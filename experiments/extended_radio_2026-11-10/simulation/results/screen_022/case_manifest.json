@@ -1,0 +1,32 @@
+{
+  "case": {
+    "shadow_std_db": 8.0,
+    "ue_nf_db": 9.0,
+    "udp_interval_ms": 50.0,
+    "sector_policy": "three",
+    "azimuth_seed": 42,
+    "shadow_seed": 42,
+    "spatial_seed": 20261109,
+    "dl_earfcn": 1300,
+    "ul_earfcn": 19300,
+    "family": "wide",
+    "beamwidth_deg": 120,
+    "exponent": 3.0,
+    "power_dbm": 46,
+    "profile": "B",
+    "category": "shadow",
+    "label": "Static shadow 8.0",
+    "duration_s": 2.0,
+    "name": "screen_022"
+  },
+  "source_sha256": "902c0560684cf2fd32f6fd8447efa098d1d1358a5cee15aed74b10a89f17cf60",
+  "sites_sha256": "d77133848c0c8953066b484303d23baebf434a75e80ee7fd2b2bae7664ea61d3",
+  "ues_sha256": "e4af74ba059fa54e7d9dcfcbd44cec95bfec68cfab89b94077d62bf33f773cd2",
+  "outputs_sha256": {
+    "ues.csv": "a49cf04d9a895a4edb3b9b978078768dd8aa4b84c6f8caa754052f729414b553",
+    "sectors.csv": "70624259bc350ae2f574fa6afc5016e7c7ec6748091d7f8c593b6b9889c7aab0",
+    "radio_samples.csv": "be12f65642ffde22ff88039555c1dcb7c82d2569d59e39934363afe6d91e270a",
+    "measurements.csv": "7ff9b7aedff03638795ac0513df0719059dab340576b56853c6e174225f6e1d4",
+    "sinr_components.csv": "ad162dc6c27046b471a24747dec2f1526afe6d702a61fbd41d6dd8b4fd5d6d69"
+  }
+}

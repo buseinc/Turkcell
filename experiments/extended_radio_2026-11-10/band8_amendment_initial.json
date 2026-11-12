@@ -1,0 +1,17 @@
+{
+  "reason": "Band 8 supports at most 10 MHz here; original 100 RB (20 MHz) is unsupported.",
+  "source": "https://www.etsi.org/deliver/etsi_ts/136100_136199/136101/18.05.00_60/ts_136101v180500p.pdf",
+  "section": "Table 5.6.1-1",
+  "rule": "Reject the two original Band 8 diagnostics; replace only their channel width (50 RB = 10 MHz), retain other inputs. Compare training only; if corrected result enters top three, expand common-draw validation before recommending.",
+  "rejected_names": [
+    "screen_015",
+    "screen_031"
+  ],
+  "runs": [],
+  "source_cpp_sha256": "06b4c63695481d3514ab7936894fef65765c46c3e581d7b9ff82255ca0c3c833",
+  "code_hashes": {
+    "sindirgi_baseline.cc": "06b4c63695481d3514ab7936894fef65765c46c3e581d7b9ff82255ca0c3c833",
+    "run_baseline.py": "f0429492242caafac65e50c77077adc345851c57cf71d008c06f703072f5c3fd",
+    "static-shadow-model.h": "9190b34909d65c3848aff3b04af1365ab8ff9c038d0fb09669c75632ab5eb445"
+  }
+}

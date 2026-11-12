@@ -1,0 +1,28 @@
+[
+  {
+    "archive": "turkcell_inceleme_paketi_2026-11-10.zip",
+    "bytes": 8022465,
+    "sha256": "7d4c7814477a25eba30d33f7544b2db83f9a792363525aade331a94ed7013bb0",
+    "file_count": 303,
+    "all_checks_passed": true,
+    "local_markdown_links_checked": 122,
+    "markdown_documents_at_root": 9,
+    "unchanged_source_files_verified": 291,
+    "main_source_excel_count": 0,
+    "build_products_excluded": true,
+    "python_caches_excluded": true
+  },
+  {
+    "archive": "turkcell_tam_paket_2026-11-10.zip",
+    "bytes": 742582074,
+    "sha256": "1b94164f6118ec5d1bed7f38595db62c875f7f3afdb36cbecb82148edac4a872",
+    "file_count": 315,
+    "all_checks_passed": true,
+    "local_markdown_links_checked": 122,
+    "markdown_documents_at_root": 9,
+    "unchanged_source_files_verified": 303,
+    "main_source_excel_count": 12,
+    "build_products_excluded": true,
+    "python_caches_excluded": true
+  }
+]

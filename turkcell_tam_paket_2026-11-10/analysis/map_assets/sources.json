@@ -1,0 +1,50 @@
+[
+  {
+    "file": "leaflet.js",
+    "source": "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js",
+    "bytes": 146715,
+    "sha256": "5819285cec137b229c94e1ee5ad73e8b6b84345a4367d60f75fe477fe0fb7b03"
+  },
+  {
+    "file": "leaflet.css",
+    "source": "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css",
+    "bytes": 14657,
+    "sha256": "90b693d86392a4779c861b28cf307e7e59c3fb35328c4d8b95f58f814d38c722"
+  },
+  {
+    "file": "layers.png",
+    "source": "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/images/layers.png",
+    "bytes": 696,
+    "sha256": "1dbbe9d028e292f36fcba8f8b3a28d5e8932754fc2215b9ac69e4cdecf5107c6"
+  },
+  {
+    "file": "layers-2x.png",
+    "source": "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/images/layers-2x.png",
+    "bytes": 1259,
+    "sha256": "066daca850d8ffbef007af00b06eac0015728dee279c51f3cb6c716df7c42edf"
+  },
+  {
+    "file": "marker-icon.png",
+    "source": "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/images/marker-icon.png",
+    "bytes": 1466,
+    "sha256": "574c3a5cca85f4114085b6841596d62f00d7c892c7b03f28cbfa301deb1dc437"
+  },
+  {
+    "file": "jquery.min.js",
+    "source": "https://code.jquery.com/jquery-3.7.1.min.js",
+    "bytes": 87533,
+    "sha256": "fc9a93dd241f6b045cbff0481cf4e1901becd0e12fb45166a8f17f95823f0b1a"
+  },
+  {
+    "file": "LEAFLET_LICENSE",
+    "source": "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/LICENSE",
+    "bytes": 1394,
+    "sha256": "97c194191510b19c72d25094922821a888d5d9bafb909ea7a38c9bf5b6c40a08"
+  },
+  {
+    "file": "JQUERY_LICENSE",
+    "source": "https://cdn.jsdelivr.net/npm/jquery@3.7.1/LICENSE.txt",
+    "bytes": 1097,
+    "sha256": "d4db9ebe6f29f5168eac45ad713f055623ac5d0dcd5ba92da23d650ae012020d"
+  }
+]

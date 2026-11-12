@@ -1,0 +1,35 @@
+{
+  "case": {
+    "shadow_std_db": 4,
+    "ue_nf_db": 9.0,
+    "udp_interval_ms": 50.0,
+    "sector_policy": "three",
+    "azimuth_seed": 42,
+    "shadow_seed": 42,
+    "spatial_seed": 20261109,
+    "dl_earfcn": 1300,
+    "ul_earfcn": 19300,
+    "family": "far",
+    "beamwidth_deg": 120,
+    "exponent": 3.0,
+    "power_dbm": 49,
+    "profile": "A",
+    "category": "placement",
+    "label": "UE far",
+    "duration_s": 1.2,
+    "name": "shadow_integration",
+    "ue_file": "ues_smoke6.csv",
+    "ue_count": 6,
+    "site_limit": 2
+  },
+  "source_sha256": "902c0560684cf2fd32f6fd8447efa098d1d1358a5cee15aed74b10a89f17cf60",
+  "sites_sha256": "d77133848c0c8953066b484303d23baebf434a75e80ee7fd2b2bae7664ea61d3",
+  "ues_sha256": "aeacca36967cfbda9365b1ae75f013197b7f3a050e7b3f36bd9253dbabab28d3",
+  "outputs_sha256": {
+    "ues.csv": "c566c34ed8f0fceee11b2921c2f1b068f91aca2c3f43b84a1c9df37c0ea58865",
+    "sectors.csv": "5e4d7495c4f58788f98ae42ac79e97c3e23b76c3ef14275f1c074708c93619f9",
+    "radio_samples.csv": "95eab217ce55e5a224e4165968b892b6d6b7fc3b892627a8362d40d347609562",
+    "measurements.csv": "aefda49abbeb07a3286392e67ee5df764a6b2f164cdc9806cf1e0ea49aed742c",
+    "sinr_components.csv": "f2d4a4b74ef8c86ea62742743fa73ef50e4a482dced87f9a9af303defe91ed25"
+  }
+}

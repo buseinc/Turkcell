@@ -1,0 +1,21 @@
+{
+  "ns3_root": "/home/buse/ns3/ns-3.44",
+  "version": "3.44",
+  "files": {
+    "src/lte/model/lte-ue-phy.cc": "5fce5b0413d8f56f7e27df13c37e16e7fc3b63fd53ab5d87eb7d24d190122a3a",
+    "src/lte/model/lte-ue-phy.h": "7f5d8de00aabf743b15689c1a7170f8fe7ba8fa1807ecf48f84c4966bec6aae7",
+    "src/lte/model/lte-spectrum-phy.cc": "19541a6c8f0170ba6d1aac78593c9fbaaeeeba80aae074d141436a4efcb6f10c",
+    "src/lte/model/lte-spectrum-phy.h": "e13e905db8dc6327be1a19a93dd1a7bedbd7b6a7a0539d7ed66ab3b1689e9536",
+    "src/lte/model/lte-interference.cc": "83489572b15c35e69f334876878f94f808241bc5460de80b4406d2de0bf83cbb",
+    "src/lte/model/lte-interference.h": "15e0c3e833b41b05de13f58ddde015a01bd6c8b1037017dca0f63eb828847b31",
+    "src/lte/model/lte-chunk-processor.cc": "a06293a3d71fb2cd6a66e2fbd8a6e6087c6c34d67afbd06cbf9985c771c90302",
+    "src/lte/model/lte-chunk-processor.h": "42332529315bd8ee0bb556b3fe2cf08a09bf382064d3f4308d0ae12c5edc3676",
+    "src/lte/model/lte-spectrum-value-helper.cc": "2f888bbf790af7b6acbd25a23707de80d8f201fed3ce2b5ff8835d8542f67261",
+    "src/lte/helper/lte-helper.cc": "0757f0782e788f601ebfd5c8699c3e295fb67ea0d8c2af2c630ca092be943234",
+    "src/antenna/model/cosine-antenna-model.cc": "ae512aedd1e38740f8effa9e89509a52dfae05ff18635685109f529479dd357d",
+    "src/antenna/model/angles.cc": "103c737fb3ab711eb39fae05905a5ff0bae8d77656801310e83a69a80f7dde09",
+    "src/propagation/model/propagation-loss-model.cc": "bf9db562cb5aa6db5f2c86da4e5f1aec9e19457e94e037221e1e1bf61844738a",
+    "src/lte/model/lte-enb-phy.cc": "96e19d3d1c40dc3fcfe75f79193e7fcd4237e5ab15ec2c3e1eb7c96a4372a29e",
+    "src/spectrum/model/multi-model-spectrum-channel.cc": "44e8d572d495bc90ffaab3bf3a326b34d1aef2974cc1d8460aa808b84d280e8d"
+  }
+}

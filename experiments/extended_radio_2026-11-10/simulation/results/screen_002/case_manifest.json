@@ -1,0 +1,32 @@
+{
+  "case": {
+    "shadow_std_db": 0.0,
+    "ue_nf_db": 9.0,
+    "udp_interval_ms": 50.0,
+    "sector_policy": "three",
+    "azimuth_seed": 42,
+    "shadow_seed": 42,
+    "spatial_seed": 20261109,
+    "dl_earfcn": 1300,
+    "ul_earfcn": 19300,
+    "family": "near",
+    "beamwidth_deg": 120,
+    "exponent": 3.0,
+    "power_dbm": 49,
+    "profile": "A",
+    "category": "placement",
+    "label": "UE near",
+    "duration_s": 2.0,
+    "name": "screen_002"
+  },
+  "source_sha256": "902c0560684cf2fd32f6fd8447efa098d1d1358a5cee15aed74b10a89f17cf60",
+  "sites_sha256": "d77133848c0c8953066b484303d23baebf434a75e80ee7fd2b2bae7664ea61d3",
+  "ues_sha256": "93c3ec2cdd1877a27f6737019f127f0762f56bc36bf35c27d0d122d9a79da242",
+  "outputs_sha256": {
+    "ues.csv": "6d5af66016d4d8851d449f1b32003ce90d3f2dfde04fd1538c362d961a4062b7",
+    "sectors.csv": "70624259bc350ae2f574fa6afc5016e7c7ec6748091d7f8c593b6b9889c7aab0",
+    "radio_samples.csv": "40bfb145604d8c5513d439f19d77b8c16e8e67b06016cabb41174d129ced9b00",
+    "measurements.csv": "11a0668bcaacf58da55f1bc70bf1dc2d30857a7e62d4fc8ec2d5631df7ac2a95",
+    "sinr_components.csv": "80bf52f329b04ff48d0db610e516672a6a40517b58c2dd8e30c4b94c2467adc4"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "reason": "Band 8 supports at most 10 MHz here; original 100 RB (20 MHz) is unsupported.",
+  "source": "https://www.etsi.org/deliver/etsi_ts/136100_136199/136101/18.05.00_60/ts_136101v180500p.pdf",
+  "section": "Table 5.6.1-1",
+  "rule": "Reject the two original Band 8 diagnostics; replace only their channel width (50 RB = 10 MHz), retain other inputs. Compare training only; if corrected result enters top three, expand common-draw validation before recommending.",
+  "rejected_names": [
+    "screen_015",
+    "screen_031"
+  ],
+  "runs": [],
+  "source_cpp_sha256": "d83c0b418864139a8ef94d15ec7cde1b2d1452de52399f4634806b0b886a389e",
+  "passive_observer_repeat_runs": 2,
+  "observer_correction": "For 50 RB, mirror native mixed-CQI averaging over the first 48 RB; native LTE model is unchanged. Preserve v1 outputs and verify all native trace CSV hashes identical.",
+  "code_hashes": {
+    "sindirgi_baseline.cc": "d83c0b418864139a8ef94d15ec7cde1b2d1452de52399f4634806b0b886a389e",
+    "run_baseline.py": "f0429492242caafac65e50c77077adc345851c57cf71d008c06f703072f5c3fd",
+    "static-shadow-model.h": "9190b34909d65c3848aff3b04af1365ab8ff9c038d0fb09669c75632ab5eb445"
+  }
+}

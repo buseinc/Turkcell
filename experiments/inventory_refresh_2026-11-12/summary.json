@@ -1,0 +1,32 @@
+{
+  "current_24_three_draws": {
+    "training": {
+      "rsrp": 3.4850707227086173,
+      "sinr": 3.262931341483712,
+      "rsrq": 2.577800219204991
+    },
+    "control": {
+      "rsrp": 2.958812444880452,
+      "sinr": 3.63345014816256,
+      "rsrq": 4.073148452622796
+    }
+  },
+  "previous_24_three_draws": {
+    "training": {
+      "rsrp": 3.5188687362678754,
+      "sinr": 3.3208525426630344,
+      "rsrq": 2.588019854124808
+    },
+    "control": {
+      "rsrp": 2.958812444880452,
+      "sinr": 3.6364825360933613,
+      "rsrq": 4.081462098766277
+    }
+  },
+  "all_three_old_new_pairs_pass": true,
+  "two_expansions_pass": true,
+  "minimum_connected": 64,
+  "minimum_receiving_dl": 64,
+  "training_site_observations": 15,
+  "control_site_observations": 9
+}

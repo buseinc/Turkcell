@@ -1,0 +1,35 @@
+{
+  "reference": {
+    "latitude": 39.2461,
+    "longitude": 28.0697,
+    "x_m": 0,
+    "y_m": 0
+  },
+  "display_radius_km": 30.0,
+  "coordinate_tolerance_m": 1.0,
+  "inventory_sites": 516,
+  "inventory_sites_within_radius": 26,
+  "selection_sites": 16,
+  "matches": 13,
+  "coordinate_conflicts": 0,
+  "selection_only_site_ids": [
+    "SITE_000554",
+    "SITE_000553",
+    "SITE_000555"
+  ],
+  "max_shared_coordinate_difference_m": 0.05933201308619309,
+  "method": "WGS84 geodetic -> ECEF -> local ENU; ellipsoidal height assumed zero",
+  "up_warning": "ENU up is curvature relative to the tangent plane, not measured terrain height.",
+  "source_separation": "Inventory is built only from its XLSX; selected positions only from selection CSV.",
+  "radio_filter_applied": false,
+  "sources": [
+    {
+      "file": "cell_site_coordinates\\cell_site_coordinates.xlsx",
+      "sha256": "9b400ac9e083112bdce4d6c93b034d7824cea7a7e6a5c22580bc5c99a2d3a5d5"
+    },
+    {
+      "file": "sindirgi_lte_sites.csv",
+      "sha256": "833c442a512881118c7b56d24e1f971f3ccbc356c989b9deecd98f2ae78105ce"
+    }
+  ]
+}

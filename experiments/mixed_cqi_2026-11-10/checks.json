@@ -1,0 +1,15 @@
+{
+  "control_regression": {
+    "passed": true,
+    "max_numeric_difference": 0.0
+  },
+  "original_baseline_unchanged": true,
+  "control_native_reconstruction_max_error_db": 2.375877272697835e-14,
+  "mixed_native_reconstruction_max_error_db": 3.552713678800501e-14,
+  "same_serving_sectors": true,
+  "max_passive_control_sinr_change_db": 0.0,
+  "max_rsrp_change_db": 0.0,
+  "max_rsrq_change_db": 0.0,
+  "mean_paired_native_sinr_change_db": 9.797808216062998,
+  "passed": true
+}

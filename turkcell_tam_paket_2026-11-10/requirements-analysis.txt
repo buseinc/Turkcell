@@ -1,0 +1,9 @@
+# Versions recorded on the packaging machine; no new-machine installation test.
+numpy==2.0.2
+pandas==2.2.3
+scipy==1.14.1
+openpyxl==3.1.5
+matplotlib==3.9.2
+plotly==5.24.1
+folium==0.19.6
+branca==0.8.1

@@ -1,0 +1,7 @@
+{
+  "training_rsrp_mae": 3.9177420531828147,
+  "holdout_rsrp_mae": 3.8590353443598766,
+  "holdout_passed": true,
+  "buffer": 16,
+  "buffer_converged": true
+}

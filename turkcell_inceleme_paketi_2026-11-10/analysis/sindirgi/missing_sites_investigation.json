@@ -1,0 +1,338 @@
+{
+  "sites": [
+    {
+      "site": "SITE_000553",
+      "latitude_from_selection": 39.21005,
+      "longitude_from_selection": 28.236552,
+      "in_coordinate_inventory": false,
+      "nearest_inventory_site": "SITE_000443",
+      "nearest_inventory_coordinate_distance_m": 5712.277752427738,
+      "inventory_coordinates_within_5m": 0,
+      "cells_from_selection": [
+        "CELL_006016",
+        "CELL_006018",
+        "CELL_006020"
+      ]
+    },
+    {
+      "site": "SITE_000554",
+      "latitude_from_selection": 39.32955,
+      "longitude_from_selection": 28.14965,
+      "in_coordinate_inventory": false,
+      "nearest_inventory_site": "SITE_000200",
+      "nearest_inventory_coordinate_distance_m": 6394.287441212167,
+      "inventory_coordinates_within_5m": 0,
+      "cells_from_selection": [
+        "CELL_006039",
+        "CELL_006040"
+      ]
+    },
+    {
+      "site": "SITE_000555",
+      "latitude_from_selection": 39.125218,
+      "longitude_from_selection": 28.234799,
+      "in_coordinate_inventory": false,
+      "nearest_inventory_site": "SITE_000480",
+      "nearest_inventory_coordinate_distance_m": 3493.024872808733,
+      "inventory_coordinates_within_5m": 0,
+      "cells_from_selection": [
+        "CELL_006041",
+        "CELL_006042",
+        "CELL_006043"
+      ]
+    }
+  ],
+  "coordinate_workbook": {
+    "sheets": [
+      {
+        "name": "Sheet1",
+        "state": "visible",
+        "rows": 5722,
+        "columns": 4,
+        "autofilter": null,
+        "hidden_rows": 0
+      }
+    ],
+    "created_property": "2026-07-21 08:06:31",
+    "modified_property": "2026-07-21 08:06:31",
+    "creator": "openpyxl",
+    "external_links": 0
+  },
+  "coordinate_cell_count": 5721,
+  "earliest_kpi_date": "2025-08-03",
+  "earliest_kpi_cell_count": 5721,
+  "coordinate_cells_equal_earliest_kpi_cells": true,
+  "earliest_kpi_cells_missing_coordinates": [],
+  "coordinate_cells_missing_earliest_kpi": [],
+  "site_id_range": [
+    "SITE_000001",
+    "SITE_000517"
+  ],
+  "daily_raw_kpi_checks": [
+    {
+      "date": "2025-08-03",
+      "source_file": "LTE Main KPI_20250803000000-20250804000000 0803\\LTE Main KPI_20250803000000-20250804000000 0803.xlsx",
+      "rows": 548132,
+      "unique_cells": 5721,
+      "target_cell_rows": {
+        "CELL_006016": 0,
+        "CELL_006018": 0,
+        "CELL_006020": 0,
+        "CELL_006039": 0,
+        "CELL_006040": 0,
+        "CELL_006041": 0,
+        "CELL_006042": 0,
+        "CELL_006043": 0
+      },
+      "cells_absent_from_coordinates": 0
+    },
+    {
+      "date": "2025-08-09",
+      "source_file": "LTE Main KPI_20250809000000-20250810000000 0809\\LTE Main KPI_20250809000000-20250810000000 0809.xlsx",
+      "rows": 550019,
+      "unique_cells": 5736,
+      "target_cell_rows": {
+        "CELL_006016": 96,
+        "CELL_006018": 96,
+        "CELL_006020": 96,
+        "CELL_006039": 94,
+        "CELL_006040": 94,
+        "CELL_006041": 96,
+        "CELL_006042": 96,
+        "CELL_006043": 96
+      },
+      "cells_absent_from_coordinates": 24
+    },
+    {
+      "date": "2025-08-10",
+      "source_file": "LTE Main KPI_20250810000000-20250811000000 0810\\LTE Main KPI_20250810000000-20250811000000 0810.xlsx",
+      "rows": 550402,
+      "unique_cells": 5736,
+      "target_cell_rows": {
+        "CELL_006016": 94,
+        "CELL_006018": 94,
+        "CELL_006020": 94,
+        "CELL_006039": 94,
+        "CELL_006040": 94,
+        "CELL_006041": 96,
+        "CELL_006042": 96,
+        "CELL_006043": 96
+      },
+      "cells_absent_from_coordinates": 24
+    },
+    {
+      "date": "2025-08-11",
+      "source_file": "LTE Main KPI_20250811000000-20250812000000 0811\\LTE Main KPI_20250811000000-20250812000000 0811.xlsx",
+      "rows": 549726,
+      "unique_cells": 5735,
+      "target_cell_rows": {
+        "CELL_006016": 92,
+        "CELL_006018": 92,
+        "CELL_006020": 92,
+        "CELL_006039": 93,
+        "CELL_006040": 93,
+        "CELL_006041": 96,
+        "CELL_006042": 96,
+        "CELL_006043": 96
+      },
+      "cells_absent_from_coordinates": 24
+    },
+    {
+      "date": "2025-08-17",
+      "source_file": "LTE Main KPI_20250817000000-20250818000000 0817\\LTE Main KPI_20250817000000-20250818000000 0817.xlsx",
+      "rows": 553748,
+      "unique_cells": 5770,
+      "target_cell_rows": {
+        "CELL_006016": 96,
+        "CELL_006018": 96,
+        "CELL_006020": 96,
+        "CELL_006039": 96,
+        "CELL_006040": 96,
+        "CELL_006041": 96,
+        "CELL_006042": 96,
+        "CELL_006043": 96
+      },
+      "cells_absent_from_coordinates": 58
+    },
+    {
+      "date": "2025-10-20",
+      "source_file": "LTE Main KPI_20251020000000-20251021000000 1020\\LTE Main KPI_20251020000000-20251021000000 1020.xlsx",
+      "rows": 587942,
+      "unique_cells": 6129,
+      "target_cell_rows": {
+        "CELL_006016": 96,
+        "CELL_006018": 96,
+        "CELL_006020": 96,
+        "CELL_006039": 96,
+        "CELL_006040": 96,
+        "CELL_006041": 96,
+        "CELL_006042": 96,
+        "CELL_006043": 96
+      },
+      "cells_absent_from_coordinates": 439
+    },
+    {
+      "date": "2025-10-26",
+      "source_file": "LTE Main KPI_20251026000000-20251027000000 1026\\LTE Main KPI_20251026000000-20251027000000 1026.xlsx",
+      "rows": 588633,
+      "unique_cells": 6139,
+      "target_cell_rows": {
+        "CELL_006016": 96,
+        "CELL_006018": 96,
+        "CELL_006020": 96,
+        "CELL_006039": 96,
+        "CELL_006040": 96,
+        "CELL_006041": 96,
+        "CELL_006042": 96,
+        "CELL_006043": 96
+      },
+      "cells_absent_from_coordinates": 454
+    },
+    {
+      "date": "2025-10-27",
+      "source_file": "LTE Main KPI_20251027000000-20251028000000 1027\\LTE Main KPI_20251027000000-20251028000000 1027.xlsx",
+      "rows": 588187,
+      "unique_cells": 6139,
+      "target_cell_rows": {
+        "CELL_006016": 96,
+        "CELL_006018": 96,
+        "CELL_006020": 96,
+        "CELL_006039": 96,
+        "CELL_006040": 96,
+        "CELL_006041": 96,
+        "CELL_006042": 96,
+        "CELL_006043": 96
+      },
+      "cells_absent_from_coordinates": 454
+    },
+    {
+      "date": "2025-10-28",
+      "source_file": "LTE Main KPI_20251028000000-20251029000000 1028\\LTE Main KPI_20251028000000-20251029000000 1028.xlsx",
+      "rows": 587108,
+      "unique_cells": 6139,
+      "target_cell_rows": {
+        "CELL_006016": 96,
+        "CELL_006018": 96,
+        "CELL_006020": 96,
+        "CELL_006039": 96,
+        "CELL_006040": 96,
+        "CELL_006041": 96,
+        "CELL_006042": 96,
+        "CELL_006043": 96
+      },
+      "cells_absent_from_coordinates": 454
+    },
+    {
+      "date": "2025-11-03",
+      "source_file": "LTE Main KPI_20251103000000-20251104000000 1103\\LTE Main KPI_20251103000000-20251104000000 1103.xlsx",
+      "rows": 590407,
+      "unique_cells": 6176,
+      "target_cell_rows": {
+        "CELL_006016": 96,
+        "CELL_006018": 96,
+        "CELL_006020": 96,
+        "CELL_006039": 96,
+        "CELL_006040": 96,
+        "CELL_006041": 96,
+        "CELL_006042": 96,
+        "CELL_006043": 96
+      },
+      "cells_absent_from_coordinates": 482
+    }
+  ],
+  "raw_experia_target_checks": {
+    "CELL_006018": {
+      "rows": 160,
+      "city": [
+        "CITY_001"
+      ],
+      "district": [
+        "DISTRICT_0019"
+      ],
+      "first": "2026-06-22 00:00:00",
+      "last": "2026-06-28 23:00:00"
+    },
+    "CELL_006039": {
+      "rows": 156,
+      "city": [
+        "CITY_001"
+      ],
+      "district": [
+        "DISTRICT_0019"
+      ],
+      "first": "2026-06-22 00:00:00",
+      "last": "2026-06-28 23:00:00"
+    },
+    "CELL_006042": {
+      "rows": 160,
+      "city": [
+        "CITY_001"
+      ],
+      "district": [
+        "DISTRICT_0019"
+      ],
+      "first": "2026-06-22 00:00:00",
+      "last": "2026-06-28 23:00:00"
+    },
+    "CELL_006040": {
+      "rows": 160,
+      "city": [
+        "CITY_001"
+      ],
+      "district": [
+        "DISTRICT_0019"
+      ],
+      "first": "2026-06-22 00:00:00",
+      "last": "2026-06-28 23:00:00"
+    },
+    "CELL_006016": {
+      "rows": 160,
+      "city": [
+        "CITY_001"
+      ],
+      "district": [
+        "DISTRICT_0019"
+      ],
+      "first": "2026-06-22 00:00:00",
+      "last": "2026-06-28 23:00:00"
+    },
+    "CELL_006041": {
+      "rows": 129,
+      "city": [
+        "CITY_001"
+      ],
+      "district": [
+        "DISTRICT_0019"
+      ],
+      "first": "2026-06-22 00:00:00",
+      "last": "2026-06-28 23:00:00"
+    },
+    "CELL_006020": {
+      "rows": 160,
+      "city": [
+        "CITY_001"
+      ],
+      "district": [
+        "DISTRICT_0019"
+      ],
+      "first": "2026-06-22 00:00:00",
+      "last": "2026-06-28 23:00:00"
+    },
+    "CELL_006043": {
+      "rows": 160,
+      "city": [
+        "CITY_001"
+      ],
+      "district": [
+        "DISTRICT_0019"
+      ],
+      "first": "2026-06-22 00:00:00",
+      "last": "2026-06-28 23:00:00"
+    }
+  },
+  "conclusion_status": {
+    "verified": "The inventory cell set equals the supplied 2025-08-03 KPI cell set. All 8 target cells are absent that day and present in every supplied later KPI day.",
+    "inference": "The coordinate export may have been restricted to the earliest KPI cell population; a later or broader coordinate source may have been used for the selection.",
+    "unresolved": "Neither the production filter/code nor an independent source for these 3 site IDs, coordinates and cell-to-site links is supplied. Cell appearance in later files does not prove physical commissioning dates."
+  }
+}

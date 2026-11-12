@@ -1,0 +1,10 @@
+[
+  {
+    "case": "offline_all_hosts_blocked",
+    "background_mode": "offline",
+    "status": "Sade koordinat zemini: saha konumları çevrimdışı gösteriliyor.",
+    "rendered_interactive_shapes": 133,
+    "visible_background_tiles": 0,
+    "passed": true
+  }
+]

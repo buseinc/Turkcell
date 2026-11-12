@@ -1,0 +1,15 @@
+# Python sanal ortamı ve önbellekler
+.venv/
+__pycache__/
+*.pyc
+
+# Derleme çıktıları
+build/
+*.o
+
+# Arşivler
+*.zip
+
+# Büyük ham veri dosyaları (GitHub'a gönderilmez, yerelde kalır)
+turkcell_tam_paket_2026-11-10/LTE Main KPI_*/*.xlsx
+turkcell_tam_paket_2026-11-10/experia/experia.xlsx

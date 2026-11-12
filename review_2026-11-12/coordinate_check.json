@@ -1,0 +1,471 @@
+{
+  "checked_on": "2026-11-12",
+  "current_file": "turkcell_tam_paket_2026-11-10\\cell_site_coordinates\\cell_site_coordinates.xlsx",
+  "current_sha256": "ae372dd2312e7cd17481d79f379563d8eb07cbbafbe8a3fa49174ffedfd06566",
+  "previous_file": "pc_validation\\20261110_pc\\analysis_workspace\\cell_site_coordinates\\cell_site_coordinates.xlsx",
+  "previous_sha256": "9b400ac9e083112bdce4d6c93b034d7824cea7a7e6a5c22580bc5c99a2d3a5d5",
+  "old_counts": {
+    "cells": 5721,
+    "sites": 516
+  },
+  "current_counts": {
+    "cells": 6475,
+    "sites": 563
+  },
+  "added_cells": 754,
+  "removed_cells": [],
+  "changed_existing_rows": [],
+  "new_sites": [
+    "SITE_000518",
+    "SITE_000519",
+    "SITE_000520",
+    "SITE_000521",
+    "SITE_000522",
+    "SITE_000523",
+    "SITE_000524",
+    "SITE_000525",
+    "SITE_000526",
+    "SITE_000527",
+    "SITE_000528",
+    "SITE_000529",
+    "SITE_000530",
+    "SITE_000531",
+    "SITE_000532",
+    "SITE_000533",
+    "SITE_000534",
+    "SITE_000535",
+    "SITE_000536",
+    "SITE_000537",
+    "SITE_000538",
+    "SITE_000539",
+    "SITE_000540",
+    "SITE_000541",
+    "SITE_000542",
+    "SITE_000543",
+    "SITE_000544",
+    "SITE_000545",
+    "SITE_000546",
+    "SITE_000547",
+    "SITE_000548",
+    "SITE_000549",
+    "SITE_000550",
+    "SITE_000551",
+    "SITE_000552",
+    "SITE_000553",
+    "SITE_000554",
+    "SITE_000555",
+    "SITE_000556",
+    "SITE_000557",
+    "SITE_000558",
+    "SITE_000559",
+    "SITE_000560",
+    "SITE_000561",
+    "SITE_000562",
+    "SITE_000563",
+    "SITE_000564"
+  ],
+  "duplicate_cell_count": 0,
+  "conflicting_site_coordinates": [],
+  "selected_site_checks": [
+    {
+      "site": "SITE_000440",
+      "role": "Evaluation",
+      "current_cells": 9,
+      "found": true,
+      "distance_from_selection_m": 0.04100174913571814,
+      "selection_lat": 39.212651,
+      "selection_lon": 28.096848,
+      "current_lat": 39.21265063303904,
+      "current_lon": 28.09684804666118,
+      "excel_rows": [
+        6022,
+        6023,
+        6024,
+        6025,
+        6026,
+        6027,
+        6028,
+        6029,
+        6030
+      ]
+    },
+    {
+      "site": "SITE_000441",
+      "role": "Evaluation",
+      "current_cells": 9,
+      "found": true,
+      "distance_from_selection_m": 0.044360371473403694,
+      "selection_lat": 39.23905,
+      "selection_lon": 28.16435,
+      "current_lat": 39.23905033054125,
+      "current_lon": 28.16435028841011,
+      "excel_rows": [
+        6031,
+        6032,
+        6033,
+        6034,
+        6035,
+        6036,
+        6037,
+        6038,
+        6039
+      ]
+    },
+    {
+      "site": "SITE_000130",
+      "role": "Evaluation",
+      "current_cells": 7,
+      "found": true,
+      "distance_from_selection_m": 0.036251796434766136,
+      "selection_lat": 39.308051,
+      "selection_lon": 27.988545,
+      "current_lat": 39.3080510501854,
+      "current_lon": 27.98854541632824,
+      "excel_rows": [
+        1914,
+        1915,
+        1916,
+        1917,
+        1918,
+        1919,
+        1920
+      ]
+    },
+    {
+      "site": "SITE_000296",
+      "role": "Evaluation",
+      "current_cells": 6,
+      "found": true,
+      "distance_from_selection_m": 0.026581960345828125,
+      "selection_lat": 39.2556,
+      "selection_lon": 28.183712,
+      "current_lat": 39.25560023904194,
+      "current_lon": 28.18371199649894,
+      "excel_rows": [
+        3993,
+        3994,
+        3995,
+        3996,
+        3997,
+        3998
+      ]
+    },
+    {
+      "site": "SITE_000443",
+      "role": "Evaluation",
+      "current_cells": 14,
+      "found": true,
+      "distance_from_selection_m": 0.02545153389580943,
+      "selection_lat": 39.24475,
+      "selection_lon": 28.187651,
+      "current_lat": 39.24475022693821,
+      "current_lon": 28.18765103852579,
+      "excel_rows": [
+        6054,
+        6055,
+        6056,
+        6057,
+        6058,
+        6059,
+        6060,
+        6061,
+        6062,
+        6063,
+        6064,
+        6065,
+        6066,
+        6067
+      ]
+    },
+    {
+      "site": "SITE_000554",
+      "role": "Evaluation",
+      "current_cells": 2,
+      "found": true,
+      "distance_from_selection_m": 0.05745558414655415,
+      "selection_lat": 39.32955,
+      "selection_lon": 28.14965,
+      "current_lat": 39.32955035263868,
+      "current_lon": 28.14965048825447,
+      "excel_rows": [
+        6040,
+        6041
+      ]
+    },
+    {
+      "site": "SITE_000482",
+      "role": "Evaluation",
+      "current_cells": 2,
+      "found": true,
+      "distance_from_selection_m": 0.020084650048428236,
+      "selection_lat": 39.264157,
+      "selection_lon": 28.209098,
+      "current_lat": 39.26415712470141,
+      "current_lon": 28.20909783122469,
+      "excel_rows": [
+        6253,
+        6254
+      ]
+    },
+    {
+      "site": "SITE_000444",
+      "role": "Evaluation",
+      "current_cells": 6,
+      "found": true,
+      "distance_from_selection_m": 0.05734471142207505,
+      "selection_lat": 39.143886,
+      "selection_lon": 28.158027,
+      "current_lat": 39.14388640148751,
+      "current_lon": 28.15802741734704,
+      "excel_rows": [
+        6068,
+        6069,
+        6070,
+        6071,
+        6072,
+        6073
+      ]
+    },
+    {
+      "site": "SITE_000506",
+      "role": "Interference buffer",
+      "current_cells": 1,
+      "found": true,
+      "distance_from_selection_m": 0.0262207082843527,
+      "selection_lat": 39.282365,
+      "selection_lon": 28.252629,
+      "current_lat": 39.2823649259248,
+      "current_lon": 28.25262928922672,
+      "excel_rows": [
+        6315
+      ]
+    },
+    {
+      "site": "SITE_000480",
+      "role": "Interference buffer",
+      "current_cells": 2,
+      "found": true,
+      "distance_from_selection_m": 0.04296862327397454,
+      "selection_lat": 39.114303,
+      "selection_lon": 28.196831,
+      "current_lat": 39.1143032472046,
+      "current_lon": 28.19683138279981,
+      "excel_rows": [
+        6250,
+        6251
+      ]
+    },
+    {
+      "site": "SITE_000553",
+      "role": "Interference buffer",
+      "current_cells": 6,
+      "found": true,
+      "distance_from_selection_m": 0.024024641454418696,
+      "selection_lat": 39.21005,
+      "selection_lon": 28.236552,
+      "current_lat": 39.2100500299427,
+      "current_lon": 28.23655227615466,
+      "excel_rows": [
+        6016,
+        6017,
+        6018,
+        6019,
+        6020,
+        6021
+      ]
+    },
+    {
+      "site": "SITE_000200",
+      "role": "Interference buffer",
+      "current_cells": 14,
+      "found": true,
+      "distance_from_selection_m": 0.05933201307754563,
+      "selection_lat": 39.38625,
+      "selection_lon": 28.137251,
+      "current_lat": 39.38625038029037,
+      "current_lon": 28.13725051572439,
+      "excel_rows": [
+        2793,
+        2794,
+        2795,
+        2796,
+        2797,
+        2798,
+        2799,
+        2800,
+        2801,
+        2802,
+        2803,
+        2804,
+        2805,
+        2806
+      ]
+    },
+    {
+      "site": "SITE_000224",
+      "role": "Interference buffer",
+      "current_cells": 10,
+      "found": true,
+      "distance_from_selection_m": 0.021322146702441234,
+      "selection_lat": 39.37625,
+      "selection_lon": 28.193652,
+      "current_lat": 39.37625014024173,
+      "current_lon": 28.19365216917932,
+      "excel_rows": [
+        3064,
+        3065,
+        3066,
+        3067,
+        3068,
+        3069,
+        3070,
+        3071,
+        3072,
+        3073
+      ]
+    },
+    {
+      "site": "SITE_000555",
+      "role": "Interference buffer",
+      "current_cells": 3,
+      "found": true,
+      "distance_from_selection_m": 0.03458572635610905,
+      "selection_lat": 39.125218,
+      "selection_lon": 28.234799,
+      "current_lat": 39.12521807696714,
+      "current_lon": 28.23479861152908,
+      "excel_rows": [
+        6042,
+        6043,
+        6044
+      ]
+    },
+    {
+      "site": "SITE_000475",
+      "role": "Interference buffer",
+      "current_cells": 1,
+      "found": true,
+      "distance_from_selection_m": 0.00824830438946713,
+      "selection_lat": 39.373276,
+      "selection_lon": 27.995816,
+      "current_lat": 39.373275990411,
+      "current_lon": 27.99581609515341,
+      "excel_rows": [
+        6238
+      ]
+    },
+    {
+      "site": "SITE_000206",
+      "role": "Interference buffer",
+      "current_cells": 12,
+      "found": true,
+      "distance_from_selection_m": 0.05752654621605657,
+      "selection_lat": 39.394453,
+      "selection_lon": 28.1325,
+      "current_lat": 39.39445339705482,
+      "current_lon": 28.132500429167,
+      "excel_rows": [
+        2881,
+        2882,
+        2883,
+        2884,
+        2885,
+        2886,
+        2887,
+        2888,
+        2889,
+        2890,
+        2891,
+        2892
+      ]
+    }
+  ],
+  "selected_cell_count": 96,
+  "selected_cell_matches": 96,
+  "selected_cell_mismatches": [],
+  "radio_cell_count": 5867,
+  "radio_cells_with_new_coordinates": 5867,
+  "radio_cells_without_new_coordinates": [],
+  "new_sites_within_30km": [
+    {
+      "site": "SITE_000549",
+      "distance_to_reference_km": 18.150350696964043,
+      "cells": 1
+    },
+    {
+      "site": "SITE_000553",
+      "distance_to_reference_km": 14.920454754631908,
+      "cells": 6
+    },
+    {
+      "site": "SITE_000554",
+      "distance_to_reference_km": 11.551997839854426,
+      "cells": 2
+    },
+    {
+      "site": "SITE_000555",
+      "distance_to_reference_km": 19.57419886107134,
+      "cells": 3
+    }
+  ],
+  "nearest_eight_radio_sites": [
+    "SITE_000440",
+    "SITE_000441",
+    "SITE_000130",
+    "SITE_000296",
+    "SITE_000443",
+    "SITE_000554",
+    "SITE_000482",
+    "SITE_000444"
+  ],
+  "site549_buffer_rank": 10,
+  "evaluation_selection_still_matches": true,
+  "nearest_eight_buffer_sites": [
+    "SITE_000506",
+    "SITE_000480",
+    "SITE_000553",
+    "SITE_000200",
+    "SITE_000224",
+    "SITE_000555",
+    "SITE_000475",
+    "SITE_000206"
+  ],
+  "buffer_selection_still_matches": true,
+  "frozen_topology_checks": [
+    {
+      "total_sites": 24,
+      "missing_current": [],
+      "new_nearest_topology_adds": [
+        "SITE_000549"
+      ],
+      "new_nearest_topology_drops": [
+        "SITE_000162"
+      ],
+      "maximum_coordinate_difference_m": 0.05745558414655415
+    },
+    {
+      "total_sites": 32,
+      "missing_current": [],
+      "new_nearest_topology_adds": [
+        "SITE_000549"
+      ],
+      "new_nearest_topology_drops": [
+        "SITE_000490"
+      ],
+      "maximum_coordinate_difference_m": 0.05745558414655415
+    },
+    {
+      "total_sites": 48,
+      "missing_current": [],
+      "new_nearest_topology_adds": [
+        "SITE_000549",
+        "SITE_000552"
+      ],
+      "new_nearest_topology_drops": [
+        "SITE_000276",
+        "SITE_000436"
+      ],
+      "maximum_coordinate_difference_m": 0.05745558414655415
+    }
+  ]
+}

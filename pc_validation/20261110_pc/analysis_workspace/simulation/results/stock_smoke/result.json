@@ -1,0 +1,18 @@
+{
+  "ns3_version": "3.44",
+  "stack": "classic LTE/EPC",
+  "example": "lena-simple-epc",
+  "source": "/home/umut/ns-allinone-3.44/ns-3.44/src/lte/examples/lena-simple-epc.cc",
+  "executable": "/home/umut/ns-allinone-3.44/ns-3.44/build/src/lte/examples/ns3.44-lena-simple-epc-default",
+  "simulation_seconds": 1.1,
+  "physical_sites": 2,
+  "ues": 2,
+  "attachment": "manual pairing (stock example)",
+  "received_pdcp_bytes": {
+    "DlPdcpStats.txt": 25296,
+    "UlPdcpStats.txt": 25296
+  },
+  "passed": true,
+  "build_and_run_wall_seconds": 7.354213033000001,
+  "meaning": "Software smoke test, not geographical or radio calibration."
+}

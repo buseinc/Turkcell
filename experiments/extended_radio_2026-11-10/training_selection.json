@@ -1,0 +1,51 @@
+{
+  "rankings": [
+    {
+      "model_id": "reference",
+      "mean_training_score": 3.1425803776852392,
+      "std_training_score": 0.1183709110650401,
+      "robust_score": 3.201765833217759,
+      "mean_training_mae_db": {
+        "rsrp": 3.5188687362678754,
+        "sinr": 3.3208525426630344,
+        "rsrq": 2.588019854124808
+      }
+    },
+    {
+      "model_id": "model_02",
+      "mean_training_score": 3.288086701049387,
+      "std_training_score": 0.37233647715263196,
+      "robust_score": 3.4742549396257028,
+      "mean_training_mae_db": {
+        "rsrp": 3.7365517854441603,
+        "sinr": 3.0036338431708325,
+        "rsrq": 3.1240744745331677
+      }
+    },
+    {
+      "model_id": "model_01",
+      "mean_training_score": 3.207169520100236,
+      "std_training_score": 0.5530132292100516,
+      "robust_score": 3.483676134705262,
+      "mean_training_mae_db": {
+        "rsrp": 3.416782734823089,
+        "sinr": 3.4936546510686934,
+        "rsrq": 2.711071174408925
+      }
+    },
+    {
+      "model_id": "model_03",
+      "mean_training_score": 3.6282431265694033,
+      "std_training_score": 0.37392852496066536,
+      "robust_score": 3.815207389049736,
+      "mean_training_mae_db": {
+        "rsrp": 4.19444961808505,
+        "sinr": 3.1655417637128065,
+        "rsrq": 3.524737997910353
+      }
+    }
+  ],
+  "nominal_best_model": "reference",
+  "recommended_model": "reference",
+  "rule": "Screen using five training sites only: mean of RSRP/SINR/RSRQ MAE +10 dB per missing training site. Take best three distinct structural models plus reference A if absent. Structural identity excludes stochastic draws. Evaluate all shortlisted models on the same three 4-second UE/azimuth/shadow draws. Choose minimum mean(training score)+0.5*population std; if reference A is within 0.10 dB of minimum, recommend reference A for parsimony. Controls excluded; all control sites have been seen previously."
+}

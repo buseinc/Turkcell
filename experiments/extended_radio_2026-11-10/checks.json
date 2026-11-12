@@ -1,0 +1,49 @@
+{
+  "computations_passed": true,
+  "counts": {
+    "screening_runs": 51,
+    "admissible_screening_runs": 49,
+    "rejected_diagnostic_runs": 2,
+    "distinct_structural_screen_models": 46,
+    "ensemble_runs": 12,
+    "ensemble_models": 4,
+    "confirmation_runs": 3,
+    "software_validation_lte_runs": 2,
+    "passive_observer_repeat_runs": 2,
+    "native_lte_runs_total": 70,
+    "previous_analytic_screens_included_in_native_count": false
+  },
+  "regression": {
+    "passed": true,
+    "maximum_numeric_difference": 0.0
+  },
+  "shadow_unit_checks": {
+    "passed": true,
+    "reciprocal": true,
+    "colocated_sectors_share_shadow": true,
+    "time_static": true,
+    "sigma_zero_matches_log_distance": true,
+    "samples": 5000,
+    "sample_mean_db": -0.0348206,
+    "sample_std_db": 3.86673
+  },
+  "shadow_integration": {
+    "passed": true,
+    "connected": 6,
+    "receiving_dl": 6,
+    "input_sha256": "aeacca36967cfbda9365b1ae75f013197b7f3a050e7b3f36bd9253dbabab28d3"
+  },
+  "maximum_mixed_reconstruction_error_db": 4.263256414560601e-14,
+  "all_data_defined_sites_and_targets_preserved": true,
+  "original_cpp_unchanged": true,
+  "buffer_two_steps_passed": true,
+  "duration_passed": true,
+  "recommended_model": "reference",
+  "nominal_best_model": "reference",
+  "rejected_unsupported_band8_names": [
+    "screen_015",
+    "screen_031"
+  ],
+  "band8_correction_does_not_change_shortlist": true,
+  "band8_passive_observer_regression_passed": true
+}

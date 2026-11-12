@@ -1,0 +1,111 @@
+{
+  "cases": [
+    {
+      "name": "updated_16",
+      "sites": 16,
+      "az": 42,
+      "ue": 701,
+      "duration": 4,
+      "old": "ensemble_reference_0"
+    },
+    {
+      "name": "updated_24",
+      "sites": 24,
+      "az": 42,
+      "ue": 701,
+      "duration": 4,
+      "old": "ensemble_reference_0"
+    },
+    {
+      "name": "updated_32",
+      "sites": 32,
+      "az": 42,
+      "ue": 701,
+      "duration": 4,
+      "old": "ensemble_reference_0"
+    },
+    {
+      "name": "updated_48",
+      "sites": 48,
+      "az": 42,
+      "ue": 701,
+      "duration": 4,
+      "old": "ensemble_reference_0"
+    },
+    {
+      "name": "addition_549",
+      "sites": 25,
+      "az": 42,
+      "ue": 701,
+      "duration": 4,
+      "old": "ensemble_reference_0"
+    },
+    {
+      "name": "updated_draw_1",
+      "sites": 24,
+      "az": 7,
+      "ue": 702,
+      "duration": 4,
+      "old": "ensemble_reference_1"
+    },
+    {
+      "name": "updated_draw_2",
+      "sites": 24,
+      "az": 99,
+      "ue": 703,
+      "duration": 4,
+      "old": "ensemble_reference_2"
+    }
+  ],
+  "core": [
+    "SITE_000440",
+    "SITE_000441",
+    "SITE_000130",
+    "SITE_000296",
+    "SITE_000443",
+    "SITE_000554",
+    "SITE_000482",
+    "SITE_000444"
+  ],
+  "advisor_sites": [
+    "SITE_000130",
+    "SITE_000200",
+    "SITE_000206",
+    "SITE_000224",
+    "SITE_000296",
+    "SITE_000440",
+    "SITE_000441",
+    "SITE_000443",
+    "SITE_000444",
+    "SITE_000475",
+    "SITE_000480",
+    "SITE_000482",
+    "SITE_000506",
+    "SITE_000553",
+    "SITE_000554",
+    "SITE_000555"
+  ],
+  "inventory_sha256": "ae372dd2312e7cd17481d79f379563d8eb07cbbafbe8a3fa49174ffedfd06566",
+  "source_sha256": "902c0560684cf2fd32f6fd8447efa098d1d1358a5cee15aed74b10a89f17cf60",
+  "input_hashes": {
+    "sites_16_42.csv": "62f2dd54ee8dd16f8be253f53326fea82ed239a2c8ec3d8e78a0250fd1fc03c2",
+    "sites_16_7.csv": "fbef02074328c1cff554d1650034a40c9918d8a5a390d99a7d54f746f94495bf",
+    "sites_16_99.csv": "0237ac3f38161d7264f4bf89e7f3b04a672372a39827d70aa22a09cba2eca4f5",
+    "sites_24_42.csv": "209366857ead771feb5e833fb4e0dcd2c7996c9591750ec99859a2e2c22ac92a",
+    "sites_24_7.csv": "f76b40cc678f7b909b55ec5eae0d5de557252c235735eef1145f8a01a2222f76",
+    "sites_24_99.csv": "3f69693c43667ae1cbe326b6ef01c26a489f8539b4fa44b8800718dd468f3fee",
+    "sites_25_42.csv": "8db36f4a8c1565f09a63c5be1fb69e2f9468183dd0a15702a5c990b6c4ddf1fb",
+    "sites_32_42.csv": "bceeed8d5f3f9a1994fef97ce2af62f8473d7839d0bb94a56fcb54842e567d14",
+    "sites_32_7.csv": "ea0bed5b2823ba85269663b279cd4f65ab1790a9e988536ed046f4173a575d95",
+    "sites_32_99.csv": "4741e967a1cc0c91349d3891024bbcd1dd65718c1703820bce8c0ec2aba81b43",
+    "sites_48_42.csv": "6d95683fe6d0900c1e4c4c277b217eb589549d59ac32b4dcccd2bc51c3502173",
+    "sites_48_7.csv": "b3e1103fecc81db3f379ca0f5803e58ae9e47a619f0f38c47f9b47fe4740ab79",
+    "sites_48_99.csv": "d9551deac178a24405cba59af83ed91879f88acbeb7f1e4becde6a1b367ca2bf"
+  },
+  "ue_hashes": {
+    "701": "19261ca60aab07ce58d90ba9134e700880728a07add47d8dd0f11aa792059675",
+    "702": "00d1f46970be6dfbec240c5672c7d56ce3d165ce8a68dfc9845fef73b9b1ed6a",
+    "703": "0c2a5c1047894ccd35e1c9bced0e42428b8455bc47651824f0d94568b34fae5f"
+  },
+  "rule": "Keep advisor 8+8. Rank extra inventory sites by distance to nearest evaluation site. Preserve old azimuths for common sites; deterministic keyed angles for new sites. Same 64 UE draws, reference radio settings, 4s duration,1s warmup. No retuning. Paired RSRP/SINR q95 <=1dB and same sector >=95%; inspect coverage and all three errors."
+}

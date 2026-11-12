@@ -1,0 +1,27 @@
+{
+  "purpose": "Compare control and mixed CQI definitions under the same frozen low-load scenario.",
+  "cases": [
+    {
+      "name": "control",
+      "mixed_cqi": 0
+    },
+    {
+      "name": "mixed",
+      "mixed_cqi": 1
+    }
+  ],
+  "fixed": "24 sites, 72 sectors, 64 fixed UEs, same seed/run, powers, azimuths, single carrier, log-distance exponent 3, 4 s, 512 bytes per UE every 50 ms.",
+  "warmup_s": 1.0,
+  "feedback_caveat": "UsePdschForCqiGeneration changes CQI input to the scheduler; this is not only a passive change of exported measurement. Track DL bytes separately.",
+  "passive_reference": "In both runs record control S/(I+N), native exported SINR, and mixed estimate reconstructed from data I+N freshness (or noise only).",
+  "source_semantics": "GenerateMixedCqiReport consumes the latest data interference update once; absent an update it divides RS power by noise PSD. Frozen baseline P_A=0 dB.",
+  "rb_caveat": "100 RB baseline has RBG modulo zero, so no trailing RB replacement is required for the mixed reconstruction.",
+  "regression_gate": "New control run must reproduce original serving sectors, connection, DL bytes and radio values before mixed run.",
+  "interpretation": "Diagnostic under low synthetic load; not evidence that mixed equals Experia or that network configuration improved.",
+  "original_cpp_sha256": "0b8451817d0857dc682e7b13b40eb40076147b007bdbef3594794f74932f0254",
+  "experiment_cpp_sha256": "9bae6b442e9661c55861e46fe148ca68e03015d23f2bcce2d0880b0cda3edb97",
+  "input_hashes": {
+    "sites.csv": "d77133848c0c8953066b484303d23baebf434a75e80ee7fd2b2bae7664ea61d3",
+    "ues.csv": "e4af74ba059fa54e7d9dcfcbd44cec95bfec68cfab89b94077d62bf33f773cd2"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "selected_name": "b120_t50",
+  "rule": "Use only the original five training sites. Score = arithmetic mean of training-site MAE for RSRP, SINR and RSRQ + 10 dB per training site missing any of these metrics. Retain all results and report each metric separately.",
+  "training": {
+    "mae_db": {
+      "rsrp": 3.862572492805185,
+      "sinr": 2.8086951027374645,
+      "rsrq": 3.805582425458776
+    },
+    "valid_sites": 5,
+    "missing_sites": [],
+    "score": 3.4922833403338087
+  }
+}

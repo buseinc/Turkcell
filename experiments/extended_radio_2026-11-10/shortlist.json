@@ -1,0 +1,141 @@
+{
+  "selection_uses": "screen training only",
+  "models": [
+    {
+      "model_id": "model_01",
+      "source_screen": "screen_005",
+      "case": {
+        "shadow_std_db": 4.0,
+        "ue_nf_db": 9.0,
+        "udp_interval_ms": 50.0,
+        "sector_policy": "three",
+        "azimuth_seed": 42,
+        "shadow_seed": 42,
+        "spatial_seed": 20261109,
+        "dl_earfcn": 1300,
+        "ul_earfcn": 19300,
+        "family": "far",
+        "beamwidth_deg": 120,
+        "exponent": 3.0,
+        "power_dbm": 49,
+        "profile": "A",
+        "category": "shadow",
+        "label": "Static shadow 4.0",
+        "duration_s": 2.0,
+        "name": "screen_005"
+      },
+      "screen_training": {
+        "mae_db": {
+          "rsrp": 2.045120156221708,
+          "sinr": 2.5408300845268177,
+          "rsrq": 2.598303721288556
+        },
+        "valid_sites": 5,
+        "missing_sites": [],
+        "score": 2.394751320679027
+      }
+    },
+    {
+      "model_id": "model_02",
+      "source_screen": "screen_041",
+      "case": {
+        "shadow_std_db": 0.0,
+        "ue_nf_db": 12.0,
+        "udp_interval_ms": 50.0,
+        "sector_policy": "three",
+        "azimuth_seed": 42,
+        "shadow_seed": 42,
+        "spatial_seed": 20261109,
+        "dl_earfcn": 1300,
+        "ul_earfcn": 19300,
+        "family": "far",
+        "beamwidth_deg": 65,
+        "exponent": 2.7,
+        "power_dbm": 43,
+        "profile": "C",
+        "category": "receiver",
+        "label": "Receiver NF 12.0",
+        "duration_s": 2.0,
+        "name": "screen_041"
+      },
+      "screen_training": {
+        "mae_db": {
+          "rsrp": 2.750691025444522,
+          "sinr": 2.6646426173118267,
+          "rsrq": 3.3916579466578667
+        },
+        "valid_sites": 5,
+        "missing_sites": [],
+        "score": 2.9356638631380716
+      }
+    },
+    {
+      "model_id": "model_03",
+      "source_screen": "screen_024",
+      "case": {
+        "shadow_std_db": 0.0,
+        "ue_nf_db": 12.0,
+        "udp_interval_ms": 50.0,
+        "sector_policy": "three",
+        "azimuth_seed": 42,
+        "shadow_seed": 42,
+        "spatial_seed": 20261109,
+        "dl_earfcn": 1300,
+        "ul_earfcn": 19300,
+        "family": "wide",
+        "beamwidth_deg": 120,
+        "exponent": 3.0,
+        "power_dbm": 46,
+        "profile": "B",
+        "category": "receiver",
+        "label": "Receiver NF 12.0",
+        "duration_s": 2.0,
+        "name": "screen_024"
+      },
+      "screen_training": {
+        "mae_db": {
+          "rsrp": 3.862572492805185,
+          "sinr": 2.1049561853848435,
+          "rsrq": 3.681245109825016
+        },
+        "valid_sites": 5,
+        "missing_sites": [],
+        "score": 3.216257929338348
+      }
+    },
+    {
+      "model_id": "reference",
+      "source_screen": "screen_000",
+      "case": {
+        "shadow_std_db": 0.0,
+        "ue_nf_db": 9.0,
+        "udp_interval_ms": 50.0,
+        "sector_policy": "three",
+        "azimuth_seed": 42,
+        "shadow_seed": 42,
+        "spatial_seed": 20261109,
+        "dl_earfcn": 1300,
+        "ul_earfcn": 19300,
+        "family": "far",
+        "beamwidth_deg": 120,
+        "exponent": 3.0,
+        "power_dbm": 49,
+        "profile": "A",
+        "category": "placement",
+        "label": "UE far",
+        "duration_s": 2.0,
+        "name": "screen_000"
+      },
+      "screen_training": {
+        "mae_db": {
+          "rsrp": 3.9310765108772556,
+          "sinr": 3.869552625998521,
+          "rsrq": 2.7986115856200176
+        },
+        "valid_sites": 5,
+        "missing_sites": [],
+        "score": 3.5330802408319313
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "case": {
+    "shadow_std_db": 0.0,
+    "ue_nf_db": 9.0,
+    "udp_interval_ms": 50.0,
+    "sector_policy": "three",
+    "azimuth_seed": 7,
+    "shadow_seed": 42,
+    "spatial_seed": 20261109,
+    "dl_earfcn": 1300,
+    "ul_earfcn": 19300,
+    "family": "far",
+    "beamwidth_deg": 65,
+    "exponent": 2.7,
+    "power_dbm": 43,
+    "profile": "C",
+    "category": "azimuth",
+    "label": "Alternate antenna rotation",
+    "duration_s": 2.0,
+    "name": "screen_048"
+  },
+  "source_sha256": "902c0560684cf2fd32f6fd8447efa098d1d1358a5cee15aed74b10a89f17cf60",
+  "sites_sha256": "286da14e9c0436a4c241d214db7ae8aa87987c408d9add11a1d6007fc9ce62ac",
+  "ues_sha256": "7414baddf461f52e281ca595544bdfd5b80d36c11887d92075ddb305b68108c5",
+  "outputs_sha256": {
+    "ues.csv": "942819bf1b058e4705291726abdddc6527af6dfc84384381b4a074b0e29d93bf",
+    "sectors.csv": "cefe9873d1e6bf2dd25e8d09643bfba9d938d24ede0eee3982e486c4a259cb48",
+    "radio_samples.csv": "274d4843a536999c56fd73876258f49ad0543c19c69adab54e47e4d6b746ab13",
+    "measurements.csv": "f5252fab50eb494430fd4bf17c791bc92f705dd622edbfd2cf7b989bafcaa2a9",
+    "sinr_components.csv": "5bc80835fdfbacd298945d42b6e69720dcdbf8f604b359adeb9ed6875dfacec8"
+  }
+}

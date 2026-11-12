@@ -1,0 +1,65 @@
+{
+  "purpose": "Exploratory measurement-informed search for joint RSRP/SINR/RSRQ agreement.",
+  "cases": [
+    {
+      "name": "b65_t50",
+      "beamwidth_deg": 65,
+      "udp_interval_ms": 50,
+      "offered_payload_mbps_per_ue": 0.08192,
+      "offered_payload_mbps_all_64": 5.24288
+    },
+    {
+      "name": "b65_t5",
+      "beamwidth_deg": 65,
+      "udp_interval_ms": 5,
+      "offered_payload_mbps_per_ue": 0.8192,
+      "offered_payload_mbps_all_64": 52.4288
+    },
+    {
+      "name": "b90_t50",
+      "beamwidth_deg": 90,
+      "udp_interval_ms": 50,
+      "offered_payload_mbps_per_ue": 0.08192,
+      "offered_payload_mbps_all_64": 5.24288
+    },
+    {
+      "name": "b90_t5",
+      "beamwidth_deg": 90,
+      "udp_interval_ms": 5,
+      "offered_payload_mbps_per_ue": 0.8192,
+      "offered_payload_mbps_all_64": 52.4288
+    },
+    {
+      "name": "b120_t50",
+      "beamwidth_deg": 120,
+      "udp_interval_ms": 50,
+      "offered_payload_mbps_per_ue": 0.08192,
+      "offered_payload_mbps_all_64": 5.24288
+    },
+    {
+      "name": "b120_t5",
+      "beamwidth_deg": 120,
+      "udp_interval_ms": 5,
+      "offered_payload_mbps_per_ue": 0.8192,
+      "offered_payload_mbps_all_64": 52.4288
+    }
+  ],
+  "mixed_cqi": true,
+  "duration_s": 4.0,
+  "warmup_s": 1.0,
+  "fixed": "Same 24 sites, 72 sectors, 64 UE positions, seed 42/run 1, original rotations, 46 dBm per sector, 15 dBi peak gain, single carrier, log-distance exponent 3, flat ground, no fading/shadowing.",
+  "antenna_caveat": "Beamwidths are explicit scenario hypotheses, not inferred operator antennas; changing width while retaining peak gain changes off-boresight gains.",
+  "load_caveat": "1x/10x synthetic offered payload, not inferred real demand, earthquake traffic or a KPI-calibrated load. No outage, capacity or service failure claims.",
+  "selection_rule": "Use only the original five training sites. Score = arithmetic mean of training-site MAE for RSRP, SINR and RSRQ + 10 dB per training site missing any of these metrics. Retain all results and report each metric separately.",
+  "score_caveat": "Equal weighting is an exploratory ranking convention, not an operator acceptance criterion. Also report Pareto tradeoffs and site/UE coverage.",
+  "control_rule": "Three original control sites are excluded from ranking. They have been seen in previous studies, so this is not a blind external validation.",
+  "no_baseline_replacement": true,
+  "regression_gate": "New b65_t50 run must reproduce the prior mixed case on all 64 UEs before other cases.",
+  "source_cpp_sha256": "bfec675f41965b0ca1aa92a0468257691d4496a99b09bbafa0bf71fd8dad96b0",
+  "original_cpp_sha256": "0b8451817d0857dc682e7b13b40eb40076147b007bdbef3594794f74932f0254",
+  "input_hashes": {
+    "sites.csv": "d77133848c0c8953066b484303d23baebf434a75e80ee7fd2b2bae7664ea61d3",
+    "ues.csv": "e4af74ba059fa54e7d9dcfcbd44cec95bfec68cfab89b94077d62bf33f773cd2",
+    "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6"
+  }
+}

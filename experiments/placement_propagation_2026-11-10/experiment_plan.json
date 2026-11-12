@@ -1,0 +1,117 @@
+{
+  "purpose": "Explore uncertain UE distribution, propagation loss and power while preserving all data-defined inputs.",
+  "screen_count": 135,
+  "proxy_checks": {
+    "static_rsrp_rsrq_max_error_db": 1.7034267330018338e-09,
+    "same_serving_sectors": true,
+    "sinr_proxy": "S/N only, ignoring data-channel interference; screening only"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "family": "wide",
+      "beamwidth_deg": 120,
+      "exponent": 3.0,
+      "power_dbm": 46,
+      "ue_file": "ues_wide.csv",
+      "sites_file": "sites.csv",
+      "duration_s": 4.0
+    },
+    {
+      "name": "candidate_01",
+      "family": "far",
+      "beamwidth_deg": 120,
+      "exponent": 3.0,
+      "power_dbm": 49,
+      "proxy_training_score": 3.469714072558179,
+      "ue_file": "ues_far.csv",
+      "sites_file": "sites.csv",
+      "duration_s": 4.0
+    },
+    {
+      "name": "candidate_02",
+      "family": "wide",
+      "beamwidth_deg": 120,
+      "exponent": 3.0,
+      "power_dbm": 43,
+      "proxy_training_score": 3.7262396852379975,
+      "ue_file": "ues_wide.csv",
+      "sites_file": "sites.csv",
+      "duration_s": 4.0
+    },
+    {
+      "name": "candidate_03",
+      "family": "uniform",
+      "beamwidth_deg": 120,
+      "exponent": 3.0,
+      "power_dbm": 49,
+      "proxy_training_score": 4.32566083531984,
+      "ue_file": "ues_uniform.csv",
+      "sites_file": "sites.csv",
+      "duration_s": 4.0
+    },
+    {
+      "name": "candidate_04",
+      "family": "far",
+      "beamwidth_deg": 65,
+      "exponent": 2.7,
+      "power_dbm": 43,
+      "proxy_training_score": 4.115004822875849,
+      "ue_file": "ues_far.csv",
+      "sites_file": "sites.csv",
+      "duration_s": 4.0
+    }
+  ],
+  "families": {
+    "wide": "8 UEs per anchor, 1-4 km annulus",
+    "near": "8 per anchor, 0.5-2 km",
+    "uniform": "uniform in evaluation-site hull",
+    "mixed": "4 near and 4 far per anchor, 0.5-2 / 2-6 km",
+    "far": "8 per anchor, 2-6 km"
+  },
+  "grid": {
+    "beamwidth_deg": [
+      65,
+      90,
+      120
+    ],
+    "exponent": [
+      2.7,
+      3.0,
+      3.3
+    ],
+    "power_dbm": [
+      43,
+      46,
+      49
+    ]
+  },
+  "spatial_seed": 20261109,
+  "independent_spatial_seed": 20261110,
+  "mixed_cqi": true,
+  "udp_interval_ms": 50,
+  "fixed": "Known site coordinates, site IDs/roles, azimuths, three sectors/site, one carrier, band, receiver NF, original Experia targets and five/three site split.",
+  "shortlist_rule": "Best training proxy per family; take best three distinct non-baseline families, additionally best wide-family variation if absent. If all use exponent 3 and room remains, add best exponent-not-3 challenge because S/N is only a proxy. At most four new native candidates.",
+  "proxy_caveat": "Static strongest-cell association, exact model RSRP/RSRQ and optimistic S/N proxy for mixed SINR. These are screening estimates, not native experiment results.",
+  "selection_rule": "Select among native baseline and shortlisted native cases only, using equal-weight mean of three training-site MAEs plus 10 dB per missing training site. Control sites excluded from ranking; all previously seen.",
+  "followup_rule": "Freeze selected native model before controls. Check a new UE seed without retuning; test same selected UEs with 32 and 48 total sites, preserving common azimuths. Report both adjacent buffer differences using <=1 dB q95 RSRP/SINR and >=95% same serving sector.",
+  "uncertainty": "UE distributions, power, exponent and antennas are hypotheses, not operator estimates; no terrain or shadowing is introduced. Three supplemental site locations remain unverified. Low synthetic load is not real demand.",
+  "source_cpp_sha256": "5e49403d873334b967c30088a735159ac140248854706ac232e126652f2d4c45",
+  "original_cpp_sha256": "0b8451817d0857dc682e7b13b40eb40076147b007bdbef3594794f74932f0254",
+  "input_hashes": {
+    "sites.csv": "d77133848c0c8953066b484303d23baebf434a75e80ee7fd2b2bae7664ea61d3",
+    "sites_32.csv": "d564fcd251e934c29c8048ba49aedee8fbf620baf20d7790a1091a199a6db2b7",
+    "sites_48.csv": "ad12dd4dd82850a4351328bebd34efc7d556e5d7c107b34f5b8edc2b78eefad4",
+    "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6",
+    "ues_far.csv": "7414baddf461f52e281ca595544bdfd5b80d36c11887d92075ddb305b68108c5",
+    "ues_far_seed2.csv": "2ddbe3d744eda95b31d0315c5307ff1613f84d12dfb51517eb6410b46ec4f4ff",
+    "ues_mixed.csv": "86e3f7a23f4b194ec1870b3863b85ebeccbeb08c5f69d79aadc47be5a9d24cce",
+    "ues_mixed_seed2.csv": "9ec380d84d83f5796d2756a977085f4d59e8a6733133350a4f0069a96291f373",
+    "ues_near.csv": "93c3ec2cdd1877a27f6737019f127f0762f56bc36bf35c27d0d122d9a79da242",
+    "ues_near_seed2.csv": "5ed22571fae83dc216e62b642da51668454426563fd06894e01c850ea52e683e",
+    "ues_uniform.csv": "8c0feafe9e189345f5191af8f81a22322593534bf7f71abfcc19c011d4621a65",
+    "ues_uniform_seed2.csv": "777802f0cda6926ea46cc8ea8a26a9a32b30cefd95eccb1f50601f5153251376",
+    "ues_wide.csv": "e4af74ba059fa54e7d9dcfcbd44cec95bfec68cfab89b94077d62bf33f773cd2",
+    "ues_wide_seed2.csv": "4d248abad40469896bda694b511f181136f90754ffcb662176ff33bd100ae4e5"
+  }
+}

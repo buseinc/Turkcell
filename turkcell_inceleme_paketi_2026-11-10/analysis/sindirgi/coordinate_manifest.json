@@ -1,0 +1,44 @@
+{
+  "reference": {
+    "latitude": 39.2461,
+    "longitude": 28.0697,
+    "ellipsoidal_height_m": 0,
+    "source": "Project advisor/selection files; external epicenter not reverified"
+  },
+  "projection": {
+    "datum_assumption": "WGS84",
+    "method": "geodetic -> ECEF -> local ENU",
+    "semi_major_axis_m": 6378137.0,
+    "inverse_flattening": 298.257223563,
+    "x": "east metres",
+    "y": "north metres",
+    "z_ground_m": 0,
+    "z_note": "Flat scenario assumption; curvature U is not terrain.",
+    "reference_url": "https://gssc.esa.int/navipedia/index.php/Transformations_between_ECEF_and_ENU_coordinates"
+  },
+  "ranking_distance": {
+    "method": "haversine",
+    "sphere_radius_km": 6371.0,
+    "reason": "Reproduce supplied selection distance convention"
+  },
+  "display_radius_km": 30.0,
+  "python": "3.12.7",
+  "sources": [
+    {
+      "path": "cell_site_coordinates\\cell_site_coordinates.xlsx",
+      "sha256": "9b400ac9e083112bdce4d6c93b034d7824cea7a7e6a5c22580bc5c99a2d3a5d5"
+    },
+    {
+      "path": "analysis\\radio_cell_summary.csv",
+      "sha256": "9b72ddb8d40fa28967d89b00df2f0440cb5c7f854f59732a5f9f7cbe6e3e8c96"
+    },
+    {
+      "path": "sindirgi_lte_sites.csv",
+      "sha256": "833c442a512881118c7b56d24e1f971f3ccbc356c989b9deecd98f2ae78105ce"
+    },
+    {
+      "path": "sindirgi_lte_cells.csv",
+      "sha256": "e599acabafa95ce272bcecc4df57afc8747126e77f8b7782d4c106a40346a6f2"
+    }
+  ]
+}

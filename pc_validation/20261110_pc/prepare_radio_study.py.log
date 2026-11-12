@@ -1,0 +1,16 @@
+{
+  "train": [
+    "SITE_000130",
+    "SITE_000296",
+    "SITE_000444",
+    "SITE_000482",
+    "SITE_000554"
+  ],
+  "holdout": [
+    "SITE_000440",
+    "SITE_000441",
+    "SITE_000443"
+  ],
+  "screening_cases": 9,
+  "ues": 64
+}

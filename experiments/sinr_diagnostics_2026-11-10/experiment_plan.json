@@ -1,0 +1,17 @@
+{
+  "purpose": "Audit S0 control-channel RSRP/SINR/RSRQ definitions and passively decompose S, I and N.",
+  "baseline": "24 sites, 72 cochannel sectors, fixed 64 UEs, frozen S0 parameters, 4 seconds, same UDP probe.",
+  "warmup_s": 1.0,
+  "observation": "Passive signal-PSD and control interference-plus-noise chunk processors; sampled at native 97-subframe PHY trace times.",
+  "noise": "Use actual UE GetNoiseFigure and the installed helper formula 10^((-174 + NF - 30)/10) W/Hz.",
+  "verification": "Same 64 UE results as frozen baseline; time-aligned PSDs; reconstruct native RSRP/SINR; independently compare RSRQ.",
+  "decomposition": "I = (I+N) - N; classify I>N as interference dominated; S/N is an algebraic no-interference reference, not a new simulated network.",
+  "spatial_attribution": "Analytical per-sector powers using the same frozen coordinates, CosineAntennaModel and log-distance model; use only if their S and sum(I) agree with passive observations.",
+  "scope": "This audits the chosen synthetic control-channel model, not Experia equivalence or real operator interference.",
+  "original_cpp_sha256": "0b8451817d0857dc682e7b13b40eb40076147b007bdbef3594794f74932f0254",
+  "diagnostic_cpp_sha256": "96b906e0c62d85d35ca891be59388345cc2313dfa0ae24abfae4924da0d336fe",
+  "input_hashes": {
+    "sites.csv": "d77133848c0c8953066b484303d23baebf434a75e80ee7fd2b2bae7664ea61d3",
+    "ues.csv": "e4af74ba059fa54e7d9dcfcbd44cec95bfec68cfab89b94077d62bf33f773cd2"
+  }
+}

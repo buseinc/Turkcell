@@ -1,0 +1,4 @@
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+Finished executing the following commands:
+/usr/bin/cmake --build /home/buse/ns3/ns-3.44/cmake-cache -j 2 --target lena-simple-epc

@@ -1,0 +1,70 @@
+{
+  "sites": 16,
+  "sectors": 48,
+  "ues": 100,
+  "rrc_connected": 100,
+  "ues_with_dl_bytes": 75,
+  "zero_dl_ue_ids": [
+    4,
+    5,
+    11,
+    15,
+    16,
+    18,
+    20,
+    21,
+    29,
+    31,
+    37,
+    39,
+    41,
+    43,
+    44,
+    47,
+    48,
+    61,
+    66,
+    73,
+    78,
+    84,
+    87,
+    92,
+    93
+  ],
+  "radio_samples": 1768,
+  "wall_seconds": 44.797426525999995,
+  "evaluation_serving_ues": 73,
+  "quantiles": {
+    "s0_rsrp": {
+      "n": 73,
+      "q05": -133.5292619482,
+      "median": -117.42859585700002,
+      "q95": -96.36197814622001
+    },
+    "experia_rsrp": {
+      "n": 55,
+      "q05": -118.76504311089802,
+      "median": -104.18782627660092,
+      "q95": -97.3958567791429
+    },
+    "s0_sinr": {
+      "n": 73,
+      "q05": -11.65998675826,
+      "median": -1.66773550322,
+      "q95": 6.64190997837359
+    },
+    "experia_sinr": {
+      "n": 55,
+      "q05": 2.8341479072737696,
+      "median": 11.751712013925514,
+      "q95": 17.594653948730183
+    }
+  },
+  "interpretation": [
+    "2-second diagnostic, not an availability or service-level estimate.",
+    "Uniform UE placement is an assumption; observation population is unknown.",
+    "Synthetic sector IDs do not map one-to-one to measured cell IDs.",
+    "SINR uses PDCCH interference; Experia aggregation/channel semantics are not confirmed.",
+    "Buffer convergence, alternative placements/seeds/models and holdout checks remain."
+  ]
+}

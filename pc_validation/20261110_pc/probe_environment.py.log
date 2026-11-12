@@ -1,0 +1,240 @@
+{
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "ns3_root": "/home/buse/ns3/ns-3.44",
+  "ns3_version": "3.44",
+  "tools": {
+    "g++": {
+      "path": "/usr/bin/g++",
+      "version": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
+    },
+    "cmake": {
+      "path": "/usr/bin/cmake",
+      "version": "cmake version 3.22.1"
+    },
+    "ninja": {
+      "path": "/usr/bin/ninja",
+      "version": "1.10.1"
+    },
+    "python3": {
+      "path": "/usr/bin/python3",
+      "version": "Python 3.10.12"
+    },
+    "pkg-config": {
+      "path": "/usr/bin/pkg-config",
+      "version": "0.29.2"
+    }
+  },
+  "cmake_configs": [
+    "/home/buse/ns3/ns-3.44/cmake-cache/ns3Config.cmake"
+  ],
+  "pkgconfig_files": [],
+  "lte_library_present": true,
+  "build_options": [
+    "CMAKE_BUILD_TYPE:STRING=default",
+    "NS3_EXAMPLES:BOOL=ON",
+    "NS3_TESTS:BOOL=OFF"
+  ]
+}
+
+SOURCE src/antenna/model/cosine-antenna-model.cc
+29:         TypeId("ns3::CosineAntennaModel")
+30:             .SetParent<AntennaModel>()
+31:             .SetGroupName("Antenna")
+32:             .AddConstructor<CosineAntennaModel>()
+33:             .AddAttribute("VerticalBeamwidth",
+34:                           "The 3 dB vertical beamwidth (degrees). A beamwidth of 360 deg "
+35:                           "corresponds to constant gain",
+36:                           DoubleValue(360),
+37:                           MakeDoubleAccessor(&CosineAntennaModel::SetVerticalBeamwidth,
+38:                                              &CosineAntennaModel::GetVerticalBeamwidth),
+39:                           MakeDoubleChecker<double>(0, 360))
+40:             .AddAttribute("HorizontalBeamwidth",
+41:                           "The 3 dB horizontal beamwidth (degrees). A beamwidth of 360 deg "
+42:                           "corresponds to constant gain",
+43:                           DoubleValue(120),
+44:                           MakeDoubleAccessor(&CosineAntennaModel::SetHorizontalBeamwidth,
+45:                                              &CosineAntennaModel::GetHorizontalBeamwidth),
+46:                           MakeDoubleChecker<double>(0, 360))
+47:             .AddAttribute("Orientation",
+48:                           "The angle (degrees) that expresses the orientation of the antenna on "
+49:                           "the x-y plane relative to the x axis",
+50:                           DoubleValue(0.0),
+51:                           MakeDoubleAccessor(&CosineAntennaModel::SetOrientation,
+52:                                              &CosineAntennaModel::GetOrientation),
+53:                           MakeDoubleChecker<double>(-360, 360))
+54:             .AddAttribute("MaxGain",
+55:                           "The gain (dB) at the antenna boresight (the direction of maximum gain)",
+56:                           DoubleValue(0.0),
+57:                           MakeDoubleAccessor(&CosineAntennaModel::m_maxGain),
+58:                           MakeDoubleChecker<double>());
+94:     return RadiansToDegrees(beamwidthRadians);
+95: }
+96: 
+97: void
+98: CosineAntennaModel::SetVerticalBeamwidth(double verticalBeamwidthDegrees)
+99: {
+100:     NS_LOG_FUNCTION(this << verticalBeamwidthDegrees);
+101:     m_verticalExponent = GetExponentFromBeamwidth(verticalBeamwidthDegrees);
+102: }
+103: 
+104: void
+105: CosineAntennaModel::SetHorizontalBeamwidth(double horizontalBeamwidthDegrees)
+106: {
+107:     NS_LOG_FUNCTION(this << horizontalBeamwidthDegrees);
+108:     m_horizontalExponent = GetExponentFromBeamwidth(horizontalBeamwidthDegrees);
+109: }
+110: 
+111: double
+112: CosineAntennaModel::GetVerticalBeamwidth() const
+113: {
+114:     return GetBeamwidthFromExponent(m_verticalExponent);
+115: }
+116: 
+117: double
+118: CosineAntennaModel::GetHorizontalBeamwidth() const
+119: {
+120:     return GetBeamwidthFromExponent(m_horizontalExponent);
+121: }
+122: 
+123: void
+124: CosineAntennaModel::SetOrientation(double orientationDegrees)
+125: {
+126:     NS_LOG_FUNCTION(this << orientationDegrees);
+127:     m_orientationRadians = DegreesToRadians(orientationDegrees);
+128: }
+129: 
+130: double
+131: CosineAntennaModel::GetOrientation() const
+132: {
+133:     return RadiansToDegrees(m_orientationRadians);
+134: }
+135: 
+
+SOURCE src/lte/helper/lte-helper.h
+122:      * @param type type of path loss model, must be a type name of any class
+123:      *             inheriting from ns3::PropagationLossModel, for example:
+124:      *             "ns3::FriisPropagationLossModel"
+125:      */
+126:     void SetPathlossModelType(TypeId type);
+127: 
+128:     /**
+129:      * Set an attribute for the path loss models to be created.
+130:      *
+131:      * @param n the name of the attribute
+132:      * @param v the value of the attribute
+133:      */
+134:     void SetPathlossModelAttribute(std::string n, const AttributeValue& v);
+135: 
+136:     /**
+137:      * Set the type of scheduler to be used by eNodeB devices.
+138:      *
+222:      * @param type type of antenna model, must be a type name of any class
+223:      *             inheriting from ns3::AntennaModel, for example:
+224:      *             "ns3::IsotropicAntennaModel"
+225:      */
+226:     void SetEnbAntennaModelType(std::string type);
+227: 
+228:     /**
+229:      * Set an attribute for the eNodeB antenna model to be created.
+230:      *
+231:      * @param n the name of the attribute.
+232:      * @param v the value of the attribute
+233:      */
+234:     void SetEnbAntennaModelAttribute(std::string n, const AttributeValue& v);
+235: 
+236:     /**
+237:      * Set an attribute for the UE devices (LteUeNetDevice) to be created.
+238:      *
+351:      * camps to a suitable cell).
+352:      *
+353:      * Note that this function can only be used in EPC-enabled simulation.
+354:      */
+355:     void Attach(NetDeviceContainer ueDevices);
+356: 
+357:     /**
+358:      * @brief Enables automatic attachment of a UE device to a suitable cell
+359:      *        using Idle mode initial cell selection procedure.
+385:      * The function can be used in both LTE-only and EPC-enabled simulations.
+386:      * Note that this function will disable Idle mode initial cell selection
+387:      * procedure.
+388:      */
+389:     void Attach(NetDeviceContainer ueDevices, Ptr<NetDevice> enbDevice);
+390: 
+391:     /**
+392:      * @brief Manual attachment of a UE device to the network via a given eNodeB.
+393:      * @param ueDevice the UE device to be attached
+414:      *
+415:      * Users are encouraged to use automatic attachment (Idle mode cell selection)
+416:      * instead of this function.
+417:      *
+418:      * \sa LteHelper::Attach(NetDeviceContainer ueDevices);
+419:      */
+420:     void AttachToClosestEnb(NetDeviceContainer ueDevices, NetDeviceContainer enbDevices);
+421: 
+422:     /**
+
+SOURCE src/lte/model/lte-ue-phy.h
+299:      * @param [in] rsrp
+300:      * @param [in] sinr
+301:      * @param [in] componentCarrierId
+302:      */
+303:     typedef void (*RsrpSinrTracedCallback)(uint16_t cellId,
+304:                                            uint16_t rnti,
+305:                                            double rsrp,
+306:                                            double sinr,
+307:                                            uint8_t componentCarrierId);
+760:     uint32_t m_raPreambleId; ///< RA preamble ID
+761:     uint32_t m_raRnti;       ///< RA RNTI
+762: 
+763:     /**
+764:      * The `ReportCurrentCellRsrpSinr` trace source. Trace information regarding
+765:      * RSRP and average SINR (see TS 36.214). Exporting cell ID, RNTI, RSRP, and
+766:      * SINR. Moreover it reports the m_componentCarrierId.
+767:      */
+768:     TracedCallback<uint16_t, uint16_t, double, double, uint8_t> m_reportCurrentCellRsrpSinrTrace;
+
+SOURCE src/lte/model/lte-ue-phy.cc
+220:                           "Transmission mode 7 gain in dB",
+221:                           DoubleValue(0.0),
+222:                           MakeDoubleAccessor(&LteUePhy::SetTxMode7Gain),
+223:                           MakeDoubleChecker<double>())
+224:             .AddTraceSource("ReportCurrentCellRsrpSinr",
+225:                             "RSRP and SINR statistics.",
+226:                             MakeTraceSourceAccessor(&LteUePhy::m_reportCurrentCellRsrpSinrTrace),
+227:                             "ns3::LteUePhy::RsrpSinrTracedCallback")
+228:             .AddAttribute("RsrpSinrSamplePeriod",
+605:             double avrgSinrForRlf = ComputeAvgSinr(m_ctrlSinrForRlf);
+606:             RlfDetection(10 * log10(avrgSinrForRlf));
+607:         }
+608: 
+609:         m_reportCurrentCellRsrpSinrTrace(m_cellId,
+610:                                          m_rnti,
+611:                                          rsrp,
+612:                                          avSinr,
+613:                                          (uint16_t)m_componentCarrierId);
+907:     LteUeCphySapUser::UeMeasurementsParameters ret{};
+908: 
+909:     for (auto it = m_ueMeasurementsMap.begin(); it != m_ueMeasurementsMap.end(); it++)
+910:     {
+911:         double avg_rsrp = (*it).second.rsrpSum / (double)(*it).second.rsrpNum;
+912:         double avg_rsrq = (*it).second.rsrqSum / (double)(*it).second.rsrqNum;
+913:         /*
+914:          * In CELL_SEARCH state, this may result in avg_rsrq = 0/0 = -nan.
+915:          * UE RRC must take this into account when receiving measurement reports.
+1172:     if (itMeasMap == m_ueMeasurementsMap.end())
+1173:     {
+1174:         // insert new entry
+1175:         UeMeasurementsElement newEl;
+1176:         newEl.rsrpSum = rsrp_dBm;
+1177:         newEl.rsrpNum = 1;
+1178:         newEl.rsrqSum = 0;
+1179:         newEl.rsrqNum = 0;
+1180:         m_ueMeasurementsMap.insert(std::pair<uint16_t, UeMeasurementsElement>(cellId, newEl));
+1181:     }
+1182:     else
+1183:     {
+1184:         (*itMeasMap).second.rsrpSum += rsrp_dBm;
+1185:         (*itMeasMap).second.rsrpNum++;
+1186:     }
+1187: 
+1188:     /*

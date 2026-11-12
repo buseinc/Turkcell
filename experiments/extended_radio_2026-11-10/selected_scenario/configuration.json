@@ -1,0 +1,173 @@
+{
+  "status": "Robustness-selected exploratory representative; not operator reconstruction",
+  "recommended_model": "reference",
+  "nominal_best_model": "reference",
+  "reference_within_margin": false,
+  "case": {
+    "shadow_std_db": 0.0,
+    "ue_nf_db": 9.0,
+    "udp_interval_ms": 50.0,
+    "sector_policy": "three",
+    "azimuth_seed": 42,
+    "shadow_seed": 1001,
+    "spatial_seed": 701,
+    "dl_earfcn": 1300,
+    "ul_earfcn": 19300,
+    "family": "far",
+    "beamwidth_deg": 120,
+    "exponent": 3.0,
+    "power_dbm": 49,
+    "profile": "A",
+    "category": "placement",
+    "label": "UE far",
+    "duration_s": 8.0,
+    "name": "confirm_24",
+    "total_sites": 24,
+    "model_id": "reference",
+    "draw_index": 0
+  },
+  "model_assumptions": {
+    "stack": "classic LTE/EPC",
+    "sectors_per_site": {
+      "SITE_000440": 3,
+      "SITE_000441": 3,
+      "SITE_000130": 3,
+      "SITE_000296": 3,
+      "SITE_000443": 3,
+      "SITE_000554": 3,
+      "SITE_000482": 3,
+      "SITE_000444": 3,
+      "SITE_000506": 3,
+      "SITE_000480": 3,
+      "SITE_000553": 3,
+      "SITE_000200": 3,
+      "SITE_000224": 3,
+      "SITE_000555": 3,
+      "SITE_000475": 3,
+      "SITE_000206": 3,
+      "SITE_000204": 3,
+      "SITE_000445": 3,
+      "SITE_000220": 3,
+      "SITE_000198": 3,
+      "SITE_000442": 3,
+      "SITE_000145": 3,
+      "SITE_000083": 3,
+      "SITE_000162": 3
+    },
+    "carriers": 1,
+    "dl_earfcn": 1300,
+    "ul_earfcn": 19300,
+    "bandwidth_rb": 100,
+    "enb_conducted_tx_power_dbm": 49.0,
+    "ue_configured_tx_power_dbm": 23,
+    "antenna": "CosineAntennaModel",
+    "horizontal_beamwidth_deg": 120.0,
+    "vertical_beamwidth_deg": 360,
+    "antenna_max_gain_dbi": 15,
+    "orientation": "counterclockwise degrees from east (+x)",
+    "enb_height_m": 30,
+    "ue_height_m": 1.5,
+    "ground": "flat; actual altitude unknown",
+    "propagation": "log-distance",
+    "log_distance_exponent": 3.0,
+    "propagation_note": "1 m free-space reference at selected DL carrier; optional static shadow, no terrain",
+    "shadowing": {
+      "type": "static reciprocal coordinate-keyed per-link Gaussian dB",
+      "std_db": 0.0,
+      "seed": 1001
+    },
+    "receiver_noise_figure_db": 9.0,
+    "fading": false,
+    "scheduler": "PfFfMacScheduler",
+    "cqi_source": "PDCCH signal and PDSCH interference; UsePdschForCqiGeneration=true",
+    "mixed_cqi_enabled": true,
+    "radio_trace_period_subframes": 97,
+    "attachment": "automatic initial radio-based cell selection with EPC; UE DL EARFCN 1300",
+    "dl_application": "512-byte UDP payload every 50 ms, starting at 0.3 s",
+    "interpretation": "Diagnostic assumed scenario, not operator reconstruction or calibrated coverage."
+  },
+  "ensemble_training": "reference",
+  "ensemble_summary": {
+    "model_id": "reference",
+    "mean_training_score": 3.1425803776852392,
+    "std_training_score": 0.1183709110650401,
+    "robust_score": 3.201765833217759,
+    "train_site_observations": 15,
+    "control_site_observations": 9,
+    "minimum_connected": 64,
+    "minimum_receiving_dl": 64,
+    "train_rsrp_mae_db": 3.518868736267875,
+    "train_rsrp_std_db": 0.4758641372992103,
+    "train_sinr_mae_db": 3.3208525426630344,
+    "train_sinr_std_db": 0.16283573600617968,
+    "train_rsrq_mae_db": 2.588019854124808,
+    "train_rsrq_std_db": 0.1419524569319252,
+    "control_rsrp_mae_db": 2.958812444880452,
+    "control_rsrp_std_db": 0.8343786894131696,
+    "control_sinr_mae_db": 3.6364825360933613,
+    "control_sinr_std_db": 1.3807562455859617,
+    "control_rsrq_mae_db": 4.081462098766278,
+    "control_rsrq_std_db": 0.21169609122203686
+  },
+  "representative_8s_training": {
+    "mae_db": {
+      "rsrp": 2.9258463785674422,
+      "sinr": 3.4502764206358383,
+      "rsrq": 2.519060222132925
+    },
+    "valid_sites": 5,
+    "missing_sites": [],
+    "score": 2.9650610071120687
+  },
+  "representative_8s_control": {
+    "mae_db": {
+      "rsrp": 2.14295284710658,
+      "sinr": 5.196463967310539,
+      "rsrq": 3.8020790351666216
+    },
+    "valid_sites": 3,
+    "missing_sites": [],
+    "score": 3.713831949861247
+  },
+  "source_cpp_sha256": "902c0560684cf2fd32f6fd8447efa098d1d1358a5cee15aed74b10a89f17cf60",
+  "code_hashes": {
+    "sindirgi_baseline.cc": "902c0560684cf2fd32f6fd8447efa098d1d1358a5cee15aed74b10a89f17cf60",
+    "static-shadow-model.h": "9190b34909d65c3848aff3b04af1365ab8ff9c038d0fb09669c75632ab5eb445",
+    "run_baseline.py": "d891b6d879a1259819281c28ef9825392494da12a79d053c27b6f6d265488a43"
+  },
+  "files": {
+    "sites.csv": "d77133848c0c8953066b484303d23baebf434a75e80ee7fd2b2bae7664ea61d3",
+    "ues.csv": "19261ca60aab07ce58d90ba9134e700880728a07add47d8dd0f11aa792059675"
+  },
+  "buffer_checks": [
+    {
+      "from_sites": 24,
+      "to_sites": 32,
+      "paired_ues": 64,
+      "rsrp_q95_abs_change_db": 0.0,
+      "sinr_q95_abs_change_db": 0.19154343473896737,
+      "same_serving_sector_fraction": 1.0,
+      "passed": true,
+      "descriptive_rsrq_q95_change_db": 0.16310569822974136
+    },
+    {
+      "from_sites": 32,
+      "to_sites": 48,
+      "paired_ues": 64,
+      "rsrp_q95_abs_change_db": 0.0,
+      "sinr_q95_abs_change_db": 0.14510134226296512,
+      "same_serving_sector_fraction": 1.0,
+      "passed": true,
+      "descriptive_rsrq_q95_change_db": 0.14134644421587103
+    }
+  ],
+  "duration_check": {
+    "paired_ues": 64,
+    "rsrp_q95_abs_change_db": 0.0,
+    "sinr_q95_abs_change_db": 0.4092053670597074,
+    "same_serving_sector_fraction": 1.0,
+    "passed": true
+  },
+  "selection_rule": "Screen using five training sites only: mean of RSRP/SINR/RSRQ MAE +10 dB per missing training site. Take best three distinct structural models plus reference A if absent. Structural identity excludes stochastic draws. Evaluate all shortlisted models on the same three 4-second UE/azimuth/shadow draws. Choose minimum mean(training score)+0.5*population std; if reference A is within 0.10 dB of minimum, recommend reference A for parsimony. Controls excluded; all control sites have been seen previously.",
+  "original_baseline_unchanged": true
+}

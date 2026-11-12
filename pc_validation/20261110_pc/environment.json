@@ -1,0 +1,37 @@
+{
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "ns3_root": "/home/buse/ns3/ns-3.44",
+  "ns3_version": "3.44",
+  "tools": {
+    "g++": {
+      "path": "/usr/bin/g++",
+      "version": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
+    },
+    "cmake": {
+      "path": "/usr/bin/cmake",
+      "version": "cmake version 3.22.1"
+    },
+    "ninja": {
+      "path": "/usr/bin/ninja",
+      "version": "1.10.1"
+    },
+    "python3": {
+      "path": "/usr/bin/python3",
+      "version": "Python 3.10.12"
+    },
+    "pkg-config": {
+      "path": "/usr/bin/pkg-config",
+      "version": "0.29.2"
+    }
+  },
+  "cmake_configs": [
+    "/home/buse/ns3/ns-3.44/cmake-cache/ns3Config.cmake"
+  ],
+  "pkgconfig_files": [],
+  "lte_library_present": true,
+  "build_options": [
+    "CMAKE_BUILD_TYPE:STRING=default",
+    "NS3_EXAMPLES:BOOL=ON",
+    "NS3_TESTS:BOOL=OFF"
+  ]
+}

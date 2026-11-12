@@ -1,0 +1,32 @@
+{
+  "case": {
+    "shadow_std_db": 0.0,
+    "ue_nf_db": 9.0,
+    "udp_interval_ms": 50.0,
+    "sector_policy": "three",
+    "azimuth_seed": 42,
+    "shadow_seed": 42,
+    "spatial_seed": 20261109,
+    "dl_earfcn": 3600,
+    "ul_earfcn": 21600,
+    "family": "wide",
+    "beamwidth_deg": 120,
+    "exponent": 3.0,
+    "power_dbm": 46,
+    "profile": "B",
+    "category": "carrier",
+    "label": "Single carrier Band 8 hypothesis",
+    "duration_s": 2.0,
+    "name": "screen_031"
+  },
+  "source_sha256": "902c0560684cf2fd32f6fd8447efa098d1d1358a5cee15aed74b10a89f17cf60",
+  "sites_sha256": "d77133848c0c8953066b484303d23baebf434a75e80ee7fd2b2bae7664ea61d3",
+  "ues_sha256": "e4af74ba059fa54e7d9dcfcbd44cec95bfec68cfab89b94077d62bf33f773cd2",
+  "outputs_sha256": {
+    "ues.csv": "16974e1438b7e1d2a633091da4f2d3d852fc968c9c08d467808554df39879c85",
+    "sectors.csv": "70624259bc350ae2f574fa6afc5016e7c7ec6748091d7f8c593b6b9889c7aab0",
+    "radio_samples.csv": "b2131f7a952ce2773f7805759313879711b06e8315017c9ca61d0edab9889121",
+    "measurements.csv": "949f541e13c8b4b67ba3a9c82aac8d59b53fc4abe94a609c639ce2c88a2f572f",
+    "sinr_components.csv": "ea60f393ff81c313a7533cfd2150557f01bbf98f0e8f9d373307061a35c8c8cc"
+  }
+}

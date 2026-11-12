@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "cases": 6,
+  "regression": {
+    "passed": true,
+    "max_numeric_difference": 0.0
+  },
+  "original_baseline_unchanged": true,
+  "all_ue_positions_preserved": true,
+  "max_native_mixed_reconstruction_error_db": 3.730349362740526e-14,
+  "selected_using_training_only": true,
+  "selected_name": "b120_t50",
+  "load_pair_comparisons": [
+    {
+      "beamwidth_deg": 65,
+      "same_serving_sectors": true,
+      "max_rsrp_change_db": 0.0,
+      "max_rsrq_change_db": 0.0,
+      "mean_native_sinr_change_db": -4.931886552697349
+    },
+    {
+      "beamwidth_deg": 90,
+      "same_serving_sectors": true,
+      "max_rsrp_change_db": 0.0,
+      "max_rsrq_change_db": 0.0,
+      "mean_native_sinr_change_db": -5.981534484127424
+    },
+    {
+      "beamwidth_deg": 120,
+      "same_serving_sectors": true,
+      "max_rsrp_change_db": 0.0,
+      "max_rsrq_change_db": 0.0,
+      "mean_native_sinr_change_db": -7.081846669517247
+    }
+  ]
+}

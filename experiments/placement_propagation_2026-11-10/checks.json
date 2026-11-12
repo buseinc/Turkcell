@@ -1,0 +1,18 @@
+{
+  "computations_passed": true,
+  "original_site_and_target_inputs_preserved": true,
+  "original_cpp_unchanged": true,
+  "proxy_checks": {
+    "static_rsrp_rsrq_max_error_db": 1.7034267330018338e-09,
+    "same_serving_sectors": true,
+    "sinr_proxy": "S/N only, ignoring data-channel interference; screening only"
+  },
+  "native_regression": {
+    "passed": true,
+    "max_numeric_difference": 0.0
+  },
+  "native_search_cases": 5,
+  "native_followup_cases": 3,
+  "maximum_native_reconstruction_error_db": 3.907985046680551e-14,
+  "buffer_two_steps_passed": true
+}

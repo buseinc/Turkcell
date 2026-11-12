@@ -1,0 +1,45 @@
+{
+  "purpose": "Diagnostic pilot of sector-count ambiguity; no operator reconstruction claim.",
+  "advisor_note": "main.tex: cell sayisina bakmadan 3 sektore boldum ama bakilmasi lazim",
+  "affected_sites": [
+    "SITE_000482",
+    "SITE_000554"
+  ],
+  "cases": [
+    {
+      "name": "s0_three",
+      "affected_site_sectors": 3,
+      "total_sectors": 72,
+      "sites_sha256": "a346378f69eccc6bf4016b5905074579d206027663850ee88aa0b1724ef4b8a2"
+    },
+    {
+      "name": "s1_two",
+      "affected_site_sectors": 2,
+      "total_sectors": 70,
+      "sites_sha256": "1a4741f8655a0d8d009a28bd1bb5193eb106375abc09a701ee23b7068ff04ea7"
+    },
+    {
+      "name": "s1_one",
+      "affected_site_sectors": 1,
+      "total_sectors": 68,
+      "sites_sha256": "18f482accc82f829e53209c7dfc44f82679918f5d4f602acd5151f78870187fa"
+    }
+  ],
+  "sites": 24,
+  "ues": 64,
+  "duration_s": 4.0,
+  "warmup_s": 1.0,
+  "seed": 42,
+  "run": 1,
+  "fixed": "Same UE positions, site positions, 65-degree antennas, per-sector 46 dBm, Band 3, log-distance exponent 3, UDP probe, and surviving azimuths.",
+  "sector_removal": "Retain original indices 0..count-1 and phi+120*index. Do not rotate or widen surviving beams.",
+  "power_caveat": "Removing sectors reduces total site radiated power; remaining per-sector power is unchanged.",
+  "scope_caveat": "One-sector case is a single 65-degree directional beam, not an omnidirectional replacement. Removed directions were fixed before simulation; alternative directions and rotations are not explored.",
+  "carrier_caveat": "All cases are cochannel single-carrier. This does not implement or validate multi-carrier hypothesis S2.",
+  "evaluation": "All eight previously observed sites, original equal-sector averaging; report missing sites and association changes. No tuning or replacement of frozen baseline.",
+  "regression_gate": "Fresh modified-code S0 must match original 64-UE RSRP/SINR/RSRQ, serving site/sector, connection and received bytes before alternatives run.",
+  "original_cpp_sha256": "0b8451817d0857dc682e7b13b40eb40076147b007bdbef3594794f74932f0254",
+  "experiment_cpp_sha256": "c9cbf02653a82d289ec6378a1afe6265645945396dd281c396b4639640fb9255",
+  "ues_sha256": "e4af74ba059fa54e7d9dcfcbd44cec95bfec68cfab89b94077d62bf33f773cd2",
+  "targets_sha256": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6"
+}

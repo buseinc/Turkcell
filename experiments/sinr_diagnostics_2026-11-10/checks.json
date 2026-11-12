@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "ues": 64,
+  "post_warmup_samples": 1984,
+  "native_output_regression_max_db": 1.7763568394002505e-15,
+  "rsrp_reconstruction_max_error_db": 4.263256414560601e-14,
+  "sinr_reconstruction_max_error_db": 2.375877272697835e-14,
+  "rsrq_reconstruction_max_error_db": 4.126476937926782e-12,
+  "analytic_signal_max_error_db": 2.2845718068435707e-09,
+  "analytic_interference_max_error_db": 1.2947359509389023e-09,
+  "noise_figure_db": [
+    9
+  ],
+  "noise_psd_dbm_hz": -165.0,
+  "noise_per_re_dbm": -123.23908740944319,
+  "noise_over_100_rb_dbm": -92.44727494896694,
+  "interference_dominated_ues": 64,
+  "signal_below_noise_ues": 0,
+  "sinr_below_zero_ues": 30,
+  "low_sinr_with_signal_above_noise_ues": 30,
+  "median_snr_db": 10.993755051563586,
+  "median_sinr_db": 0.6290340784922419,
+  "median_snr_minus_sinr_db": 10.272262681003392,
+  "median_interference_fraction": 0.9056948797639727,
+  "median_same_site_interference_fraction": 0.003981895587240601,
+  "strongest_interferer_same_site_ues": 5,
+  "same_site_majority_interference_ues": 3,
+  "other_sites_majority_interference_ues": 61,
+  "control_channel_only": true,
+  "original_baseline_unchanged": true
+}

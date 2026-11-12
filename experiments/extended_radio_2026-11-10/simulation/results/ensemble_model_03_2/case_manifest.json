@@ -1,0 +1,34 @@
+{
+  "case": {
+    "shadow_std_db": 0.0,
+    "ue_nf_db": 12.0,
+    "udp_interval_ms": 50.0,
+    "sector_policy": "three",
+    "azimuth_seed": 99,
+    "shadow_seed": 1003,
+    "spatial_seed": 703,
+    "dl_earfcn": 1300,
+    "ul_earfcn": 19300,
+    "family": "wide",
+    "beamwidth_deg": 120,
+    "exponent": 3.0,
+    "power_dbm": 46,
+    "profile": "B",
+    "category": "receiver",
+    "label": "Receiver NF 12.0",
+    "duration_s": 4.0,
+    "name": "ensemble_model_03_2",
+    "model_id": "model_03",
+    "draw_index": 2
+  },
+  "source_sha256": "902c0560684cf2fd32f6fd8447efa098d1d1358a5cee15aed74b10a89f17cf60",
+  "sites_sha256": "22802fa4e9ced6b80b4e90c89670781179ac36c50e3da5cdc8fa9c3275c11063",
+  "ues_sha256": "da1a4f8e61f98f9e7118d541a575e19cff632e09f95308ac9b6fd1829fbed049",
+  "outputs_sha256": {
+    "ues.csv": "9540fd46f2ea4643c4245b9b6e624a7b0a4689dddeb93198a31dec5c4f603083",
+    "sectors.csv": "f856913eb9feb6c73dc3343de24334936f6b8e47e88c61eac1db69eb6b91a956",
+    "radio_samples.csv": "d1eda09ff9e86c2f66f51c8724d6f2dbef765f719a66b5f7c90089540b6bd024",
+    "measurements.csv": "0241ddb4e8f66f5de2c190c148ed59993823951e64ff0d03773ca9d7c7a5e8da",
+    "sinr_components.csv": "c95617d7b39b13061334b129cb211e0699f3936584f69637890dbbf8439005b6"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "phase": "complete",
+  "screening_completed": 49,
+  "screening_planned": 49,
+  "ensemble_completed": 12,
+  "ensemble_planned": 12,
+  "final_completed": 3,
+  "recommended_model": "reference"
+}

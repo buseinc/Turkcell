@@ -1,0 +1,123 @@
+{
+  "sites": {
+    "SITE_000440": {
+      "rsrp": -87.1658631536,
+      "sinr": 36.07322425583333,
+      "rsrq": -3.9225939299633334,
+      "active_sectors": 3
+    },
+    "SITE_000441": {
+      "rsrp": -87.21571791113334,
+      "sinr": 36.0233694983,
+      "rsrq": -3.46626438451,
+      "active_sectors": 3
+    }
+  },
+  "ues": [
+    {
+      "ue_id": 0,
+      "site": "SITE_000440",
+      "sector": 2,
+      "role": "Evaluation",
+      "x_m": 2844.68188513,
+      "y_m": -3713.19245996,
+      "rsrp": -86.372874638,
+      "rsrq": -3.91830615149,
+      "sinr": 36.8662127714,
+      "best_serving_gap_db": 0.0,
+      "connected": 1,
+      "connected_at_s": 0.260214285,
+      "dl_bytes": 8704,
+      "power_trace_difference_db": 0.0,
+      "serving_distance_m": 500.81159131953007
+    },
+    {
+      "ue_id": 1,
+      "site": "SITE_000441",
+      "sector": 0,
+      "role": "Evaluation",
+      "x_m": 8421.5493233,
+      "y_m": -345.372293464,
+      "rsrp": -84.3648245973,
+      "rsrq": -3.46219977009,
+      "sinr": 38.8742628121,
+      "best_serving_gap_db": 0.0,
+      "connected": 1,
+      "connected_at_s": 0.260214285,
+      "dl_bytes": 8704,
+      "power_trace_difference_db": 0.0,
+      "serving_distance_m": 500.81159131934044
+    },
+    {
+      "ue_id": 2,
+      "site": "SITE_000440",
+      "sector": 0,
+      "role": "Evaluation",
+      "x_m": 2094.68188513,
+      "y_m": -3280.17975806,
+      "rsrp": -90.8080660709,
+      "rsrq": -3.93000928396,
+      "sinr": 32.4310213385,
+      "best_serving_gap_db": 0.0,
+      "connected": 1,
+      "connected_at_s": 0.260214285,
+      "dl_bytes": 8704,
+      "power_trace_difference_db": 0.0,
+      "serving_distance_m": 500.81159132625754
+    },
+    {
+      "ue_id": 3,
+      "site": "SITE_000441",
+      "sector": 1,
+      "role": "Evaluation",
+      "x_m": 7671.5493233,
+      "y_m": -778.384995356,
+      "rsrp": -88.1337187674,
+      "rsrq": -3.46756585724,
+      "sinr": 35.1053686421,
+      "best_serving_gap_db": 0.0,
+      "connected": 1,
+      "connected_at_s": 0.260214285,
+      "dl_bytes": 8704,
+      "power_trace_difference_db": 0.0,
+      "serving_distance_m": 500.81159131953007
+    },
+    {
+      "ue_id": 4,
+      "site": "SITE_000440",
+      "sector": 1,
+      "role": "Evaluation",
+      "x_m": 2094.68188513,
+      "y_m": -4146.20516185,
+      "rsrp": -84.3166487519,
+      "rsrq": -3.91946635444,
+      "sinr": 38.9224386576,
+      "best_serving_gap_db": 0.0,
+      "connected": 1,
+      "connected_at_s": 0.260214285,
+      "dl_bytes": 8704,
+      "power_trace_difference_db": 0.0,
+      "serving_distance_m": 500.81159131761103
+    },
+    {
+      "ue_id": 5,
+      "site": "SITE_000441",
+      "sector": 2,
+      "role": "Evaluation",
+      "x_m": 8421.5493233,
+      "y_m": -1211.39769725,
+      "rsrp": -89.1486103687,
+      "rsrq": -3.4690275262,
+      "sinr": 34.0904770407,
+      "best_serving_gap_db": 0.0,
+      "connected": 1,
+      "connected_at_s": 0.260214285,
+      "dl_bytes": 8704,
+      "power_trace_difference_db": 0.0,
+      "serving_distance_m": 500.81159132106967
+    }
+  ],
+  "warmup_s": 1.0,
+  "rsrp_trace_agreement_q95_db": 0.0,
+  "serving_gap_q95_db": 0.0
+}

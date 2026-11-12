@@ -1,0 +1,32 @@
+{
+  "case": {
+    "shadow_std_db": 0.0,
+    "ue_nf_db": 9.0,
+    "udp_interval_ms": 50.0,
+    "sector_policy": "two_small",
+    "azimuth_seed": 42,
+    "shadow_seed": 42,
+    "spatial_seed": 20261109,
+    "dl_earfcn": 1300,
+    "ul_earfcn": 19300,
+    "family": "far",
+    "beamwidth_deg": 120,
+    "exponent": 3.0,
+    "power_dbm": 49,
+    "profile": "A",
+    "category": "sector",
+    "label": "Two sectors at the two 2-cell sites",
+    "duration_s": 2.0,
+    "name": "screen_013"
+  },
+  "source_sha256": "902c0560684cf2fd32f6fd8447efa098d1d1358a5cee15aed74b10a89f17cf60",
+  "sites_sha256": "1a4741f8655a0d8d009a28bd1bb5193eb106375abc09a701ee23b7068ff04ea7",
+  "ues_sha256": "7414baddf461f52e281ca595544bdfd5b80d36c11887d92075ddb305b68108c5",
+  "outputs_sha256": {
+    "ues.csv": "ef4ec37b2ca25b434d4e1c2c3a38af31c55614acdcf43a19c4553963a8d9717f",
+    "sectors.csv": "33851ae0268db67b0036849f84e1aa8101f9b27527054ee6b4e76199d58160c9",
+    "radio_samples.csv": "6f2b1d5d0d47ac08b7028b290b6f297bc0b3581e51193f00e3917c6f1d338437",
+    "measurements.csv": "6365a1d0cfa9a4de9dd9705191a4237b16f7126162d3ac82331bf9de40bd61fa",
+    "sinr_components.csv": "cf09ea8c81dc69be38d27d24f1fb663fbf032e528e87a283a49f92533e5275a5"
+  }
+}

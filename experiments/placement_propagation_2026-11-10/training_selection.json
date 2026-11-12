@@ -1,0 +1,25 @@
+{
+  "selected_name": "candidate_01",
+  "case": {
+    "name": "candidate_01",
+    "family": "far",
+    "beamwidth_deg": 120,
+    "exponent": 3.0,
+    "power_dbm": 49,
+    "proxy_training_score": 3.469714072558179,
+    "ue_file": "ues_far.csv",
+    "sites_file": "sites.csv",
+    "duration_s": 4.0
+  },
+  "training": {
+    "mae_db": {
+      "rsrp": 3.9310765108772556,
+      "sinr": 3.721269711131225,
+      "rsrq": 2.798611585620306
+    },
+    "valid_sites": 5,
+    "missing_sites": [],
+    "score": 3.483652602542929
+  },
+  "rule": "Select among native baseline and shortlisted native cases only, using equal-weight mean of three training-site MAEs plus 10 dB per missing training site. Control sites excluded from ranking; all previously seen."
+}
