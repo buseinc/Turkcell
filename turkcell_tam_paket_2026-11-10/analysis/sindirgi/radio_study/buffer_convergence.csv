@@ -1,4 +1,0 @@
-paired_ues,rsrp_q95_abs_change_db,sinr_q95_abs_change_db,same_serving_sector_fraction,passed,from_buffer,to_buffer
-64,0.0,1.0014086920187504,1.0,False,8,16
-64,0.0,0.16414509094530075,1.0,True,16,24
-64,0.0,0.2875833938174002,1.0,True,24,40

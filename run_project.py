@@ -4,7 +4,7 @@ import os
 import subprocess
 import sys
 
-root = Path(__file__).resolve().parent / 'turkcell_tam_paket_2026-11-10'
+root = Path(__file__).resolve().parent / 'ana_proje'
 if len(sys.argv) < 2:
     raise SystemExit('Usage: calistir.cmd analysis/script.py [args] or simulation/script.py [args]')
 script = (root / sys.argv[1]).resolve()

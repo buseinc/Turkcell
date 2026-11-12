@@ -6,10 +6,11 @@ __pycache__/
 # Derleme çıktıları
 build/
 *.o
+matplotlib_cache/
 
 # Arşivler
 *.zip
 
 # Büyük ham veri dosyaları (GitHub'a gönderilmez, yerelde kalır)
-turkcell_tam_paket_2026-11-10/LTE Main KPI_*/*.xlsx
-turkcell_tam_paket_2026-11-10/experia/experia.xlsx
+ana_proje/LTE Main KPI_*/*.xlsx
+ana_proje/experia/experia.xlsx

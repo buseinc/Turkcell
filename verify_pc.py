@@ -16,7 +16,7 @@ import time
 from datetime import datetime
 
 ROOT = Path(__file__).resolve().parent
-PROJECT = ROOT / 'turkcell_tam_paket_2026-11-10'
+PROJECT = ROOT / 'ana_proje'
 
 
 def load(path):
