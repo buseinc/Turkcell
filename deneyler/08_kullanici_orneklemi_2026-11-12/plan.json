@@ -1,0 +1,125 @@
+{
+  "cases": [
+    {
+      "name": "n64_draw701",
+      "ues": 64,
+      "az": 42,
+      "ue_seed": 701,
+      "udp_interval_ms": 50.0,
+      "duration": 4,
+      "warmup": 1,
+      "reproduce": "refresh_20261112_updated_24"
+    },
+    {
+      "name": "n128_draw701",
+      "ues": 128,
+      "az": 42,
+      "ue_seed": 701,
+      "udp_interval_ms": 100.0,
+      "duration": 4,
+      "warmup": 1,
+      "reproduce": null
+    },
+    {
+      "name": "n256_draw701",
+      "ues": 256,
+      "az": 42,
+      "ue_seed": 701,
+      "udp_interval_ms": 200.0,
+      "duration": 4,
+      "warmup": 1,
+      "reproduce": null
+    },
+    {
+      "name": "n64_draw702",
+      "ues": 64,
+      "az": 7,
+      "ue_seed": 702,
+      "udp_interval_ms": 50.0,
+      "duration": 4,
+      "warmup": 1,
+      "reproduce": "refresh_20261112_updated_draw_1"
+    },
+    {
+      "name": "n128_draw702",
+      "ues": 128,
+      "az": 7,
+      "ue_seed": 702,
+      "udp_interval_ms": 100.0,
+      "duration": 4,
+      "warmup": 1,
+      "reproduce": null
+    },
+    {
+      "name": "n256_draw702",
+      "ues": 256,
+      "az": 7,
+      "ue_seed": 702,
+      "udp_interval_ms": 200.0,
+      "duration": 4,
+      "warmup": 1,
+      "reproduce": null
+    },
+    {
+      "name": "n64_draw703",
+      "ues": 64,
+      "az": 99,
+      "ue_seed": 703,
+      "udp_interval_ms": 50.0,
+      "duration": 4,
+      "warmup": 1,
+      "reproduce": "refresh_20261112_updated_draw_2"
+    },
+    {
+      "name": "n128_draw703",
+      "ues": 128,
+      "az": 99,
+      "ue_seed": 703,
+      "udp_interval_ms": 100.0,
+      "duration": 4,
+      "warmup": 1,
+      "reproduce": null
+    },
+    {
+      "name": "n256_draw703",
+      "ues": 256,
+      "az": 99,
+      "ue_seed": 703,
+      "udp_interval_ms": 200.0,
+      "duration": 4,
+      "warmup": 1,
+      "reproduce": null
+    }
+  ],
+  "radio": {
+    "mixed_cqi": 1,
+    "beamwidth": 120,
+    "exponent": 3,
+    "enb_power": 49,
+    "receiver_nf": 9,
+    "shadow_std": 0,
+    "dl_earfcn": 1300,
+    "sectors": "three"
+  },
+  "offered_load": {
+    "total_dl_bps": 5242880.0,
+    "note": "per-UE interval = 50 ms x n/64; packet 512 B"
+  },
+  "source_sha256": "902c0560684cf2fd32f6fd8447efa098d1d1358a5cee15aed74b10a89f17cf60",
+  "input_hashes": {
+    "sites_24_42.csv": "209366857ead771feb5e833fb4e0dcd2c7996c9591750ec99859a2e2c22ac92a",
+    "sites_24_7.csv": "f76b40cc678f7b909b55ec5eae0d5de557252c235735eef1145f8a01a2222f76",
+    "sites_24_99.csv": "3f69693c43667ae1cbe326b6ef01c26a489f8539b4fa44b8800718dd468f3fee",
+    "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6",
+    "ues_far_701_128.csv": "2b97903a6c82e6249d6b2343daa0764175ff997407fac742b717d5f037ca1df3",
+    "ues_far_701_256.csv": "9941cb3eb1b356d3de805af6e4216e855efa918d8b17d59816ed4458b599cde3",
+    "ues_far_701_64.csv": "19261ca60aab07ce58d90ba9134e700880728a07add47d8dd0f11aa792059675",
+    "ues_far_702_128.csv": "15a2ca4a301488ec3fca8345283b078e3d41d0e8bb8c7427352e7ff36960db0f",
+    "ues_far_702_256.csv": "040ea12cf5de46ea0458355e49b89b043aa4f1e441e9cc55ee9489f90656c2b5",
+    "ues_far_702_64.csv": "00d1f46970be6dfbec240c5672c7d56ce3d165ce8a68dfc9845fef73b9b1ed6a",
+    "ues_far_703_128.csv": "ea5dc9418c2fdb5dc4dfdea5f5e446a21db90d2ced4379e2b99e002db68e34a5",
+    "ues_far_703_256.csv": "385cfee4ea2a29a75e65216b12ee6217e4c51dbec414bee25eaa00bc8885078f",
+    "ues_far_703_64.csv": "0c2a5c1047894ccd35e1c9bced0e42428b8455bc47651824f0d94568b34fae5f"
+  },
+  "rule": "Predeclared before runs. No retuning. (1) n=64 runs must reproduce the 07 refresh runs (paired RSRP/SINR q95 <= 0.01 dB, same sector 100%). (2) Original 64 UEs, paired across n: report RSRP/SINR/RSRQ q95 change and serving-sector agreement (load effect on SINR/RSRQ expected to be small because total offered load is fixed). (3) Sample-size adequacy: for each draw, training and control MAE of RSRP/SINR/RSRQ change by <= 0.5 dB between n=128 and n=256, and the spread across the three draws does not grow with n. Also report UEs per evaluation site."
+}

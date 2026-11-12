@@ -1,0 +1,745 @@
+{
+  "completed": 1,
+  "planned": 1,
+  "results": [
+    {
+      "case": {
+        "name": "L2_busy_hour_draw701",
+        "load": "L2_busy_hour",
+        "az": 42,
+        "ue_seed": 701,
+        "ues": 328,
+        "measurement_ues": 256,
+        "duration": 4,
+        "warmup": 1,
+        "baseline_08": "n256_draw701"
+      },
+      "cached": false,
+      "wall_seconds": 847.0827712690001,
+      "connected_ues": 328,
+      "measurement_connected": 256,
+      "measurement_with_dl": 255,
+      "load_ues_on_target": 67,
+      "prb_mean_target": 0.359,
+      "prb_mean_achieved": 0.5458101851851528,
+      "cells": [
+        {
+          "cell": 1,
+          "site": "SITE_000440",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.585333333333,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 2,
+          "site": "SITE_000440",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.557,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 3,
+          "site": "SITE_000440",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.583333333333,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 4,
+          "site": "SITE_000441",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.562,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 5,
+          "site": "SITE_000441",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.636333333333,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 6,
+          "site": "SITE_000441",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.572333333333,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 7,
+          "site": "SITE_000130",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.574333333333,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 8,
+          "site": "SITE_000130",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.560666666667,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 9,
+          "site": "SITE_000130",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.561333333333,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 10,
+          "site": "SITE_000296",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.612333333333,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 11,
+          "site": "SITE_000296",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.901333333333,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 12,
+          "site": "SITE_000296",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 13,
+          "site": "SITE_000443",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.563666666667,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 14,
+          "site": "SITE_000443",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.0,
+          "load_ue_on_target": false
+        },
+        {
+          "cell": 15,
+          "site": "SITE_000443",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.551,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 16,
+          "site": "SITE_000554",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.549,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 17,
+          "site": "SITE_000554",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.567,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 18,
+          "site": "SITE_000554",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.594666666667,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 19,
+          "site": "SITE_000482",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.55,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 20,
+          "site": "SITE_000482",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.568666666667,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 21,
+          "site": "SITE_000482",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.571666666667,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 22,
+          "site": "SITE_000444",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.574333333333,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 23,
+          "site": "SITE_000444",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.563,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 24,
+          "site": "SITE_000444",
+          "role": "Evaluation",
+          "target_prb": 0.359,
+          "achieved_prb": 0.538,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 25,
+          "site": "SITE_000506",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.539,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 26,
+          "site": "SITE_000506",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.543,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 27,
+          "site": "SITE_000506",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.563,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 28,
+          "site": "SITE_000480",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.545333333333,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 29,
+          "site": "SITE_000480",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.556,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 30,
+          "site": "SITE_000480",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.537,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 31,
+          "site": "SITE_000553",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.563,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 32,
+          "site": "SITE_000553",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.590333333333,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 33,
+          "site": "SITE_000553",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.55,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 34,
+          "site": "SITE_000200",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 35,
+          "site": "SITE_000200",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.534,
+          "load_ue_on_target": false
+        },
+        {
+          "cell": 36,
+          "site": "SITE_000200",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.55,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 37,
+          "site": "SITE_000224",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 38,
+          "site": "SITE_000224",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.561,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 39,
+          "site": "SITE_000224",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 40,
+          "site": "SITE_000555",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 41,
+          "site": "SITE_000555",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.547333333333,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 42,
+          "site": "SITE_000555",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.536,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 43,
+          "site": "SITE_000475",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.532,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 44,
+          "site": "SITE_000475",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.532,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 45,
+          "site": "SITE_000475",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.545333333333,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 46,
+          "site": "SITE_000206",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 47,
+          "site": "SITE_000206",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": false
+        },
+        {
+          "cell": 48,
+          "site": "SITE_000206",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.534,
+          "load_ue_on_target": false
+        },
+        {
+          "cell": 49,
+          "site": "SITE_000204",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 50,
+          "site": "SITE_000204",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 51,
+          "site": "SITE_000204",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.537666666667,
+          "load_ue_on_target": false
+        },
+        {
+          "cell": 52,
+          "site": "SITE_000549",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 53,
+          "site": "SITE_000549",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.544333333333,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 54,
+          "site": "SITE_000549",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.532,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 55,
+          "site": "SITE_000445",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.532,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 56,
+          "site": "SITE_000445",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.532,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 57,
+          "site": "SITE_000445",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.532,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 58,
+          "site": "SITE_000220",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 59,
+          "site": "SITE_000220",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 60,
+          "site": "SITE_000220",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.546666666667,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 61,
+          "site": "SITE_000198",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 62,
+          "site": "SITE_000198",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 63,
+          "site": "SITE_000198",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 64,
+          "site": "SITE_000442",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 65,
+          "site": "SITE_000442",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 66,
+          "site": "SITE_000442",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.532,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 67,
+          "site": "SITE_000145",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.532,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 68,
+          "site": "SITE_000145",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.532,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 69,
+          "site": "SITE_000145",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.532,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 70,
+          "site": "SITE_000083",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.532,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 71,
+          "site": "SITE_000083",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.532,
+          "load_ue_on_target": true
+        },
+        {
+          "cell": 72,
+          "site": "SITE_000083",
+          "role": "Interference buffer",
+          "target_prb": 0.359,
+          "achieved_prb": 0.533,
+          "load_ue_on_target": true
+        }
+      ],
+      "sites": {
+        "SITE_000444": {
+          "rsrp": -110.90096494579545,
+          "sinr": 5.526617105946068,
+          "rsrq": -6.944210511212397,
+          "active_sectors": 3
+        },
+        "SITE_000130": {
+          "rsrp": -113.9629595511926,
+          "sinr": 4.062298897663769,
+          "rsrq": -7.198674848143685,
+          "active_sectors": 3
+        },
+        "SITE_000482": {
+          "rsrp": -100.4654398572725,
+          "sinr": 11.639896561334318,
+          "rsrq": -6.137754376678903,
+          "active_sectors": 3
+        },
+        "SITE_000553": {
+          "rsrp": -109.46006226243556,
+          "sinr": 5.979053823996997,
+          "rsrq": -7.798806206619702,
+          "active_sectors": 3
+        },
+        "SITE_000296": {
+          "rsrp": -102.14845607698948,
+          "sinr": 7.732667509767998,
+          "rsrq": -7.402432395299246,
+          "active_sectors": 2
+        },
+        "SITE_000441": {
+          "rsrp": -106.7748978615357,
+          "sinr": 6.4506951361839,
+          "rsrq": -7.752496182527199,
+          "active_sectors": 3
+        },
+        "SITE_000440": {
+          "rsrp": -112.95151603093926,
+          "sinr": 4.266174347655305,
+          "rsrq": -6.9437673157257755,
+          "active_sectors": 3
+        },
+        "SITE_000554": {
+          "rsrp": -111.13719054043452,
+          "sinr": 5.059574216895021,
+          "rsrq": -7.8388343156005,
+          "active_sectors": 3
+        },
+        "SITE_000443": {
+          "rsrp": -102.01327491418999,
+          "sinr": 9.733552591010007,
+          "rsrq": -7.297253604479377,
+          "active_sectors": 2
+        },
+        "SITE_000480": {
+          "rsrp": -94.96391182335,
+          "sinr": 17.10592312175011,
+          "rsrq": -5.129789095931556,
+          "active_sectors": 3
+        },
+        "SITE_000506": {
+          "rsrp": -102.34807705714603,
+          "sinr": 11.610409943902686,
+          "rsrq": -5.276376008631751,
+          "active_sectors": 3
+        },
+        "SITE_000555": {
+          "rsrp": -103.87800671715,
+          "sinr": 9.533992060553766,
+          "rsrq": -6.693134077929167,
+          "active_sectors": 2
+        },
+        "SITE_000220": {
+          "rsrp": -115.422310812,
+          "sinr": 1.9226691957380644,
+          "rsrq": -9.001023815806,
+          "active_sectors": 1
+        },
+        "SITE_000204": {
+          "rsrp": -116.895959027,
+          "sinr": -0.26068844735000024,
+          "rsrq": -11.392214568,
+          "active_sectors": 1
+        },
+        "SITE_000549": {
+          "rsrp": -110.450210819,
+          "sinr": 5.4481398263335805,
+          "rsrq": -7.406951064937999,
+          "active_sectors": 1
+        },
+        "SITE_000200": {
+          "rsrp": -105.38847538793333,
+          "sinr": 8.615502290472344,
+          "rsrq": -7.367389859966667,
+          "active_sectors": 1
+        },
+        "SITE_000475": {
+          "rsrp": -112.7157004925,
+          "sinr": 3.865125622149678,
+          "rsrq": -8.212537516765,
+          "active_sectors": 1
+        },
+        "SITE_000224": {
+          "rsrp": -104.398145495025,
+          "sinr": 10.334843361742015,
+          "rsrq": -6.411846103339833,
+          "active_sectors": 1
+        }
+      },
+      "training": {
+        "mae_db": {
+          "rsrp": 2.945149662378648,
+          "sinr": 3.7409941146995225,
+          "rsrq": 2.7717137373052987
+        },
+        "valid_sites": 5,
+        "missing_sites": [],
+        "score": 3.1526191714611564
+      },
+      "control": {
+        "mae_db": {
+          "rsrp": 1.8164846207196301,
+          "sinr": 4.926866079490515,
+          "rsrq": 3.8491868776258724
+        },
+        "valid_sites": 3,
+        "missing_sites": [],
+        "score": 3.5308458592786724
+      },
+      "paired_vs_08": {
+        "paired_ues": 256,
+        "same_serving_sector_fraction": 1.0,
+        "rsrp_mean_change_db": 0.0,
+        "rsrp_q95_abs_change_db": 0.0,
+        "sinr_mean_change_db": -6.807639354957471,
+        "sinr_q95_abs_change_db": 11.089277766589191,
+        "rsrq_mean_change_db": 0.0,
+        "rsrq_q95_abs_change_db": 0.0
+      }
+    }
+  ]
+}

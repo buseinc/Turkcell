@@ -14,3 +14,5 @@ matplotlib_cache/
 # Büyük ham veri dosyaları (GitHub'a gönderilmez, yerelde kalır)
 ana_proje/LTE Main KPI_*/*.xlsx
 ana_proje/experia/experia.xlsx
+# Ham KPI'dan süzülen hücre verisi (operatör verisi; extract.py ile yeniden üretilir)
+deneyler/09_kpi_yuk_profili_2026-11-12/kpi_cells.csv.gz

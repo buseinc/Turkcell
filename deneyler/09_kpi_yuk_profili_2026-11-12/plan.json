@@ -1,0 +1,179 @@
+{
+  "cases": [
+    {
+      "name": "L0_idle_draw701",
+      "load": "L0_idle",
+      "az": 42,
+      "ue_seed": 701,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1,
+      "baseline_08": "n256_draw701"
+    },
+    {
+      "name": "L1_daily_mean_draw701",
+      "load": "L1_daily_mean",
+      "az": 42,
+      "ue_seed": 701,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1,
+      "baseline_08": "n256_draw701"
+    },
+    {
+      "name": "L2_busy_hour_draw701",
+      "load": "L2_busy_hour",
+      "az": 42,
+      "ue_seed": 701,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1,
+      "baseline_08": "n256_draw701"
+    },
+    {
+      "name": "L3_site_busy_hour_draw701",
+      "load": "L3_site_busy_hour",
+      "az": 42,
+      "ue_seed": 701,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1,
+      "baseline_08": "n256_draw701"
+    },
+    {
+      "name": "L0_idle_draw702",
+      "load": "L0_idle",
+      "az": 7,
+      "ue_seed": 702,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1,
+      "baseline_08": "n256_draw702"
+    },
+    {
+      "name": "L1_daily_mean_draw702",
+      "load": "L1_daily_mean",
+      "az": 7,
+      "ue_seed": 702,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1,
+      "baseline_08": "n256_draw702"
+    },
+    {
+      "name": "L2_busy_hour_draw702",
+      "load": "L2_busy_hour",
+      "az": 7,
+      "ue_seed": 702,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1,
+      "baseline_08": "n256_draw702"
+    },
+    {
+      "name": "L3_site_busy_hour_draw702",
+      "load": "L3_site_busy_hour",
+      "az": 7,
+      "ue_seed": 702,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1,
+      "baseline_08": "n256_draw702"
+    },
+    {
+      "name": "L0_idle_draw703",
+      "load": "L0_idle",
+      "az": 99,
+      "ue_seed": 703,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1,
+      "baseline_08": "n256_draw703"
+    },
+    {
+      "name": "L1_daily_mean_draw703",
+      "load": "L1_daily_mean",
+      "az": 99,
+      "ue_seed": 703,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1,
+      "baseline_08": "n256_draw703"
+    },
+    {
+      "name": "L2_busy_hour_draw703",
+      "load": "L2_busy_hour",
+      "az": 99,
+      "ue_seed": 703,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1,
+      "baseline_08": "n256_draw703"
+    },
+    {
+      "name": "L3_site_busy_hour_draw703",
+      "load": "L3_site_busy_hour",
+      "az": 99,
+      "ue_seed": 703,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1,
+      "baseline_08": "n256_draw703"
+    }
+  ],
+  "levels": {
+    "L0_idle": null,
+    "L1_daily_mean": 0.233,
+    "L2_busy_hour": 0.359,
+    "L3_site_busy_hour": "site"
+  },
+  "filled_site_prb": {
+    "SITE_000549": 0.26534782608695656
+  },
+  "calibration_factors": {
+    "L1_daily_mean": 1.75,
+    "L2_busy_hour": 1.52,
+    "L3_site_busy_hour": 1.72
+  },
+  "radio": {
+    "mixed_cqi": 1,
+    "beamwidth": 120,
+    "exponent": 3,
+    "enb_power": 49,
+    "receiver_nf": 9,
+    "shadow_std": 0,
+    "dl_earfcn": 1300
+  },
+  "source_sha256": "b2c71c9a3b88a0edb36ec91650d86274548feabfb8dce4b79ac6786b618a182a",
+  "input_hashes": {
+    "sites_24_42.csv": "209366857ead771feb5e833fb4e0dcd2c7996c9591750ec99859a2e2c22ac92a",
+    "sites_24_7.csv": "f76b40cc678f7b909b55ec5eae0d5de557252c235735eef1145f8a01a2222f76",
+    "sites_24_99.csv": "3f69693c43667ae1cbe326b6ef01c26a489f8539b4fa44b8800718dd468f3fee",
+    "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6",
+    "ues_L0_idle_701.csv": "05b0a55cfb5e2c784705d68079b98d6b048707e8ee52b6312a8f36ca97bc6c29",
+    "ues_L0_idle_702.csv": "9d01fefbb9dbda3970cfe41d6cce5376119584a987e7e8aa842a4b20f505b552",
+    "ues_L0_idle_703.csv": "5b78ebb201a77edee53f14a066300281382067e0d77aaf2eeda30a738e8476fc",
+    "ues_L1_daily_mean_701.csv": "7959061f11f54d16201741e66ffdb8ef209e851b6228c63a517d6f66437eae64",
+    "ues_L1_daily_mean_702.csv": "a6d3e444737289104ba83d853e5fc5b8ac96f7b110a75ce7f8a890aec3a6b38e",
+    "ues_L1_daily_mean_703.csv": "5bab5091df7014ac458ba697d97e3bb6717d6303a53eef1fa2c6bb3ec7907247",
+    "ues_L2_busy_hour_701.csv": "2ec35bad5ed77c305d310b52982e293e0e19cbd41ad787bf71058d4a7854f61b",
+    "ues_L2_busy_hour_702.csv": "2830ffe736257af1728d08244f6aad5b3640f97cf37e4a00b17a2217dc550141",
+    "ues_L2_busy_hour_703.csv": "d087a0ffd299656359562eb38cd06a337b1b476848049e87731038f72ee5c071",
+    "ues_L3_site_busy_hour_701.csv": "87125564dee77f6aceb022c99a8d589fa695e4cb7ce5492ae2c00779e5193c1d",
+    "ues_L3_site_busy_hour_702.csv": "ee35198aed76b0fc2e693c749164353cfd1fbb9d6ec7d361481b4e62412d71a5",
+    "ues_L3_site_busy_hour_703.csv": "40d88094d9a7206f883b603ddab5d3a88ee9a942038714637e7c18127cc6bd85"
+  },
+  "rule": "- Same selected radio settings, current 24 sites, 3 azimuth/UE draws, 256 measurement UEs (08, n=256).\n- Measurement UEs keep the 08 traffic (512 B every 200 ms) and are the only UEs used in metrics.\n- One extra 'load UE' per sector (72), 800 m along the sector boresight, ids 256..327. Its UDP\n  rate sets the sector's DL PRB occupancy. ns-3 PF scheduling gives each scheduled TTI the whole\n  band, so a 512 B packet ~ one fully used subframe: interval_ms = 1 / target_prb.\n- Cases: L0 (load UEs present, ~no traffic: isolates their presence), uniform daily mean,\n  uniform busy hour, site-specific busy hour (KPI 20:00-24:00 mean per site).\n- Hypothesis: simulated SINR (mixed CQI) falls toward Experia as load rises; RSRP must not change.\n- Amendment after the first test run (L2, draw 701): achieved mean PRB 0.546 vs target 0.359,\n  because packets need more than one subframe once interference lowers the MCS. Load-UE intervals\n  are therefore multiplied by a per-level calibration factor (calibration.json), fitted on draw 701\n  only, then frozen for all draws. Accept a level if its mean achieved PRB is within +/-10% of target."
+}

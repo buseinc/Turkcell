@@ -1,0 +1,11 @@
+START L1_daily_mean_draw703
+START L1_daily_mean_draw701
+START L1_daily_mean_draw702
+START L3_site_busy_hour_draw702
+START L3_site_busy_hour_draw703
+DONE L1_daily_mean_draw703 prb 0.222
+DONE L1_daily_mean_draw701 prb 0.225
+DONE L1_daily_mean_draw702 prb 0.224
+DONE L3_site_busy_hour_draw703 prb 0.263
+DONE L3_site_busy_hour_draw702 prb 0.266
+COMPLETE

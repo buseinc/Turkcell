@@ -1,0 +1,24 @@
+site,role,cells,prb,users_per_cell
+SITE_000083,Interference buffer,6,0.1083,6.9227
+SITE_000130,Evaluation,7,0.2048,11.0930
+SITE_000145,Interference buffer,9,0.2172,10.7667
+SITE_000198,Interference buffer,9,0.3250,12.3659
+SITE_000200,Interference buffer,14,0.6334,34.8908
+SITE_000204,Interference buffer,18,0.5515,31.3473
+SITE_000206,Interference buffer,12,0.3291,18.6242
+SITE_000220,Interference buffer,11,0.2145,11.9827
+SITE_000224,Interference buffer,10,0.4098,22.6617
+SITE_000296,Evaluation,6,0.1866,10.3403
+SITE_000440,Evaluation,8,0.3742,20.7193
+SITE_000441,Evaluation,9,0.5350,27.1875
+SITE_000442,Interference buffer,9,0.1936,11.1864
+SITE_000443,Evaluation,14,0.5598,42.6037
+SITE_000444,Evaluation,6,0.0699,4.1787
+SITE_000445,Interference buffer,6,0.0470,3.3495
+SITE_000475,Interference buffer,1,0.1626,22.5022
+SITE_000480,Interference buffer,2,0.1252,14.4527
+SITE_000482,Evaluation,2,0.4626,38.3862
+SITE_000506,Interference buffer,1,0.0899,8.6070
+SITE_000553,Interference buffer,6,0.0656,5.9695
+SITE_000554,Evaluation,2,0.0548,5.8301
+SITE_000555,Interference buffer,3,0.1826,13.0281

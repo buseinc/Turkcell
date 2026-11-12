@@ -16,8 +16,17 @@ Sonraki aşamalar: KPI'dan yük modeli, stres testi, öncelikli bölge ve rota/U
   64 sanal kullanıcı. Kontrol sahalarında hata (MAE): **RSRP 2,96 / SINR 3,63 /
   RSRQ 4,07 dB**. → [Güncel envanter kontrolü](deneyler/07_guncel_envanter_kontrolu_2026-11-12/SONUCLAR.md)
 - Açık konular: Experia SINR/RSRQ tanımları, TAAVG ve KPI birimleri, yük aşamasına
-  geçiş ölçütü. Sıradaki adım: kullanıcı örneklemi duyarlılığı (64→128→256) ve
-  KPI'dan yük profili.
+  geçiş ölçütü.
+- Kullanıcı örneklemi duyarlılığı (64→128→256) tamamlandı: önceden yazılan ölçüt
+  **geçmedi**. Saha ortalamaları 64 kullanıcıda örneklemeye bağlıymış. 256 kullanıcıda
+  kontrol MAE RSRP 1,72 / SINR 4,74 / RSRQ 4,30 dB. Simülasyon SINR'si çoğu sahada
+  Experia'dan sistematik olarak yüksek. → [Deney 08](deneyler/08_kullanici_orneklemi_2026-11-12/SONUCLAR.md)
+- KPI yük profili ve gerçekçi yük tamamlandı: önceki simülasyon ağı gerçeğe göre 7–10 kat
+  boş çalıştırıyordu (PRB %3 vs KPI %23–36). KPI'daki PRB yükü verilince kontrol SINR hatası
+  **4,74 → 1,44–1,72 dB**; RSRP değişmedi. Deprem anında bağlı kullanıcı ≈2× artıyor, veri
+  hacmi ilk yarım saatte düşüyor. → [Deney 09](deneyler/09_kpi_yuk_profili_2026-11-12/SONUCLAR.md)
+- Sıradaki adım: yoğun saat yükünden (L2) başlayan stres pilotu (PRB yükü ve eşzamanlı kullanıcı).
+- Ekip için özet: [Kullanıcı örneklemi ve gerçekçi ağ yükü — bulgular](toplantilar/2026-11-12_orneklem_ve_yuk_bulgulari/BULGULAR_OZETI.md)
 - Hocaya gönderilen son mesaj: [HOCAYA_MESAJ.md](toplantilar/2026-11-12_koordinat_dogrulama_ve_hoca_mesaji/HOCAYA_MESAJ.md)
 
 ## Klasör haritası
@@ -49,6 +58,8 @@ Her deney bir öncekinin sonucunu kullanır. Sonuç belgesi genellikle `SONUCLAR
 | 5 | [05_kullanici_yayilim_guc](deneyler/05_kullanici_yayilim_guc_2026-11-10/SONUCLAR.md) | Kullanıcı yerleşimi, yayılım modeli ve güç araştırması |
 | 6 | [06_genis_tarama_secilen_ayar](deneyler/06_genis_tarama_secilen_ayar_2026-11-10/SONUCLAR.md) | 49 koşullu geniş tarama, ortak tekrarlar; **seçilen ayar** |
 | 7 | [07_guncel_envanter_kontrolu](deneyler/07_guncel_envanter_kontrolu_2026-11-12/SONUCLAR.md) | Seçilen ayarın güncel envanterle (563 saha) yeniden kontrolü |
+| 8 | [08_kullanici_orneklemi](deneyler/08_kullanici_orneklemi_2026-11-12/SONUCLAR.md) | 64→128→256 kullanıcı, toplam yük sabit; örneklem duyarlılığı |
+| 9 | [09_kpi_yuk_profili](deneyler/09_kpi_yuk_profili_2026-11-12/SONUCLAR.md) | KPI'dan yük profili, deprem anı yükü; KPI PRB yüküyle radyo karşılaştırması |
 
 ## Notlar
 

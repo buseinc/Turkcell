@@ -1,0 +1,15 @@
+START L0_idle_draw701
+START L1_daily_mean_draw701
+START L0_idle_draw702
+START L3_site_busy_hour_draw701
+DONE L0_idle_draw701 prb 0.033
+START L2_busy_hour_draw702
+DONE L0_idle_draw702 prb 0.033
+START L0_idle_draw703
+DONE L1_daily_mean_draw701 prb 0.194
+START L2_busy_hour_draw703
+DONE L3_site_busy_hour_draw701 prb 0.269
+DONE L0_idle_draw703 prb 0.032
+DONE L2_busy_hour_draw702 prb 0.371
+DONE L2_busy_hour_draw703 prb 0.369
+COMPLETE

@@ -1,0 +1,1 @@
+{"round": 3, "factors": {"L1_daily_mean": 1.75, "L2_busy_hour": 1.52, "L3_site_busy_hour": 1.72}, "basis": "round 2 (draw 701): L1 factor 1.90 -> ratio 0.83, round 1: 1.52 -> 1.25; linear interpolation to ratio 1 gives 1.75. L2 frozen after round 1, L3 frozen after round 2 (ratio 1.01)."}
