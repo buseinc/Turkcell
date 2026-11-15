@@ -1,0 +1,35 @@
+LTE Main KPI_20250803000000-20250804000000 0803.xlsx
+LTE Main KPI_20250809000000-20250810000000 0809.xlsx
+LTE Main KPI_20250810000000-20250811000000 0810.xlsx
+LTE Main KPI_20250811000000-20250812000000 0811.xlsx
+LTE Main KPI_20250817000000-20250818000000 0817.xlsx
+LTE Main KPI_20251020000000-20251021000000 1020.xlsx
+LTE Main KPI_20251026000000-20251027000000 1026.xlsx
+LTE Main KPI_20251027000000-20251028000000 1027.xlsx
+LTE Main KPI_20251028000000-20251029000000 1028.xlsx
+LTE Main KPI_20251103000000-20251104000000 1103.xlsx
+           site                 role  cells  cells_interfreq multi_frequency
+0   SITE_000083  Interference buffer      6                6            True
+1   SITE_000130           Evaluation      7                7            True
+2   SITE_000145  Interference buffer      9                9            True
+3   SITE_000198  Interference buffer      9                9            True
+4   SITE_000200  Interference buffer     14               14            True
+5   SITE_000204  Interference buffer     18               17            True
+6   SITE_000206  Interference buffer     12                8            True
+7   SITE_000220  Interference buffer     11               11            True
+8   SITE_000224  Interference buffer     10                9            True
+9   SITE_000296           Evaluation      6                4            True
+10  SITE_000440           Evaluation      8                7            True
+11  SITE_000441           Evaluation      9                9            True
+12  SITE_000442  Interference buffer      9                6            True
+13  SITE_000443           Evaluation     14               14            True
+14  SITE_000444           Evaluation      6                0           False
+15  SITE_000445  Interference buffer      6                0           False
+16  SITE_000475  Interference buffer      1                1            True
+17  SITE_000480  Interference buffer      2                0           False
+18  SITE_000482           Evaluation      2                1            True
+19  SITE_000506  Interference buffer      1                1            True
+20  SITE_000553  Interference buffer      6                1           False
+21  SITE_000554           Evaluation      2                0           False
+22  SITE_000555  Interference buffer      3                1           False
+0   SITE_000549  Interference buffer      0                0            None

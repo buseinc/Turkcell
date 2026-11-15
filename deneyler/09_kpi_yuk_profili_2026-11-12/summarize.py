@@ -76,6 +76,11 @@ def main():
 
     q = prof['earthquakes']
     L = ['# KPI yük profili ve gerçekçi yükte radyo karşılaştırması — 12 Kasım 2026', '',
+         '> **15 Kasım ek uyarısı:** Raporlanan mixed SINR örneklerinin yalnız ≈%32–41\'i veri kanalı girişimi '
+         'içeriyor, kalanı birebir S/N. Bu çalışmadaki yük kullanıcılarının UDP trafiği eşzamanlı başladığından '
+         'komşu sektörler aynı alt çerçevelerde yayın yapıyor. Düşük yükün SINR\'yi iyimser gösterdiği sonucu '
+         'geçerli; aşağıdaki sayısal yakınlık bu ortalama yöntemine bağlı. Ayrıntı: '
+         '[Izgara kapsama haritaları](../10_kapsama_haritalari_2026-11-15/SONUCLAR.md).', '',
          'İki soru: (1) KPI verisine göre bölgedeki ağ normal günde ve deprem anında ne kadar yüklü? '
          '(2) Simülasyona bu yükü verince Experia ile SINR farkı kapanıyor mu?', '',
          '## 1. KPI\'dan yük profili', '',

@@ -5,6 +5,22 @@
 Ana proje: `ana_proje` (eski adı `turkcell_tam_paket_2026-11-10`).
 Klasör haritası için [README.md](README.md).
 
+## İkinci bilgisayar (15 Kasım çalışmaları)
+
+8–14 numaralı deneyler başka bir bilgisayarda koşuldu. Oradaki farklar:
+
+- WSL dağıtımının adı `Ubuntu` (24.04); ns-3.44 `/home/<kullanıcı>/ns-allinone-3.44/ns-3.44` altında.
+  `simulation/ns3_paths.py` bu yolu da otomatik bulur.
+- `.venv` yok; analiz ve özet script'leri sistem Python'u (3.12, numpy 2.0.2, pandas, matplotlib, folium)
+  ile çalıştırıldı.
+- `calistir.cmd` için dağıtım adı ortam değişkeniyle verilebilir: `set TURKCELL_WSL_DISTRO=Ubuntu`.
+- Yeni deneyler kendi klasöründen çalışır. Her klasörde sıra: `prepare.py` (Windows Python) →
+  `study.py` (WSL: `wsl -d Ubuntu --cd <klasör> --exec python3 study.py`) → `summarize.py` (Windows Python).
+  Simülasyon kodu her deneyin `simulation/` klasöründe; ilk koşu `--skip-build` olmadan derler.
+- Ham KPI/Experia'dan süzülen ara dosyalar (`*.csv.gz`) git'te yok; ilgili `extract*.py` ile yeniden üretilir.
+- Bu bilgisayarda 64 kullanıcılık koşular önceki sonuçları dosya düzeyinde birebir üretti
+  (bkz. [kullanıcı örneklemi](deneyler/08_kullanici_orneklemi_2026-11-12/SONUCLAR.md)).
+
 ## Ortam
 
 - Analizler: çalışma klasöründeki `.venv`, Python 3.10; ana analiz paketleri

@@ -1,0 +1,15 @@
+Sub-GHz reference gain DL 7.05083 dB, UL 6.1529 dB
+{
+  "ns3_version": "3.44",
+  "seed": 42,
+  "run": 1,
+  "physical_sites": 24,
+  "synthetic_sectors": 122,
+  "ues": 378,
+  "connected_ues": 378,
+  "ues_receiving_dl": 376,
+  "total_dl_bytes": 32509952,
+  "radio_samples": 14740,
+  "duration_s": 4,
+  "placement": "near-sites"
+}

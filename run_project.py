@@ -11,7 +11,9 @@ script = (root / sys.argv[1]).resolve()
 if not script.is_relative_to(root) or not script.is_file() or script.suffix != '.py':
     raise SystemExit('Expected a Python script inside the full project directory')
 relative = script.relative_to(root).as_posix()
-command = (['wsl', '--distribution', 'Ubuntu-22.04', '--exec', 'python3']
+# WSL distribution name differs between machines; override with TURKCELL_WSL_DISTRO.
+distro = os.environ.get('TURKCELL_WSL_DISTRO', 'Ubuntu-22.04')
+command = (['wsl', '--distribution', distro, '--exec', 'python3']
            if relative.startswith('simulation/') else [sys.executable])
 os.environ['PYTHONIOENCODING'] = 'utf-8'
 os.environ['PYTHONUTF8'] = '1'

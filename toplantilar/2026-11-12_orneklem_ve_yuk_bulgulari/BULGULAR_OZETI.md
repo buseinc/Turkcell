@@ -1,5 +1,12 @@
 # Kullanıcı örneklemi ve gerçekçi ağ yükü — bulgular özeti (12 Kasım 2026)
 
+> **15 Kasım ek uyarısı (SINR yorumu):** Kapsama haritaları hazırlanırken iki ns-3 davranışı bulundu.
+> (1) Raporlanan mixed SINR örneklerinin yalnız ≈%32–41'i veri kanalı girişimi içeriyor; kalanı
+> birebir S/N. (2) Yük çalışmasında yük kullanıcılarının UDP trafiği eşzamanlı başladığı için komşu
+> sektörler aynı alt çerçevelerde yayın yapıyor. Düşük yükün SINR'yi iyimser gösterdiği sonucu geçerli.
+> Ama "4,74 → 1,44–1,72 dB" yakınlığı bu ortalama yöntemine bağlı; Experia SINR tanımı bilinmeden
+> "eşleşti" denmemeli. Ayrıntı: [Izgara kapsama haritaları](../../deneyler/10_kapsama_haritalari_2026-11-15/SONUCLAR.md).
+
 Bu not, 12 Kasım'da eklenen iki çalışmayı ekip için özetler. Ayrıntılı sayılar, grafikler ve kod
 her çalışmanın kendi klasöründe.
 

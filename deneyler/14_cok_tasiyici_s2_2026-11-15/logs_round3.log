@@ -1,0 +1,10 @@
+START S2_draw701
+DONE S0_draw701 prb 0.254
+START S2_draw702
+DONE S0_draw702 prb 0.259
+DONE S0_draw703 prb 0.249
+START S2_draw703
+DONE S2_draw702 prb 0.227
+DONE S2_draw703 prb 0.222
+DONE S2_draw701 prb 0.225
+COMPLETE

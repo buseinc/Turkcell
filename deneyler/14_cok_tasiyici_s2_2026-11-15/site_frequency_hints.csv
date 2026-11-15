@@ -1,0 +1,25 @@
+site,role,cells,cells_interfreq,multi_frequency
+SITE_000083,Interference buffer,6,6,True
+SITE_000130,Evaluation,7,7,True
+SITE_000145,Interference buffer,9,9,True
+SITE_000198,Interference buffer,9,9,True
+SITE_000200,Interference buffer,14,14,True
+SITE_000204,Interference buffer,18,17,True
+SITE_000206,Interference buffer,12,8,True
+SITE_000220,Interference buffer,11,11,True
+SITE_000224,Interference buffer,10,9,True
+SITE_000296,Evaluation,6,4,True
+SITE_000440,Evaluation,8,7,True
+SITE_000441,Evaluation,9,9,True
+SITE_000442,Interference buffer,9,6,True
+SITE_000443,Evaluation,14,14,True
+SITE_000444,Evaluation,6,0,False
+SITE_000445,Interference buffer,6,0,False
+SITE_000475,Interference buffer,1,1,True
+SITE_000480,Interference buffer,2,0,False
+SITE_000482,Evaluation,2,1,True
+SITE_000506,Interference buffer,1,1,True
+SITE_000553,Interference buffer,6,1,False
+SITE_000554,Evaluation,2,0,False
+SITE_000555,Interference buffer,3,1,False
+SITE_000549,Interference buffer,0,0,

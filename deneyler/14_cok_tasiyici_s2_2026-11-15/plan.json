@@ -1,0 +1,185 @@
+{
+  "cases": [
+    {
+      "name": "S0_draw701",
+      "scenario": "S0",
+      "az": 42,
+      "ue_seed": 701,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1
+    },
+    {
+      "name": "S2_draw701",
+      "scenario": "S2",
+      "az": 42,
+      "ue_seed": 701,
+      "ues": 378,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1
+    },
+    {
+      "name": "S0_draw702",
+      "scenario": "S0",
+      "az": 7,
+      "ue_seed": 702,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1
+    },
+    {
+      "name": "S2_draw702",
+      "scenario": "S2",
+      "az": 7,
+      "ue_seed": 702,
+      "ues": 378,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1
+    },
+    {
+      "name": "S0_draw703",
+      "scenario": "S0",
+      "az": 99,
+      "ue_seed": 703,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1
+    },
+    {
+      "name": "S2_draw703",
+      "scenario": "S2",
+      "az": 99,
+      "ue_seed": 703,
+      "ues": 378,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1
+    }
+  ],
+  "calibration_factors": {
+    "S0": 1.47,
+    "S2": 1.54
+  },
+  "camping": {
+    "S0_701": {
+      "b20_share": 0.0,
+      "cells": 72,
+      "b20_cells": 0
+    },
+    "S2_701": {
+      "b20_share": 0.50390625,
+      "cells": 122,
+      "b20_cells": 51
+    },
+    "S0_702": {
+      "b20_share": 0.0,
+      "cells": 72,
+      "b20_cells": 0
+    },
+    "S2_702": {
+      "b20_share": 0.546875,
+      "cells": 122,
+      "b20_cells": 51
+    },
+    "S0_703": {
+      "b20_share": 0.0,
+      "cells": 72,
+      "b20_cells": 0
+    },
+    "S2_703": {
+      "b20_share": 0.515625,
+      "cells": 122,
+      "b20_cells": 51
+    }
+  },
+  "site_carriers_S2": {
+    "SITE_000440": "B3;B20",
+    "SITE_000441": "B3;B20",
+    "SITE_000130": "B3;B20",
+    "SITE_000296": "B3;B20",
+    "SITE_000443": "B3;B20",
+    "SITE_000554": "B3",
+    "SITE_000482": "B3;B20",
+    "SITE_000444": "B3",
+    "SITE_000506": "B3;B20",
+    "SITE_000480": "B3",
+    "SITE_000553": "B3",
+    "SITE_000200": "B3;B20",
+    "SITE_000224": "B3;B20",
+    "SITE_000555": "B3",
+    "SITE_000475": "B3;B20",
+    "SITE_000206": "B3;B20",
+    "SITE_000204": "B3;B20",
+    "SITE_000549": "B3",
+    "SITE_000445": "B3",
+    "SITE_000220": "B3;B20",
+    "SITE_000198": "B3;B20",
+    "SITE_000442": "B3;B20",
+    "SITE_000145": "B3;B20",
+    "SITE_000083": "B3;B20"
+  },
+  "site_sectors_S2": {
+    "SITE_000440": 3,
+    "SITE_000441": 3,
+    "SITE_000130": 3,
+    "SITE_000296": 3,
+    "SITE_000443": 3,
+    "SITE_000554": 2,
+    "SITE_000482": 3,
+    "SITE_000444": 3,
+    "SITE_000506": 3,
+    "SITE_000480": 3,
+    "SITE_000553": 3,
+    "SITE_000200": 3,
+    "SITE_000224": 3,
+    "SITE_000555": 3,
+    "SITE_000475": 3,
+    "SITE_000206": 3,
+    "SITE_000204": 3,
+    "SITE_000549": 3,
+    "SITE_000445": 3,
+    "SITE_000220": 3,
+    "SITE_000198": 3,
+    "SITE_000442": 3,
+    "SITE_000145": 3,
+    "SITE_000083": 3
+  },
+  "radio": {
+    "mixed_cqi": 1,
+    "beamwidth": 120,
+    "exponent": 3,
+    "enb_power": 49,
+    "receiver_nf": 9,
+    "shadow_std": 0,
+    "dl_earfcn": 1300,
+    "udp_jitter": 1
+  },
+  "constants": {
+    "camp_b3_min_rsrp_dbm": -110.0,
+    "b20_dl_gain_db": 7.050831751340814,
+    "b20_rsrp_offset_db": 10.061131707980627,
+    "target_prb": 0.233
+  },
+  "source_sha256": "ebc0de9b823267bb8f5c8814ebf3bfac3f627398a44302f1f8a571e3ca2138fa",
+  "input_hashes": {
+    "sites_S0_42.csv": "59a5f4f30fb820546f9b3cb210b1ae3cfd038ff10cbc2bb5a18d48912d2a1abe",
+    "sites_S0_7.csv": "50b204af23cc8be26da020b52408e26c02a5a54b84d0806a06f5e0ab48431618",
+    "sites_S0_99.csv": "e8de49801a5a48935e3df2dfe364e7cac64716872d9c5d9fd79a0ce4e9ead8c4",
+    "sites_S2_42.csv": "3201dfbb0a22de8ceb5c3a276c70521c00254031a3c03d17ce1cec6ffa527676",
+    "sites_S2_7.csv": "7faf6e35b4d5c24b552624a1ba92602e67aff3e4a6987d8a8fc774d78389db0d",
+    "sites_S2_99.csv": "bf62aab77abebd830ed1b14dbbe260e25f3562b395d52129dfe808f4d9eea051",
+    "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6",
+    "ues_S0_701.csv": "457c4ee99c4cd4e19d1269936806c7bee5f098b96643740b1421f5f61fff4755",
+    "ues_S0_702.csv": "77ae65b1293da0bc11fdd2f155eea5dab1c519cb94ba2c0cf5cffd0d2dfaac6e",
+    "ues_S0_703.csv": "d53ddfb7d2b37b04e19cb48ea5e529d0496c423bcc30574e323a13c937089799",
+    "ues_S2_701.csv": "e5192aa2c94603ba2cdf3b672f9d586da1f4aa37a0808c07ca656f170c8e7798",
+    "ues_S2_702.csv": "f5dca2cd3f2680963a3a441bebbdeb477d43310c47e6756dc7935aee4ef43c84",
+    "ues_S2_703.csv": "afe238dab608f4104286f28d63aa9b23b1700fdcc9380775e3a56475ffe2cb86"
+  },
+  "rule": "- Common to both: selected radio settings, current 24 sites, the three azimuth/UE draws, 256 measurement\n  UEs (512 B / 200 ms), one load UE per cell at 800 m on its boresight targeting the KPI daily-mean DL PRB\n  (0.233), 4 s, 1 s warm-up. NEW for both: UDP start times jittered within one interval (removes the\n  synchronised-load artefact found by the coverage-map study). So S0 here is re-run, not reused.\n- S0: every site 3 sectors x B3 (1800 MHz, 20 MHz).\n- S2: carriers from KPI handover evidence (cell signature study): a site whose cells mostly report\n  inter-frequency handovers gets B3 + B20 (800 MHz, 10 MHz) on each sector; otherwise B3 only.\n  Sites without KPI cells keep B3 only. SITE_000554 gets 2 sectors (S1 hint). Same 49 dBm per carrier.\n  B20 path loss: free-space reference difference (+7.05 dB DL) on top of the same log-distance law.\n- UE camping rule (assumption; ns-3 does no inter-frequency initial selection): a UE camps on B3 if its\n  best B3 RSRP >= -110 dBm; otherwise on B20 if its best B20 RSRP is higher; else B3. Computed with the\n  analytical link budget validated in the coverage-map study (RSRP exact).\n- Metrics vs Experia and KPI CQI exactly as in the earlier studies; per-cell = (sector, carrier).\n- Load calibration: interval = factor / target_prb, one factor per scenario fitted on draw 701 only,\n  then frozen; accept if mean achieved PRB within +/-10 % of target."
+}

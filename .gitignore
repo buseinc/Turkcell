@@ -16,3 +16,6 @@ ana_proje/LTE Main KPI_*/*.xlsx
 ana_proje/experia/experia.xlsx
 # Ham KPI'dan süzülen hücre verisi (operatör verisi; extract.py ile yeniden üretilir)
 deneyler/09_kpi_yuk_profili_2026-11-12/kpi_cells.csv.gz
+deneyler/13_hucre_imzasi_2026-11-15/experia_cells.csv.gz
+deneyler/13_hucre_imzasi_2026-11-15/kpi_cells.csv.gz
+deneyler/14_cok_tasiyici_s2_2026-11-15/buffer_kpi_cells.csv.gz
