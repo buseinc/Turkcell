@@ -1,5 +1,7 @@
 # Sındırgı LTE başlangıç senaryosu — ilk aşama özeti (15 Kasım 2026)
 
+> Terimler yabancı geliyorsa önce [basit anlatım](BASIT_ANLATIM.md) belgesini okuyun.
+
 Bu belge, 10–15 Kasım arasında yapılan bütün çalışmayı tek yerde toplar. Ayrıntılar her başlıktaki
 bağlantılarda. Eski belgelerdeki sayılar, o günün senaryosuna aittir; **güncel sayılar bu belgededir.**
 

@@ -7,7 +7,8 @@ Sonraki aşamalar: KPI'dan yük modeli, stres testi, öncelikli bölge ve rota/U
 
 ## Güncel durum — 15 Kasım 2026
 
-**İlk aşama tamamlandı.** Baştan okumak için: [İlk aşama özeti](toplantilar/2026-11-15_ilk_asama_ozeti/ILK_ASAMA_OZETI.md)
+**İlk aşama tamamlandı.** Konuya yeniyseniz önce [basit anlatım](toplantilar/2026-11-15_ilk_asama_ozeti/BASIT_ANLATIM.md)
+(RSRP, SINR, PRB… örneklerle). Baştan okumak için: [İlk aşama özeti](toplantilar/2026-11-15_ilk_asama_ozeti/ILK_ASAMA_OZETI.md)
 (hocanın istekleri ve karşılıkları, güncel başlangıç senaryosunun tam tanımı, ana sonuçlar, açık sorular).
 Hocaya gönderilecek mesaj taslağı: [HOCAYA_MESAJ_TASLAGI.md](toplantilar/2026-11-15_ilk_asama_ozeti/HOCAYA_MESAJ_TASLAGI.md).
 
