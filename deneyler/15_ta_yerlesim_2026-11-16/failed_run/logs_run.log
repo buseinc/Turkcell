@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+  File "/mnt/c/Users/20umu/OneDrive/Desktop/Turkcell/deneyler/15_ta_yerlesim_2026-11-16/study.py", line 132, in <module>
+    main()
+  File "/mnt/c/Users/20umu/OneDrive/Desktop/Turkcell/deneyler/15_ta_yerlesim_2026-11-16/study.py", line 124, in main
+    results.append(f.result())
+                   ^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/20umu/OneDrive/Desktop/Turkcell/deneyler/15_ta_yerlesim_2026-11-16/study.py", line 89, in one
+    full = radio.metrics(folder, c['warmup'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/20umu/OneDrive/Desktop/Turkcell/ana_proje/simulation/run_radio_study.py", line 87, in metrics
+    save(folder/'metrics.json',out)
+  File "/mnt/c/Users/20umu/OneDrive/Desktop/Turkcell/ana_proje/simulation/run_radio_study.py", line 41, in save
+    path.write_text(json.dumps(data,indent=2,allow_nan=False),encoding='utf-8')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 398, in _iterencode_dict
+    yield _floatstr(value)
+          ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 240, in floatstr
+    raise ValueError(
+ValueError: Out of range float values are not JSON compliant: nan

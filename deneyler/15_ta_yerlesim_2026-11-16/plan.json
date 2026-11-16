@@ -1,0 +1,90 @@
+{
+  "cases": [
+    {
+      "name": "S0TA_draw701",
+      "scenario": "S0TA",
+      "az": 42,
+      "ue_seed": 701,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1
+    },
+    {
+      "name": "S0TA_draw702",
+      "scenario": "S0TA",
+      "az": 7,
+      "ue_seed": 702,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1
+    },
+    {
+      "name": "S0TA_draw703",
+      "scenario": "S0TA",
+      "az": 99,
+      "ue_seed": 703,
+      "ues": 328,
+      "measurement_ues": 256,
+      "duration": 4,
+      "warmup": 1
+    }
+  ],
+  "calibration_factors": {
+    "S0TA": 1.47
+  },
+  "placement_median_m": {
+    "701": {
+      "SITE_000130": 8043.0,
+      "SITE_000296": 2533.0,
+      "SITE_000440": 8146.0,
+      "SITE_000441": 2518.0,
+      "SITE_000443": 1477.0,
+      "SITE_000444": 1693.0,
+      "SITE_000482": 1005.0,
+      "SITE_000554": 1737.0
+    },
+    "702": {
+      "SITE_000130": 7352.0,
+      "SITE_000296": 2380.0,
+      "SITE_000440": 7847.0,
+      "SITE_000441": 2613.0,
+      "SITE_000443": 1041.0,
+      "SITE_000444": 2070.0,
+      "SITE_000482": 1209.0,
+      "SITE_000554": 2310.0
+    },
+    "703": {
+      "SITE_000130": 7662.0,
+      "SITE_000296": 2551.0,
+      "SITE_000440": 8826.0,
+      "SITE_000441": 2566.0,
+      "SITE_000443": 953.0,
+      "SITE_000444": 2099.0,
+      "SITE_000482": 1066.0,
+      "SITE_000554": 6448.0
+    }
+  },
+  "radio": {
+    "mixed_cqi": 1,
+    "beamwidth": 120,
+    "exponent": 3,
+    "enb_power": 49,
+    "receiver_nf": 9,
+    "shadow_std": 0,
+    "dl_earfcn": 1300,
+    "udp_jitter": 1
+  },
+  "source_sha256": "ebc0de9b823267bb8f5c8814ebf3bfac3f627398a44302f1f8a571e3ca2138fa",
+  "input_hashes": {
+    "sites_S0TA_42.csv": "59a5f4f30fb820546f9b3cb210b1ae3cfd038ff10cbc2bb5a18d48912d2a1abe",
+    "sites_S0TA_7.csv": "50b204af23cc8be26da020b52408e26c02a5a54b84d0806a06f5e0ab48431618",
+    "sites_S0TA_99.csv": "e8de49801a5a48935e3df2dfe364e7cac64716872d9c5d9fd79a0ce4e9ead8c4",
+    "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6",
+    "ues_S0TA_701.csv": "cd013c78ed046dac4d7a9120055e40eaa2305e4fb9b0c97a43dcf7ea373b7310",
+    "ues_S0TA_702.csv": "bd558efa386844863194c3acdeb1e0189288a7050a2428a03dd36dee72e88a3f",
+    "ues_S0TA_703.csv": "cedba1183986214053be39a43d6bee112f7d036f1da9786060369a32e72c2d72"
+  },
+  "rule": "- Question: does placing the measured users at the distances the real users have (from timing\n  advance) bring the simulation closer to Experia than the uniform 2-6 km clusters?\n- Everything else is identical to S0 of the multi-carrier study (deneyler/14): same 24 sites,\n  same azimuth draws (42/7/99), same load users and load factor (frozen 1.47, KPI daily-mean\n  PRB 0.233), randomised UDP start, 256 measured users (32 per evaluation site), 4 s, 1 s warm-up.\n- Only the measured users move. For each user of evaluation site s: draw one hourly Experia record\n  of s at random (so busier cells and hours weigh more), take its TA distance\n  d = AVG(TAAVG) x 4.88 m (unit given by the advisor/Turkcell), clip to [100 m, 15 km], and place\n  the user at distance d in a uniformly random direction (antenna azimuths are unknown).\n- TA is an input about where users are, like the site coordinates; it is not RSRP/SINR, so\n  the comparison with Experia RSRP/SINR stays a fair check. The held-out sites keep their role.\n- Compare with deneyler/14 S0 on the same metrics: site MAE (tuning and held-out sites), signed\n  errors, site ranking, cell-level RSRP/SINR distribution, KPI CQI. No other change, no retuning."
+}

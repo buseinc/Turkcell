@@ -5,6 +5,8 @@ yararlanarak Sındırgı bölgesi için ns-3.44 üzerinde bir LTE/EPC başlangı
 senaryosu kurmak ve simülasyon çıktılarını gerçek ölçümlerle karşılaştırmak.
 Sonraki aşamalar: KPI'dan yük modeli, stres testi, öncelikli bölge ve rota/UAV.
 
+> **Başka bir bilgisayarda / yapay zekâyla devam ediyorsanız önce [DEVAM_NOTU.md](DEVAM_NOTU.md) okuyun.**
+
 ## Güncel durum — 15 Kasım 2026
 
 **İlk aşama tamamlandı.** Konuya yeniyseniz önce [basit anlatım](toplantilar/2026-11-15_ilk_asama_ozeti/BASIT_ANLATIM.md)
@@ -106,6 +108,7 @@ Her deney bir öncekinin sonucunu kullanır. Sonuç belgesi genellikle `SONUCLAR
 | 12 | [12_dagilim_karsilastirmasi](deneyler/12_dagilim_karsilastirmasi_2026-11-15/SONUCLAR.md) | Hücre düzeyi dağılımlar ve saha sıralaması (Experia) |
 | 13 | [13_hucre_imzasi](deneyler/13_hucre_imzasi_2026-11-15/SONUCLAR.md) | Saha içi hücre imzaları: sektör/taşıyıcı ipuçları, S2 önerisi |
 | 14 | [14_cok_tasiyici_s2](deneyler/14_cok_tasiyici_s2_2026-11-15/SONUCLAR.md) | Çok taşıyıcılı senaryo (S2) ve tek taşıyıcı (S0) karşılaştırması |
+| 15 | [15_ta_yerlesim](deneyler/15_ta_yerlesim_2026-11-16/SONUCLAR.md) | Kullanıcıları TA mesafesine göre yerleştirme; modelde bina içi kayıp ve anten eğimi eksik |
 
 ## Notlar
 
