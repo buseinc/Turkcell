@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[margin=2.4cm]{geometry}
 \usepackage{amsmath,amssymb,booktabs,tabularx,array,enumitem,hyperref,xcolor,listings}
+\usepackage{graphicx}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
 \newcommand{\blue}[1]{\textcolor{blue}{#1}}
 \newcommand{\green}[1]{\textcolor{green}{#1}}
@@ -20,7 +21,7 @@ This document specifies a reproducible procedure to construct a \emph{representa
 \end{abstract}
 
 \begin{progress}
-Mavi notlar, ilk aşamada yaptıklarımızı ve ana bulguları ilgili bölümlerin altında özetliyor. Kısaca: Sındırgı ağı ns-3'te çalışıyor ve gerçek ölçümlerle iyi örtüşüyor. Ayarları seçerken kullanmadığımız üç kontrol sahasında, simülasyon ile Experia arasındaki ortalama fark sinyal gücü (RSRP) için 1,7~dB, sinyal kalitesi (SINR) için 2,2~dB. Her sonucu üç farklı anten yönü ve kullanıcı yerleşimiyle tekrarlayarak kontrol ettik. Kodlar ve ayrıntılı raporlar proje klasöründe duruyor.
+Mavi notlar, ilk aşamada yaptıklarımızı ve ana bulguları ilgili bölümlerin altında özetliyor. Kısaca: Sındırgı ağı ns-3'te çalışıyor ve gerçek ölçümlerle iyi örtüşüyor. Ayarları seçerken kullanmadığımız üç sahada, simülasyon ile Experia arasındaki ortalama fark sinyal gücü (RSRP) için 1,7~dB, sinyal kalitesi (SINR) için 2,2~dB. Her sonucu üç farklı anten yönü ve kullanıcı yerleşimiyle tekrarlayarak kontrol ettik. Kodlar ve ayrıntılı raporlar proje klasöründe duruyor.
 \end{progress}
 \section{Scope and key methodological constraints}
 The available data include (i) cell identifiers and coordinates (several cells share each physical site coordinate), (ii) aggregate radio-quality indicators such as RSRP, RSRQ, SINR, and mean timing advance (TAAVG), and (iii) a separate LTE KPI dataset with traffic, users, PRB utilization, CQI, throughput, and potentially availability, drops, and handover counters. The radio and traffic observation periods \textbf{do not coincide}, although cell IDs and site coordinates match. Thus, these datasets may be joined by cell identity for metadata and long-run characterization, \emph{not} treated as simultaneous observations. Actual carrier frequencies, bandwidths, antenna azimuths, transmit powers, schedulers, and user coordinates are unavailable.
@@ -102,7 +103,7 @@ Configuration S0 is a deliberately simplified, reproducible \emph{single-carrier
 \end{enumerate}
 
 \begin{progress}
-S0'ı bu adımlarla kurduk. Bilinmeyen ayarları denemeyle bulduk: güç, anten genişliği, yayılım modeli, gölgeleme ve kullanıcı yerleşimi için 49 farklı kombinasyonu ns-3'te çalıştırdık. Seçimi yalnızca 5 eğitim sahasına bakarak yaptık, kalan 3 sahayı kontrol için ayırdık. Ölçümlere en yakın ve tekrarlarda en tutarlı sonucu sektör başına 49~dBm güç, 120$^\circ$ anten genişliği ve gölgelemesiz yayılım verdi. Ayrıca 64 sanal kullanıcının yetersiz olduğunu gördük: bazı sahalara yalnızca 1--2 kullanıcı düşüyordu ve sonuçlar kullanıcıların nereye düştüğüne göre değişiyordu. Bu yüzden 256 kullanıcıya çıkardık.
+S0'ı bu adımlarla kurduk. Bilinmeyen ayarları denemeyle bulduk: güç, anten genişliği, yayılım modeli, gölgeleme ve kullanıcı yerleşimi için 49 farklı kombinasyonu ns-3'te çalıştırdık. Aşağıdaki holdout önerisine uygun olarak seçimi 8 ana sahanın 5'ine bakarak yaptık, kalan 3 sahayı seçimden sonra kontrol için ayırdık. Ölçümlere en yakın ve tekrarlarda en tutarlı sonucu sektör başına 49~dBm güç, 120$^\circ$ anten genişliği ve gölgelemesiz yayılım verdi. Ayrıca 64 sanal kullanıcının yetersiz olduğunu gördük: bazı sahalara yalnızca 1--2 kullanıcı düşüyordu ve sonuçlar kullanıcıların nereye düştüğüne göre değişiyordu. Bu yüzden 256 kullanıcıya çıkardık.
 \end{progress}
 
 \paragraph{Scale and feasibility.} A first test can use 16 sites, 48 sectors, and approximately 100--200 stationary UEs; these UE counts are \emph{computational test settings}, not inferred user populations. Run a smaller 2--3-site topology first to verify antenna orientation and interference behavior, then scale to all 16 sites. A 48-sector network may be expensive with full traffic; adjust UE count and simulation duration based on measured runtime.
@@ -113,7 +114,7 @@ For each Turkcell cell ID, compute a time-series signature containing RSRP, SINR
 We propose three explicit alternatives: \textbf{S0}, three synthetic single-carrier sectors at every site; \textbf{S1}, site-specific sector counts (e.g., one or two at the observed 2-cell sites, three elsewhere), selected as assumptions; and \textbf{S2}, selected sites represented by multiple carrier layers when the cell-ID inventory and radio signatures make this plausible. S2 requires correct inter-frequency modeling and should not be treated as equivalent to adding colocated cochannel sectors. Compare simulated interior RSRP/SINR distributions and service-area geometry under S0/S1/S2. Report whether conclusions persist across hypotheses; do not label an inferred configuration as confirmed.
 
 \begin{progress}
-Üç senaryoyu da denedik. İki hücreli sahalarda sektör sayısını azaltmak (S1) bir iyileşme sağlamadı. Çok frekanslı senaryoda (S2), handover kayıtlarına göre çok frekanslı görünen sahalara 1800~MHz'e ek olarak bir 800~MHz katmanı ekledik. S2 hücrelerin sinyal düzeyini ve CQI'yı gerçeğe yaklaştırdı, ama saha ortalamalarındaki hatayı artırdı (kontrol sahalarında RSRP farkı 1,7'den 3,0~dB'ye çıktı). Bunun nedeni, 800~MHz katmanının gücünü ve kullanıcıların frekanslara nasıl dağıldığını bilmememiz. Bu yüzden şimdilik tek frekanslı S0'ı temel senaryo olarak kullanıyoruz.
+Üç senaryoyu da denedik. İki hücreli sahalarda sektör sayısını azaltmak (S1) bir iyileşme sağlamadı. Çok frekanslı senaryoda (S2), handover kayıtlarına göre çok frekanslı görünen sahalara 1800~MHz'e ek olarak bir 800~MHz katmanı ekledik. S2 hücrelerin sinyal düzeyini ve CQI'yı gerçeğe yaklaştırdı, ama saha ortalamalarındaki hatayı artırdı (ayarda kullanılmayan sahalarda RSRP farkı 1,7'den 3,0~dB'ye çıktı). Bunun nedeni, 800~MHz katmanının gücünü ve kullanıcıların frekanslara nasıl dağıldığını bilmememiz. Bu yüzden şimdilik tek frekanslı S0'ı temel senaryo olarak kullanıyoruz.
 
 Yük deneylerinde S0 ve S2'yi birlikte koşturmayı öneriyoruz. S0'da girişim olduğundan fazla, S2'de az; iki senaryoda da aynı çıkan sonuç daha güvenilir olur. Bant bilgisi gelirse S2 netleşir.
 \end{progress}
@@ -135,14 +136,14 @@ TAAVG'yi birimi belli olmadığı için mesafeye çevirmedik. Yine de göreli ol
 \end{enumerate}
 
 \begin{progress}
-Bu adımların hepsini yaptık. Ayarları 5 eğitim sahasıyla seçip 3 kontrol sahasında sınadık; komşu sayısı testi de geçti. Simülasyon, hangi sahanın güçlü hangisinin zayıf olduğunu doğru sıralıyor. Ancak hücre düzeyinde bakınca, gerçek ağdaki çok güçlü hücreler simülasyonda yok ve simülasyondaki hücreler birbirine fazla benziyor. Bunun nedeni büyük olasılıkla gerçek ağın çok frekanslı olması ve gerçek kullanıcıların sahalara bizim varsaydığımızdan daha yakın olması.
+Bu adımların hepsini yaptık. Ayarları 5 sahayla seçip, seçimde kullanmadığımız 3 sahada sınadık (holdout); komşu sayısı testi de geçti. Sonuçlar için bkz. Bölüm~\ref{sec:validation}. Simülasyon, hangi sahanın güçlü hangisinin zayıf olduğunu doğru sıralıyor. Ancak hücre düzeyinde bakınca, gerçek ağdaki çok güçlü hücreler simülasyonda yok ve simülasyondaki hücreler birbirine fazla benziyor. Bunun nedeni büyük olasılıkla gerçek ağın çok frekanslı olması ve gerçek kullanıcıların sahalara bizim varsaydığımızdan daha yakın olması.
 \end{progress}
 
 \subsection{Portable region-generation interface}
 The same code should accept \texttt{region.yaml} (geographic polygon or epicenter/aftershock selection, evaluation sites, guard-ring rule, assumed carrier/sector policy, UE spatial model, random seeds) plus \texttt{sites.csv} and \texttt{cell\_radio.csv}. The S\i nd\i rg\i{} case is the first configuration; coastal and city-center scenarios should reuse the exact generator with different geographic subsets and environment assumptions. This separates geographical input, uncertain radio configuration, and experimental demand/failure scenarios.
 
 \begin{progress}
-Henüz yapılmadı. Şu an bölge ayarları her deneyin kendi dosyalarında duruyor. Şehir merkezi veya sahil bölgesine geçmeden önce bunları tek bir bölge dosyasında toplamak gerekecek.
+Henüz yapılmadı; şu an bölge ayarları her deneyin kendi dosyalarında duruyor. Önerdiğiniz gibi benzer büyüklükte başka bölgelerde de deneyeceğiz. Bunun için ayarları önce tek bir bölge dosyasında toplayacağız. Yeni bölgede Sındırgı ayarlarıyla başlayıp hangilerinin bölgeye göre değişmesi gerektiğine bakmayı düşünüyoruz; anten gücü gibi ekipman ayarlarının aynı kalmasını, yayılım gibi ortama bağlı ayarların değişmesini bekliyoruz.
 \end{progress}
 
 \section{Baseline radio configuration}
@@ -171,19 +172,7 @@ EPC / backhaul & non-bottleneck baseline & Keep transport effects separate from 
 \bottomrule\end{tabularx}\end{table}
 
 \begin{progress}
-ns-3.44'ün klasik LTE modülünü kullandık. Tablodaki değerlerle başladık, sonra ölçümlere göre değiştirdik. Seçtiğimiz değerler taslaktakilerden biraz farklı:
-\begin{center}\small
-\begin{tabular}{@{}lll@{}}\toprule
- & Taslak & Kullandığımız \\\midrule
-Güç & 46~dBm & 49~dBm \\
-Anten genişliği & 65$^\circ$ & 120$^\circ$ \\
-Yayılım & urban macro & log-distance (üs 3) \\
-Gölgeleme & 8~dB & yok \\
-Sanal kullanıcı & 100--200 & 256 \\
-Yük & --- & KPI'daki ortalama kullanım \\\bottomrule
-\end{tabular}
-\end{center}
-Bunlar Turkcell'in gerçek ayarları değil; denediklerimiz arasında ölçümlere en yakın ve tekrarlarda en tutarlı sonucu verenler. Kullanıcılar sabit olduğu için handover kullanmadık.
+ns-3.44'ün klasik LTE modülünü kullandık. Tablodaki değerlerle başladık, sonra ölçümlere göre değiştirdik. Denediğimiz ve seçtiğimiz değerler doğrulama bölümündeki tabloda (Bölüm~\ref{sec:validation}). Kullanıcılar şimdilik sabit olduğu için handover'ı henüz eklemedik.
 \end{progress}
 
 \subsection{Azimuth uncertainty}
@@ -213,7 +202,7 @@ Generate a configurable number of UEs in the selected region. Compare (U1) unifo
 In the classic LTE helper, \texttt{Attach(ueDevices)} can perform automatic initial cell selection based on radio measurements, whereas \texttt{Attach(ueDevice,enbDevice)} forces a chosen eNB. Verify the exact overload and handover behavior in the installed version. Configure X2 interfaces and an A3 RSRP handover algorithm for mobility studies; neither RSRP-based handover nor initial attachment automatically implements load balancing. For site outages or UAV eNB introduction, explicit recovery/reselection logic may be needed.
 
 \begin{progress}
-Kullanıcıları hem bölgeye düzgün dağıtarak hem de sahaların çevresinde kümeler hâlinde denedik. En tutarlı sonuç sahaların 2--6~km çevresindeki kümelerle çıktı. Kullanıcılar şimdilik sabit ve handover henüz kurulmadı; kesinti ve UAV deneylerinde gerekecek.
+Kullanıcıları hem bölgeye düzgün dağıtarak hem de sahaların çevresinde kümeler hâlinde denedik. En tutarlı sonuç sahaların 2--6~km çevresindeki kümelerle çıktı. Kullanıcılar şimdilik sabit ve handover henüz kurulmadı. Kesinti ve UAV deneylerinde kullanıcıların başka sahaya geçebilmesi gerektiği için handover'ı bir sonraki adımda ekleyeceğiz.
 \end{progress}
 
 \section{Traffic model and calibration}
@@ -267,6 +256,7 @@ lte->SetHandoverAlgorithmType(
 \end{lstlisting}
 
 \section{Verification, validation, and acceptance criteria}
+\label{sec:validation}
 \begin{table}[ht]\centering\small
 \begin{tabularx}{\linewidth}{@{}l X X@{}}\toprule
 Level & Test & Interpretation \\
@@ -280,7 +270,63 @@ Out-of-sample & Hold out sites and/or intervals where available & Tests limited 
 Do not specify numerical acceptance thresholds before auditing KPI units, spatial variability, and model capability. Use distributional error (e.g., quantile differences), site-level errors, and stability of spatial rankings; avoid relying on one aggregate mean. A simulated network can be useful for controlled counterfactual experiments without being validated as a faithful reconstruction of Turkcell's real deployment.
 
 \begin{progress}
-Sonuçları tek bir ortalamayla değil; saha hataları, hücre dağılımları ve sahaların sıralamasıyla birlikte değerlendirdik. Her deneyin başarı ölçütünü koşudan önce yazdık; 64 kullanıcının yetersiz olduğu da böyle bir ölçütle ortaya çıktı. Kabul edilebilir hata düzeyi konusunda görüşünüzü almak istiyoruz.
+\textbf{Kurulan ağ.} Aşağıdaki şekil simülasyondaki ağı gösteriyor: seçtiğiniz 8 ana saha (kırmızı), komşu sahalar, her sahada üç anten yönü ve ana sahaların 2--6~km çevresine yerleştirilen sanal kullanıcılar. Gerçek anten yönleri bilinmediği için yönler rastgele seçildi ve her şey üç farklı yönle tekrarlandı.
+\begin{center}
+\includegraphics[width=0.78\linewidth]{figures/yerlesim.png}
+\end{center}
+
+\textbf{Ayarlanan değerler.} Turkcell anten ayarlarını paylaşmadığı için bunları ns-3'te denedik. Ayarlar bütün ağ için ortak; sahaları tek tek ayarlamadık.
+\begin{center}\small
+\begin{tabular}{@{}lll@{}}\toprule
+Ayar & Denenen değerler & Seçilen \\\midrule
+Anten gücü (sektör başına) & 40, 43, 46, 49~dBm & 49~dBm \\
+Yatay anten genişliği & 65$^\circ$, 90$^\circ$, 120$^\circ$ & 120$^\circ$ \\
+Yayılım modeli & log-distance (üs 2,55--3,3), COST231 & log-distance, üs 3 \\
+Gölgeleme & 0, 4, 8~dB & yok \\
+Alıcı gürültü faktörü & 6, 9, 12~dB & 9~dB \\
+Kullanıcı yerleşimi & düzgün; sahalara 0,5--2 / 1--4 / 2--6~km & 2--6~km \\
+Taşıyıcı & 900, 1800, 2100~MHz & 1800~MHz \\
+Sanal kullanıcı sayısı & 64, 128, 256 & 256 \\
+Ağ yükü & boş; KPI günlük ortalama ve yoğun saat & KPI günlük ortalama \\\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Ölçümlerle benzerlik.} Taslaktaki holdout önerisine uygun olarak, ayarları 8 ana sahanın 5'ine (130, 296, 444, 482, 554) bakarak seçtik. Kalan 3 sahayı (440, 441, 443) seçimden sonra, ayarın görmediği sahalarda da tutup tutmadığını görmek için kullandık. 49 aday arasından seçim yapınca bazı adaylar sırf şans eseri iyi uyabilir; ayrılan sahalar bunu yakalamak için. Aşağıdaki şekilde her nokta bir saha: köşegene ne kadar yakınsa simülasyon ölçüme o kadar yakın.
+\begin{center}
+\includegraphics[width=\linewidth]{figures/saha_karsilastirma.png}
+\end{center}
+\begin{center}\small
+\begin{tabular}{@{}lccc@{}}\toprule
+Ortalama fark (dB, üç tekrar) & RSRP & SINR & RSRQ \\\midrule
+Ayarda kullanılmayan sahalar (440, 441, 443) & 1,7 $\pm$ 0,5 & 2,2 $\pm$ 1,1 & 4,3 $\pm$ 0,4 \\
+Ayarda kullanılan sahalar (130, 296, 444, 482, 554) & 3,6 $\pm$ 0,6 & 2,6 $\pm$ 0,6 & 2,5 $\pm$ 0,3 \\\bottomrule
+\end{tabular}
+\end{center}
+Ayarda kullanılmayan sahalardaki fark, kullanılanlardakinden büyük değil; yani seçilen ayar şansa değil gerçek bir uyuma dayanıyor. Simülasyon sahaların güçlü/zayıf sıralamasını da doğru veriyor (Spearman 0,79--0,95).
+
+\textbf{Neden yeterince yakın?} Saha ortalamasındaki 1,7~dB'lik RSRP farkı, konumdan konuma doğal sinyal dalgalanmasından (tipik olarak 6--8~dB) ve sahalar arasındaki farktan (bizim 8 sahada yaklaşık 16~dB) çok küçük. Bu yüzden simülasyon hangi sahanın güçlü, hangisinin zayıf olduğunu doğru gösteriyor. Sınırlar: 482 ve 554'te RSRP farkı 5~dB civarında (ikisinde de yalnız 2 hücre var ve yapıları belirsiz); Experia'nın SINR tanımını bilmediğimiz için SINR'de ``yakın'' diyebiliyoruz ama ``aynı şeyi ölçüyoruz'' diyemiyoruz; RSRQ ise ns-3'ün farklı tanımı nedeniyle karşılaştırılamıyor.
+
+\textbf{Bağımsız kontrol: CQI.} Ayarlarken hiç kullanmadığımız KPI CQI değerleriyle de karşılaştırdık. KPI'da CQI ve yük aynı kayıttan geldiği için bu, aynı dönemin verisiyle yapılan bir karşılaştırma. Simülasyon ortalamada 1,1 puan düşük; girişim biraz fazla, tek frekans varsayımıyla uyumlu.
+\begin{center}
+\includegraphics[width=0.85\linewidth]{figures/cqi.png}
+\end{center}
+
+\textbf{Neyi doğruladık.}
+\begin{center}\small
+\begin{tabular}{@{}p{0.36\linewidth}p{0.58\linewidth}@{}}\toprule
+Kontrol & Sonuç \\\midrule
+Saha konumları ve hücre--saha eşleşmesi & 16 saha doğru; seçilen 96 hücrenin 96'sı doğru sahada \\
+Taslaktaki Sındırgı tablosu & Hücre sayıları aynı; saha RSRP ortalamaları en fazla 0,55~dB farklı \\
+Yeterli komşu saha & 16, 24, 32, 48 saha karşılaştırıldı; 24'ten sonra sonuçlar değişmiyor \\
+Yeterli sanal kullanıcı & 64 yetersiz (sonuçlar oynuyor); 256 ile sabit \\
+Ayarın görmediği sahalarda tutması & 5 sahayla seçildi, seçimde kullanılmayan 3 sahada sınandı \\
+Tekrarlanabilirlik & Aynı senaryo iki bilgisayarda birebir aynı sonucu verdi \\
+Ağ yükü & Simülasyondaki kapasite kullanımı KPI hedefinin \%10'u içinde \\
+Kapsama haritaları & Harita hesabı ns-3 ile birebir aynı; bölgenin \%99,8'inde sinyal yeterli \\\bottomrule
+\end{tabular}
+\end{center}
+
+Bu yakınlığı, ağı birebir kopya değil ``measurement-informed'' olarak tanımlamak için yeterli görüyoruz. Siz de uygun görürseniz ayarlamayı burada bırakıp stres testine geçmek istiyoruz.
 \end{progress}
 
 \section{Deliverables and staged milestones}
