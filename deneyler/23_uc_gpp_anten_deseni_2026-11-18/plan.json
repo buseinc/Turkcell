@@ -1,0 +1,146 @@
+{
+  "draws": [
+    [
+      42,
+      701
+    ],
+    [
+      7,
+      702
+    ],
+    [
+      99,
+      703
+    ]
+  ],
+  "radio": {
+    "pathloss": "rma",
+    "dl_earfcn": 1651,
+    "ul_earfcn": 19651,
+    "enb_power": 49,
+    "beamwidth": 65,
+    "antenna_max_gain_dbi": 15,
+    "vertical_pattern": 1,
+    "downtilt": 6,
+    "vertical_beamwidth": 10,
+    "link_shadow_std": 8,
+    "receiver_nf": 9,
+    "indoor_loss": 0,
+    "mixed_cqi": 1,
+    "udp_jitter": 1,
+    "antenna_3gpp": 1,
+    "max_attenuation": 25
+  },
+  "sources": {
+    "pathloss": "3GPP TR 38.901 Table 7.4.1-1 RMa (h=5 m, W=20 m), LOS probability Table 7.4.2-1; chosen after deneyler/20",
+    "dl_earfcn": "CellMapper, Turkcell B3 primary carrier observed on Balikesir towers (17.11.2026)",
+    "enb_power": "3GPP TR 36.814 Table A.2.1.1-1: 49 dBm for a 20 MHz carrier",
+    "beamwidth": "3GPP TR 36.814/36.942 sector antenna, 65 deg horizontal HPBW",
+    "antenna_max_gain_dbi": "3GPP TR 36.942 macro antenna 15 dBi",
+    "vertical_pattern": "3GPP TR 36.814 vertical pattern form, 10 deg HPBW, 20 dB cap",
+    "downtilt": "advisor draft (6 deg)",
+    "link_shadow_std": "3GPP TR 36.814 macro log-normal shadowing 8 dB",
+    "receiver_nf": "3GPP TR 36.814 UE noise figure 9 dB",
+    "distance_correction": "fit over Experia cells of the region excluding the 8 evaluation sites, minus fit over deneyler/21 simulated users",
+    "antenna_pattern": "3GPP TR 36.814 Table A.2.1.1-2: A=min(A_H+A_V,25), A_H cap 25, A_V cap 20; chosen after deneyler/22"
+  },
+  "correction": {
+    "experia_fit_a_b": [
+      -68.33640440362697,
+      -10.621472507923482
+    ],
+    "experia_fit_resid_sd_db": 4.645203519042683,
+    "experia_cells_used": 5812,
+    "rma_fit_a_b": [
+      42.45222428833993,
+      -42.87671145759594
+    ],
+    "rma_fit_resid_sd_db": 11.884289253736997,
+    "rma_users_used": 768,
+    "extra_loss_db": "110.789 + (-32.255)*log10(d_m), d clipped to [100, 15000] m",
+    "per_draw_extra_loss_stats": {
+      "701": {
+        "min": -23.11311709817079,
+        "median": 6.308455719989652,
+        "max": 39.79085142970858
+      },
+      "702": {
+        "min": -21.636352388607094,
+        "median": 5.029595575700057,
+        "max": 37.698374302557596
+      },
+      "703": {
+        "min": -23.56251383030994,
+        "median": 5.212416334454865,
+        "max": 46.27815079262197
+      }
+    }
+  },
+  "cases": [
+    {
+      "name": "A3_TA_draw701",
+      "label": "A3_TA",
+      "az": 42,
+      "ue_seed": 701,
+      "sites_file": "sites_S0TA_42.csv",
+      "ue_file": "ues_DC_TA_701.csv",
+      "shadow_seed": 42
+    },
+    {
+      "name": "A3_TA_draw702",
+      "label": "A3_TA",
+      "az": 7,
+      "ue_seed": 702,
+      "sites_file": "sites_S0TA_7.csv",
+      "ue_file": "ues_DC_TA_702.csv",
+      "shadow_seed": 7
+    },
+    {
+      "name": "A3_TA_draw703",
+      "label": "A3_TA",
+      "az": 99,
+      "ue_seed": 703,
+      "sites_file": "sites_S0TA_99.csv",
+      "ue_file": "ues_DC_TA_703.csv",
+      "shadow_seed": 99
+    }
+  ],
+  "train_sites": [
+    "SITE_000130",
+    "SITE_000296",
+    "SITE_000444",
+    "SITE_000482",
+    "SITE_000554"
+  ],
+  "holdout_sites": [
+    "SITE_000440",
+    "SITE_000441",
+    "SITE_000443"
+  ],
+  "decision_rule": {
+    "holdout_rsrp_mae_max_db": 3.0,
+    "holdout_sinr_mae_max_db": 3.0,
+    "all_measured_connected": true,
+    "scenario": "A3_TA"
+  },
+  "regression": {
+    "reference": "deneyler/16_bina_anten_2026-11-16/simulation/results/regression_disabled_draw701"
+  },
+  "source_hashes": {
+    "sindirgi_baseline.cc": "0c77c7dca5e806193c725bec7b6204fcfe2fece343d9f51b9049aa741907eefa",
+    "building-vertical-model.h": "ce9e648299fbbb2035e5c3a385d3d7d51fa93d4c16d2f25ff827f8de76a04cfc",
+    "static-shadow-model.h": "83ed29579c7a678880afa9dd5e84e3520a52c4ce5d3f476531c7a631e8d2c9ed",
+    "run_baseline.py": "6675c2fdbe934b6b56c1ef9f1e65c6bb701ab8a2efe9cb58370ecfeef2d9c5f9"
+  },
+  "input_hashes": {
+    "sites_S0TA_42.csv": "59a5f4f30fb820546f9b3cb210b1ae3cfd038ff10cbc2bb5a18d48912d2a1abe",
+    "sites_S0TA_7.csv": "50b204af23cc8be26da020b52408e26c02a5a54b84d0806a06f5e0ab48431618",
+    "sites_S0TA_99.csv": "e8de49801a5a48935e3df2dfe364e7cac64716872d9c5d9fd79a0ce4e9ead8c4",
+    "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6",
+    "ues_DC_TA_701.csv": "82b903407b88948d59e7c8502837726d6cf59f5b3dd5b31845356ff4c75dcabf",
+    "ues_DC_TA_702.csv": "d88e12a618953f8e62b8037206769d763335f3d5db931a5a4141142f9f995ca5",
+    "ues_DC_TA_703.csv": "c23e4c0c35e5af861e43251ce82cd3aba39af4aaf9b04aa8aed208f882176538",
+    "ues_S0TA_701.csv": "cd013c78ed046dac4d7a9120055e40eaa2305e4fb9b0c97a43dcf7ea373b7310"
+  },
+  "rule": "- Context: in deneyler/22 the data-derived distance correction brought RSRP close to Experia (held-out MAE\n  3.5 dB, median identical) but SINR stayed ~8 dB too high: too little interference. The ns-3 cosine antenna\n  used since deneyler/20 has no back/side-lobe floor, so interference from the back and sides of neighbouring\n  sectors is attenuated without limit. This choice is made AFTER seeing deneyler/22 and is reported as such.\n- Only change against deneyler/22 DC_TA: the eNB antenna pattern is the 3GPP TR 36.814 Table A.2.1.1-2\n  macro pattern, applied per link (DL and UL, all users incl. load users):\n      A_H = min(12 (phi/65)^2, 25),  A_V = min(12 ((theta - 6)/10)^2, 20),  A = min(A_H + A_V, 25) dB\n  with 15 dBi peak gain (isotropic 15 dBi element + pattern loss). 65 deg horizontal, 10 deg vertical, 6 deg\n  tilt and 15 dBi are the same sourced values as deneyler/20; Am = 25 dB and SLAv = 20 dB are the TR 36.814\n  values. No value is fitted.\n- Everything else identical to deneyler/22 DC_TA (RMa, 1850 MHz, 49 dBm, 8 dB link shadow, NF 9 dB, TA\n  placement, same per-user distance correction file, load users and 1.47 factor, three draws, 4 s, 1 s warm-up).\n- Regression first: with the new option off the copied simulator must reproduce deneyler/16\n  regression_disabled_draw701 byte for byte (after CRLF->LF).\n- Same decision rule as deneyler/20: becomes the reference if held-out RSRP MAE <= 3 dB and SINR MAE\n  <= 3 dB averaged over draws and all 256 measured users connect in every draw. No value is adjusted after\n  seeing the results."
+}

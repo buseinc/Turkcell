@@ -1,0 +1,65 @@
+{
+  "key": {
+    "name": "A3_TA_draw702",
+    "sites": "sites_S0TA_7.csv",
+    "ues": "ues_DC_TA_702.csv",
+    "extra": [
+      "--pathloss",
+      "rma",
+      "--exponent",
+      "3",
+      "--beamwidth",
+      "65",
+      "--enb-power",
+      "49",
+      "--receiver-nf",
+      "9",
+      "--shadow-std",
+      "0",
+      "--dl-earfcn",
+      "1651",
+      "--ul-earfcn",
+      "19651",
+      "--indoor-loss",
+      "0",
+      "--downtilt",
+      "6",
+      "--vertical-pattern",
+      "1",
+      "--vertical-beamwidth",
+      "10",
+      "--link-shadow-std",
+      "8",
+      "--antenna-3gpp",
+      "1",
+      "--max-attenuation",
+      "25",
+      "--shadow-seed",
+      "7"
+    ],
+    "source_hashes": {
+      "sindirgi_baseline.cc": "0c77c7dca5e806193c725bec7b6204fcfe2fece343d9f51b9049aa741907eefa",
+      "building-vertical-model.h": "ce9e648299fbbb2035e5c3a385d3d7d51fa93d4c16d2f25ff827f8de76a04cfc",
+      "static-shadow-model.h": "83ed29579c7a678880afa9dd5e84e3520a52c4ce5d3f476531c7a631e8d2c9ed",
+      "run_baseline.py": "6675c2fdbe934b6b56c1ef9f1e65c6bb701ab8a2efe9cb58370ecfeef2d9c5f9"
+    },
+    "input_hashes": {
+      "sites_S0TA_42.csv": "59a5f4f30fb820546f9b3cb210b1ae3cfd038ff10cbc2bb5a18d48912d2a1abe",
+      "sites_S0TA_7.csv": "50b204af23cc8be26da020b52408e26c02a5a54b84d0806a06f5e0ab48431618",
+      "sites_S0TA_99.csv": "e8de49801a5a48935e3df2dfe364e7cac64716872d9c5d9fd79a0ce4e9ead8c4",
+      "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6",
+      "ues_DC_TA_701.csv": "82b903407b88948d59e7c8502837726d6cf59f5b3dd5b31845356ff4c75dcabf",
+      "ues_DC_TA_702.csv": "d88e12a618953f8e62b8037206769d763335f3d5db931a5a4141142f9f995ca5",
+      "ues_DC_TA_703.csv": "c23e4c0c35e5af861e43251ce82cd3aba39af4aaf9b04aa8aed208f882176538",
+      "ues_S0TA_701.csv": "cd013c78ed046dac4d7a9120055e40eaa2305e4fb9b0c97a43dcf7ea373b7310"
+    }
+  },
+  "output_hashes": {
+    "sectors.csv": "c2a5cc0b9d4a24e4cce94b6c845f689f0f8162cdbdfe06a4ef018f9210c3103a",
+    "ues.csv": "d5dfa33efc22db099ed211a10d5d90fac95ef2de5ab754421b023636d26ed0f7",
+    "radio_samples.csv": "7364f9e32cb7b882bfedadc0e7188e9345028b4211731b618ee7ccdf184dd40f",
+    "sinr_components.csv": "cc9830ab36ec8e127ec4414a9e4c61d95d1bde7d0cff5fc2cb57d95eb628671b",
+    "measurements.csv": "89bf3e68d84efbb2787a5fecbcb3b96d66cd6a40e2a37ea840d8e7cbb0e0d81a",
+    "prb_usage.csv": "f6ef8ace3e9aec85d1d2271018f96a74957747eee45931ba88bde8791181ab97"
+  }
+}

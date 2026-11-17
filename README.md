@@ -131,6 +131,9 @@ Her deney bir öncekinin sonucunu kullanır. Sonuç belgesi genellikle `SONUCLAR
 | 18 | [18_tasiyici_yuk_esleme](deneyler/18_tasiyici_yuk_esleme_2026-11-16/SONUCLAR.md) | Yalnız B20 trafiği: yük eşlemesi üç örnekte geçti, RF ve RSRP korundu |
 | 19 | [19_s0_handover](deneyler/19_s0_handover_2026-11-17/SONUCLAR.md) | X2+A3: eski sonuç kontrolü, 6 hareket kontrolü ve 3 tam S0 entegrasyon koşusu geçti |
 | 20 | [20_kaynakli_parametreler](deneyler/20_kaynakli_parametreler_2026-11-17/SONUCLAR.md) | Standart/gözlem kaynaklı değerler (COST-231 Hata, 65°, 6° eğim, 8 dB gölge, 1850 MHz): sinyal 12–17 dB zayıf, kural geçmedi; S0 temel kalıyor |
+| 21 | [21_kirsal_yol_kaybi_rma](deneyler/21_kirsal_yol_kaybi_rma_2026-11-17/SONUCLAR.md) | 20. deney + kırsal 3GPP RMa: medyan ve CQI tuttu ama yakın sahalar 11–18 dB güçlü, uzaklar 6–7 dB zayıf; kural geçmedi, S0 temel |
+| 22 | [22_veri_tabanli_mesafe_duzeltmesi](deneyler/22_veri_tabanli_mesafe_duzeltmesi_2026-11-17/SONUCLAR.md) | RMa + bölgedeki 5.812 Turkcell hücresinden mesafe düzeltmesi: RSRP dağılımı tuttu (medyan aynı, KS 0,18), SINR 8 dB yüksek; kural geçmedi, S0 temel |
+| 23 | [23_uc_gpp_anten_deseni](deneyler/23_uc_gpp_anten_deseni_2026-11-18/SONUCLAR.md) | 22. deney + 3GPP TR 36.814 anten deseni (25 dB tavan): SINR düşmedi (9,6 dB fark) ama saha sıralaması tuttu (Spearman 0,93); şüpheli artık düşük yük; kural geçmedi, S0 temel |
 
 ## Notlar
 
