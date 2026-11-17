@@ -1,0 +1,48 @@
+{
+  "key": {
+    "source": "ac38f6efd9185ef933f62337f323e6ddb7ae06ef447b6b71e7da2f799831cff9",
+    "case": {
+      "name": "S0_A3_draw702",
+      "kind": "static",
+      "az": 7,
+      "seed": 702,
+      "handover": 1,
+      "sites": "sites_S0_7.csv",
+      "ues_file": "ues_S0_702.csv",
+      "ues": 328,
+      "duration": 4
+    },
+    "sites_sha256": "50b204af23cc8be26da020b52408e26c02a5a54b84d0806a06f5e0ab48431618",
+    "ues_sha256": "77ae65b1293da0bc11fdd2f155eea5dab1c519cb94ba2c0cf5cffd0d2dfaac6e",
+    "radio": {
+      "power_dbm": 49,
+      "beamwidth": 120,
+      "exponent": 3,
+      "nf_db": 9,
+      "mixed_cqi": 1,
+      "udp_jitter": 1,
+      "dl_earfcn": 1300,
+      "ul_earfcn": 19300
+    },
+    "A3": {
+      "name": "A3RsrpHandoverAlgorithm",
+      "hysteresis_db": 3,
+      "time_to_trigger_ms": 256,
+      "defaults_verified": "installed ns-3.44 source; original default NoOp is retained when off",
+      "X2": "Full mesh among 72 logical sector nodes in full S0 (2556 links); 6 nodes in pair test (15 links). Not a claim about real operator X2 topology.",
+      "inter_frequency_supported": false,
+      "RRC": "existing default ideal RRC; measured interruption times are diagnostic only"
+    }
+  },
+  "outputs": {
+    "sectors.csv": "c2a5cc0b9d4a24e4cce94b6c845f689f0f8162cdbdfe06a4ef018f9210c3103a",
+    "ues.csv": "29056411e37ef0eba13fafcc6889d232833a70f986f79f27997b02aafec91b8e",
+    "radio_samples.csv": "5b7a55df44241cbd849ccaa1c21ef49a47b550c086c3b215a26fbfca3907c613",
+    "sinr_components.csv": "c8866d9abd310a80808ff9f27dcb27a1c68183cb4dbf89a21bf4fa4e873dc795",
+    "measurements.csv": "bc88a4fd7745be6f8b608feca9f6d226c04fdfda5abade98b46c104d634eb366",
+    "prb_usage.csv": "04b8d2c8649641152ea221063a4f1ed40c0bf56a30b02ed68b2b6bb92dcb04a2",
+    "result.json": "a828b7d803f553f0db75c1176b6479df58cc11ed3138ca9e04b7e0fc0de82116",
+    "handover_events.csv": "175018062d569a6afb17b958fb51aac6e058fa7cb79e509dfdfce1421a890d17",
+    "serving_timeline.csv": "d005804f1935d8d753e38d4e087f105edeb09cb1095d55ad6eb218aa824c45e4"
+  }
+}

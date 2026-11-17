@@ -1,0 +1,85 @@
+{
+  "load_matching_passed": true,
+  "load_only_invariants_passed": true,
+  "checks_by_draw": [
+    {
+      "seed": 701,
+      "B20_matches": true,
+      "B1_still_matches": true,
+      "network_PRB_close_to_S0": true,
+      "layout_unchanged": true,
+      "camping_unchanged": true,
+      "rsrp_unchanged": true,
+      "all_measurement_connected": true
+    },
+    {
+      "seed": 702,
+      "B20_matches": true,
+      "B1_still_matches": true,
+      "network_PRB_close_to_S0": true,
+      "layout_unchanged": true,
+      "camping_unchanged": true,
+      "rsrp_unchanged": true,
+      "all_measurement_connected": true
+    },
+    {
+      "seed": 703,
+      "B20_matches": true,
+      "B1_still_matches": true,
+      "network_PRB_close_to_S0": true,
+      "layout_unchanged": true,
+      "camping_unchanged": true,
+      "rsrp_unchanged": true,
+      "all_measurement_connected": true
+    }
+  ],
+  "metrics": {
+    "S0": {
+      "mae_db": {
+        "training": {
+          "rsrp": 3.592391243862025,
+          "sinr": 2.573875448985459
+        },
+        "control": {
+          "rsrp": 1.7240361668153161,
+          "sinr": 2.1536287991789433
+        }
+      },
+      "mean_prb": 0.25378395061732406
+    },
+    "G17": {
+      "mae_db": {
+        "training": {
+          "rsrp": 3.592391243862025,
+          "sinr": 2.6254345059416506
+        },
+        "control": {
+          "rsrp": 2.6402862969399417,
+          "sinr": 3.608979223701061
+        }
+      },
+      "mean_prb": 0.22420624017959595
+    },
+    "L18": {
+      "mae_db": {
+        "training": {
+          "rsrp": 3.592391243862025,
+          "sinr": 2.6254345059416506
+        },
+        "control": {
+          "rsrp": 2.6402862969399417,
+          "sinr": 3.4376718777290636
+        }
+      },
+      "mean_prb": 0.2430452974186532
+    }
+  },
+  "selected_interval_ms": 5.021216,
+  "mean_prb_by_carrier": {
+    "B3": 0.2500478395061898,
+    "B20": 0.22602666666666665,
+    "B1": 0.2225897435898205
+  },
+  "RF_configuration_verified": false,
+  "automatic_model_replacement": false
+}

@@ -5,6 +5,18 @@
 Ana proje: `ana_proje` (eski adı `turkcell_tam_paket_2026-11-10`).
 Klasör haritası için [README.md](README.md).
 
+## Güncel devir bilgisi — 17 Kasım 2026
+
+Bu bilgisayarda analiz `.venv/Scripts/python.exe -X utf8` (Python3.10.22), simülasyon
+`wsl -d Ubuntu-22.04` / Python3.10.12 / `/home/buse/ns3/ns-3.44` ile çalıştı.
+Deney16–19 tamamlandı; aktif koşu yok. S0 handover kodu Deney19'dadır ve `--handover 1`
+ile açılır; varsayılan kapalı. Doğru tam S0 komutu ilgili sonuç JSON'unda kayıtlıdır;
+çalıştırıcının küçük tanı varsayılanlarını tam S0 sanmayın.
+
+Başka AI'a devir için önce [DEVAM_NOTU.md](DEVAM_NOTU.md), sonra Deney19/18 raporlarını okuyun.
+Bitmiş `study.py` kampanyalarını veya dondurulmuş `prepare.py` adımlarını sırf ortamı kontrol etmek
+için çalıştırmayın. Aşağıdaki 10–15 Kasım kayıtları tarihsel ortam/komut bilgilerini de içerir.
+
 ## İkinci bilgisayar (15 Kasım çalışmaları)
 
 8–14 numaralı deneyler başka bir bilgisayarda koşuldu. Oradaki farklar:
@@ -84,10 +96,14 @@ yapılır; çevrimiçi harita servisinin erişilebilirliğini sınamaz.
 ns-3.44 kurulum başvurusu:
 [Resmî kurulum belgesi](https://www.nsnam.org/docs/release/3.44/installation/html/quick-start.html).
 
-## Değişiklikler
+## İlk taşınabilirlik değişiklikleri (tarihsel paket)
 
 Simülasyon modelinin C++ kaynağı değiştirilmedi. Çalıştırma kodlarına taşınabilir
 ns-3 yolu seçimi, farklı çıktıya yazma seçenekleri ve derleme önbelleğinde kurulum
 yolu kontrolü eklendi. Dolayısıyla paket içindeki eski manifest, değiştirilen bu
 Python dosyalarının yeni hash'lerini içermez; paylaşım anının kaydı olarak tutuldu.
 Harita kontrol koduna ayrıca tüm uzak sunucuları engelleyen çevrimdışı seçenek eklendi.
+
+Bu paragraf ilk paket hakkındadır. Daha sonra Deney16/17/19'un kendi C++ kopyalarına deney
+özellikleri eklendi; eski ana proje ve tarihsel deney kaynakları değiştirilmedi. Güncel farklar
+ve doğrulama kanıtları ilgili deneyin plan/sonuç dosyalarında bulunur.

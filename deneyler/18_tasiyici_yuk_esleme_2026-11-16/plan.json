@@ -1,0 +1,97 @@
+{
+  "status": "completed_load_matching_and_invariants_passed",
+  "question": "Match B20 PRB to the fixed KPI-derived load target, then assess the same G17 radio model without the previous load mismatch.",
+  "target_prb": 0.233,
+  "pilot_relative_tolerance": 0.05,
+  "validation_relative_tolerance": 0.1,
+  "calibration_seed": 701,
+  "validation_seeds": [
+    702,
+    703
+  ],
+  "draws": [
+    [
+      42,
+      701
+    ],
+    [
+      7,
+      702
+    ],
+    [
+      99,
+      703
+    ]
+  ],
+  "duration_s": 4,
+  "warmup_s": 1,
+  "max_new_calibration_runs": 4,
+  "interval_bounds_ms": [
+    1.0,
+    50.0
+  ],
+  "only_adjust": "udp_interval_ms of the 14 kind=load, dl_earfcn=6400 rows. Every other value is preserved, including all B1 traffic.",
+  "selection_rule": "First candidate in pilot +/-5% target is frozen; otherwise next interval = last_interval * achieved_B20_PRB / target, limited to [0.5,2] times last and absolute bounds. If observations bracket target, use secant interpolation in packet rate (1/interval) within bracket. No signal-error ranking.",
+  "fit_basis": "Unweighted mean synthetic PRB across all 14 B20 cells on draw701, including 440 load cells. This sets offered load only; never read Experia RSRP/SINR target errors to choose a rate. No site-specific rate adjustments.",
+  "baseline_point": {
+    "interval_ms": 12.618026,
+    "prb_by_carrier": {
+      "B3": 0.24994907407411113,
+      "B20": 0.09344,
+      "B1": 0.22287179487184614
+    }
+  },
+  "initial_interval_ms": 6.309013,
+  "immutable": [
+    "C++ and wrapper source",
+    "99 cells and four strong-site layouts",
+    "all carrier frequencies/bandwidths/powers",
+    "all UE positions and counts",
+    "all per-UE camping frequencies",
+    "all 72 B3 and 13 B1 load intervals",
+    "all measurement-user traffic",
+    "mixed CQI, antenna parameters, propagation, noise, random draws"
+  ],
+  "validation": "Reuse selected pilot701 without rerunning it, apply the same frozen interval to independent draws702/703. No correction based on validation results.",
+  "load_acceptance": "B20 and B1 per-carrier mean PRB within +/-10% of .233 on each of all three draws; absolute whole-network mean PRB change vs S0 <=.03 on each draw. Report B3 separately unchanged.",
+  "radio_interpretation": "Report S0, original G17 and load-matched L18. Load matching does not claim to fix RSRP or identify real RF configuration. Keep original G17 frozen acceptance thresholds as a separate diagnostic.",
+  "source_hashes": {
+    "ns3_paths.py": "87b7ff832181cc7cd268ba61d52098e22ba323442a768e79077115533330e30e",
+    "run_baseline.py": "1edfdc000992c1702450d161324fb559144baad94f43c429704ea042d99d8450",
+    "sindirgi_baseline.cc": "e016946d986e36aab2f7ebe134a3314a9a96b56272a2fd571b6543ec543b3518",
+    "static-shadow-model.h": "83ed29579c7a678880afa9dd5e84e3520a52c4ce5d3f476531c7a631e8d2c9ed"
+  },
+  "initial_input_hashes": {
+    "sites_G17_42.csv": "b4a684d4716593c9b58dfbb5f48f77176211bfe0b81ddfdb72004e16f24e13ab",
+    "sites_G17_7.csv": "6f4929068e7d4654e14735f11aa42468fa3adf677947280b0ba34b61120f7e05",
+    "sites_G17_99.csv": "cf6bc8cb879f100953d99b536c6fc9a90a4cd9d43604bb2afa7e00627ec2061a",
+    "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6",
+    "ues_G17_701.csv": "a8d03034d27657edb7f11481557b6ddc064221d6a4cabea8cefa3d1dd48b1d22",
+    "ues_G17_702.csv": "32ff5dabedea775b9d9927d1e20b16b5c4f840be1ceeb541076448bae48cb5d8",
+    "ues_G17_703.csv": "bbbe9c60d114d3ddb60c92a492fe3d00ea8cc3d330b3b070c97467f09ed48469"
+  },
+  "reused_build": {
+    "binary_sha256": "58c1cd5786897a95113365ea98cd65c0c6454342a08616b050f8cc1b0fe87fe7",
+    "source_manifest": {
+      "source_sha256": "b4f89c4abadc6821b39fa07b831f1750e6fdabe1209d3c86b338fcef1a0dc4c4",
+      "ns3_version": "3.44",
+      "ns3_root": "/home/buse/ns3/ns-3.44"
+    },
+    "origin": "experiment17, exact same binary and source; no C++ changes; no need for a new S0 simulation repeat"
+  },
+  "parent_plan_sha256": "d08c38be04b0a4c4d4d97219b10d2f2722387584bec85d4a9b242ae0f3215ad8",
+  "parent_result_sha256": "24a2fa4da9fcb2d1de4c6cc8d25504643720b50bfc11bdb869644deb062f4127",
+  "parent_regression_sha256": "b912077287d938d36b49e98d589c26414304c769494a8f6cef74d0ad1b3b74de",
+  "unbounded_initial_prediction_ms": 5.060208,
+  "documentation_correction": "Initial display now includes the already-declared 0.5x bound. Actual pilot input already uses this rule; no rate, criterion or algorithm changed.",
+  "completion": {
+    "date_local": "2026-11-17",
+    "calibration_runs": 2,
+    "independent_validation_runs": 2,
+    "final_replicates": 3,
+    "selected_interval_ms": 5.021216,
+    "load_matching_passed": true,
+    "RF_or_layout_changes": false,
+    "S0_automatically_replaced": false
+  }
+}

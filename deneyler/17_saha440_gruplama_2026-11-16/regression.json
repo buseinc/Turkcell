@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "model_checks": {
+    "passed": true,
+    "checks": 20
+  },
+  "files": {
+    "sectors.csv": {
+      "old": "feda8e55f5bbeac44778734356e596f35f39a9eb11a6e9d44256cc1106f2a38b",
+      "new": "ca190fe69fd517507ca2cc367b5dbe039950c6020b871ebb680ca92358cbffa0",
+      "raw_equal": false,
+      "content_equal": true
+    },
+    "ues.csv": {
+      "old": "f9e8e2328d9399cbb5d5eae728d254dc475f2f6e8a9bb8403e96125338d7af72",
+      "new": "0ffbf9ecb133f6abbdb6756ac4dc0d22500b62e7e9e9ee811d10076741738cc0",
+      "raw_equal": false,
+      "content_equal": true
+    },
+    "radio_samples.csv": {
+      "old": "28c7bdfc0ef3e44f35c59af44cf8ec79fb5e18571dc3273b40dc713e00c05864",
+      "new": "ac88af0c025c269f0c109a2aa6325aef3e206b5460c00e15142f34d9cd8740e3",
+      "raw_equal": false,
+      "content_equal": true
+    },
+    "sinr_components.csv": {
+      "old": "3fd72e99945fdad5650c1f5fa136a1d528a557933f9cc8ea6361155151d8d85c",
+      "new": "351995bb8d3a7410ee7ab10d6596f294c7ac58bcffa9cb644ee832429c24b835",
+      "raw_equal": false,
+      "content_equal": true
+    },
+    "measurements.csv": {
+      "old": "15cff98e5d8a2cdf99e558ba3223089f73fe4fc266b5def22399f3e5eddad3a3",
+      "new": "c944912368dffcc6b6c61e8afaeae43d41e2e0f11ef2614e5ebdc07b2974800c",
+      "raw_equal": false,
+      "content_equal": true
+    },
+    "prb_usage.csv": {
+      "old": "b0a102a0fbeddbc55cc1a4ae3bb40731e6edd242f918f21fba6ad0ac7ccb1e2d",
+      "new": "d40a3cf09816c49dcd0227f122241e8a74984340559864191cffb721e7a806fb",
+      "raw_equal": false,
+      "content_equal": true
+    }
+  },
+  "normalization": "CRLF to LF only; no numeric tolerance or row changes"
+}

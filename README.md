@@ -7,7 +7,11 @@ Sonraki aşamalar: KPI'dan yük modeli, stres testi, öncelikli bölge ve rota/U
 
 > **Başka bir bilgisayarda / yapay zekâyla devam ediyorsanız önce [DEVAM_NOTU.md](DEVAM_NOTU.md) okuyun.**
 
-## Güncel durum — 15 Kasım 2026
+## Güncel durum — 17 Kasım 2026
+
+**S0 handover doğrulandı:** X2 + A3 RSRP eklendi. Üç hareketli açık/kapalı çift kontrolü ve
+üç tam S0 entegrasyon koşusu geçti; kapalıyken eski S0 sonuçları birebir korundu.
+→ [Deney 19 sonuçları](deneyler/19_s0_handover_2026-11-17/SONUCLAR.md)
 
 **İlk aşama tamamlandı.** Konuya yeniyseniz önce [basit anlatım](toplantilar/2026-11-15_ilk_asama_ozeti/BASIT_ANLATIM.md)
 (RSRP, SINR, PRB… örneklerle). Baştan okumak için: [İlk aşama özeti](toplantilar/2026-11-15_ilk_asama_ozeti/ILK_ASAMA_OZETI.md)
@@ -21,7 +25,20 @@ Hocaya gönderilecek mesaj taslağı: [HOCAYA_MESAJ_TASLAGI.md](toplantilar/2026
 - **KPI CQI'sıyla eşzamanlı karşılaştırma:** simülasyon 1,1 birim düşük (girişim biraz fazla).
 - **Kapsama:** değerlendirme alanının %99,8'inde RSRP ≥ −120 dBm.
 - **Açık sorular:** hücre bant/EARFCN ve güç bilgisi, Experia SINR/RSRQ tanımı, KPI birimleri.
-- **Sıradaki adım:** hocayla değerlendirme, ardından S0 ve S2 ile stres pilotu.
+- **Deney 16 tamamlandı:** TA yerleşiminde sabit bina kaybı ve dikey anten deseni sınandı (9 koşu).
+  Ayar sahalarında iyileşme diğer 3 sahaya taşınmadı; yeni aday kabul edilmedi, S0 temel kaldı.
+  → [Deney 16 sonuçları](deneyler/16_bina_anten_2026-11-16/SONUCLAR.md)
+- **Hocanın gruplaması sınandı (Deney 17, 3 koşu):** strong 198/220/224/440 dosyadaki sektör
+  sayılarıyla, diğer 20 saha tek taşıyıcı kuruldu. TA sırasına göre B20/B3/B1 atanması bir varsayım.
+  Kontrol RSRP farkı 1,72 → 2,64 dB, SINR farkı 2,15 → 3,61 dB; yeni bantlarda PRB yükü tam
+  eşleşmedi. S0 referans kalıyor; sonuç gruplamanın yanlış olduğunu kanıtlamaz.
+  → [Deney 17 sonuçları](deneyler/17_saha440_gruplama_2026-11-16/SONUCLAR.md)
+- **Yük eşlemesi tamamlandı (Deney 18):** Yalnız B20 yük trafiği ayarlandı; ortalama doluluk
+  %9,3 → %22,6 (hedef %23,3). Seçilen aralık üç örnekte yük ölçütlerini geçti. RSRP değişmedi;
+  kontrol SINR farkı 3,61 → 3,44 dB oldu, S0 2,15 dB. S0 referans kalır.
+  → [Deney 18 sonuçları](deneyler/18_tasiyici_yuk_esleme_2026-11-16/SONUCLAR.md)
+- **Sıradaki adım:** S0 üzerinde trafik yükü ve kullanıcı sayısını ayrı ayrı artıran küçük stres pilotu;
+  ardından saha kesintisi ve UAV. Handover tamamlandı. Aktif koşu yok; yeni stres deneyi henüz açılmadı.
 
 ## Gelişim kaydı
 
@@ -108,11 +125,17 @@ Her deney bir öncekinin sonucunu kullanır. Sonuç belgesi genellikle `SONUCLAR
 | 12 | [12_dagilim_karsilastirmasi](deneyler/12_dagilim_karsilastirmasi_2026-11-15/SONUCLAR.md) | Hücre düzeyi dağılımlar ve saha sıralaması (Experia) |
 | 13 | [13_hucre_imzasi](deneyler/13_hucre_imzasi_2026-11-15/SONUCLAR.md) | Saha içi hücre imzaları: sektör/taşıyıcı ipuçları, S2 önerisi |
 | 14 | [14_cok_tasiyici_s2](deneyler/14_cok_tasiyici_s2_2026-11-15/SONUCLAR.md) | Çok taşıyıcılı senaryo (S2) ve tek taşıyıcı (S0) karşılaştırması |
-| 15 | [15_ta_yerlesim](deneyler/15_ta_yerlesim_2026-11-16/SONUCLAR.md) | Kullanıcıları TA mesafesine göre yerleştirme; modelde bina içi kayıp ve anten eğimi eksik |
+| 15 | [15_ta_yerlesim](deneyler/15_ta_yerlesim_2026-11-16/SONUCLAR.md) | TA yerleşimiyle uyumun bozulması; bina/dikey desen açıklama adayı, çözüm olduğu kanıtlanmadı |
+| 16 | [16_bina_anten](deneyler/16_bina_anten_2026-11-16/SONUCLAR.md) | Bina kaybı/dikey desen: 9 koşu, kabul ölçütleri geçmedi |
+| 17 | [17_hocanin_gruplamasi](deneyler/17_saha440_gruplama_2026-11-16/SONUCLAR.md) | Dört strong sahada 3/4 sektörlü taşıyıcı grupları; bantlar TA'ya göre varsayım |
+| 18 | [18_tasiyici_yuk_esleme](deneyler/18_tasiyici_yuk_esleme_2026-11-16/SONUCLAR.md) | Yalnız B20 trafiği: yük eşlemesi üç örnekte geçti, RF ve RSRP korundu |
+| 19 | [19_s0_handover](deneyler/19_s0_handover_2026-11-17/SONUCLAR.md) | X2+A3: eski sonuç kontrolü, 6 hareket kontrolü ve 3 tam S0 entegrasyon koşusu geçti |
 
 ## Notlar
 
 - Eski deney kayıtlarındaki (`*.json`, `*.log`) mutlak yollar eski klasör
   adlarını (`paylasim/paylasim`, `turkcell_tam_paket_2026-11-10`, `experiments/…`)
   gösterir; bunlar tarihsel kayıttır ve değiştirilmedi.
-- `build/` klasörleri silindi; ns-3 programı ilk küçük test koşusunda yeniden derlenir.
+- `build/` Git dışında yerel derleme önbelleğidir; bu bilgisayarda güncel önbellekler var.
+  Başka bilgisayarda yoksa ilgili kaynak/başlık ve ns-3.44 kurulumu ile yeniden hazırlanır.
+  Aynı bilgisayarda hash'leri eşleşen tamamlanmış kontrolleri gereksiz yere tekrarlamayın.

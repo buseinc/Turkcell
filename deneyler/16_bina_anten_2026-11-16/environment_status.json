@@ -1,0 +1,20 @@
+{
+  "checked_at_utc": "2026-11-16T14:37:04.971788+00:00",
+  "status": "completed",
+  "distro": "Ubuntu-22.04",
+  "python": "3.10.12",
+  "ns3_version": "3.44",
+  "native_runs_started": true,
+  "model_cpp_compiled": true,
+  "isolated_cpp_checks_passed": 12,
+  "repair": "Stopped waiting wsl.exe processes and restarted unresponsive WslService through administrator helper.",
+  "previous_failure": {
+    "checked_at_utc": "2026-11-16T14:22:48.128038+00:00",
+    "status": "blocked_wsl_preflight",
+    "reason": "Command '['wsl', '--list', '--quiet']' timed out after 30 seconds",
+    "native_runs_started": false
+  },
+  "native_cases_completed": 9,
+  "selected_candidate_accepted": false,
+  "completed_at_utc": "2026-11-16T16:48:24.793692+00:00"
+}

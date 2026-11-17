@@ -1,0 +1,36 @@
+{
+  "key": {
+    "name": "combined_draw703",
+    "az": 99,
+    "seed": 703,
+    "indoor_loss_db": 6,
+    "downtilt_deg": 0,
+    "vertical_pattern": 1,
+    "source_hashes": {
+      "building-vertical-model.h": "f1dbcab56ed1b470dd2b8fb7416ecd3999da89c1e95569ace3d38ab7e9c93550",
+      "ns3_paths.py": "87b7ff832181cc7cd268ba61d52098e22ba323442a768e79077115533330e30e",
+      "run_baseline.py": "e0c1da15cad8833b0027b6c7fd96072a40c675350b901623f0fb61ab6d5afddd",
+      "sindirgi_baseline.cc": "d39a260a503762208386f6ca85ab30ea781527854f601e70bbd825018a99396d",
+      "static-shadow-model.h": "83ed29579c7a678880afa9dd5e84e3520a52c4ce5d3f476531c7a631e8d2c9ed"
+    },
+    "input_hashes": {
+      "sites_S0TA_42.csv": "59a5f4f30fb820546f9b3cb210b1ae3cfd038ff10cbc2bb5a18d48912d2a1abe",
+      "sites_S0TA_7.csv": "50b204af23cc8be26da020b52408e26c02a5a54b84d0806a06f5e0ab48431618",
+      "sites_S0TA_99.csv": "e8de49801a5a48935e3df2dfe364e7cac64716872d9c5d9fd79a0ce4e9ead8c4",
+      "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6",
+      "ues_S0TA_701.csv": "cd013c78ed046dac4d7a9120055e40eaa2305e4fb9b0c97a43dcf7ea373b7310",
+      "ues_S0TA_702.csv": "bd558efa386844863194c3acdeb1e0189288a7050a2428a03dd36dee72e88a3f",
+      "ues_S0TA_703.csv": "cedba1183986214053be39a43d6bee112f7d036f1da9786060369a32e72c2d72"
+    },
+    "duration": 4,
+    "warmup": 1
+  },
+  "output_hashes": {
+    "sectors.csv": "d98980b9b5a714705ce44527fb31a6915ec637c2737a92eb3dd2f45cbfe0710b",
+    "ues.csv": "3cba2cb765623926eb3035e8734d9d30ed689ff7c9549ee12ea7b0d8cb686d8c",
+    "radio_samples.csv": "f90d4791a7540c2c3598bf2bfa593abe04a072b6a8489f870dcbc57ada757e76",
+    "sinr_components.csv": "44820fc0cbcd80780a504092f2e0f371ad800a3f0dc1611fe03268b2d2d46ed5",
+    "measurements.csv": "c10b58f551d091e0afc4ed3cc8982264a3fb7113a7621bd37e6a560401f30c15",
+    "prb_usage.csv": "d370698a08005697c41b42062c9e6254ac8f0683f5b42c9dcee27c941b60e4b8"
+  }
+}

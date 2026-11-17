@@ -1,0 +1,2 @@
+ue_id,x_m,y_m,z_m,kind,target_site,target_sector,target_prb,udp_interval_ms,dl_earfcn
+0,8473.172788114,-683.110436368,1.500000000,measure,,,,10.0,1300

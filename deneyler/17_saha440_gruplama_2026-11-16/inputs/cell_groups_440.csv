@@ -1,0 +1,10 @@
+site,cell,block,sector_azimuth_deg,verified_band,verified_dl_earfcn,verified_bandwidth_mhz,source_band_hypothesis,source_layer,experia_median_ta_km,experia_mean_rsrp_dbm
+SITE_000440,CELL_006021,1,,,,,800/900 MHz?,1,8.6,-113.4
+SITE_000440,CELL_006022,1,,,,,800/900 MHz?,1,7.22,-109.1
+SITE_000440,CELL_006023,1,,,,,800/900 MHz?,1,7.85,-108.8
+SITE_000440,CELL_006024,2,,,,,800/900 MHz?,1,7.12,-107
+SITE_000440,CELL_006025,2,,,,,800/900 MHz?,1,11.4,-112.8
+SITE_000440,CELL_006026,2,,,,,800/900 MHz?,1,10.53,-109.4
+SITE_000440,CELL_006027,3,,,,,800/900/1800 MHz?,2,12.48,-117.8
+SITE_000440,CELL_006028,3,,,,,800/900/1800 MHz?,2,4.92,-113.2
+SITE_000440,CELL_006029,3,,,,,800/900/1800 MHz?,2,6.5,-118.6

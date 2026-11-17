@@ -1,0 +1,217 @@
+{
+  "status": "completed_all_handover_checks_passed",
+  "scope": "S0 single-carrier B3 handover integration; other experiments unchanged",
+  "algorithm": {
+    "name": "A3RsrpHandoverAlgorithm",
+    "hysteresis_db": 3,
+    "time_to_trigger_ms": 256,
+    "defaults_verified": "installed ns-3.44 source; original default NoOp is retained when off",
+    "X2": "Full mesh among 72 logical sector nodes in full S0 (2556 links); 6 nodes in pair test (15 links). Not a claim about real operator X2 topology.",
+    "inter_frequency_supported": false,
+    "RRC": "existing default ideal RRC; measured interruption times are diagnostic only"
+  },
+  "regression": {
+    "name": "regression_S0_off",
+    "sites": "sites_S0_42.csv",
+    "ues_file": "ues_S0_701.csv",
+    "ues": 328,
+    "duration": 4,
+    "handover": 0,
+    "reference": "deneyler/14_cok_tasiyici_s2_2026-11-15/simulation/results/S0_draw701",
+    "files": [
+      "sectors.csv",
+      "ues.csv",
+      "radio_samples.csv",
+      "sinr_components.csv",
+      "measurements.csv",
+      "prb_usage.csv"
+    ],
+    "comparison": "Exact content after CRLF-to-LF only; no rounding or row reordering"
+  },
+  "static_cases": [
+    {
+      "name": "S0_A3_draw701",
+      "kind": "static",
+      "az": 42,
+      "seed": 701,
+      "handover": 1,
+      "sites": "sites_S0_42.csv",
+      "ues_file": "ues_S0_701.csv",
+      "ues": 328,
+      "duration": 4
+    },
+    {
+      "name": "S0_A3_draw702",
+      "kind": "static",
+      "az": 7,
+      "seed": 702,
+      "handover": 1,
+      "sites": "sites_S0_7.csv",
+      "ues_file": "ues_S0_702.csv",
+      "ues": 328,
+      "duration": 4
+    },
+    {
+      "name": "S0_A3_draw703",
+      "kind": "static",
+      "az": 99,
+      "seed": 703,
+      "handover": 1,
+      "sites": "sites_S0_99.csv",
+      "ues_file": "ues_S0_703.csv",
+      "ues": 328,
+      "duration": 4
+    }
+  ],
+  "motion_cases": [
+    {
+      "name": "motion_off_draw701",
+      "kind": "motion",
+      "az": 42,
+      "seed": 701,
+      "handover": 0,
+      "sites": "sites_pair_42.csv",
+      "ues_file": "ues_motion_701.csv",
+      "waypoints": "waypoints_701.csv",
+      "ues": 1,
+      "duration": 102.409,
+      "expected_source_site": "SITE_000441",
+      "expected_target_site": "SITE_000443"
+    },
+    {
+      "name": "motion_A3_draw701",
+      "kind": "motion",
+      "az": 42,
+      "seed": 701,
+      "handover": 1,
+      "sites": "sites_pair_42.csv",
+      "ues_file": "ues_motion_701.csv",
+      "waypoints": "waypoints_701.csv",
+      "ues": 1,
+      "duration": 102.409,
+      "expected_source_site": "SITE_000441",
+      "expected_target_site": "SITE_000443"
+    },
+    {
+      "name": "motion_off_draw702",
+      "kind": "motion",
+      "az": 7,
+      "seed": 702,
+      "handover": 0,
+      "sites": "sites_pair_7.csv",
+      "ues_file": "ues_motion_702.csv",
+      "waypoints": "waypoints_702.csv",
+      "ues": 1,
+      "duration": 102.409,
+      "expected_source_site": "SITE_000441",
+      "expected_target_site": "SITE_000443"
+    },
+    {
+      "name": "motion_A3_draw702",
+      "kind": "motion",
+      "az": 7,
+      "seed": 702,
+      "handover": 1,
+      "sites": "sites_pair_7.csv",
+      "ues_file": "ues_motion_702.csv",
+      "waypoints": "waypoints_702.csv",
+      "ues": 1,
+      "duration": 102.409,
+      "expected_source_site": "SITE_000441",
+      "expected_target_site": "SITE_000443"
+    },
+    {
+      "name": "motion_off_draw703",
+      "kind": "motion",
+      "az": 99,
+      "seed": 703,
+      "handover": 0,
+      "sites": "sites_pair_99.csv",
+      "ues_file": "ues_motion_703.csv",
+      "waypoints": "waypoints_703.csv",
+      "ues": 1,
+      "duration": 102.409,
+      "expected_source_site": "SITE_000441",
+      "expected_target_site": "SITE_000443"
+    },
+    {
+      "name": "motion_A3_draw703",
+      "kind": "motion",
+      "az": 99,
+      "seed": 703,
+      "handover": 1,
+      "sites": "sites_pair_99.csv",
+      "ues_file": "ues_motion_703.csv",
+      "waypoints": "waypoints_703.csv",
+      "ues": 1,
+      "duration": 102.409,
+      "expected_source_site": "SITE_000441",
+      "expected_target_site": "SITE_000443"
+    }
+  ],
+  "motion_design": {
+    "speed_m_s": 15,
+    "pair": [
+      "SITE_000441",
+      "SITE_000443"
+    ],
+    "path": "15% to 85% of straight line, 2s dwell at both ends",
+    "traffic_interval_ms": 10,
+    "packet_bytes": 512,
+    "trace_period_ms": 100,
+    "meaning": "Two-site isolated protocol check, same S0 radio settings/rotations; not a full 24-site mobility or disaster performance study.",
+    "no_manual_handover": "No HandoverRequest, forced target attach or network cut is used."
+  },
+  "acceptance": {
+    "regression_must_pass": true,
+    "static": "All 256 measurement users connected with DL, serving cells preserved, no handovers or failure events while stationary; per-UE RSRP max change <=.01 dB vs S0 on each draw.",
+    "motion_positive": "Each of 3 draws: initial connection at 441, exactly one automatic UE handover to 443, matching eNB start/end, zero UE/eNB handover errors, final connection at target, data before and after completion.",
+    "motion_negative": "Each of 3 handover-off runs uses same route/traffic and has zero handover starts/completions. Final disconnection is recorded, not hidden as a simulator failure.",
+    "max_handover_duration_s": 0.1,
+    "max_packet_gap_around_handover_s": 0.25,
+    "no_post_result_tuning": "Hysteresis, TTT, routes and margins are not selected against outcomes."
+  },
+  "radio": {
+    "power_dbm": 49,
+    "beamwidth": 120,
+    "exponent": 3,
+    "nf_db": 9,
+    "mixed_cqi": 1,
+    "udp_jitter": 1,
+    "dl_earfcn": 1300,
+    "ul_earfcn": 19300
+  },
+  "source_hashes": {
+    "handover-support.h": "2d4b5199230d1cc902529b02259a94973e6063ef854b8870b5aac0e45c327f58",
+    "ns3_paths.py": "87b7ff832181cc7cd268ba61d52098e22ba323442a768e79077115533330e30e",
+    "run_baseline.py": "cd73c17c6a599b60b7bb89436e1bfeeb5007b22d148232d7c174337708bb746a",
+    "sindirgi_baseline.cc": "38e8837ad979de18109dbee628ded38db2e7bead769cc3970722d0cc88199b50",
+    "static-shadow-model.h": "83ed29579c7a678880afa9dd5e84e3520a52c4ce5d3f476531c7a631e8d2c9ed"
+  },
+  "input_hashes": {
+    "sites_pair_42.csv": "31a67534f643735e059c34d749cead3090d09498b42f741671835ef816c44650",
+    "sites_pair_7.csv": "d6c581378b64be745b4a06f25dd175151e6e9d3d60b213d1782f732cc85825cd",
+    "sites_pair_99.csv": "1cec85d4782e14f09a04cf4fa18d9180d86a4359519ad65d07c52e6448d107eb",
+    "sites_S0_42.csv": "59a5f4f30fb820546f9b3cb210b1ae3cfd038ff10cbc2bb5a18d48912d2a1abe",
+    "sites_S0_7.csv": "50b204af23cc8be26da020b52408e26c02a5a54b84d0806a06f5e0ab48431618",
+    "sites_S0_99.csv": "e8de49801a5a48935e3df2dfe364e7cac64716872d9c5d9fd79a0ce4e9ead8c4",
+    "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6",
+    "ues_motion_701.csv": "aa77fe6ca4edeb5da720abc7b72ea5c5bbcb44cc0bfb3705bdffb60186144a6f",
+    "ues_motion_702.csv": "aa77fe6ca4edeb5da720abc7b72ea5c5bbcb44cc0bfb3705bdffb60186144a6f",
+    "ues_motion_703.csv": "aa77fe6ca4edeb5da720abc7b72ea5c5bbcb44cc0bfb3705bdffb60186144a6f",
+    "ues_S0_701.csv": "457c4ee99c4cd4e19d1269936806c7bee5f098b96643740b1421f5f61fff4755",
+    "ues_S0_702.csv": "77ae65b1293da0bc11fdd2f155eea5dab1c519cb94ba2c0cf5cffd0d2dfaac6e",
+    "ues_S0_703.csv": "d53ddfb7d2b37b04e19cb48ea5e529d0496c423bcc30574e323a13c937089799",
+    "waypoints_701.csv": "8b01b961c50f868594fff3228c43a0d8d484675ae4781fb864e9e1d48360d7ae",
+    "waypoints_702.csv": "8b01b961c50f868594fff3228c43a0d8d484675ae4781fb864e9e1d48360d7ae",
+    "waypoints_703.csv": "8b01b961c50f868594fff3228c43a0d8d484675ae4781fb864e9e1d48360d7ae"
+  },
+  "documentation": "https://www.nsnam.org/docs/release/3.44/models/singlehtml/index.html",
+  "pre_run_guard": "Reject handover with multi-carrier input: this phase validates S0 intra-frequency only. Added before any native run.",
+  "completion": {
+    "regression_passed": true,
+    "motion_controls_passed": 6,
+    "full_S0_A3_cases_passed": 3,
+    "integration_passed": true
+  }
+}

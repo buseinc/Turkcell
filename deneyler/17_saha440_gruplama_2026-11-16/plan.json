@@ -1,0 +1,585 @@
+{
+  "status": "completed_acceptance_failed_S0_retained",
+  "site": "SITE_000440",
+  "coordinates": {
+    "lat": 39.21265,
+    "lon": 28.09685
+  },
+  "grouping": {
+    "cells": 9,
+    "blocks": 3,
+    "cells_per_block": 3,
+    "confidence": "strong",
+    "p_value": 0.017,
+    "evidence_kind": "statistical grouping hypothesis; not RF configuration"
+  },
+  "verification": {
+    "method": "manual CellMapper viewing, no bulk scraping",
+    "url": "https://www.cellmapper.net/map?MCC=286&MNC=1&type=LTE&latitude=39.21265&longitude=28.09685&zoom=16",
+    "matching_distance_threshold_m": 300,
+    "status": "not_observed",
+    "reason": "Browser access host unavailable; native UI URL safety check stopped access; web reader cannot access interactive map.",
+    "required": [
+      "Matching tower coordinates and distance",
+      "LTE bands / EARFCNs shown and observation date",
+      "Observed sector counts per carrier",
+      "Azimuths if available"
+    ],
+    "cautions": [
+      "No tower observation is not evidence of tower absence.",
+      "A nearby public tower does not by itself map anonymized CELL IDs to EARFCNs.",
+      "Current crowdsourced data may differ from 2025 KPI and 2026 Experia periods.",
+      "Unobserved carriers may be modeled only as clearly labeled TA-informed assumptions, not as verified bands."
+    ],
+    "mandatory_for_assumption_based_run": false,
+    "user_observation": {
+      "source": "User manually opened all three coordinate views; provider screenshot confirms Turkcell LTE, all bands",
+      "sites_without_visible_towers": [
+        "SITE_000440",
+        "SITE_000206",
+        "SITE_000224"
+      ],
+      "precise_300m_radius_search_confirmed": false,
+      "interpretation": "No visible CellMapper record, not proof of physical tower absence",
+      "advisor_fallback": "Search approximately 300m around targets; if insufficient, inspect well-measured main roads/highways for regional band and sector patterns. Do not match distant towers to targets."
+    }
+  },
+  "predeclared_experiment": {
+    "baseline": "S0 of experiment 14, original 2–6 km placement (TA placement remains unresolved)",
+    "question": "Does applying all strong-confidence advisor groups in the 24-site region improve representation relative to S0?",
+    "other_sites": "Remaining 20 sites: one 1800 MHz B3 carrier and 3 sectors",
+    "measurement_positions": "Reuse frozen S0 inputs; 256 measurement users, draws 701/702/703",
+    "orientations": "Reuse rotations 42/7/99. Three- and four-sector blocks retain their specified counts; orientation arrangement is an assumption, not inferred from anonymized ID order.",
+    "duration_s": 4,
+    "warmup_s": 1,
+    "seeds": [
+      [
+        42,
+        701
+      ],
+      [
+        7,
+        702
+      ],
+      [
+        99,
+        703
+      ]
+    ],
+    "load": "Keep load inputs on 20 unchanged sites; explicitly freeze per-cell load generation on all four changed sites and check achieved PRB before acceptance.",
+    "training_sites": [
+      "SITE_000130",
+      "SITE_000296",
+      "SITE_000444",
+      "SITE_000482",
+      "SITE_000554"
+    ],
+    "holdout_sites": [
+      "SITE_000440",
+      "SITE_000441",
+      "SITE_000443"
+    ],
+    "no_retuning": "No RF parameter selection from 440 RSRP/SINR; 440 remains held out for tuning. Topology evidence is an input.",
+    "gate": "Before any run, freeze explicit verified or clearly labeled assumed carrier frequencies, bandwidths, powers, sector mapping, per-UE carrier selection and added-carrier load in a run plan. Do not present TA-derived band labels as verified.",
+    "metrics": [
+      "Per-site RSRP/SINR signed errors and MAE by existing split",
+      "Per-carrier cell counts and serving-user shares",
+      "All measurement users connected and receiving downlink",
+      "Achieved PRB and total offered traffic",
+      "No RSRQ-based tuning; explain mixed-SINR sampling limitation"
+    ],
+    "acceptance_before_any_run": {
+      "holdout_mean_rsrp_improvement_db_min": 0.5,
+      "holdout_mean_sinr_degradation_db_max": 0.5,
+      "each_other_evaluation_site_rsrp_degradation_db_max": 1.0,
+      "per_draw_mean_prb_change_max": 0.03,
+      "measurement_users_connected": 256,
+      "measurement_users_receiving_dl": 256
+    },
+    "regression": "If code changes are required, compare a local disabled-feature repeat to frozen S0 outputs; normalize CRLF/LF only, no numeric tolerance.",
+    "changed_sites": [
+      "SITE_000198",
+      "SITE_000220",
+      "SITE_000224",
+      "SITE_000440"
+    ]
+  },
+  "legacy_template_conflict": {
+    "old_p_value": 0.055,
+    "current_p_value": 0.017,
+    "resolution": "Use current v2 grouping statistics. Keep original template unchanged."
+  },
+  "source_hashes": {
+    "ana_proje\\sindirgi_site_cell_groups_v2.xlsx": "37e1f6e562f52abc69b40a3921376350281574742d34b2857b48529829c4ebde",
+    "ana_proje\\all_sites_cell_layers_v2.xlsx": "150eaac75a63c9b4d33f22421c2e9e44b8a27f0dd01e39e0fdb7ed768456bb96",
+    "ana_proje\\cellmapper_check_template.xlsx": "ab0df72869339a7636e94143b001794ed9b0c93de6a140c7fac66de91ac2ca46",
+    "deneyler\\14_cok_tasiyici_s2_2026-11-15\\plan.json": "d0ff9b0f891e13b8acd853eddb18bfa7fd9bd57f371dd40e76d8a76006698688"
+  },
+  "prepared_input_sha256": "8d508db2fc2b6f61ae782881ba18569ca11774bde2ca02b7c8e7ab51a64fd3dd",
+  "advisor_clarification": {
+    "source": "User-provided advisor messages of 16 November 2026; pre-run amendment",
+    "rule": "Strong sites use suggested groups; others use one 1800 MHz carrier and 3 sectors. Higher TA may be assigned lower frequency as an explicit assumption. CellMapper evidence is preferred, not a blanket prerequisite.",
+    "manual_check_priority": [
+      "SITE_000440",
+      "SITE_000206",
+      "SITE_000224"
+    ],
+    "verified_RF_fields_remain_empty": true
+  },
+  "strong_sites_in_current_region": [
+    {
+      "site": "SITE_000198",
+      "blocks": "3+3+3",
+      "confidence": "strong",
+      "p_value": 0.047
+    },
+    {
+      "site": "SITE_000220",
+      "blocks": "4+3+4",
+      "confidence": "strong",
+      "p_value": 0.01
+    },
+    {
+      "site": "SITE_000224",
+      "blocks": "3+4+3",
+      "confidence": "strong",
+      "p_value": 0.05
+    },
+    {
+      "site": "SITE_000440",
+      "blocks": "3+3+3",
+      "confidence": "strong",
+      "p_value": 0.017
+    }
+  ],
+  "manual_check_sites": [
+    {
+      "site": "SITE_000440",
+      "lat": 39.21265,
+      "lon": 28.09685,
+      "current_confidence": "strong",
+      "current_blocks": "3+3+3",
+      "observation": "not verified"
+    },
+    {
+      "site": "SITE_000206",
+      "lat": 39.39445,
+      "lon": 28.1325,
+      "current_confidence": "moderate",
+      "current_blocks": "3+3+3+3",
+      "observation": "not verified"
+    },
+    {
+      "site": "SITE_000224",
+      "lat": 39.37625,
+      "lon": 28.19365,
+      "current_confidence": "strong",
+      "current_blocks": "3+4+3",
+      "observation": "not verified"
+    }
+  ],
+  "staged_scope": {
+    "current": "Single full advisor scenario: strong 198/220/224/440 use exact suggested groups; other 20 sites one B3 carrier and three sectors",
+    "supersedes": "Earlier 440-only pilot; all current scope fields now refer to the full scenario",
+    "run_status": "not started; RF assumptions and allocation/load rules still to be frozen"
+  },
+  "regional_cellmapper_example": {
+    "source": "User-pasted CellMapper tower panel after manual map selection",
+    "tower_enb_id": 13062,
+    "mcc": 286,
+    "mnc": 1,
+    "region": 6163,
+    "type": "MACRO",
+    "coordinates": null,
+    "matched_to_project_site": false,
+    "observed_band_labels": [
+      1,
+      3,
+      20
+    ],
+    "cells": [
+      {
+        "local_cell": 11,
+        "cell_identifier": 3343883,
+        "pci": 322,
+        "band": 20,
+        "dl_earfcn": 6400,
+        "dl_mhz": 816,
+        "ul_mhz": 857,
+        "bandwidth_mhz": null,
+        "reported_direction_deg": 0,
+        "last_seen": "2026-06-17"
+      },
+      {
+        "local_cell": 12,
+        "cell_identifier": 3343884,
+        "pci": 322,
+        "band": 3,
+        "dl_earfcn": 1651,
+        "dl_mhz": 1850.1,
+        "ul_mhz": 1755.1,
+        "bandwidth_mhz": 20,
+        "reported_direction_deg": 178,
+        "last_seen": "2026-06-17"
+      },
+      {
+        "local_cell": 17,
+        "cell_identifier": 3343889,
+        "pci": 322,
+        "band": 1,
+        "dl_earfcn": 100,
+        "dl_mhz": 2120,
+        "ul_mhz": 1930,
+        "bandwidth_mhz": 20,
+        "reported_direction_deg": 179,
+        "last_seen": "2024-05-09"
+      },
+      {
+        "local_cell": 21,
+        "cell_identifier": 3343893,
+        "pci": 279,
+        "band": 20,
+        "dl_earfcn": 6400,
+        "dl_mhz": 816,
+        "ul_mhz": 857,
+        "bandwidth_mhz": 10,
+        "reported_direction_deg": 175,
+        "last_seen": "2024-05-09"
+      },
+      {
+        "local_cell": 22,
+        "cell_identifier": 3343894,
+        "pci": 279,
+        "band": 3,
+        "dl_earfcn": 1651,
+        "dl_mhz": 1850.1,
+        "ul_mhz": 1755.1,
+        "bandwidth_mhz": 20,
+        "reported_direction_deg": 176,
+        "last_seen": "2026-06-17"
+      },
+      {
+        "local_cell": 23,
+        "cell_identifier": 3343895,
+        "pci": 279,
+        "band": 3,
+        "dl_earfcn": 1795,
+        "dl_mhz": 1864.5,
+        "ul_mhz": 1769.5,
+        "bandwidth_mhz": null,
+        "reported_direction_deg": 179,
+        "last_seen": "2021-05-29"
+      },
+      {
+        "local_cell": 26,
+        "cell_identifier": 3343898,
+        "pci": 279,
+        "band": 1,
+        "dl_earfcn": 50,
+        "dl_mhz": 2115,
+        "ul_mhz": 1925,
+        "bandwidth_mhz": null,
+        "reported_direction_deg": 176,
+        "last_seen": "2021-05-29"
+      },
+      {
+        "local_cell": 27,
+        "cell_identifier": 3343899,
+        "pci": 279,
+        "band": 1,
+        "dl_earfcn": 100,
+        "dl_mhz": 2120,
+        "ul_mhz": 1930,
+        "bandwidth_mhz": 20,
+        "reported_direction_deg": null,
+        "last_seen": "2024-05-09"
+      }
+    ],
+    "limitations": [
+      "Historical mixed-date records; not proof of simultaneous operation",
+      "Incomplete pasted cell list; exact sector count unresolved",
+      "Not evidence of target-site RF configuration",
+      "PCI and reported direction are not a validated sector/azimuth mapping"
+    ]
+  },
+  "runtime_amendments": [
+    {
+      "before_any_native_run": true,
+      "superseded_runtime_sha256": "2c5b98ea5cd5d219c3cfe926aabdcab8ef43ab0f6115602036647b70168b0502",
+      "reason": "Normalize new load rates by carrier RB count: B20 50 RB gets half the packet rate of 100 RB carriers. Fixed before any run, no target-fitting."
+    }
+  ],
+  "runtime": {
+    "frozen_before_native_runs": true,
+    "cases": [
+      {
+        "name": "G17_draw701",
+        "az": 42,
+        "seed": 701,
+        "ues": 355
+      },
+      {
+        "name": "G17_draw702",
+        "az": 7,
+        "seed": 702,
+        "ues": 355
+      },
+      {
+        "name": "G17_draw703",
+        "az": 99,
+        "seed": 703,
+        "ues": 355
+      }
+    ],
+    "block_band_mapping": [
+      {
+        "site": "SITE_000198",
+        "block": 3,
+        "sectors": 3,
+        "median_ta_km": 6.69,
+        "real_cells": [
+          "CELL_002779",
+          "CELL_002780",
+          "CELL_002781"
+        ],
+        "assumed_band": "B20"
+      },
+      {
+        "site": "SITE_000198",
+        "block": 1,
+        "sectors": 3,
+        "median_ta_km": 2.68,
+        "real_cells": [
+          "CELL_002773",
+          "CELL_002774",
+          "CELL_002775"
+        ],
+        "assumed_band": "B3"
+      },
+      {
+        "site": "SITE_000198",
+        "block": 2,
+        "sectors": 3,
+        "median_ta_km": 2.49,
+        "real_cells": [
+          "CELL_002776",
+          "CELL_002777",
+          "CELL_002778"
+        ],
+        "assumed_band": "B1"
+      },
+      {
+        "site": "SITE_000220",
+        "block": 1,
+        "sectors": 4,
+        "median_ta_km": 9.445,
+        "real_cells": [
+          "CELL_003029",
+          "CELL_003030",
+          "CELL_003031",
+          "CELL_003032"
+        ],
+        "assumed_band": "B20"
+      },
+      {
+        "site": "SITE_000220",
+        "block": 2,
+        "sectors": 3,
+        "median_ta_km": 5.76,
+        "real_cells": [
+          "CELL_003033",
+          "CELL_003034",
+          "CELL_003035"
+        ],
+        "assumed_band": "B3"
+      },
+      {
+        "site": "SITE_000220",
+        "block": 3,
+        "sectors": 4,
+        "median_ta_km": 1.915,
+        "real_cells": [
+          "CELL_003036",
+          "CELL_003037",
+          "CELL_003038",
+          "CELL_003039"
+        ],
+        "assumed_band": "B1"
+      },
+      {
+        "site": "SITE_000224",
+        "block": 2,
+        "sectors": 4,
+        "median_ta_km": 11.11,
+        "real_cells": [
+          "CELL_003066",
+          "CELL_003067",
+          "CELL_003068",
+          "CELL_003069"
+        ],
+        "assumed_band": "B20"
+      },
+      {
+        "site": "SITE_000224",
+        "block": 3,
+        "sectors": 3,
+        "median_ta_km": 8.89,
+        "real_cells": [
+          "CELL_003070",
+          "CELL_003071",
+          "CELL_003072"
+        ],
+        "assumed_band": "B3"
+      },
+      {
+        "site": "SITE_000224",
+        "block": 1,
+        "sectors": 3,
+        "median_ta_km": 7.56,
+        "real_cells": [
+          "CELL_003063",
+          "CELL_003064",
+          "CELL_003065"
+        ],
+        "assumed_band": "B1"
+      },
+      {
+        "site": "SITE_000440",
+        "block": 2,
+        "sectors": 3,
+        "median_ta_km": 10.53,
+        "real_cells": [
+          "CELL_006024",
+          "CELL_006025",
+          "CELL_006026"
+        ],
+        "assumed_band": "B20"
+      },
+      {
+        "site": "SITE_000440",
+        "block": 1,
+        "sectors": 3,
+        "median_ta_km": 7.85,
+        "real_cells": [
+          "CELL_006021",
+          "CELL_006022",
+          "CELL_006023"
+        ],
+        "assumed_band": "B3"
+      },
+      {
+        "site": "SITE_000440",
+        "block": 3,
+        "sectors": 3,
+        "median_ta_km": 6.5,
+        "real_cells": [
+          "CELL_006027",
+          "CELL_006028",
+          "CELL_006029"
+        ],
+        "assumed_band": "B1"
+      }
+    ],
+    "bands": {
+      "B3": {
+        "dl_earfcn": 1300,
+        "ul_earfcn": 19300,
+        "dl_mhz": 1815,
+        "ul_mhz": 1720,
+        "rb": 100
+      },
+      "B20": {
+        "dl_earfcn": 6400,
+        "ul_earfcn": 24400,
+        "dl_mhz": 816,
+        "ul_mhz": 857,
+        "rb": 50
+      },
+      "B1": {
+        "dl_earfcn": 100,
+        "ul_earfcn": 18100,
+        "dl_mhz": 2120,
+        "ul_mhz": 1930,
+        "rb": 100
+      }
+    },
+    "band_mapping_status": "TA-informed assumptions; not verified at project sites. B1 historical in regional example.",
+    "frequency_choice": "Largest block median TA -> B20; middle -> B3; smallest -> B1. B3 remains S0 center frequency for controlled comparison; B20/B1 centers from regional example.",
+    "power_dbm_per_cell": 49,
+    "beamwidth_deg": 120,
+    "max_gain_dbi": 15,
+    "exponent": 3,
+    "receiver_nf_db": 9,
+    "orientation_assumption": "Same frozen site rotation; 3-sector blocks 120-degree spacing, 4-sector blocks 90-degree spacing. Beamwidth 120 degrees on both.",
+    "carrier_allocation": "Strongest S0 analytical B3 cell determines provisional site. For UEs provisionally at a strong site, balanced round-robin B3/B20/B1 by UE ID; others B3. Real band shares unknown; no inter-frequency automatic selection/CA/handover claimed.",
+    "measurement_allocations": {
+      "701": {
+        "100": 11,
+        "1300": 232,
+        "6400": 13
+      },
+      "702": {
+        "100": 12,
+        "1300": 230,
+        "6400": 14
+      },
+      "703": {
+        "100": 9,
+        "1300": 236,
+        "6400": 11
+      }
+    },
+    "load_cells": 99,
+    "baseline_load_cells": 72,
+    "load_rule": "All original 72 B3 load users copied unchanged; 27 new B20/B1 load users, 800m on boresight, target PRB .233. Interval (1.47/.233)*(100/RB) ms: double interval for B20 50 RB, unchanged for B1 100 RB. Frozen bandwidth normalization, no outcome-based calibration.",
+    "interpretation": "Per-resource offered load held nominally constant, NOT constant total offered traffic/power/capacity. Equivalent traffic rises (72+14*.5+13)/72=1.27778; total cell count/power rises 99/72=1.375. Report achieved PRB separately.",
+    "duration_s": 4,
+    "warmup_s": 1,
+    "input_hashes": {
+      "cell_groups_440.csv": "8d508db2fc2b6f61ae782881ba18569ca11774bde2ca02b7c8e7ab51a64fd3dd",
+      "sites_G17_42.csv": "b4a684d4716593c9b58dfbb5f48f77176211bfe0b81ddfdb72004e16f24e13ab",
+      "sites_G17_7.csv": "6f4929068e7d4654e14735f11aa42468fa3adf677947280b0ba34b61120f7e05",
+      "sites_G17_99.csv": "cf6bc8cb879f100953d99b536c6fc9a90a4cd9d43604bb2afa7e00627ec2061a",
+      "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6",
+      "ues_G17_701.csv": "a8d03034d27657edb7f11481557b6ddc064221d6a4cabea8cefa3d1dd48b1d22",
+      "ues_G17_702.csv": "32ff5dabedea775b9d9927d1e20b16b5c4f840be1ceeb541076448bae48cb5d8",
+      "ues_G17_703.csv": "bbbe9c60d114d3ddb60c92a492fe3d00ea8cc3d330b3b070c97467f09ed48469"
+    },
+    "simulation_hashes": {
+      "ns3_paths.py": "87b7ff832181cc7cd268ba61d52098e22ba323442a768e79077115533330e30e",
+      "run_baseline.py": "1edfdc000992c1702450d161324fb559144baad94f43c429704ea042d99d8450",
+      "sindirgi_baseline.cc": "e016946d986e36aab2f7ebe134a3314a9a96b56272a2fd571b6543ec543b3518",
+      "static-shadow-model.h": "83ed29579c7a678880afa9dd5e84e3520a52c4ce5d3f476531c7a631e8d2c9ed"
+    },
+    "regression_inputs": {
+      "deneyler/14_cok_tasiyici_s2_2026-11-15/inputs/sites_S0_42.csv": "59a5f4f30fb820546f9b3cb210b1ae3cfd038ff10cbc2bb5a18d48912d2a1abe",
+      "deneyler/14_cok_tasiyici_s2_2026-11-15/inputs/ues_S0_701.csv": "457c4ee99c4cd4e19d1269936806c7bee5f098b96643740b1421f5f61fff4755"
+    },
+    "baseline_reference": "deneyler/14_cok_tasiyici_s2_2026-11-15/simulation/results/S0_draw701",
+    "no_new_handover_or_building_model": true
+  },
+  "technical_fixes": [
+    {
+      "issue": "Two 4-sector cases hit CosineAntennaModel Orientation range when rotation+270 exceeded 360 degrees; third case completed.",
+      "fix": "Normalize explicit per-carrier angles modulo 360. Physical direction, input coordinates, carrier assignments, powers, loads and frozen acceptance criteria unchanged. Original default S0 branch unchanged.",
+      "old_cpp_sha256": "28d71d5d9d360cbaf783234b10bc6bf29de8f41447826295d54577323c8936ab",
+      "new_cpp_sha256": "e016946d986e36aab2f7ebe134a3314a9a96b56272a2fd571b6543ec543b3518",
+      "completed_draw703_output_hashes_before_fix": {
+        "sectors.csv": "0d9cb1aea7396a155132948c071c6272c8517ad211de301f65deda767ab722dd",
+        "ues.csv": "959e7a01a162faa7a6a1645d416c08d4bac62ca6a8cc3c0a74cb372744c8a233",
+        "radio_samples.csv": "e8e3e0696462dce6dfdba8d8fbd3f71af3237428c9451db7de372522754f3ae3",
+        "sinr_components.csv": "56ceb83d15f6a185b45d25b381c947f0a25592d1a16f1bbcc723a1f9f9508b0e",
+        "measurements.csv": "b23195f1280bb2e67131be1b974075d4dc53389cf586b5e028e4e65a0f27e1f3",
+        "prb_usage.csv": "cbc2aece753f6aceeca03c6b8a6d08af9c942253a4cb9bca126c39bd6386cd7f"
+      },
+      "validation": "Add direct antenna attribute tests for rotations over 90 degrees; rerun full S0 regression and all three cases under the corrected source.",
+      "completed_draw703_outputs_unchanged_after_fix": true
+    }
+  ],
+  "completion": {
+    "native_cases": 3,
+    "model_checks": 20,
+    "reference_regression_passed": true,
+    "acceptance_passed": false
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "raw_bytes_passed": false,
+  "comparison": "Exact byte equality after CRLF-to-LF transport normalization only; no numeric tolerance, rounding or row reordering.",
+  "files": {
+    "sectors.csv": {
+      "new": "ca190fe69fd517507ca2cc367b5dbe039950c6020b871ebb680ca92358cbffa0",
+      "old": "feda8e55f5bbeac44778734356e596f35f39a9eb11a6e9d44256cc1106f2a38b",
+      "equal": false,
+      "content_equal_after_CRLF_to_LF": true,
+      "old_CRLF_count": 73,
+      "new_CRLF_count": 0
+    },
+    "ues.csv": {
+      "new": "50be43c805c1888f2c0edb0344d63ada5be7185d9d1521d4cc55f259844d8a89",
+      "old": "519950ef31c489ac1487ed7c1ec9fa34d9b459d483b55bb2f6d39c35b43c4455",
+      "equal": false,
+      "content_equal_after_CRLF_to_LF": true,
+      "old_CRLF_count": 329,
+      "new_CRLF_count": 0
+    },
+    "radio_samples.csv": {
+      "new": "4d90fa84a7ab2a7f85846d2c458726bdda0265f1cb40a70ee8294775c63cf397",
+      "old": "b9ad22522e4e0f2c23acd57f07f74aa855fee21558f5127daa16c81ad648412a",
+      "equal": false,
+      "content_equal_after_CRLF_to_LF": true,
+      "old_CRLF_count": 12791,
+      "new_CRLF_count": 0
+    },
+    "sinr_components.csv": {
+      "new": "2eef85a31710fa337a76b42de331150e9f0dde7949c39e512b24970b1077bd87",
+      "old": "6896504c4a9da7d8d44a0a514a4393c1ac130a2444740e97c033ad2453cc8266",
+      "equal": false,
+      "content_equal_after_CRLF_to_LF": true,
+      "old_CRLF_count": 10169,
+      "new_CRLF_count": 0
+    },
+    "measurements.csv": {
+      "new": "4d22a1be5e8e395ac278a5c51697116d198ddcaf5c0acab1365541ba5202f223",
+      "old": "f7927e782e4378c34dd047090f13ab1c13aa68aaf68745d484f6e98f0901462b",
+      "equal": false,
+      "content_equal_after_CRLF_to_LF": true,
+      "old_CRLF_count": 6233,
+      "new_CRLF_count": 0
+    },
+    "prb_usage.csv": {
+      "new": "d330c8f237f9cfd3a9bfbe4746d3523850931b55e7246de1b8e3342f41b5d184",
+      "old": "cd9341760f597761cf29515b753c3d161e3374bb8e2998a7010d559eaab69875",
+      "equal": false,
+      "content_equal_after_CRLF_to_LF": true,
+      "old_CRLF_count": 73,
+      "new_CRLF_count": 0
+    }
+  }
+}

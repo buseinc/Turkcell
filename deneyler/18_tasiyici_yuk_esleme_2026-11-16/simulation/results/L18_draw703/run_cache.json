@@ -1,0 +1,25 @@
+{
+  "key": {
+    "source": "b4f89c4abadc6821b39fa07b831f1750e6fdabe1209d3c86b338fcef1a0dc4c4",
+    "sites_sha256": "cf6bc8cb879f100953d99b536c6fc9a90a4cd9d43604bb2afa7e00627ec2061a",
+    "ues_sha256": "f967dabadfefd755fbb49d7d966031b1e6db49b0ba511866037fee86dd1bc3ca",
+    "duration": 4,
+    "fixed_radio": {
+      "power": 49,
+      "beamwidth": 120,
+      "exponent": 3,
+      "nf": 9,
+      "mixed_cqi": 1,
+      "udp_jitter": 1
+    }
+  },
+  "outputs": {
+    "sectors.csv": "0d9cb1aea7396a155132948c071c6272c8517ad211de301f65deda767ab722dd",
+    "ues.csv": "0436af645991fedccdde699b8acbd6848b1b336b09e33de83910caacb665b03f",
+    "radio_samples.csv": "45342d48c47024bf8c51f880fb201b32b6c8ade0014d9ac07c38915386d2576e",
+    "sinr_components.csv": "bd26d54dd5d4bed5185fd3f0859371f312104219b408e73733efa65c16c549cc",
+    "measurements.csv": "b23195f1280bb2e67131be1b974075d4dc53389cf586b5e028e4e65a0f27e1f3",
+    "prb_usage.csv": "19e608ed8434308ddb3f9596af4b30c22aca54dab81ad75f797d9a128f4e26bf",
+    "result.json": "e0f0eee19b313e7695a9c5670c03bb2b160b2dbbf0b3b9ed7121ef09da2dd2c3"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "selection_uses": "B20 mean PRB only; no signal targets",
+  "points": [
+    {
+      "round": 0,
+      "seed": 701,
+      "interval_ms": 12.618026,
+      "prb_by_carrier": {
+        "B3": 0.24994907407411113,
+        "B20": 0.09344,
+        "B1": 0.22287179487184614
+      },
+      "source": "existing G17 draw701"
+    },
+    {
+      "round": 1,
+      "seed": 701,
+      "interval_ms": 6.309013,
+      "prb_by_carrier": {
+        "B3": 0.24994907407411113,
+        "B20": 0.18544,
+        "B1": 0.22287179487184614
+      },
+      "prb_mean_achieved": 0.2372709764310101,
+      "folder": "simulation/results/cal_r1_draw701",
+      "input": "inputs/ues_cal_r1_701.csv",
+      "input_sha256": "14ecc58356caba790d594b914188dd9262aefb71ec48ea3701812b6c59c01276"
+    },
+    {
+      "round": 2,
+      "seed": 701,
+      "interval_ms": 5.021216,
+      "prb_by_carrier": {
+        "B3": 0.24994907407411113,
+        "B20": 0.22701714285714286,
+        "B1": 0.22287179487184614
+      },
+      "prb_mean_achieved": 0.24315057239060606,
+      "folder": "simulation/results/cal_r2_draw701",
+      "input": "inputs/ues_cal_r2_701.csv",
+      "input_sha256": "bff6f8dff689fd94fb8f44938318bf3b732c2ccb1320b8bbd879ae8ef5ac4c95"
+    }
+  ],
+  "selected": {
+    "round": 2,
+    "seed": 701,
+    "interval_ms": 5.021216,
+    "prb_by_carrier": {
+      "B3": 0.24994907407411113,
+      "B20": 0.22701714285714286,
+      "B1": 0.22287179487184614
+    },
+    "prb_mean_achieved": 0.24315057239060606,
+    "folder": "simulation/results/cal_r2_draw701",
+    "input": "inputs/ues_cal_r2_701.csv",
+    "input_sha256": "bff6f8dff689fd94fb8f44938318bf3b732c2ccb1320b8bbd879ae8ef5ac4c95"
+  },
+  "frozen_final_inputs": {
+    "701": {
+      "path": "inputs/ues_L18_701.csv",
+      "sha256": "bff6f8dff689fd94fb8f44938318bf3b732c2ccb1320b8bbd879ae8ef5ac4c95"
+    },
+    "702": {
+      "path": "inputs/ues_L18_702.csv",
+      "sha256": "5329e0d619e4b07eb08be9a2faf796b999ea7b006fbdda0af35c8dbba231550d"
+    },
+    "703": {
+      "path": "inputs/ues_L18_703.csv",
+      "sha256": "f967dabadfefd755fbb49d7d966031b1e6db49b0ba511866037fee86dd1bc3ca"
+    }
+  }
+}

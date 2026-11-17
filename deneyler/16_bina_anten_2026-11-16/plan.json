@@ -1,0 +1,96 @@
+{
+  "status": "frozen_before_runs",
+  "draws": [
+    [
+      42,
+      701
+    ],
+    [
+      7,
+      702
+    ],
+    [
+      99,
+      703
+    ]
+  ],
+  "measurement_ues": 256,
+  "duration_s": 4,
+  "warmup_s": 1,
+  "grid": {
+    "indoor_loss_db": [
+      0,
+      6,
+      12,
+      18
+    ],
+    "downtilt_deg": [
+      0,
+      3,
+      6,
+      9
+    ]
+  },
+  "fixed_vertical_beamwidth_deg": 10,
+  "fixed_vertical_cap_db": 20,
+  "train_sites": [
+    "SITE_000130",
+    "SITE_000296",
+    "SITE_000444",
+    "SITE_000482",
+    "SITE_000554"
+  ],
+  "holdout_sites": [
+    "SITE_000440",
+    "SITE_000441",
+    "SITE_000443"
+  ],
+  "selection": "Analytical RSRP only, mean site MAE over the 5 tuning sites and all 3 draws; missing tuning site = invalid candidate. Tie: smaller indoor loss, then smaller tilt. No holdout metrics before selection.",
+  "screen_gate": "At zero loss and disabled vertical pattern, analytical RSRP max absolute error <0.01 dB and serving cells identical for all 256 measured UEs of all 3 archived TA runs.",
+  "native_cases": "Selected combined candidate, selected indoor loss only, selected tilt only, each on 3 draws; deduplicate equal cases. Plus one full archived TA repeat with both effects disabled.",
+  "native_selection": "None: freeze analytical winner before native runs; do not choose another candidate from holdout results.",
+  "acceptance": {
+    "holdout_rsrp_improvement_over_TA_db": 0.5,
+    "holdout_rsrp_no_worse_than_S0_by_db": 0.5,
+    "holdout_sinr_no_worse_than_TA_by_db": 1.0,
+    "all_measurement_ues_connected": true,
+    "all_measurement_ues_with_dl": true,
+    "absolute_PRB_change_max": 0.03
+  },
+  "regression": "Byte equality of sectors.csv, ues.csv, radio_samples.csv, sinr_components.csv, measurements.csv, prb_usage.csv for archived S0TA_draw701 with disabled effects. Metadata/log paths and timing are excluded.",
+  "assumptions": [
+    "Fixed building loss is an effective scenario assumption, not evidence that all Experia users are indoors.",
+    "Vertical loss = min(12*((downward elevation - tilt)/10)^2,20) dB, applied once per eNB-UE link; existing horizontal pattern and 15 dBi peak unchanged.",
+    "Synthetic load UEs remain outdoors; vertical pattern applies to them too. Load rate/factor unchanged, achieved PRB must be checked.",
+    "Constant indoor loss attenuates serving and interfering signals together; it need not fix interference-limited SINR.",
+    "Hourly TA averages and random directions do not reconstruct individual user positions; changed attachment remains a limitation.",
+    "These tests can reject hypotheses; they cannot identify true building loss or real antenna tilt."
+  ],
+  "input_hashes": {
+    "sites_S0TA_42.csv": "59a5f4f30fb820546f9b3cb210b1ae3cfd038ff10cbc2bb5a18d48912d2a1abe",
+    "sites_S0TA_7.csv": "50b204af23cc8be26da020b52408e26c02a5a54b84d0806a06f5e0ab48431618",
+    "sites_S0TA_99.csv": "e8de49801a5a48935e3df2dfe364e7cac64716872d9c5d9fd79a0ce4e9ead8c4",
+    "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6",
+    "ues_S0TA_701.csv": "cd013c78ed046dac4d7a9120055e40eaa2305e4fb9b0c97a43dcf7ea373b7310",
+    "ues_S0TA_702.csv": "bd558efa386844863194c3acdeb1e0189288a7050a2428a03dd36dee72e88a3f",
+    "ues_S0TA_703.csv": "cedba1183986214053be39a43d6bee112f7d036f1da9786060369a32e72c2d72"
+  },
+  "source_hashes": {
+    "building-vertical-model.h": "f1dbcab56ed1b470dd2b8fb7416ecd3999da89c1e95569ace3d38ab7e9c93550",
+    "ns3_paths.py": "87b7ff832181cc7cd268ba61d52098e22ba323442a768e79077115533330e30e",
+    "run_baseline.py": "e0c1da15cad8833b0027b6c7fd96072a40c675350b901623f0fb61ab6d5afddd",
+    "sindirgi_baseline.cc": "d39a260a503762208386f6ca85ab30ea781527854f601e70bbd825018a99396d",
+    "static-shadow-model.h": "83ed29579c7a678880afa9dd5e84e3520a52c4ce5d3f476531c7a631e8d2c9ed"
+  },
+  "reference": "https://www.nsnam.org/docs/release/3.44/models/ns-3-model-library.pdf",
+  "technical_amendments": [
+    {
+      "when": "after WSL repair, before first successful build or native run",
+      "change": "Compiler options fallback from stock LTE example to stock perf-io executable because current CMake records omit LTE examples. No scientific parameters or selection changed."
+    },
+    {
+      "when": "after disabled regression, before candidate runs",
+      "change": "All six files differ only by CRLF vs LF (verified byte-for-byte after newline normalization). Preserve raw hashes and raw mismatch; permit exact content comparison with CRLF-to-LF normalization only. No numeric tolerance or scientific settings changed."
+    }
+  ]
+}

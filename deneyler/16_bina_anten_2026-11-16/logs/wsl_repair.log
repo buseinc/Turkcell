@@ -1,0 +1,5 @@
+﻿2026-11-16T17:31:58.4866948+03:00 Starting WSL service recovery with administrator rights.
+2026-11-16T17:31:58.6973014+03:00 Stopped waiting wsl.exe clients.
+2026-11-16T17:32:00.7442265+03:00 Normal service stop failed or timed out: Exception calling "Stop" with "0" argument(s): "Cannot stop WslService service on computer '.'."
+2026-11-16T17:32:00.7649220+03:00 Stopping unresponsive WSL service process 28696
+2026-11-16T17:32:04.0719331+03:00 SUCCESS: WslService is running. Linux readiness still needs verification.

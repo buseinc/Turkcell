@@ -1,0 +1,145 @@
+{
+  "metrics": {
+    "S0": {
+      "training": {
+        "rsrp": 3.592391243862025,
+        "sinr": 2.573875448985459
+      },
+      "control": {
+        "rsrp": 1.7240361668153161,
+        "sinr": 2.1536287991789433
+      }
+    },
+    "G17": {
+      "training": {
+        "rsrp": 3.592391243862025,
+        "sinr": 2.6254345059416506
+      },
+      "control": {
+        "rsrp": 2.6402862969399417,
+        "sinr": 3.608979223701061
+      }
+    }
+  },
+  "checks": {
+    "all_evaluation_sites_present": true,
+    "holdout_rsrp_improves": false,
+    "holdout_sinr_not_degraded": false,
+    "other_sites_rsrp_not_degraded": true,
+    "all_measurement_connected": true,
+    "all_measurement_receive_dl": false,
+    "prb_change_within_limit": false,
+    "layout_and_band_allocation_correct": true,
+    "analytical_native_rsrp_agree": true
+  },
+  "accepted": false,
+  "per_site": {
+    "SITE_000130": {
+      "rsrp": {
+        "S0_mean_error_db": -1.7757635927266904,
+        "G17_mean_error_db": -1.7757635927266904,
+        "MAE_change_db": 0.0
+      },
+      "sinr": {
+        "S0_mean_error_db": 0.20879503502233376,
+        "G17_mean_error_db": 0.1781369423871221,
+        "MAE_change_db": -0.03878814988640167
+      }
+    },
+    "SITE_000296": {
+      "rsrp": {
+        "S0_mean_error_db": -0.047341526757136876,
+        "G17_mean_error_db": -0.047341526757136876,
+        "MAE_change_db": 0.0
+      },
+      "sinr": {
+        "S0_mean_error_db": 2.554084561139973,
+        "G17_mean_error_db": 2.407404269273396,
+        "MAE_change_db": -0.025554146940283573
+      }
+    },
+    "SITE_000444": {
+      "rsrp": {
+        "S0_mean_error_db": 2.715935401698014,
+        "G17_mean_error_db": 2.715935401698014,
+        "MAE_change_db": 0.0
+      },
+      "sinr": {
+        "S0_mean_error_db": 3.5922412465266027,
+        "G17_mean_error_db": 3.7724652896820996,
+        "MAE_change_db": 0.1802240431554969
+      }
+    },
+    "SITE_000482": {
+      "rsrp": {
+        "S0_mean_error_db": -4.651561337527966,
+        "G17_mean_error_db": -4.651561337527966,
+        "MAE_change_db": 0.0
+      },
+      "sinr": {
+        "S0_mean_error_db": 1.7995892552003923,
+        "G17_mean_error_db": 1.8491925587186149,
+        "MAE_change_db": 0.06046509976200665
+      }
+    },
+    "SITE_000554": {
+      "rsrp": {
+        "S0_mean_error_db": -5.517606957069954,
+        "G17_mean_error_db": -5.517606957069954,
+        "MAE_change_db": 0.0
+      },
+      "sinr": {
+        "S0_mean_error_db": -3.0682468189618852,
+        "G17_mean_error_db": -3.1496952576520223,
+        "MAE_change_db": 0.08144843869013707
+      }
+    },
+    "SITE_000440": {
+      "rsrp": {
+        "S0_mean_error_db": 0.08381614361173224,
+        "G17_mean_error_db": 3.305063555123965,
+        "MAE_change_db": 2.748750390373876
+      },
+      "sinr": {
+        "S0_mean_error_db": 0.7709556938862908,
+        "G17_mean_error_db": 4.983502470124448,
+        "MAE_change_db": 4.20217548029624
+      }
+    },
+    "SITE_000441": {
+      "rsrp": {
+        "S0_mean_error_db": -1.4600241780492524,
+        "G17_mean_error_db": -1.4600241780492524,
+        "MAE_change_db": 0.0
+      },
+      "sinr": {
+        "S0_mean_error_db": 1.6750937082567614,
+        "G17_mean_error_db": 2.1345265618760134,
+        "MAE_change_db": 0.07114469134520673
+      }
+    },
+    "SITE_000443": {
+      "rsrp": {
+        "S0_mean_error_db": 2.046566123414389,
+        "G17_mean_error_db": 2.046566123414389,
+        "MAE_change_db": 0.0
+      },
+      "sinr": {
+        "S0_mean_error_db": 2.1748237127505727,
+        "G17_mean_error_db": 2.2497234095212844,
+        "MAE_change_db": 0.09273110192490686
+      }
+    }
+  },
+  "mean_prb": {
+    "S0": 0.25378395061732406,
+    "G17": 0.22420624017959595
+  },
+  "mean_prb_by_carrier": {
+    "B3": 0.2500478395061898,
+    "B20": 0.09280761904761904,
+    "B1": 0.2225897435898205
+  },
+  "no_post_result_retuning": true,
+  "reference_scenario": "S0 remains available regardless of this test decision"
+}

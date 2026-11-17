@@ -1,0 +1,236 @@
+{
+  "validation": [
+    {
+      "seed": 701,
+      "same_serving": true,
+      "rsrp_max_error_db": 3.279140514678147e-09,
+      "finite_all": true,
+      "passed": true
+    },
+    {
+      "seed": 702,
+      "same_serving": true,
+      "rsrp_max_error_db": 2.8187940870338934e-09,
+      "finite_all": true,
+      "passed": true
+    },
+    {
+      "seed": 703,
+      "same_serving": true,
+      "rsrp_max_error_db": 5.322490892467613e-09,
+      "finite_all": true,
+      "passed": true
+    }
+  ],
+  "gate_passed": true,
+  "grid": [
+    {
+      "indoor_loss_db": 0,
+      "downtilt_deg": 0,
+      "training_rsrp_mae_db": 7.3198530701732025,
+      "training_by_draw_db": [
+        7.42405050099795,
+        6.740975451536218,
+        7.7945332579854405
+      ],
+      "valid": true
+    },
+    {
+      "indoor_loss_db": 0,
+      "downtilt_deg": 3,
+      "training_rsrp_mae_db": 7.80334648288424,
+      "training_by_draw_db": [
+        7.912837423443051,
+        7.225035505431643,
+        8.272166519778025
+      ],
+      "valid": true
+    },
+    {
+      "indoor_loss_db": 0,
+      "downtilt_deg": 6,
+      "training_rsrp_mae_db": 7.076576792858671,
+      "training_by_draw_db": [
+        7.0859140212735525,
+        6.534757952412926,
+        7.609058404889535
+      ],
+      "valid": true
+    },
+    {
+      "indoor_loss_db": 0,
+      "downtilt_deg": 9,
+      "training_rsrp_mae_db": 5.442423453373505,
+      "training_by_draw_db": [
+        4.8636141306059075,
+        5.813705939513559,
+        5.649950290001049
+      ],
+      "valid": true
+    },
+    {
+      "indoor_loss_db": 6,
+      "downtilt_deg": 0,
+      "training_rsrp_mae_db": 4.675420594918592,
+      "training_by_draw_db": [
+        4.439801060055482,
+        4.891087059185838,
+        4.695373665514455
+      ],
+      "valid": true
+    },
+    {
+      "indoor_loss_db": 6,
+      "downtilt_deg": 3,
+      "training_rsrp_mae_db": 4.870110854083859,
+      "training_by_draw_db": [
+        4.5941901672589065,
+        5.0536498722684655,
+        4.962492522724207
+      ],
+      "valid": true
+    },
+    {
+      "indoor_loss_db": 6,
+      "downtilt_deg": 6,
+      "training_rsrp_mae_db": 4.926839144709629,
+      "training_by_draw_db": [
+        4.368289599076931,
+        5.769875078436951,
+        4.642352756615006
+      ],
+      "valid": true
+    },
+    {
+      "indoor_loss_db": 6,
+      "downtilt_deg": 9,
+      "training_rsrp_mae_db": 6.354305737768905,
+      "training_by_draw_db": [
+        4.607713842941218,
+        8.005822528246412,
+        6.449380842119086
+      ],
+      "valid": true
+    },
+    {
+      "indoor_loss_db": 12,
+      "downtilt_deg": 0,
+      "training_rsrp_mae_db": 5.835503820237261,
+      "training_by_draw_db": [
+        5.17324009445328,
+        6.601199898112543,
+        5.732071468145961
+      ],
+      "valid": true
+    },
+    {
+      "indoor_loss_db": 12,
+      "downtilt_deg": 3,
+      "training_rsrp_mae_db": 5.91267024579071,
+      "training_by_draw_db": [
+        4.867031216255919,
+        6.892299179433254,
+        5.978680341682955
+      ],
+      "valid": true
+    },
+    {
+      "indoor_loss_db": 12,
+      "downtilt_deg": 6,
+      "training_rsrp_mae_db": 7.426436584845297,
+      "training_by_draw_db": [
+        6.312218308795025,
+        8.60106085383984,
+        7.366030591901025
+      ],
+      "valid": true
+    },
+    {
+      "indoor_loss_db": 12,
+      "downtilt_deg": 9,
+      "training_rsrp_mae_db": 11.25916336284717,
+      "training_by_draw_db": [
+        10.529387642965919,
+        12.208799659004736,
+        11.039302786570861
+      ],
+      "valid": true
+    },
+    {
+      "indoor_loss_db": 18,
+      "downtilt_deg": 0,
+      "training_rsrp_mae_db": 11.467735866118119,
+      "training_by_draw_db": [
+        10.57634294206412,
+        12.465795711307724,
+        11.361068944982515
+      ],
+      "valid": true
+    },
+    {
+      "indoor_loss_db": 18,
+      "downtilt_deg": 3,
+      "training_rsrp_mae_db": 11.284327797814724,
+      "training_by_draw_db": [
+        10.354425463122283,
+        12.301238622597296,
+        11.19731930772459
+      ],
+      "valid": true
+    },
+    {
+      "indoor_loss_db": 18,
+      "downtilt_deg": 6,
+      "training_rsrp_mae_db": 13.175182832247922,
+      "training_by_draw_db": [
+        12.312218308795028,
+        14.175019140801016,
+        13.038311047147726
+      ],
+      "valid": true
+    },
+    {
+      "indoor_loss_db": 18,
+      "downtilt_deg": 9,
+      "training_rsrp_mae_db": 17.259163362847172,
+      "training_by_draw_db": [
+        16.529387642965922,
+        18.208799659004733,
+        17.039302786570865
+      ],
+      "valid": true
+    }
+  ],
+  "winner": {
+    "indoor_loss_db": 6,
+    "downtilt_deg": 0,
+    "training_rsrp_mae_db": 4.675420594918592,
+    "training_by_draw_db": [
+      4.439801060055482,
+      4.891087059185838,
+      4.695373665514455
+    ],
+    "valid": true
+  },
+  "native_candidates": [
+    {
+      "label": "combined",
+      "indoor_loss_db": 6,
+      "downtilt_deg": 0,
+      "vertical_pattern": 1
+    },
+    {
+      "label": "indoor_only",
+      "indoor_loss_db": 6,
+      "downtilt_deg": 0,
+      "vertical_pattern": 0
+    },
+    {
+      "label": "vertical_only",
+      "indoor_loss_db": 0,
+      "downtilt_deg": 0,
+      "vertical_pattern": 1
+    }
+  ],
+  "interpretation": "Analytical RSRP screening only. No native network, SINR, load or holdout acceptance result yet."
+}

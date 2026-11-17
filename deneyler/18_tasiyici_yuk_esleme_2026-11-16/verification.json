@@ -1,0 +1,9 @@
+{
+  "source_identical_to_G17": true,
+  "binary_identical_to_G17": true,
+  "reused_regression_passed": true,
+  "model_checks": {
+    "passed": true,
+    "checks": 20
+  }
+}

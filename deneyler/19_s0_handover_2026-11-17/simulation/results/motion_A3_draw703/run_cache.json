@@ -1,0 +1,53 @@
+{
+  "key": {
+    "source": "ac38f6efd9185ef933f62337f323e6ddb7ae06ef447b6b71e7da2f799831cff9",
+    "case": {
+      "name": "motion_A3_draw703",
+      "kind": "motion",
+      "az": 99,
+      "seed": 703,
+      "handover": 1,
+      "sites": "sites_pair_99.csv",
+      "ues_file": "ues_motion_703.csv",
+      "waypoints": "waypoints_703.csv",
+      "ues": 1,
+      "duration": 102.409,
+      "expected_source_site": "SITE_000441",
+      "expected_target_site": "SITE_000443"
+    },
+    "sites_sha256": "1cec85d4782e14f09a04cf4fa18d9180d86a4359519ad65d07c52e6448d107eb",
+    "ues_sha256": "aa77fe6ca4edeb5da720abc7b72ea5c5bbcb44cc0bfb3705bdffb60186144a6f",
+    "radio": {
+      "power_dbm": 49,
+      "beamwidth": 120,
+      "exponent": 3,
+      "nf_db": 9,
+      "mixed_cqi": 1,
+      "udp_jitter": 1,
+      "dl_earfcn": 1300,
+      "ul_earfcn": 19300
+    },
+    "A3": {
+      "name": "A3RsrpHandoverAlgorithm",
+      "hysteresis_db": 3,
+      "time_to_trigger_ms": 256,
+      "defaults_verified": "installed ns-3.44 source; original default NoOp is retained when off",
+      "X2": "Full mesh among 72 logical sector nodes in full S0 (2556 links); 6 nodes in pair test (15 links). Not a claim about real operator X2 topology.",
+      "inter_frequency_supported": false,
+      "RRC": "existing default ideal RRC; measured interruption times are diagnostic only"
+    },
+    "waypoints_sha256": "8b01b961c50f868594fff3228c43a0d8d484675ae4781fb864e9e1d48360d7ae"
+  },
+  "outputs": {
+    "sectors.csv": "a583d4fd70eca9d93629f3d05de00b83f2222adee6ac554e4131775cab030e33",
+    "ues.csv": "c31c78f32266fd1354e9fc81c8ca3c00ffea3c8436d0b0f505fbbca8ebaa1089",
+    "radio_samples.csv": "6f921b4f3cd354070a80fb1eab93e2125e2d8ad1750d3478e49ec3e3b9b407ce",
+    "sinr_components.csv": "19bf52b16f78d8fb34ec45da48507df5043cffe9ff1e5e989ae237251177edf6",
+    "measurements.csv": "b6706cfc376c09fa0962d7f874fc6ee15942ff74649cfd180e030374b34b6c47",
+    "prb_usage.csv": "132e4b3114394993708295a170bc743f801c720a672725e646bec36ea591638b",
+    "result.json": "8a907017650495c5bfc41abbd5122214df672118ee9b693521c32f5f34842c89",
+    "handover_events.csv": "dd34132b4577b831e92062f15c534ed39b640e581b1b120b8681b6fa453fd1ef",
+    "serving_timeline.csv": "fdfaea07e3a4c32bcfd5af166b1f597909ec094f178b6fedf7af05773909d188",
+    "packet_rx.csv": "2ceaa45052b3563c85425b25ee55f7479129b80ded6637124ef5a2e4a4334197"
+  }
+}

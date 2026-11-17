@@ -1,0 +1,76 @@
+{
+  "summaries": {
+    "combined": {
+      "mae_db": {
+        "training": {
+          "rsrp": 4.6754205949402525,
+          "sinr": 5.836870941456513
+        },
+        "control": {
+          "rsrp": 5.0095934048425175,
+          "sinr": 3.098895867171655
+        }
+      },
+      "checks": {
+        "all_sites_present": true,
+        "holdout_rsrp_improves_TA": false,
+        "holdout_rsrp_close_to_S0": false,
+        "holdout_sinr_not_degraded": true,
+        "all_ues_connected": true,
+        "all_ues_with_dl": false,
+        "prb_stable": true
+      },
+      "accepted": false,
+      "prb_mean": 0.2517268518518273
+    },
+    "indoor_only": {
+      "mae_db": {
+        "training": {
+          "rsrp": 4.996007740602747,
+          "sinr": 6.662485995986962
+        },
+        "control": {
+          "rsrp": 4.9564596750700645,
+          "sinr": 3.1895371901406357
+        }
+      },
+      "checks": {
+        "all_sites_present": true,
+        "holdout_rsrp_improves_TA": false,
+        "holdout_rsrp_close_to_S0": false,
+        "holdout_sinr_not_degraded": true,
+        "all_ues_connected": true,
+        "all_ues_with_dl": false,
+        "prb_stable": true
+      },
+      "accepted": false,
+      "prb_mean": 0.24910030864199398
+    },
+    "vertical_only": {
+      "mae_db": {
+        "training": {
+          "rsrp": 7.319853070186035,
+          "sinr": 8.743820609830111
+        },
+        "control": {
+          "rsrp": 3.1345742218618984,
+          "sinr": 3.2362151426023202
+        }
+      },
+      "checks": {
+        "all_sites_present": true,
+        "holdout_rsrp_improves_TA": false,
+        "holdout_rsrp_close_to_S0": false,
+        "holdout_sinr_not_degraded": true,
+        "all_ues_connected": true,
+        "all_ues_with_dl": false,
+        "prb_stable": true
+      },
+      "accepted": false,
+      "prb_mean": 0.2546018518518565
+    }
+  },
+  "selected_label": "combined",
+  "selected_accepted": false,
+  "decision": "S0 remains the reference; passing all checks supports further study, not automatic replacement."
+}
