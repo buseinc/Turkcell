@@ -27,7 +27,7 @@ from reportlab.platypus import (Image, PageBreak, Paragraph, SimpleDocTemplate, 
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-D14 = ROOT / 'deneyler/14_cok_tasiyici_s2_2026-11-15'
+D14 = ROOT / 'deneyler/14_temel_s0_ve_cok_tasiyici_s2_2026-11-15'
 D10 = ROOT / 'deneyler/10_kapsama_haritalari_2026-11-15'
 SEEDS = [701, 702, 703]
 plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 9})

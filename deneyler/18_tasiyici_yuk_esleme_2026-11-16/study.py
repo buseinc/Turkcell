@@ -14,7 +14,7 @@ import sys
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-D17 = HERE.parent/'17_saha440_gruplama_2026-11-16'
+D17 = HERE.parent/'17_hoca_gruplamasi_2026-11-16'
 SIM = HERE/'simulation'
 FILES = ['sectors.csv','ues.csv','radio_samples.csv','sinr_components.csv','measurements.csv','prb_usage.csv','result.json']
 
@@ -137,7 +137,7 @@ def summarize():
     rows = result['results']
     assert {r['case']['seed'] for r in rows}=={701,702,703}
     g17 = json.loads((D17/'result.json').read_text(encoding='utf-8'))['results']
-    s0 = [r for r in json.loads((ROOT/'deneyler/14_cok_tasiyici_s2_2026-11-15/result.json').read_text(encoding='utf-8'))['results'] if r['case']['scenario']=='S0']
+    s0 = [r for r in json.loads((ROOT/'deneyler/14_temel_s0_ve_cok_tasiyici_s2_2026-11-15/result.json').read_text(encoding='utf-8'))['results'] if r['case']['scenario']=='S0']
     target,tol = plan['target_prb'],plan['validation_relative_tolerance']
     per_draw_checks = []
     for r in rows:

@@ -19,7 +19,7 @@ SITE = 'SITE_000440'
 SOURCE = ROOT/'ana_proje/sindirgi_site_cell_groups_v2.xlsx'
 LAYERS = ROOT/'ana_proje/all_sites_cell_layers_v2.xlsx'
 TEMPLATE = ROOT/'ana_proje/cellmapper_check_template.xlsx'
-BASE = ROOT/'deneyler/14_cok_tasiyici_s2_2026-11-15'
+BASE = ROOT/'deneyler/14_temel_s0_ve_cok_tasiyici_s2_2026-11-15'
 MAP = 'https://www.cellmapper.net/map?MCC=286&MNC=1&type=LTE&latitude=39.21265&longitude=28.09685&zoom=16'
 
 
@@ -244,7 +244,7 @@ main(int argc, char* argv[])''')
         'simulation_hashes':{p.name:sha(p) for p in sorted(sim.glob('*')) if p.is_file()},
         'regression_inputs':{str(p.relative_to(ROOT)).replace('\\','/'):sha(p) for p in
                              [BASE/'inputs/sites_S0_42.csv',BASE/'inputs/ues_S0_701.csv']},
-        'baseline_reference':'deneyler/14_cok_tasiyici_s2_2026-11-15/simulation/results/S0_draw701',
+        'baseline_reference':'deneyler/14_temel_s0_ve_cok_tasiyici_s2_2026-11-15/simulation/results/S0_draw701',
         'no_new_handover_or_building_model':True,
     }
     plan['runtime']=runtime

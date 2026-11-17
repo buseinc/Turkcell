@@ -8,8 +8,8 @@ import shutil
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-BASE = HERE.parent/'14_cok_tasiyici_s2_2026-11-15'
-D17 = HERE.parent/'17_saha440_gruplama_2026-11-16'
+BASE = HERE.parent/'14_temel_s0_ve_cok_tasiyici_s2_2026-11-15'
+D17 = HERE.parent/'17_hoca_gruplamasi_2026-11-16'
 
 
 def read(path):

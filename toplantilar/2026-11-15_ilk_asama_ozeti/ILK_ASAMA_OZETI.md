@@ -46,7 +46,7 @@ Karşılaştırmalarda kullanılan standart budur.
 
 ## 4. Ana sonuçlar (güncel standartla)
 
-Kaynak: [S0/S2 karşılaştırması](../../deneyler/14_cok_tasiyici_s2_2026-11-15/SONUCLAR.md).
+Kaynak: [S0/S2 karşılaştırması](../../deneyler/14_temel_s0_ve_cok_tasiyici_s2_2026-11-15/SONUCLAR.md).
 
 | Gösterge | Değer | Yorum |
 |---|---:|---|
@@ -123,6 +123,6 @@ koşulardan önce yazılacak.
 | 11 | [CQI karşılaştırması](../../deneyler/11_cqi_karsilastirmasi_2026-11-15/SONUCLAR.md) | Tek frekans girişimi abartıyor |
 | 12 | [Dağılım karşılaştırması](../../deneyler/12_dagilim_karsilastirmasi_2026-11-15/SONUCLAR.md) | Sıralama iyi, hücre çeşitliliği eksik |
 | 13 | [Hücre imzası](../../deneyler/13_hucre_imzasi_2026-11-15/SONUCLAR.md) | 5 ana saha çok frekanslı |
-| 14 | [Çok taşıyıcı (S2)](../../deneyler/14_cok_tasiyici_s2_2026-11-15/SONUCLAR.md) | Karışık; S0 korunuyor |
+| 14 | [Çok taşıyıcı (S2)](../../deneyler/14_temel_s0_ve_cok_tasiyici_s2_2026-11-15/SONUCLAR.md) | Karışık; S0 korunuyor |
 
 Etkileşimli kapsama haritası: [kapsama_haritasi.html](../../deneyler/10_kapsama_haritalari_2026-11-15/kapsama_haritasi.html)

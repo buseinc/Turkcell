@@ -19,7 +19,7 @@ yerden devam edebilmesi için yazıldı. Önce bunu, sonra gerekirse bağlantı 
   henüz oluşturulmadı; kullanıcı yalnız durum sorarsa kendiliğinden yeni kampanya başlatmayın.
 - **Okuma sırası:** Bu belge → [Deney 19](deneyler/19_s0_handover_2026-11-17/SONUCLAR.md) →
   [Deney 18](deneyler/18_tasiyici_yuk_esleme_2026-11-16/SONUCLAR.md). Önceki denemeler gerekiyorsa
-  [Deney 17](deneyler/17_saha440_gruplama_2026-11-16/SONUCLAR.md) ve
+  [Deney 17](deneyler/17_hoca_gruplamasi_2026-11-16/SONUCLAR.md) ve
   [Deney 16](deneyler/16_bina_anten_2026-11-16/SONUCLAR.md).
 - **Git:** Commit/push yapılmadı. Deney 16–19 bu çalışma klasöründe mevcut, henüz Git'e eklenmemiş.
   Başka AI aynı klasörü açarsa dosyaları görür; yalnız GitHub'dan çekerek bu oturumun dosyalarını alamaz.
@@ -128,7 +128,7 @@ Tanım: 24 saha, 3 sektör, tek taşıyıcı (Band 3, 1815 MHz, 20 MHz), 49 dBm,
 eNB 30 m / UE 1,5 m, log-distance üs 3, gölgeleme yok, NF 9 dB, PF zamanlayıcı, mixed CQI, 256 ölçüm
 kullanıcısı (ana sahalara 2–6 km kümeler), her hücreye 1 yük kullanıcısı (KPI günlük ortalama PRB 0,233,
 katsayı 1,47), rastgele UDP başlangıcı, 4 s koşu / 1 s ısınma, 3 örnek. Kod ve girdiler:
-`deneyler/14_cok_tasiyici_s2_2026-11-15/` (senaryo adı `S0`).
+`deneyler/14_temel_s0_ve_cok_tasiyici_s2_2026-11-15/` (senaryo adı `S0`).
 
 Handover gereken yeni S0 işleri için `deneyler/19_s0_handover_2026-11-17/simulation/` kodu ve
 `--handover 1` kullanılır. Deney 19 ayrı bir entegrasyon kopyasıdır; eski S0 değiştirilmedi.
@@ -238,8 +238,8 @@ Klasör: `deneyler/16_bina_anten_2026-11-16/`.
 
 ## 13. Deney 17 — hocanın tam gruplaması tamamlandı
 
-Klasör: `deneyler/17_saha440_gruplama_2026-11-16/`. Adı ilk 440 incelemesinden kalmıştır;
-son kapsam yalnız 440 değil, mevcut bölgenin bütün strong sahalarıdır. Yeni klasör/rapor kopyası açılmadı.
+Klasör: `deneyler/17_hoca_gruplamasi_2026-11-16/`. Klasörün eski adı `17_saha440_gruplama` idi; kapsam yalnız 440 değil, bölgenin bütün strong
+sahaları olduğu için 17 Kasım'da yeniden adlandırıldı.
 
 - Güncel `all_sites_cell_layers_v2.xlsx` esas: **198 (3+3+3), 220 (4+3+4), 224 (3+4+3), 440 (3+3+3)**.
   Diğer 20 saha tek B3, üç sektör. Dört sektörlü bloklar gerçekten dört ayrı yönle kuruldu.

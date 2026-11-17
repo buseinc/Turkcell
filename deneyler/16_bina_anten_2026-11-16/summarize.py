@@ -11,7 +11,7 @@ def main():
     native = json.loads((HERE/'result.json').read_text(encoding='utf-8'))
     assert native['completed']
     old = json.loads((HERE.parent/'15_ta_yerlesim_2026-11-16/result.json').read_text(encoding='utf-8'))['results']
-    s0 = json.loads((HERE.parent/'14_cok_tasiyici_s2_2026-11-15/result.json').read_text(encoding='utf-8'))['results']
+    s0 = json.loads((HERE.parent/'14_temel_s0_ve_cok_tasiyici_s2_2026-11-15/result.json').read_text(encoding='utf-8'))['results']
     s0 = [r for r in s0 if r['case']['scenario']=='S0']
     def avg(rows,split,metric):
         return statistics.mean(r[split]['mae_db'][metric] for r in rows)

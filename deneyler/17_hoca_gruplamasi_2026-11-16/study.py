@@ -14,7 +14,7 @@ import sys
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 SIM = HERE/'simulation'
-BASE = ROOT/'deneyler/14_cok_tasiyici_s2_2026-11-15'
+BASE = ROOT/'deneyler/14_temel_s0_ve_cok_tasiyici_s2_2026-11-15'
 FILES = ['sectors.csv','ues.csv','radio_samples.csv','sinr_components.csv','measurements.csv','prb_usage.csv']
 
 

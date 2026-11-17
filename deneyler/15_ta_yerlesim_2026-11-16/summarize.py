@@ -12,7 +12,7 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-D14 = ROOT / 'deneyler/14_cok_tasiyici_s2_2026-11-15'
+D14 = ROOT / 'deneyler/14_temel_s0_ve_cok_tasiyici_s2_2026-11-15'
 SEEDS = [701, 702, 703]
 M = ['rsrp', 'sinr', 'rsrq']
 SCEN = {'S0': ('Önceki yerleşim (2–6 km)', D14), 'S0TA': ('TA’ya göre yerleşim', HERE)}

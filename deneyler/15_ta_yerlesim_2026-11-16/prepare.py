@@ -25,7 +25,7 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-D14 = ROOT / 'deneyler/14_cok_tasiyici_s2_2026-11-15'
+D14 = ROOT / 'deneyler/14_temel_s0_ve_cok_tasiyici_s2_2026-11-15'
 EXPERIA = ROOT / 'deneyler/13_hucre_imzasi_2026-11-15/experia_cells.csv.gz'
 DRAWS = [(42, 701), (7, 702), (99, 703)]
 PER_SITE = 32

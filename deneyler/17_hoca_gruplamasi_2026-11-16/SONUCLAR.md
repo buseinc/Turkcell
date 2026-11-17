@@ -31,8 +31,8 @@ Erişim denendi: tarayıcı bağlantı sunucusu kullanılamadı; yerel arayüz a
 24 sahalık bölgede strong 198, 220, 224 ve 440'ın yapısı güncel v2 dosyasındaki gibi kurulacak.
 Kalan 20 saha tek taşıyıcı, 3 sektör, 1800 MHz kalacak. 220 ve 224'ün dört sektörlü blokları korunacak.
 S0 ölçüm kullanıcılarının konumları ve temel radyo ayarları korunacak; Deney 16’daki bina kaybı
-eklenmeyecek. Üç anten/kullanıcı örneği kullanılacak. Klasör adı ilk 440 incelemesinden kalmıştır;
-aynı deney genişletildi, yeni deney/rapor kopyası oluşturulmadı.
+eklenmeyecek. Üç anten/kullanıcı örneği kullanılacak. Deney ilk 440 incelemesinden
+genişletildi; klasörün eski adı `17_saha440_gruplama` idi, 17 Kasım'da yeniden adlandırıldı.
 
 Koşudan önce frekanslar, bant genişlikleri, güçler, taşıyıcıya kullanıcı atama kuralı ve yeni hücrelerin yükü açıkça sabitlenecek. Doğrulanamayan bilgi varsayım diye işaretlenecek; 3 taşıyıcıyı doldurmak için veri uydurulmayacak. Karşılaştırma ve kabul kuralları plan.json içinde kayıtlı.
 
@@ -48,7 +48,7 @@ Mevcut 24 sahalık bölgenin güncel v2 dosyasında güçlü sahalar: **198 (3+3
 
 206 elle kontrol önceliğinde kalır; güncel v2 dosyasında güveni moderate, gruplaması 3+3+3+3’tür. Eski şablondaki 4+4+4 ve p-değeri güncel v2 ile aynı değildir.
 
-Son görüşmede kapsam sadeleştirildi: ayrı bir 440 pilotu yerine, hocanın tarif ettiği güçlü grupların tamamını içeren tek yeni senaryo hazırlanacak. Dört sektörlü bloklar üçe yuvarlanmaz. Yukarıdaki yalnız 440 ile ilgili ilk taslak bu kapsam kararıyla genişletilmiştir; henüz yeni koşu başlatılmadı.
+Son görüşmede kapsam sadeleştirildi: ayrı bir 440 pilotu yerine, hocanın tarif ettiği güçlü grupların tamamını içeren tek yeni senaryo hazırlanacak. Dört sektörlü bloklar üçe yuvarlanmaz. Yukarıdaki yalnız 440 ile ilgili ilk taslak bu kapsam kararıyla genişletilmiştir; koşuların sonuçları aşağıdadır.
 
 | Elle kontrol | Enlem | Boylam | Güncel v2 güveni |
 |---|---:|---:|---|

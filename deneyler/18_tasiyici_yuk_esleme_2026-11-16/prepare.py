@@ -8,7 +8,7 @@ import statistics
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-D17 = HERE.parent/'17_saha440_gruplama_2026-11-16'
+D17 = HERE.parent/'17_hoca_gruplamasi_2026-11-16'
 
 
 def sha(path):
