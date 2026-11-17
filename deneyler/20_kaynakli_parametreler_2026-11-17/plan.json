@@ -1,0 +1,154 @@
+{
+  "draws": [
+    [
+      42,
+      701
+    ],
+    [
+      7,
+      702
+    ],
+    [
+      99,
+      703
+    ]
+  ],
+  "radio": {
+    "pathloss": "okumura",
+    "dl_earfcn": 1651,
+    "ul_earfcn": 19651,
+    "enb_power": 49,
+    "beamwidth": 65,
+    "antenna_max_gain_dbi": 15,
+    "vertical_pattern": 1,
+    "downtilt": 6,
+    "vertical_beamwidth": 10,
+    "link_shadow_std": 8,
+    "receiver_nf": 9,
+    "indoor_loss": 0,
+    "mixed_cqi": 1,
+    "udp_jitter": 1
+  },
+  "sources": {
+    "pathloss": "COST-231 Hata (COST 231 final report eq. 4.4.3), ns-3 OkumuraHataPropagationLossModel",
+    "dl_earfcn": "CellMapper, Turkcell B3 primary carrier observed on Balikesir towers (17.11.2026)",
+    "enb_power": "3GPP TR 36.814 Table A.2.1.1-1: 49 dBm for a 20 MHz carrier",
+    "beamwidth": "3GPP TR 36.814/36.942 sector antenna, 65 deg horizontal HPBW",
+    "antenna_max_gain_dbi": "3GPP TR 36.942 macro antenna 15 dBi",
+    "vertical_pattern": "3GPP TR 36.814 vertical pattern form, 10 deg HPBW, 20 dB cap",
+    "downtilt": "advisor draft (6 deg)",
+    "link_shadow_std": "3GPP TR 36.814 macro log-normal shadowing 8 dB",
+    "receiver_nf": "3GPP TR 36.814 UE noise figure 9 dB"
+  },
+  "cases": [
+    {
+      "name": "R_TA_draw701",
+      "label": "R_TA",
+      "az": 42,
+      "ue_seed": 701,
+      "sites_file": "sites_S0TA_42.csv",
+      "ue_file": "ues_R_TA_701.csv",
+      "ues": 328,
+      "shadow_seed": 42
+    },
+    {
+      "name": "R_TA_draw702",
+      "label": "R_TA",
+      "az": 7,
+      "ue_seed": 702,
+      "sites_file": "sites_S0TA_7.csv",
+      "ue_file": "ues_R_TA_702.csv",
+      "ues": 328,
+      "shadow_seed": 7
+    },
+    {
+      "name": "R_TA_draw703",
+      "label": "R_TA",
+      "az": 99,
+      "ue_seed": 703,
+      "sites_file": "sites_S0TA_99.csv",
+      "ue_file": "ues_R_TA_703.csv",
+      "ues": 328,
+      "shadow_seed": 99
+    },
+    {
+      "name": "R_S0yer_draw701",
+      "label": "R_S0yer",
+      "az": 42,
+      "ue_seed": 701,
+      "sites_file": "sites_S0_42.csv",
+      "ue_file": "ues_R_S0yer_701.csv",
+      "ues": 328,
+      "shadow_seed": 42
+    },
+    {
+      "name": "R_S0yer_draw702",
+      "label": "R_S0yer",
+      "az": 7,
+      "ue_seed": 702,
+      "sites_file": "sites_S0_7.csv",
+      "ue_file": "ues_R_S0yer_702.csv",
+      "ues": 328,
+      "shadow_seed": 7
+    },
+    {
+      "name": "R_S0yer_draw703",
+      "label": "R_S0yer",
+      "az": 99,
+      "ue_seed": 703,
+      "sites_file": "sites_S0_99.csv",
+      "ue_file": "ues_R_S0yer_703.csv",
+      "ues": 328,
+      "shadow_seed": 99
+    }
+  ],
+  "train_sites": [
+    "SITE_000130",
+    "SITE_000296",
+    "SITE_000444",
+    "SITE_000482",
+    "SITE_000554"
+  ],
+  "holdout_sites": [
+    "SITE_000440",
+    "SITE_000441",
+    "SITE_000443"
+  ],
+  "decision_rule": {
+    "holdout_rsrp_mae_max_db": 3.0,
+    "holdout_sinr_mae_max_db": 3.0,
+    "all_measured_connected": true,
+    "scenario": "R_TA"
+  },
+  "regression": {
+    "reference": "deneyler/16_bina_anten_2026-11-16/simulation/results/regression_disabled_draw701"
+  },
+  "source_hashes": {
+    "sindirgi_baseline.cc": "1fc9fe50be02f5ebfa09d48c2a477c3f50b422405302be7c09445c51bb210f12",
+    "building-vertical-model.h": "f26a14a0e116253861bf1393cfafee2b3de9fe11ffbe4aa1a315939c65fd10c9",
+    "static-shadow-model.h": "83ed29579c7a678880afa9dd5e84e3520a52c4ce5d3f476531c7a631e8d2c9ed",
+    "run_baseline.py": "2cecc1927c71f8b7343865148544519c1d21699139613d935d3ee7642a1cc69a"
+  },
+  "input_hashes": {
+    "sites_S0_42.csv": "59a5f4f30fb820546f9b3cb210b1ae3cfd038ff10cbc2bb5a18d48912d2a1abe",
+    "sites_S0_7.csv": "50b204af23cc8be26da020b52408e26c02a5a54b84d0806a06f5e0ab48431618",
+    "sites_S0_99.csv": "e8de49801a5a48935e3df2dfe364e7cac64716872d9c5d9fd79a0ce4e9ead8c4",
+    "sites_S0TA_42.csv": "59a5f4f30fb820546f9b3cb210b1ae3cfd038ff10cbc2bb5a18d48912d2a1abe",
+    "sites_S0TA_7.csv": "50b204af23cc8be26da020b52408e26c02a5a54b84d0806a06f5e0ab48431618",
+    "sites_S0TA_99.csv": "e8de49801a5a48935e3df2dfe364e7cac64716872d9c5d9fd79a0ce4e9ead8c4",
+    "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6",
+    "ues_R_S0yer_701.csv": "6270a082c43008ea0efa468203b25314ca146f313654dbbd0f3c52f36b1c7410",
+    "ues_R_S0yer_702.csv": "4ff41bbfa52f4f1d9f36d8c3cd1048fc7f477405faea63c9662a6eb9ed7635d7",
+    "ues_R_S0yer_703.csv": "83a2bec6cb5ee9fbbd82b27549dc1a8e88070ea005bffc37d1df761ce1dcfb39",
+    "ues_R_TA_701.csv": "009deb809d7786c7778b82d3521e3f6b3b35bb704f851697162f081ef1c26130",
+    "ues_R_TA_702.csv": "8685c5114c826cc3ad75124c30085fc9ad48fbf72181012c490c0deaeb07f0e2",
+    "ues_R_TA_703.csv": "f1c7c6dd43ff1b0aa0a216ccbbce189c71a1938cfc7345b685a15227fe864c12",
+    "ues_S0_701.csv": "457c4ee99c4cd4e19d1269936806c7bee5f098b96643740b1421f5f61fff4755",
+    "ues_S0_702.csv": "77ae65b1293da0bc11fdd2f155eea5dab1c519cb94ba2c0cf5cffd0d2dfaac6e",
+    "ues_S0_703.csv": "d53ddfb7d2b37b04e19cb48ea5e529d0496c423bcc30574e323a13c937089799",
+    "ues_S0TA_701.csv": "cd013c78ed046dac4d7a9120055e40eaa2305e4fb9b0c97a43dcf7ea373b7310",
+    "ues_S0TA_702.csv": "bd558efa386844863194c3acdeb1e0189288a7050a2428a03dd36dee72e88a3f",
+    "ues_S0TA_703.csv": "cedba1183986214053be39a43d6bee112f7d036f1da9786060369a32e72c2d72"
+  },
+  "rule": "- Question: if every radio value comes from a published standard or an observed operator setting\n  instead of our fit to Experia, how close does the simulation stay to the measurements?\n- Nothing is tuned. No value below was chosen by looking at simulation-vs-Experia agreement.\n  Radio values and their sources:\n    * Path loss: COST-231 Hata (ns-3 OkumuraHataPropagationLossModel, >1.5 GHz branch, medium city /\n      suburban C=0), eNB 30 m, UE 1.5 m. Replaces the fitted log-distance exponent 3.\n    * Carrier: Turkcell B3 EARFCN 1651 (DL 1850.1 MHz, UL 19651), 20 MHz, as seen on CellMapper towers\n      in Balikesir (17.11.2026). Replaces EARFCN 1300 (1815 MHz).\n    * eNB power: 49 dBm total per 20 MHz carrier (3GPP TR 36.814, Table A.2.1.1-1). Unchanged value,\n      now with a source instead of a sweep result.\n    * Antenna: 65 deg horizontal 3 dB beamwidth (3GPP TR 36.814 / 36.942 sector antenna; typical panel\n      data sheets), 15 dBi max gain (3GPP TR 36.942 macro). Replaces the fitted 120 deg.\n      ns-3 CosineAntennaModel is kept for the horizontal pattern (no 25 dB front-to-back floor).\n    * Vertical pattern: 3GPP form 12((theta - tilt)/10)^2, capped at 20 dB, 10 deg vertical beamwidth,\n      6 deg downtilt (value suggested in the advisor's draft).\n    * Shadowing: 8 dB static log-normal per eNB-UE link (3GPP TR 36.814 macro), seed = azimuth seed.\n      Sectors of a site share the value. Replaces \"no shadowing\".\n    * UE noise figure 9 dB (3GPP TR 36.814). Unchanged value.\n    * No indoor loss (Experia indoor/outdoor share unknown; Hata is an outdoor empirical model).\n- Users (two placements, both without tuning):\n    * R_TA (primary): users at their Experia timing-advance distance (deneyler/15 placement).\n    * R_S0yer (secondary): the old 2-6 km clusters (deneyler/14 S0), only to separate the radio effect\n      from the placement effect. The 2-6 km clusters were themselves a fitted choice.\n  Load users and the frozen 1.47 KPI load factor are copied unchanged (load comes from KPI PRB, not\n  from radio agreement). Per-UE dl_earfcn is moved from 1300 to 1651; nothing else in the UE files changes.\n- Three draws (azimuth/UE seeds 42/701, 7/702, 99/703), 256 measured users, 4 s, 1 s warm-up.\n- Regression first: with link shadowing off the copied simulator must reproduce deneyler/16\n  regression_disabled_draw701 byte for byte (after CRLF->LF). Otherwise no new runs.\n- Comparison with S0 (deneyler/14) and S0TA (deneyler/15) on the same metrics: site MAE on tuning and\n  held-out sites, signed errors, site ranking, cell distributions, KPI CQI, PRB.\n- Decision rule (fixed now): R_TA becomes the new reference (\"sourced baseline\") if, averaged over the\n  three draws, the held-out sites' RSRP MAE <= 3 dB and SINR MAE <= 3 dB, and all 256 measured users\n  connect in every draw. Otherwise S0 stays the reference and R_TA is reported as the sourced variant.\n  Either way no value is adjusted after seeing the results."
+}

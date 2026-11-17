@@ -1,0 +1,14 @@
+START regression_off_draw701
+REGRESSION PASSED
+START R_S0yer_draw701
+START R_TA_draw702
+START R_TA_draw703
+START R_TA_draw701
+DONE R_S0yer_draw701
+START R_S0yer_draw702
+DONE R_TA_draw702
+START R_S0yer_draw703
+DONE R_TA_draw701
+DONE R_TA_draw703
+DONE R_S0yer_draw702
+DONE R_S0yer_draw703

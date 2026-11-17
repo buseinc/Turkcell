@@ -1,0 +1,72 @@
+{
+  "key": {
+    "name": "R_TA_draw703",
+    "sites": "sites_S0TA_99.csv",
+    "ues": "ues_R_TA_703.csv",
+    "extra": [
+      "--pathloss",
+      "okumura",
+      "--exponent",
+      "3",
+      "--beamwidth",
+      "65",
+      "--enb-power",
+      "49",
+      "--receiver-nf",
+      "9",
+      "--shadow-std",
+      "0",
+      "--dl-earfcn",
+      "1651",
+      "--ul-earfcn",
+      "19651",
+      "--indoor-loss",
+      "0",
+      "--downtilt",
+      "6",
+      "--vertical-pattern",
+      "1",
+      "--vertical-beamwidth",
+      "10",
+      "--link-shadow-std",
+      "8",
+      "--shadow-seed",
+      "99"
+    ],
+    "source_hashes": {
+      "sindirgi_baseline.cc": "1fc9fe50be02f5ebfa09d48c2a477c3f50b422405302be7c09445c51bb210f12",
+      "building-vertical-model.h": "f26a14a0e116253861bf1393cfafee2b3de9fe11ffbe4aa1a315939c65fd10c9",
+      "static-shadow-model.h": "83ed29579c7a678880afa9dd5e84e3520a52c4ce5d3f476531c7a631e8d2c9ed",
+      "run_baseline.py": "2cecc1927c71f8b7343865148544519c1d21699139613d935d3ee7642a1cc69a"
+    },
+    "input_hashes": {
+      "sites_S0_42.csv": "59a5f4f30fb820546f9b3cb210b1ae3cfd038ff10cbc2bb5a18d48912d2a1abe",
+      "sites_S0_7.csv": "50b204af23cc8be26da020b52408e26c02a5a54b84d0806a06f5e0ab48431618",
+      "sites_S0_99.csv": "e8de49801a5a48935e3df2dfe364e7cac64716872d9c5d9fd79a0ce4e9ead8c4",
+      "sites_S0TA_42.csv": "59a5f4f30fb820546f9b3cb210b1ae3cfd038ff10cbc2bb5a18d48912d2a1abe",
+      "sites_S0TA_7.csv": "50b204af23cc8be26da020b52408e26c02a5a54b84d0806a06f5e0ab48431618",
+      "sites_S0TA_99.csv": "e8de49801a5a48935e3df2dfe364e7cac64716872d9c5d9fd79a0ce4e9ead8c4",
+      "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6",
+      "ues_R_S0yer_701.csv": "6270a082c43008ea0efa468203b25314ca146f313654dbbd0f3c52f36b1c7410",
+      "ues_R_S0yer_702.csv": "4ff41bbfa52f4f1d9f36d8c3cd1048fc7f477405faea63c9662a6eb9ed7635d7",
+      "ues_R_S0yer_703.csv": "83a2bec6cb5ee9fbbd82b27549dc1a8e88070ea005bffc37d1df761ce1dcfb39",
+      "ues_R_TA_701.csv": "009deb809d7786c7778b82d3521e3f6b3b35bb704f851697162f081ef1c26130",
+      "ues_R_TA_702.csv": "8685c5114c826cc3ad75124c30085fc9ad48fbf72181012c490c0deaeb07f0e2",
+      "ues_R_TA_703.csv": "f1c7c6dd43ff1b0aa0a216ccbbce189c71a1938cfc7345b685a15227fe864c12",
+      "ues_S0_701.csv": "457c4ee99c4cd4e19d1269936806c7bee5f098b96643740b1421f5f61fff4755",
+      "ues_S0_702.csv": "77ae65b1293da0bc11fdd2f155eea5dab1c519cb94ba2c0cf5cffd0d2dfaac6e",
+      "ues_S0_703.csv": "d53ddfb7d2b37b04e19cb48ea5e529d0496c423bcc30574e323a13c937089799",
+      "ues_S0TA_701.csv": "cd013c78ed046dac4d7a9120055e40eaa2305e4fb9b0c97a43dcf7ea373b7310",
+      "ues_S0TA_702.csv": "bd558efa386844863194c3acdeb1e0189288a7050a2428a03dd36dee72e88a3f",
+      "ues_S0TA_703.csv": "cedba1183986214053be39a43d6bee112f7d036f1da9786060369a32e72c2d72"
+    }
+  },
+  "output_hashes": {
+    "sectors.csv": "d98980b9b5a714705ce44527fb31a6915ec637c2737a92eb3dd2f45cbfe0710b",
+    "ues.csv": "cf04b9b98840f6c8ed7560eef4fe88f1b4daaa501a2876c544b3fcecb79449d7",
+    "radio_samples.csv": "242b065f8b611eaf759308c738abc9172dd790a7c1a39ebca2cc7f68d88f761b",
+    "sinr_components.csv": "bc743a6896166d24ca12eae0b7729c2a138f9717c08a3afb1fa0b72916b116b6",
+    "measurements.csv": "983f4281d13dcd2b2034554c9c6e48f2b373f812a01d5f8271a402a2b4f82b3d",
+    "prb_usage.csv": "092b485a3ccf907753da6ea2ff272f44517c1f98af1ee8a60a8e9596710f482f"
+  }
+}
