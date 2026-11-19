@@ -135,6 +135,8 @@ Her deney bir öncekinin sonucunu kullanır. Sonuç belgesi genellikle `SONUCLAR
 | 22 | [22_veri_tabanli_mesafe_duzeltmesi](deneyler/22_veri_tabanli_mesafe_duzeltmesi_2026-11-17/SONUCLAR.md) | RMa + bölgedeki 5.812 Turkcell hücresinden mesafe düzeltmesi: RSRP dağılımı tuttu (medyan aynı, KS 0,18), SINR 8 dB yüksek; kural geçmedi, S0 temel |
 | 23 | [23_uc_gpp_anten_deseni](deneyler/23_uc_gpp_anten_deseni_2026-11-18/SONUCLAR.md) | 22. deney + 3GPP TR 36.814 anten deseni (25 dB tavan): SINR düşmedi (9,6 dB fark) ama saha sıralaması tuttu (Spearman 0,93); şüpheli artık düşük yük; kural geçmedi, S0 temel |
 | 24 | [24_yuk_kalibrasyonu](deneyler/24_yuk_kalibrasyonu_2026-11-19/SONUCLAR.md) | 23. deney + yük KPI PRB'sine (0,233) yeniden kalibre: SINR yalnızca 0,3 dB düştü (9,3 dB fark); şüpheli artık SINR tanımı (veri kanalı ve referans sinyali); kural geçmedi, S0 temel |
+| 25 | [25_sinr_tavani_evm](deneyler/25_sinr_tavani_evm_2026-11-19/SONUCLAR.md) | Yalnız analiz: Experia SINR'ı ~20 dB'de duruyor, simülasyonda tavan yok; 3GPP TS 36.104 EVM %8 eklenince 22–24'ün SINR farkı 2,3–2,8 dB'ye iniyor |
+| 26 | [26_kaynakli_tam_model](deneyler/26_kaynakli_tam_model_2026-11-19/SONUCLAR.md) | Bütün kaynaklı parçalar + EVM simülatörün içinde (özel libns3-lte): SINR geçti (2,6 dB), RSRP 4,8 dB (296/440/444 7–10 dB güçlü); kural geçmedi, S0 temel |
 
 ## Notlar
 
