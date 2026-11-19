@@ -19,3 +19,6 @@ deneyler/09_kpi_yuk_profili_2026-11-12/kpi_cells.csv.gz
 deneyler/13_hucre_imzasi_2026-11-15/experia_cells.csv.gz
 deneyler/13_hucre_imzasi_2026-11-15/kpi_cells.csv.gz
 deneyler/14_temel_s0_ve_cok_tasiyici_s2_2026-11-15/buffer_kpi_cells.csv.gz
+
+# Komşu saha kontrolü için ham Experia'dan süzülen hücre verisi (operatör verisi; prepare.py ile yeniden üretilir)
+deneyler/27_komsu_saha_kontrolu_2026-11-19/neighbour_experia.csv.gz

@@ -23,7 +23,7 @@ This document specifies a reproducible procedure to construct a \emph{representa
 \end{abstract}
 
 \begin{yeni}
-\textbf{Yeni (turkuaz yazılar):} Dediğiniz gibi modeli, bütün değerleri gerçek kaynaklardan (3GPP standartları, CellMapper ve Turkcell'in bölgedeki kendi ölçümleri) alarak yeniden kurduk (Bölüm~\ref{sec:sourced}). Hiçbir değeri sonuca bakarak seçmedik. Test sahalarında sinyal kalitesi (SINR) 2,6~dB, sinyal gücü (RSRP) 4,8~dB farkla tutuyor. Sinyal gücündeki farkın büyük kısmı, antenlerin hangi yöne baktığını bilmememizden geliyor.
+\textbf{Yeni eklentilerimiz (turkuaz yazılar):}  modeli, bütün değerleri gerçek kaynaklardan (3GPP standartları, CellMapper ve Turkcell'in bölgedeki kendi ölçümleri) alarak yeniden kurduk (Bölüm~\ref{sec:sourced}). Test sahalarında SINR 2,6~dB, RSRP 4,8~dB farkla tutuyor.
 \end{yeni}
 
 \section{Scope and key methodological constraints}
@@ -129,7 +129,7 @@ TAAVG'yi birimi belli olmadığı için mesafeye çevirmedik. Yine de göreli ol
 \end{progress}
 
 \begin{yeni}
-Yeni modelde (Bölüm~\ref{sec:sourced}) TAAVG'yi bir varsayımla kullandık: bir birimin 4,88~m olduğunu (LTE'nin en küçük zaman adımı) kabul edip her hücrenin kullanıcılarını bu mesafeye yerleştirdik. Birim netleşirse bu varsayımı kontrol etmek gerekiyor.
+yeni modelde (Bölüm~\ref{sec:sourced}) TAAVG'yi bir varsayımla kullandık: bir birimin 4,88~m olduğunu (LTE'nin en küçük zaman adımı) kabul edip her hücrenin kullanıcılarını bu mesafeye yerleştirdik.
 \end{yeni}
 
 \subsection{Staged calibration and acceptance tests}
@@ -195,7 +195,7 @@ Bunlar denediklerimiz arasında ölçümlere en yakın ve tekrarlarda en tutarl�
 \end{progress}
 
 \begin{yeni}
-Yukarıdaki tabloyu sonuca bakarak seçmiştik. Yeni modelde (Bölüm~\ref{sec:sourced}) standart değerlere döndük: 65$^\circ$ anten, 8~dB gölgeleme, 6$^\circ$ eğim ve kırsal alan için yapılmış 3GPP yayılım modeli. Güç 49~dBm kaldı, çünkü 3GPP'nin 20~MHz için önerdiği değer de bu.
+yukarıdaki tabloyu sonuca bakarak seçmiştik. yeni modelde (Bölüm~\ref{sec:sourced}) standart değerlere döndük. 65$^\circ$ anten, 8~dB gölgeleme, 6$^\circ$ eğim ve kırsal alan için yapılmış 3GPP yayılım modeli. Güç 49~dBm kaldı, çünkü 3GPP'nin 20~MHz için önerdiği değer de buydu.
 \end{yeni}
 
 \subsection{Azimuth uncertainty}
@@ -350,56 +350,119 @@ Kapsama haritaları & Harita hesabı ns-3 ile birebir aynı; bölgenin \%99,8'in
 \section{Updated radio model (real-world values)}
 \label{sec:sourced}
 \begin{yeni}
-İlk modeldeki bazı değerleri (örneğin 120$^\circ$ anten genişliği) ölçümlere en iyi uydukları için seçmiştik. Dediğiniz gibi bu doğru bir yöntem değildi. Modeli baştan kurduk: her değeri gerçek bir kaynaktan aldık (3GPP standartları, CellMapper ve Turkcell'in bölgedeki kendi ölçümleri) ve hiçbir değeri sonuca bakarak seçmedik. Bundan sonra bu modeli kullanacağız.
+modeli baştan kurduk. her değeri gerçek bir kaynaktan aldık (3GPP standartları, CellMapper ve Turkcell'in bölgedeki kendi ölçümleri) ve hiçbir değeri sonuca bakarak seçmedik, daha gerçeğe ve standartlara yakın sçeimler yapmış olduk yani
 
-\textbf{Kısaca sonuç.}
+\textbf{aldığımız sonuçlar}
 \begin{itemize}[nosep]
-\item \textbf{Sinyal kalitesi (SINR) tutuyor:} test sahalarında (440, 441, 443) ortalama fark 2,6~dB.
-\item \textbf{Bölgenin genel sinyal gücü (RSRP) gerçek ağla aynı:} bütün hücrelerin ortancası modelde de, ölçümde de $-104{,}2$~dBm.
-\item \textbf{Tek tek sahalarda sinyal gücü farkı ortalama 4,8~dB.} Bunun büyük kısmı, antenlerin hangi yöne baktığını bilmememizden geliyor (aşağıda).
+\item \textbf{SINR tutuyor:} test sahalarında (440, 441, 443) ortalama fark 2,6~dB çıktı
+\item \textbf{bölgenin genel sinyal gücü  gerçek ağla aynı:} bütün hücrelerin ortancası modelde de, ölçümde de $-104{,}2$~dBm.
+\item \textbf{Tek tek sahalarda sinyal gücü farkı ortalama 4,8~dB.} bunun büyük kısmı antenlerin hangi yöne baktığını bilmememizden geliyormuş galina(aşağıda).
 \end{itemize}
 
-\textbf{Kullandığımız değerler ve nereden aldığımız.}
-\begin{center}\small
-\begin{tabularx}{\linewidth}{@{}l l X@{}}\toprule
-Ne & Değer & Nereden \\\midrule
-Frekans & 1800~MHz, 20~MHz genişlik & CellMapper: Balıkesir'deki Turkcell kulelerinin ana frekansı \\
-Verici gücü & 49~dBm & 3GPP'nin 20~MHz için önerdiği değer \\
-Anten & 65$^\circ$ genişlik, 15~dBi & 3GPP'nin standart makro anteni \\
-Anten arkası ve yanı & Sinyal en fazla 25~dB zayıflıyor & 3GPP (gerçek antenler arkaya da biraz yayın yapar) \\
-Anten eğimi & 6$^\circ$ aşağı & Taslaktaki değer \\
-Sinyalin mesafeyle zayıflaması & Kırsal alan modeli + Turkcell verisinden düzeltme & 3GPP; bölgedeki 5.812 Turkcell hücresi (test sahaları hariç) \\
-Verici kusuru & \%8 & 3GPP'nin baz istasyonlarına izin verdiği en yüksek değer \\
-Engellerden gelen dalgalanma, telefon gürültüsü & 8~dB, 9~dB & 3GPP \\
-Kullanıcıların kuleye uzaklığı & Her hücrenin TA değerinden & Experia (bir birim = 4,88~m varsayımı) \\
-Ağın yoğunluğu & Kapasitenin \%23'ü kullanılıyor & KPI \\\bottomrule
+
+\begin{table}[htbp]
+\centering
+\caption{Simülasyonda kullanılan parametreler ve veri kaynakları}
+\label{tab:simulation_parameters}
+
+\small
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{7pt}
+
+\begin{tabularx}{\linewidth}{
+    @{}
+    >{\raggedright\arraybackslash}p{0.27\linewidth}
+    >{\raggedright\arraybackslash}p{0.20\linewidth}
+    >{\raggedright\arraybackslash}X
+    @{}
+}
+\toprule
+\textbf{Parametre} &
+\textbf{Değer} &
+\textbf{Kaynak / Açıklama} \\
+\midrule
+
+Taşıyıcı frekans &
+1800 MHz &
+CellMapper (Balıkesir, Turkcell) \\
+
+Kanal bant genişliği &
+20 MHz &
+CellMapper \\
+
+Verici gücü &
+49 dBm &
+3GPP referans değeri \\
+
+Anten açıklık açısı &
+$65^\circ$ &
+3GPP makro anten modeli \\
+
+Anten kazancı &
+15 dBi &
+3GPP makro anten modeli \\
+
+Arka/yan lob zayıflaması &
+25 dB &
+3GPP anten modeli \\
+
+Anten eğimi (downtilt) &
+$6^\circ$ &
+Başlangıç taslağı \\
+
+Yol kaybı modeli &
+Kırsal alan &
+3GPP modeli; 5.812 Turkcell hücresiyle kalibrasyon \\
+
+Verici kusuru &
+\%8 &
+3GPP varsayımı \\
+
+Gölgeleme ve gürültü &
+8 dB / 9 dB &
+3GPP model parametreleri \\
+
+Kullanıcı mesafesi &
+TA tabanlı &
+Experia; 1 TA birimi $\approx 4.88$ m \\
+
+Ağ yükü (PRB) &
+\%23 &
+KPI veri seti \\
+
+\bottomrule
 \end{tabularx}
-\end{center}
+\end{table}
 
 \textbf{Gerçek ağla karşılaştırma} (üç farklı anten yönüyle tekrarlanıp ortalaması alındı).
 \begin{center}\small
+\begin{tabular}{@{}lc@{}}\toprule
+Model ile gerçek ağ arasındaki ortalama fark & Fark \\\midrule
+Sinyal kalitesi, test sahaları & 2,6~dB \\
+Sinyal gücü, test sahaları & 4,8~dB \\
+CQI, KPI'ya göre & 0,9 puan \\\bottomrule
+\end{tabular}
+
+\medskip
 \begin{tabular}{@{}lcc@{}}\toprule
- & Model & Gerçek ağ (Experia/KPI) \\\midrule
-Sinyal kalitesi: test sahalarında ortalama fark & \multicolumn{2}{c}{2,6~dB} \\
-Sinyal gücü: test sahalarında ortalama fark & \multicolumn{2}{c}{4,8~dB} \\
-Bütün hücrelerin ortanca sinyal gücü & $-104{,}2$~dBm & $-104{,}2$~dBm \\
-Hücreler arası sinyal gücü farklılığı (IQR) & 9,9~dB & 10,9~dB \\
-Hücreler arası sinyal kalitesi farklılığı (IQR) & 7,3~dB & 6,9~dB \\
-CQI (KPI ile ortalama fark) & \multicolumn{2}{c}{0,9 puan} \\\bottomrule
+Bütün hücreler & Model & Gerçek ağ \\\midrule
+Ortanca sinyal gücü & $-104{,}2$~dBm & $-104{,}2$~dBm \\
+Sinyal gücü farklılığı (IQR) & 9,9~dB & 10,9~dB \\
+Sinyal kalitesi farklılığı (IQR) & 7,3~dB & 6,9~dB \\\bottomrule
 \end{tabular}
 \end{center}
-Aşağıdaki grafikte her nokta bir saha. Nokta çizginin üstündeyse model ile gerçek ağ birebir aynı, gri bant $\pm$3~dB'yi gösteriyor. Turuncu noktalar test sahaları; modeli kurarken bunlara hiç bakmadık.
+
+Aşağıdaki grafikte her nokta bir saha. gri bant $\pm$3~dB'yi gösteriyor. turuncu noktalar test sahaları yani modeli kurarken bunlara hiç bakmadık.
 \begin{center}
 \includegraphics[width=0.95\linewidth]{figures/kaynakli_model.png}
 \end{center}
 
-\textbf{Sonucu belirleyen iki şey.}
+\textbf{Sonucu belirleyen şeyler}
+1-sinyal, gerçek ağda mesafeyle sanıldığından çok daha yavaş zayıflıyor. bölgedeki Turkcell hücrelerinde kullanıcı kuleden 10 kat uzaklaşınca sinyal 10,6~dB zayıflıyor. kırsal alan için yapılmış standart modelde bu düşüş 43~dB. bunu düzeltmek için bölgedeki 5.812 Turkcell cellinin ortalama sinyal gücü ile kullanıcıların kuleye ortalama uzaklığı arasındaki ilişkiyi çıkardık ve modeldeki her kullanıcının sinyalini, kuleye uzaklığına göre bu ilişkiye uyacak şekilde düzelttik (örneğin 300~m'deki kullanıcıya 32~dB kayıp ekledik, 2~km'dekine dokunmadık, 10~km'dekine 18~dB kazanç verdik). Bu fark muhtemelen bilmediğimiz şeylerden geliyor: yakın kullanıcıların çoğunun bina içinde olması ve antenlerin uzak köyleri görecek şekilde ayarlanmış olması gibi.
 
-\emph{1. Sinyal, gerçek ağda mesafeyle sanıldığından çok daha yavaş zayıflıyor.} Bölgedeki Turkcell hücrelerinde kullanıcı kuleden 10 kat uzaklaşınca sinyal yalnızca 10,6~dB zayıflıyor. Kırsal alan için yapılmış standart modelde bu düşüş 43~dB. Muhtemel nedenler: kuleye yakın kullanıcıların çoğu binaların içinde olduğu için sinyalleri zayıf, antenler de uzak köylere ulaşacak şekilde ayarlanmış. Bu bilgiler elimizde yok. Bu yüzden aradaki farkı Turkcell'in bölgedeki 5.812 hücresinin verisinden çıkarıp modele tek bir düzeltme olarak ekledik. Test sahalarının verisini bu hesapta kullanmadık.
+ 2-verici kusur u: sinyal kalitesinin bir üst sınırı var. gerçek bir baz istasyonu sinyali kusursuz göndermezmiş gönderdiği sinyalin içinde her zaman biraz bozulma olurmuş. 3GPP standardı bu bozulmanın sinyalin en fazla \%8'i kadar olmasına izin veriyor (teknik adı EVM). bu yüzden telefon kuleye ne kadar yakın olursa olsun sinyal kalitesi yaklaşık 22~dB'yi geçemez.
 
-\emph{2. Verici kusuru: sinyal kalitesinin bir üst sınırı var.} Gerçek bir baz istasyonu sinyali kusursuz göndermez; gönderdiği sinyalin içinde her zaman biraz bozulma olur. 3GPP standardı bu bozulmanın sinyalin en fazla \%8'i kadar olmasına izin veriyor (teknik adı EVM). Bu yüzden telefon kuleye ne kadar yakın olursa olsun sinyal kalitesi yaklaşık 22~dB'yi geçemez. Örnek: iyi bir hoparlöre ne kadar yaklaşırsan yaklaş, hoparlörün kendi cızırtısı yüzünden ses belli bir netliğin üstüne çıkmaz.
-
-İlk hâliyle modelde bu kusur yoktu. Kuleye yakın kullanıcılar gerçekte imkânsız derecede temiz sinyal (40~dB'ye kadar) görüyordu ve model sinyal kalitesini ortalama 9~dB fazla iyi gösteriyordu. Aşağıdaki grafik bunu gösteriyor:
+ilk halinde modelde bu kusur yoktu. Kuleye yakın kullanıcılar gerçekte imkânsız derecede temiz sinyal (40~dB'ye kadar) görüyordu ve model sinyal kalitesini ortalama 9~dB fazla iyi gösteriyordu. Aşağıdaki grafik bunu gösteriyor:
 \begin{itemize}[nosep]
 \item Soldaki gri bölgede sinyal zayıf. Kaliteyi arka plandaki gürültü belirliyor ve bütün eğriler birlikte yükseliyor.
 \item Sağa doğru sinyal güçlendikçe gerçek ağda (mavi) kalite 20~dB civarında duruyor. Kusursuz verici varsayan model (turuncu) ise yükselmeye devam ediyor.
@@ -409,9 +472,8 @@ Aşağıdaki grafikte her nokta bir saha. Nokta çizginin üstündeyse model ile
 \includegraphics[width=0.85\linewidth]{figures/sinr_tavani.png}
 \end{center}
 
-\textbf{Kalan fark neden var?} Antenlerin hangi yöne baktığını bilmiyoruz; CellMapper'da da bu sahalar için bilgi yok. Bu yüzden yönleri rastgele seçip her şeyi üç farklı yönle tekrarlıyoruz. 440'ta sonuç tamamen yöne bağlı: bir denemede fark 0,1~dB, diğerlerinde 9,5 ve 12,6~dB. Yani 440'ın gerçek anten yönünü bilsek büyük olasılıkla tutacak. 296 ve 444 ise yön ne olursa olsun 8--10~dB fazla güçlü çıkıyor. Bu iki sahaya özel bir durum var; anten yüksekliği, eğimi veya gücü bilinmeden düzeltemiyoruz.
+antenlerin hangi yöne baktığını bilmiyoruz; CellMapper'da da bu sahalar için bilgi yok. bu yüzden yönleri rastgele seçip her şeyi üç farklı yönle tekrarlıyoruz. 440'ta sonuç tamamen yöne bağlı. bir denemede fark 0,1~dB, diğerlerinde 9,5 ve 12,6~dB. Yani 440'ın gerçek anten yönünü bilsek büyük olasılıkla tutacak. 296 ve 444 ise yön ne olursa olsun 8--10~dB fazla güçlü çıkıyor.
 
-Bundan sonraki çalışmalarda (yoğunluk testi, saha kesintisi, İHA) bu modeli kullanmayı öneriyoruz. Bir kule kapandığında girişim ve yük değişecek; bu model her değeri gerçek bir kaynağa dayandığı için bu değişime de gerçekçi tepki verir. Ara adımların ayrıntıları proje klasöründe (deney 20--26).
 \end{yeni}
 
 \section{Deliverables and staged milestones}
@@ -449,14 +511,6 @@ turkcelle sorabilme ihtimalimiz var mı hocam bir seyleri mesela:
 \item KPI'daki throughput ve TAAVG birimleri ne? bunlar netleşirse yükü ve mesafeyi daha doğru modelleriz
 \end{itemize}
 \end{progress}
-
-\begin{yeni}
-Yeni modelden sonra eklenenler:
-\begin{itemize}[nosep]
-\item 440, 296 ve 444'ün antenlerinin hangi yöne baktığı, eğimi ve yüksekliği. Sinyal gücündeki kalan farkın büyük kısmı bu bilgilerin eksikliğinden geliyor.
-\item Experia'daki sinyal kalitesinin (SINR) nasıl ölçüldüğü. Verilerde SINR hiçbir zaman 25~dB'yi geçmiyor ve güçlü sinyalde 20~dB civarında duruyor; bu, yukarıda anlattığımız verici kusuruyla uyumlu. Ölçüm şeklini öğrenirsek bu kesinleşir.
-\end{itemize}
-\end{yeni}
 
 \paragraph{Implementation reference.} Consult the ns-3 LTE user documentation and the examples distributed with the \emph{installed version}: \url{https://www.nsnam.org/docs/models/html/lte-user.html}. API and model support may differ between releases.
 \end{document}

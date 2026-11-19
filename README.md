@@ -137,6 +137,7 @@ Her deney bir öncekinin sonucunu kullanır. Sonuç belgesi genellikle `SONUCLAR
 | 24 | [24_yuk_kalibrasyonu](deneyler/24_yuk_kalibrasyonu_2026-11-19/SONUCLAR.md) | 23. deney + yük KPI PRB'sine (0,233) yeniden kalibre: SINR yalnızca 0,3 dB düştü (9,3 dB fark); şüpheli artık SINR tanımı (veri kanalı ve referans sinyali); kural geçmedi, S0 temel |
 | 25 | [25_sinr_tavani_evm](deneyler/25_sinr_tavani_evm_2026-11-19/SONUCLAR.md) | Yalnız analiz: Experia SINR'ı ~20 dB'de duruyor, simülasyonda tavan yok; 3GPP TS 36.104 EVM %8 eklenince 22–24'ün SINR farkı 2,3–2,8 dB'ye iniyor |
 | 26 | [26_kaynakli_tam_model](deneyler/26_kaynakli_tam_model_2026-11-19/SONUCLAR.md) | Bütün kaynaklı parçalar + EVM simülatörün içinde (özel libns3-lte): SINR geçti (2,6 dB), RSRP 4,8 dB (296/440/444 7–10 dB güçlü); kural geçmedi, S0 temel |
+| 27 | [27_komsu_saha_kontrolu](deneyler/27_komsu_saha_kontrolu_2026-11-19/SONUCLAR.md) | 26. deneyin modeli 3 komşu sahada (200, 224, 206): SINR farkı 3,1 dB, RSRP 5,7 dB; ana sahalara yakın, zayıf/uzak sahalarda (224, 444, 440) model iyimser |
 
 ## Notlar
 
