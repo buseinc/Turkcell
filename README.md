@@ -134,6 +134,7 @@ Her deney bir öncekinin sonucunu kullanır. Sonuç belgesi genellikle `SONUCLAR
 | 21 | [21_kirsal_yol_kaybi_rma](deneyler/21_kirsal_yol_kaybi_rma_2026-11-17/SONUCLAR.md) | 20. deney + kırsal 3GPP RMa: medyan ve CQI tuttu ama yakın sahalar 11–18 dB güçlü, uzaklar 6–7 dB zayıf; kural geçmedi, S0 temel |
 | 22 | [22_veri_tabanli_mesafe_duzeltmesi](deneyler/22_veri_tabanli_mesafe_duzeltmesi_2026-11-17/SONUCLAR.md) | RMa + bölgedeki 5.812 Turkcell hücresinden mesafe düzeltmesi: RSRP dağılımı tuttu (medyan aynı, KS 0,18), SINR 8 dB yüksek; kural geçmedi, S0 temel |
 | 23 | [23_uc_gpp_anten_deseni](deneyler/23_uc_gpp_anten_deseni_2026-11-18/SONUCLAR.md) | 22. deney + 3GPP TR 36.814 anten deseni (25 dB tavan): SINR düşmedi (9,6 dB fark) ama saha sıralaması tuttu (Spearman 0,93); şüpheli artık düşük yük; kural geçmedi, S0 temel |
+| 24 | [24_yuk_kalibrasyonu](deneyler/24_yuk_kalibrasyonu_2026-11-19/SONUCLAR.md) | 23. deney + yük KPI PRB'sine (0,233) yeniden kalibre: SINR yalnızca 0,3 dB düştü (9,3 dB fark); şüpheli artık SINR tanımı (veri kanalı ve referans sinyali); kural geçmedi, S0 temel |
 
 ## Notlar
 

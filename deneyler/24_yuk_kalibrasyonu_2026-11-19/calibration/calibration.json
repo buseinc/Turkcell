@@ -1,0 +1,11 @@
+{
+  "target_prb": 0.233,
+  "rounds": [
+    {
+      "factor": 1.2432260371959327,
+      "prb": 0.2310324074073986
+    }
+  ],
+  "frozen_factor": 1.2432260371959327,
+  "rule": "- Context: the load factor 1.47 was calibrated in deneyler/14 for the old S0 radio. With the deneyler/23 radio\n  (RMa + distance correction + 3GPP antenna) the same load gives mean DL PRB 0.197 / 0.198 / 0.199, below the\n  KPI daily-mean target 0.233 (deneyler/09). Lower load means less interference. Chosen after seeing\n  deneyler/23 and reported as such.\n- Target is the measured load only: mean DL PRB = 0.233. SINR, RSRP or CQI are NOT used in the calibration.\n- Same method as deneyler/14: only draw 701 (azimuth 42) is used. Load-user UDP interval = factor / 0.233 ms\n  (only kind=load rows change; measured users and everything else are copied from deneyler/23 inputs).\n  Round 1: factor = 1.47 * 0.19706 / 0.233 (proportional step from the deneyler/23 draw-701 PRB).\n  If round-1 PRB is within 0.233 +/- 5 % the factor is frozen; otherwise one more proportional step\n  (factor * PRB_round1 / 0.233) is taken and frozen without checking further. At most two rounds.\n- The frozen factor is then used for all three draws by prepare.py / study.py; the decision rule is unchanged."
+}
