@@ -9,7 +9,7 @@
 \newcommand{\green}[1]{\textcolor{green}{#1}}
 % Mavi paragraflar: ilk aşamada yaptıklarımız ve ana bulgular (Kasım 2026).
 \newenvironment{progress}{\par\smallskip\color{blue}}{\par\smallskip}
-% Turkuaz paragraflar: kaynaklı (gerekçeli) model, yeni eklenenler (19 Kasım 2026).
+% Turkuaz paragraflar: gerçek değerlerle kurulan yeni model, yeni eklenenler (19 Kasım 2026).
 \newenvironment{yeni}{\par\smallskip\color{teal}}{\par\smallskip}
 
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
@@ -23,7 +23,7 @@ This document specifies a reproducible procedure to construct a \emph{representa
 \end{abstract}
 
 \begin{yeni}
-\textbf{Yeni (turkuaz):} Önerinize uygun olarak, her değeri standartlara (3GPP), CellMapper'a ve Turkcell'in bölgedeki kendi ölçümlerine dayanan ikinci bir ``kaynaklı'' model kurduk (Bölüm~\ref{sec:sourced}). SINR'de S0 ile aynı başarıyı veriyor (ayarda kullanılmayan sahalarda 2,6~dB), RSRP dağılımı Experia ile aynı. Saha ortalamalarındaki RSRP farkı (4,8~dB) büyük ölçüde bilinmeyen anten yönlerinden geliyor.
+\textbf{Yeni (turkuaz yazılar):} Dediğiniz gibi modeli, bütün değerleri gerçek kaynaklardan (3GPP standartları, CellMapper ve Turkcell'in bölgedeki kendi ölçümleri) alarak yeniden kurduk (Bölüm~\ref{sec:sourced}). Hiçbir değeri sonuca bakarak seçmedik. Test sahalarında sinyal kalitesi (SINR) 2,6~dB, sinyal gücü (RSRP) 4,8~dB farkla tutuyor. Sinyal gücündeki farkın büyük kısmı, antenlerin hangi yöne baktığını bilmememizden geliyor.
 \end{yeni}
 
 \section{Scope and key methodological constraints}
@@ -129,7 +129,7 @@ TAAVG'yi birimi belli olmadığı için mesafeye çevirmedik. Yine de göreli ol
 \end{progress}
 
 \begin{yeni}
-Kaynaklı modelde (Bölüm~\ref{sec:sourced}) TAAVG'yi bir varsayımla kullandık: LTE'nin temel zaman biriminde ($T_s$, bir birim 4,88~m) olduğunu kabul edip kullanıcıları hücrelerin ortalama TA mesafesine yerleştirdik (100~m--15~km arası). Birim netleşirse bu varsayım doğrulanmalı.
+Yeni modelde (Bölüm~\ref{sec:sourced}) TAAVG'yi bir varsayımla kullandık: bir birimin 4,88~m olduğunu (LTE'nin en küçük zaman adımı) kabul edip her hücrenin kullanıcılarını bu mesafeye yerleştirdik. Birim netleşirse bu varsayımı kontrol etmek gerekiyor.
 \end{yeni}
 
 \subsection{Staged calibration and acceptance tests}
@@ -195,7 +195,7 @@ Bunlar denediklerimiz arasında ölçümlere en yakın ve tekrarlarda en tutarl�
 \end{progress}
 
 \begin{yeni}
-Kaynaklı modelde (Bölüm~\ref{sec:sourced}) bu tablodaki standart değerlere geri döndük: 65$^\circ$ anten, 8~dB gölgeleme, 6$^\circ$ eğim ve kırsal 3GPP yayılım modeli. Güç 49~dBm kaldı, çünkü 3GPP'nin 20~MHz taşıyıcı için önerdiği değer de bu.
+Yukarıdaki tabloyu sonuca bakarak seçmiştik. Yeni modelde (Bölüm~\ref{sec:sourced}) standart değerlere döndük: 65$^\circ$ anten, 8~dB gölgeleme, 6$^\circ$ eğim ve kırsal alan için yapılmış 3GPP yayılım modeli. Güç 49~dBm kaldı, çünkü 3GPP'nin 20~MHz için önerdiği değer de bu.
 \end{yeni}
 
 \subsection{Azimuth uncertainty}
@@ -347,65 +347,71 @@ Kapsama haritaları & Harita hesabı ns-3 ile birebir aynı; bölgenin \%99,8'in
 
 \end{progress}
 
-\section{Sourced (justified) radio model}
+\section{Updated radio model (real-world values)}
 \label{sec:sourced}
 \begin{yeni}
-S0'daki bazı değerler (120$^\circ$ anten genişliği, yayılım üssü 3) ölçümlere en iyi uydukları için seçilmişti. Önerinize uygun olarak, her değeri bir kaynağa dayanan ikinci bir model kurduk: standartlar (3GPP), CellMapper ve Turkcell'in bölgedeki kendi ölçümleri. Ölçüm sahalarının sonucuna bakılarak ayarlanan değer yok.
+İlk modeldeki bazı değerleri (örneğin 120$^\circ$ anten genişliği) ölçümlere en iyi uydukları için seçmiştik. Dediğiniz gibi bu doğru bir yöntem değildi. Modeli baştan kurduk: her değeri gerçek bir kaynaktan aldık (3GPP standartları, CellMapper ve Turkcell'in bölgedeki kendi ölçümleri) ve hiçbir değeri sonuca bakarak seçmedik. Bundan sonra bu modeli kullanacağız.
 
-\textbf{Sonuç.}
+\textbf{Kısaca sonuç.}
 \begin{itemize}[nosep]
-\item \textbf{SINR tutuyor:} ayarda kullanılmayan sahalarda fark 2,6~dB (S0: 2,2~dB). Yayılım, saha sıralaması ve CQI'da S0'dan daha iyi.
-\item \textbf{RSRP'nin genel dağılımı Experia ile aynı:} hücre medyanı $-104{,}2$~dBm (Experia $-104{,}2$). Saha ortalamalarında fark 4,8~dB (S0: 1,7~dB).
-\item \textbf{Kalan RSRP farkı bilinmeyen sahaya özel bilgiden geliyor:} 440'ta anten yönü, 296 ve 444'te sahaya özel bir etki.
+\item \textbf{Sinyal kalitesi (SINR) tutuyor:} test sahalarında (440, 441, 443) ortalama fark 2,6~dB.
+\item \textbf{Bölgenin genel sinyal gücü (RSRP) gerçek ağla aynı:} bütün hücrelerin ortancası modelde de, ölçümde de $-104{,}2$~dBm.
+\item \textbf{Tek tek sahalarda sinyal gücü farkı ortalama 4,8~dB.} Bunun büyük kısmı, antenlerin hangi yöne baktığını bilmememizden geliyor (aşağıda).
 \end{itemize}
 
-\textbf{Modelin parçaları ve kaynakları.}
+\textbf{Kullandığımız değerler ve nereden aldığımız.}
 \begin{center}\small
 \begin{tabularx}{\linewidth}{@{}l l X@{}}\toprule
-Parça & Değer & Kaynak \\\midrule
-Taşıyıcı & 1800~MHz (B3), 20~MHz & CellMapper: Balıkesir'deki Turkcell kulelerinin ana taşıyıcısı \\
-Verici gücü & 49~dBm & 3GPP TR 36.814 (20~MHz taşıyıcı) \\
-Anten & 65$^\circ$, 15~dBi & 3GPP TR 36.814 / 36.942 makro sektör anteni \\
-Anten deseni & Arka/yan zayıflama en fazla 25~dB, dikey 10$^\circ$ ve en fazla 20~dB & 3GPP TR 36.814 \\
-Eğim & 6$^\circ$ & Taslaktaki başlangıç değeri \\
-Yol kaybı & Kırsal makro (RMa) & 3GPP TR 38.901 \\
-Mesafe düzeltmesi & $113{,}2 - 32{,}7\log_{10} d$~[m] dB & Bölgedeki 5.812 Turkcell hücresi (8 ana saha hariç) \\
-Verici kalitesi (EVM) & \%8 & 3GPP TS 36.104, 64QAM sınırı \\
-Gölgeleme, alıcı gürültüsü & 8~dB, 9~dB & 3GPP TR 36.814 \\
-Kullanıcı yerleşimi & Hücrenin TA mesafesinde & Experia TAAVG ($\times$4,88~m varsayımı) \\
-Yük & Ortalama PRB 0,233 & KPI (yalnızca bir çekilişte ayarlandı) \\\bottomrule
+Ne & Değer & Nereden \\\midrule
+Frekans & 1800~MHz, 20~MHz genişlik & CellMapper: Balıkesir'deki Turkcell kulelerinin ana frekansı \\
+Verici gücü & 49~dBm & 3GPP'nin 20~MHz için önerdiği değer \\
+Anten & 65$^\circ$ genişlik, 15~dBi & 3GPP'nin standart makro anteni \\
+Anten arkası ve yanı & Sinyal en fazla 25~dB zayıflıyor & 3GPP (gerçek antenler arkaya da biraz yayın yapar) \\
+Anten eğimi & 6$^\circ$ aşağı & Taslaktaki değer \\
+Sinyalin mesafeyle zayıflaması & Kırsal alan modeli + Turkcell verisinden düzeltme & 3GPP; bölgedeki 5.812 Turkcell hücresi (test sahaları hariç) \\
+Verici kusuru & \%8 & 3GPP'nin baz istasyonlarına izin verdiği en yüksek değer \\
+Engellerden gelen dalgalanma, telefon gürültüsü & 8~dB, 9~dB & 3GPP \\
+Kullanıcıların kuleye uzaklığı & Her hücrenin TA değerinden & Experia (bir birim = 4,88~m varsayımı) \\
+Ağın yoğunluğu & Kapasitenin \%23'ü kullanılıyor & KPI \\\bottomrule
 \end{tabularx}
 \end{center}
 
-\textbf{Ölçümlerle karşılaştırma} (üç anten yönü çekilişinin ortalaması).
+\textbf{Gerçek ağla karşılaştırma} (üç farklı anten yönüyle tekrarlanıp ortalaması alındı).
 \begin{center}\small
 \begin{tabular}{@{}lcc@{}}\toprule
- & S0 (ayarlanmış) & Kaynaklı model \\\midrule
-RSRP farkı, ayarda kullanılmayan sahalar (dB) & \textbf{1,7} & 4,8 \\
-SINR farkı, ayarda kullanılmayan sahalar (dB) & \textbf{2,2} & 2,6 \\
-Hücre RSRP medyanı (Experia $-104{,}2$~dBm) & $-111{,}7$ & \textbf{$-$104,2} \\
-Hücre RSRP yayılımı, IQR (Experia 10,9~dB) & 5,3 & \textbf{9,9} \\
-Hücre SINR yayılımı, IQR (Experia 6,9~dB) & 3,1 & \textbf{7,3} \\
-Saha SINR sıralaması (Spearman) & 0,90 & \textbf{0,95} \\
-KPI CQI ile mutlak fark & 1,3 & \textbf{0,9} \\\bottomrule
+ & Model & Gerçek ağ (Experia/KPI) \\\midrule
+Sinyal kalitesi: test sahalarında ortalama fark & \multicolumn{2}{c}{2,6~dB} \\
+Sinyal gücü: test sahalarında ortalama fark & \multicolumn{2}{c}{4,8~dB} \\
+Bütün hücrelerin ortanca sinyal gücü & $-104{,}2$~dBm & $-104{,}2$~dBm \\
+Hücreler arası sinyal gücü farklılığı (IQR) & 9,9~dB & 10,9~dB \\
+Hücreler arası sinyal kalitesi farklılığı (IQR) & 7,3~dB & 6,9~dB \\
+CQI (KPI ile ortalama fark) & \multicolumn{2}{c}{0,9 puan} \\\bottomrule
 \end{tabular}
 \end{center}
+Aşağıdaki grafikte her nokta bir saha. Nokta çizginin üstündeyse model ile gerçek ağ birebir aynı, gri bant $\pm$3~dB'yi gösteriyor. Turuncu noktalar test sahaları; modeli kurarken bunlara hiç bakmadık.
 \begin{center}
-\includegraphics[width=0.92\linewidth]{figures/kaynakli_model.png}
+\includegraphics[width=0.95\linewidth]{figures/kaynakli_model.png}
 \end{center}
 
-\textbf{Sonucu belirleyen iki bulgu.}
+\textbf{Sonucu belirleyen iki şey.}
 
-\emph{1. Sinyal gerçek ağda mesafeyle çok daha yavaş zayıflıyor.} Bölgedeki Turkcell hücrelerinde RSRP, mesafe on katına çıkınca yalnızca 10,6~dB düşüyor; kırsal 3GPP modelinde bu düşüş 43~dB. Aradaki farkı, bilmediğimiz etkilerin (bina içi kullanıcılar, gerçek anten eğimi ve yüksekliği, ağ planlaması) toplu karşılığı olarak operatörün kendi verisinden türettik. Bu düzeltme bütün bölge için tek bir eğri; test edilen 8 sahanın verisi bu hesapta kullanılmadı.
+\emph{1. Sinyal, gerçek ağda mesafeyle sanıldığından çok daha yavaş zayıflıyor.} Bölgedeki Turkcell hücrelerinde kullanıcı kuleden 10 kat uzaklaşınca sinyal yalnızca 10,6~dB zayıflıyor. Kırsal alan için yapılmış standart modelde bu düşüş 43~dB. Muhtemel nedenler: kuleye yakın kullanıcıların çoğu binaların içinde olduğu için sinyalleri zayıf, antenler de uzak köylere ulaşacak şekilde ayarlanmış. Bu bilgiler elimizde yok. Bu yüzden aradaki farkı Turkcell'in bölgedeki 5.812 hücresinin verisinden çıkarıp modele tek bir düzeltme olarak ekledik. Test sahalarının verisini bu hesapta kullanmadık.
 
-\emph{2. SINR'nin bir üst sınırı var.} Experia'da SINR, sinyal güçlendikçe yaklaşık 20~dB'de duruyor ve hiçbir değer 25~dB'yi geçmiyor. Simülasyonda ise 40~dB'ye kadar çıkıyordu. Gerçek vericiler sinyali biraz bozarak gönderir; 3GPP bu bozulmaya (EVM) 64QAM için en fazla \%8 izin veriyor, bu da SINR'yi yaklaşık 22~dB ile sınırlıyor. Bunu ns-3'ün LTE kütüphanesine ekleyince (kurulu ns-3'ü değiştirmeden, deneye özel bir kopyada) SINR farkı 9~dB'den 2,6~dB'ye indi.
+\emph{2. Verici kusuru: sinyal kalitesinin bir üst sınırı var.} Gerçek bir baz istasyonu sinyali kusursuz göndermez; gönderdiği sinyalin içinde her zaman biraz bozulma olur. 3GPP standardı bu bozulmanın sinyalin en fazla \%8'i kadar olmasına izin veriyor (teknik adı EVM). Bu yüzden telefon kuleye ne kadar yakın olursa olsun sinyal kalitesi yaklaşık 22~dB'yi geçemez. Örnek: iyi bir hoparlöre ne kadar yaklaşırsan yaklaş, hoparlörün kendi cızırtısı yüzünden ses belli bir netliğin üstüne çıkmaz.
+
+İlk hâliyle modelde bu kusur yoktu. Kuleye yakın kullanıcılar gerçekte imkânsız derecede temiz sinyal (40~dB'ye kadar) görüyordu ve model sinyal kalitesini ortalama 9~dB fazla iyi gösteriyordu. Aşağıdaki grafik bunu gösteriyor:
+\begin{itemize}[nosep]
+\item Soldaki gri bölgede sinyal zayıf. Kaliteyi arka plandaki gürültü belirliyor ve bütün eğriler birlikte yükseliyor.
+\item Sağa doğru sinyal güçlendikçe gerçek ağda (mavi) kalite 20~dB civarında duruyor. Kusursuz verici varsayan model (turuncu) ise yükselmeye devam ediyor.
+\item \%8 verici kusurunu modele (ns-3'e) ekleyince (yeşil) model de gerçek ağ gibi duruyor. Bununla sinyal kalitesindeki fark 9~dB'den 2,6~dB'ye indi.
+\end{itemize}
 \begin{center}
-\includegraphics[width=0.8\linewidth]{figures/sinr_tavani.png}
+\includegraphics[width=0.85\linewidth]{figures/sinr_tavani.png}
 \end{center}
 
-\textbf{Kalan fark.} Gerçek anten yönleri bilinmediği için her şeyi üç rastgele yön çekilişiyle tekrarlıyoruz (CellMapper'da bu sahalar için veri yok). 440'ın RSRP hatası tamamen yöne bağlı: çekilişlerde $+0{,}1$, $+9{,}5$ ve $+12{,}6$~dB. Ayarda kullanılmayan sahaların ortalama farkı da çekilişe göre 2,8 / 4,1 / 7,5~dB arasında değişiyor; yani farkın büyük kısmı bilinmeyen anten yönünden geliyor. 296 ve 444 ise yönden bağımsız olarak 7,5--10,7~dB güçlü kalıyor. Bu iki saha için anten yüksekliği, eğimi veya gücü gibi sahaya özel bilgi gerekiyor.
+\textbf{Kalan fark neden var?} Antenlerin hangi yöne baktığını bilmiyoruz; CellMapper'da da bu sahalar için bilgi yok. Bu yüzden yönleri rastgele seçip her şeyi üç farklı yönle tekrarlıyoruz. 440'ta sonuç tamamen yöne bağlı: bir denemede fark 0,1~dB, diğerlerinde 9,5 ve 12,6~dB. Yani 440'ın gerçek anten yönünü bilsek büyük olasılıkla tutacak. 296 ve 444 ise yön ne olursa olsun 8--10~dB fazla güçlü çıkıyor. Bu iki sahaya özel bir durum var; anten yüksekliği, eğimi veya gücü bilinmeden düzeltemiyoruz.
 
-\textbf{Hangi model ne için?} S0 saha ortalamalarına en iyi uyan model; ancak değerlerinin bir kısmı uyduğu için seçildi. Kaynaklı model her değeri gerekçelendirilebilen, SINR ve dağılım ölçütlerinde daha iyi olan model. Kesinti ve İHA senaryolarında bir saha kapandığında girişim ve yük değişeceği için, bu değişime fiziksel olarak doğru tepki veren kaynaklı modeli ana model olarak kullanmayı, S0'ı ise karşılaştırma için tutmayı öneriyoruz. Ara adımların ayrıntıları proje klasöründe (deney 20--26).
+Bundan sonraki çalışmalarda (yoğunluk testi, saha kesintisi, İHA) bu modeli kullanmayı öneriyoruz. Bir kule kapandığında girişim ve yük değişecek; bu model her değeri gerçek bir kaynağa dayandığı için bu değişime de gerçekçi tepki verir. Ara adımların ayrıntıları proje klasöründe (deney 20--26).
 \end{yeni}
 
 \section{Deliverables and staged milestones}
@@ -445,10 +451,10 @@ turkcelle sorabilme ihtimalimiz var mı hocam bir seyleri mesela:
 \end{progress}
 
 \begin{yeni}
-Kaynaklı modelden sonra eklenenler:
+Yeni modelden sonra eklenenler:
 \begin{itemize}[nosep]
-\item 440, 296 ve 444'ün anten yönü (azimut), eğimi ve yüksekliği. Kaynaklı modeldeki kalan RSRP farkının büyük kısmı bu bilgilerin eksikliğinden geliyor.
-\item SINR tanımı için bir ipucu bulduk: Experia'da SINR 25~dB'de kesiliyor ve güçlü sinyalde 20~dB civarında duruyor. Bu, verici kalitesinin (EVM) etkisiyle uyumlu; tanım öğrenilirse kesinleşir.
+\item 440, 296 ve 444'ün antenlerinin hangi yöne baktığı, eğimi ve yüksekliği. Sinyal gücündeki kalan farkın büyük kısmı bu bilgilerin eksikliğinden geliyor.
+\item Experia'daki sinyal kalitesinin (SINR) nasıl ölçüldüğü. Verilerde SINR hiçbir zaman 25~dB'yi geçmiyor ve güçlü sinyalde 20~dB civarında duruyor; bu, yukarıda anlattığımız verici kusuruyla uyumlu. Ölçüm şeklini öğrenirsek bu kesinleşir.
 \end{itemize}
 \end{yeni}
 
