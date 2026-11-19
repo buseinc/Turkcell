@@ -21,7 +21,7 @@ This document specifies a reproducible procedure to construct a \emph{representa
 \end{abstract}
 
 \begin{progress}
-Mavi notlar, ilk aşamada yaptıklarımızı ve ana bulguları ilgili bölümlerin altında özetliyor. Kısaca: Sındırgı ağı ns-3'te çalışıyor ve gerçek ölçümlerle iyi örtüşüyor. Ayarları seçerken kullanmadığımız üç sahada, simülasyon ile Experia arasındaki ortalama fark sinyal gücü (RSRP) için 1,7~dB, sinyal kalitesi (SINR) için 2,2~dB. Her sonucu üç farklı anten yönü ve kullanıcı yerleşimiyle tekrarlayarak kontrol ettik. Kodlar ve ayrıntılı raporlar proje klasöründe duruyor.
+Mavi notlar, ilk aşamada yaptıklarımızı ve ana bulguları ilgili bölümlerin altında özetliyor. Kısaca: Sındırgı ağı ns-3'te çalışıyor ve gerçek ölçümlerle iyi örtüşüyor. Ayarları seçerken kullanmadığımız üç sahada, simülasyon ile Experia arasındaki ortalama fark sinyal gücü (RSRP) için 1,7~dB, sinyal kalitesi (SINR) için 2,2~dB. Her sonucu üç farklı anten yönü ve kullanıcı yerleşimiyle tekrarlayarak kontrol ettik. Bunun yanında her değeri standartlara ve Turkcell verisine dayanan ikinci bir ``kaynaklı'' model kurduk (Bölüm~\ref{sec:sourced}): SINR'de aynı başarıyı (2,6~dB) ve Experia ile aynı RSRP dağılımını veriyor; saha ortalamalarındaki RSRP farkı (4,8~dB) büyük ölçüde bilinmeyen anten yönlerinden geliyor. Kodlar ve ayrıntılı raporlar proje klasöründe duruyor.
 \end{progress}
 \section{Scope and key methodological constraints}
 The available data include (i) cell identifiers and coordinates (several cells share each physical site coordinate), (ii) aggregate radio-quality indicators such as RSRP, RSRQ, SINR, and mean timing advance (TAAVG), and (iii) a separate LTE KPI dataset with traffic, users, PRB utilization, CQI, throughput, and potentially availability, drops, and handover counters. The radio and traffic observation periods \textbf{do not coincide}, although cell IDs and site coordinates match. Thus, these datasets may be joined by cell identity for metadata and long-run characterization, \emph{not} treated as simultaneous observations. Actual carrier frequencies, bandwidths, antenna azimuths, transmit powers, schedulers, and user coordinates are unavailable.
@@ -122,7 +122,7 @@ Yük deneylerinde S0 ve S2'yi birlikte koşturmayı öneriyoruz. S0'da girişim 
 \paragraph{Experia timing-advance caveat.} \red{bunu Turkcell le netlestirmeye calisiyoruz. bazi degerler anlamsiz}The supplied vendor description defines 12 cell-range usage categories: 0--9\%, 10--19\%, \ldots, 100--109\%, and 110--200\%. However, the exported \texttt{AVG(TAAVG)} column contains values far outside the 0--11 category-index range. Therefore, neither $\mathrm{TAAVG}\times 1.5$ km nor a standard LTE timing-advance-command conversion is justified for the raw export. Preserve raw values and exclude TAAVG from distance-based calibration until its aggregation, scaling, and units are verified. Even with a valid conversion, the metric describes weighted usage distance, not maximum cell radius or UE coordinates.
 
 \begin{progress}
-TAAVG'yi birimi belli olmadığı için mesafeye çevirmedik. Yine de göreli olarak anlamlı görünüyor: aynı sahada TAAVG'si büyük olan hücrelerin sinyali genelde daha zayıf ve KPI'daki RACH TA da aynı yönü gösteriyor. Birim netleşirse mesafe kontrolüne eklenebilir.
+S0'da TAAVG'yi birimi belli olmadığı için mesafeye çevirmedik. Yine de göreli olarak anlamlı görünüyor: aynı sahada TAAVG'si büyük olan hücrelerin sinyali genelde daha zayıf ve KPI'daki RACH TA da aynı yönü gösteriyor. Kaynaklı modelde (Bölüm~\ref{sec:sourced}) TAAVG'nin LTE'nin temel zaman biriminde ($T_s$, bir birim 4,88~m) olduğunu varsayarak kullanıcıları hücrelerin ortalama TA mesafesine yerleştirdik (100~m--15~km arası). Bu bir varsayım; birim netleşirse doğrulanmalı.
 \end{progress}
 
 \subsection{Staged calibration and acceptance tests}
@@ -329,6 +329,67 @@ Kapsama haritaları & Harita hesabı ns-3 ile birebir aynı; bölgenin \%99,8'in
 Bu yakınlığı, ağı birebir kopya değil ``measurement-informed'' olarak tanımlamak için yeterli görüyoruz. Siz de uygun görürseniz ayarlamayı burada bırakıp stres testine geçmek istiyoruz.
 \end{progress}
 
+\section{Sourced (justified) radio model}
+\label{sec:sourced}
+\begin{progress}
+S0'daki bazı değerler (120$^\circ$ anten genişliği, yayılım üssü 3) ölçümlere en iyi uydukları için seçildi. Önerinize uygun olarak, her değeri bir kaynağa dayanan ikinci bir model kurduk: standartlar (3GPP), CellMapper ve Turkcell'in bölgedeki kendi ölçümleri. Ölçüm sahalarının sonucuna bakılarak ayarlanan değer yok.
+
+\textbf{Sonuç.}
+\begin{itemize}[nosep]
+\item \textbf{SINR tutuyor:} ayarda kullanılmayan sahalarda fark 2,6~dB (S0: 2,2~dB). Yayılım, saha sıralaması ve CQI'da S0'dan daha iyi.
+\item \textbf{RSRP'nin genel dağılımı Experia ile aynı:} hücre medyanı $-104{,}2$~dBm (Experia $-104{,}2$). Saha ortalamalarında fark 4,8~dB (S0: 1,7~dB).
+\item \textbf{Kalan RSRP farkı bilinmeyen sahaya özel bilgiden geliyor:} 440'ta anten yönü, 296 ve 444'te sahaya özel bir etki.
+\end{itemize}
+
+\textbf{Modelin parçaları ve kaynakları.}
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}l l X@{}}\toprule
+Parça & Değer & Kaynak \\\midrule
+Taşıyıcı & 1800~MHz (B3), 20~MHz & CellMapper: Balıkesir'deki Turkcell kulelerinin ana taşıyıcısı \\
+Verici gücü & 49~dBm & 3GPP TR 36.814 (20~MHz taşıyıcı) \\
+Anten & 65$^\circ$, 15~dBi & 3GPP TR 36.814 / 36.942 makro sektör anteni \\
+Anten deseni & Arka/yan zayıflama en fazla 25~dB, dikey 10$^\circ$ ve en fazla 20~dB & 3GPP TR 36.814 \\
+Eğim & 6$^\circ$ & Taslaktaki başlangıç değeri \\
+Yol kaybı & Kırsal makro (RMa) & 3GPP TR 38.901 \\
+Mesafe düzeltmesi & $113{,}2 - 32{,}7\log_{10} d$~[m] dB & Bölgedeki 5.812 Turkcell hücresi (8 ana saha hariç) \\
+Verici kalitesi (EVM) & \%8 & 3GPP TS 36.104, 64QAM sınırı \\
+Gölgeleme, alıcı gürültüsü & 8~dB, 9~dB & 3GPP TR 36.814 \\
+Kullanıcı yerleşimi & Hücrenin TA mesafesinde & Experia TAAVG ($\times$4,88~m varsayımı) \\
+Yük & Ortalama PRB 0,233 & KPI (yalnızca bir çekilişte ayarlandı) \\\bottomrule
+\end{tabularx}
+\end{center}
+
+\textbf{Ölçümlerle karşılaştırma} (üç anten yönü çekilişinin ortalaması).
+\begin{center}\small
+\begin{tabular}{@{}lcc@{}}\toprule
+ & S0 (ayarlanmış) & Kaynaklı model \\\midrule
+RSRP farkı, ayarda kullanılmayan sahalar (dB) & \textbf{1,7} & 4,8 \\
+SINR farkı, ayarda kullanılmayan sahalar (dB) & \textbf{2,2} & 2,6 \\
+Hücre RSRP medyanı (Experia $-104{,}2$~dBm) & $-111{,}7$ & \textbf{$-$104,2} \\
+Hücre RSRP yayılımı, IQR (Experia 10,9~dB) & 5,3 & \textbf{9,9} \\
+Hücre SINR yayılımı, IQR (Experia 6,9~dB) & 3,1 & \textbf{7,3} \\
+Saha SINR sıralaması (Spearman) & 0,90 & \textbf{0,95} \\
+KPI CQI ile mutlak fark & 1,3 & \textbf{0,9} \\\bottomrule
+\end{tabular}
+\end{center}
+\begin{center}
+\includegraphics[width=0.92\linewidth]{figures/kaynakli_model.png}
+\end{center}
+
+\textbf{Sonucu belirleyen iki bulgu.}
+
+\emph{1. Sinyal gerçek ağda mesafeyle çok daha yavaş zayıflıyor.} Bölgedeki Turkcell hücrelerinde RSRP, mesafe on katına çıkınca yalnızca 10,6~dB düşüyor; kırsal 3GPP modelinde bu düşüş 43~dB. Aradaki farkı, bilmediğimiz etkilerin (bina içi kullanıcılar, gerçek anten eğimi ve yüksekliği, ağ planlaması) toplu karşılığı olarak operatörün kendi verisinden türettik. Bu düzeltme bütün bölge için tek bir eğri; test edilen 8 sahanın verisi bu hesapta kullanılmadı.
+
+\emph{2. SINR'nin bir üst sınırı var.} Experia'da SINR, sinyal güçlendikçe yaklaşık 20~dB'de duruyor ve hiçbir değer 25~dB'yi geçmiyor. Simülasyonda ise 40~dB'ye kadar çıkıyordu. Gerçek vericiler sinyali biraz bozarak gönderir; 3GPP bu bozulmaya (EVM) 64QAM için en fazla \%8 izin veriyor, bu da SINR'yi yaklaşık 22~dB ile sınırlıyor. Bunu ns-3'ün LTE kütüphanesine ekleyince (kurulu ns-3'ü değiştirmeden, deneye özel bir kopyada) SINR farkı 9~dB'den 2,6~dB'ye indi.
+\begin{center}
+\includegraphics[width=0.8\linewidth]{figures/sinr_tavani.png}
+\end{center}
+
+\textbf{Kalan fark.} Gerçek anten yönleri bilinmediği için her şeyi üç rastgele yön çekilişiyle tekrarlıyoruz (CellMapper'da bu sahalar için veri yok). 440'ın RSRP hatası tamamen yöne bağlı: çekilişlerde $+0{,}1$, $+9{,}5$ ve $+12{,}6$~dB. Ayarda kullanılmayan sahaların ortalama farkı da çekilişe göre 2,8 / 4,1 / 7,5~dB arasında değişiyor; yani farkın büyük kısmı bilinmeyen anten yönünden geliyor. 296 ve 444 ise yönden bağımsız olarak 7,5--10,7~dB güçlü kalıyor. Bu iki saha için anten yüksekliği, eğimi veya gücü gibi sahaya özel bilgi gerekiyor.
+
+\textbf{Hangi model ne için?} S0 saha ortalamalarına en iyi uyan model; ancak değerlerinin bir kısmı uyduğu için seçildi. Kaynaklı model her değeri gerekçelendirilebilen, SINR ve dağılım ölçütlerinde daha iyi olan model. Kesinti ve İHA senaryolarında bir saha kapandığında girişim ve yük değişeceği için, bu değişime fiziksel olarak doğru tepki veren kaynaklı modeli ana model olarak kullanmayı, S0'ı ise karşılaştırma için tutmayı öneriyoruz. Ara adımların ayrıntıları proje klasöründe (deney 20--26).
+\end{progress}
+
 \section{Deliverables and staged milestones}
 \begin{enumerate}[nosep]
 \item \textbf{M1: Input audit.} Cell/site/carrier inventory, coordinate map, KPI dictionary, and mismatch report.
@@ -363,7 +424,8 @@ Stres testine henüz başlamadık. Önerimiz, yoğun saat yükünden başlayıp 
 Sizden ve Turkcell'den öğrenmek istediklerimiz:
 \begin{itemize}[nosep]
 \item Hücrelerin frekans bandı ve gücü, en azından hangi hücrelerin aynı sektörde olduğu. Bu bilgi gelirse çok frekanslı senaryoyu tahmine değil veriye dayandırabiliriz.
-\item Experia'daki SINR ve RSRQ'nun hangi kanal ve ortalamayla hesaplandığı. Simülasyonla aynı şeyi karşılaştırdığımızdan emin olmak istiyoruz.
+\item 440, 296 ve 444'ün anten yönü (azimut), eğimi ve yüksekliği. Kaynaklı modeldeki kalan RSRP farkının büyük kısmı bu bilgilerin eksikliğinden geliyor.
+\item Experia'daki SINR ve RSRQ'nun hangi kanal ve ortalamayla hesaplandığı. Verideki 25~dB tavanı ve eğrinin şekli, verici kalitesinin (EVM) etkisini gösteriyor; tanım bilinirse bu kesinleşir.
 \item KPI'daki throughput ve TAAVG birimleri. Bunlar netleşirse yükü ve mesafeyi daha doğru modelleyebiliriz.
 \item KPI saatlerinin yerel saat olduğunun teyidi. Deprem anındaki sıçramalar buna işaret ediyor.
 \item Bu başlangıç senaryosunun, sınırlarıyla birlikte, stres testine geçmek için yeterli olup olmadığı.
