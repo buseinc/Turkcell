@@ -1,0 +1,104 @@
+{
+  "completed": true,
+  "results": [
+    {
+      "case": {
+        "name": "FT_TA_draw701",
+        "label": "FT_TA",
+        "az": 42,
+        "ue_seed": 701,
+        "sites_file": "sites_S0TA_42.csv",
+        "ue_file": "ues_FT_TA_701.csv",
+        "shadow_seed": 42
+      },
+      "training": {
+        "mae_db": {
+          "rsrp": 4.620827973203594,
+          "sinr": 2.5446919594555255,
+          "rsrq": 5.011005649177846
+        },
+        "valid_sites": 5,
+        "missing_sites": [],
+        "score": 4.058841860612322
+      },
+      "control": {
+        "mae_db": {
+          "rsrp": 2.8351071459381956,
+          "sinr": 1.1762548997684323,
+          "rsrq": 6.137434782765356
+        },
+        "valid_sites": 3,
+        "missing_sites": [],
+        "score": 3.382932276157328
+      },
+      "measurement_connected": 256,
+      "prb_mean_achieved": 0.2284707407407657
+    },
+    {
+      "case": {
+        "name": "FT_TA_draw702",
+        "label": "FT_TA",
+        "az": 7,
+        "ue_seed": 702,
+        "sites_file": "sites_S0TA_7.csv",
+        "ue_file": "ues_FT_TA_702.csv",
+        "shadow_seed": 7
+      },
+      "training": {
+        "mae_db": {
+          "rsrp": 5.368769245029464,
+          "sinr": 2.912082068688574,
+          "rsrq": 5.099912076733258
+        },
+        "valid_sites": 5,
+        "missing_sites": [],
+        "score": 4.460254463483765
+      },
+      "control": {
+        "mae_db": {
+          "rsrp": 4.059560113129294,
+          "sinr": 2.2643023148602377,
+          "rsrq": 5.953725298702877
+        },
+        "valid_sites": 3,
+        "missing_sites": [],
+        "score": 4.092529242230803
+      },
+      "measurement_connected": 256,
+      "prb_mean_achieved": 0.19345203703703057
+    },
+    {
+      "case": {
+        "name": "FT_TA_draw703",
+        "label": "FT_TA",
+        "az": 99,
+        "ue_seed": 703,
+        "sites_file": "sites_S0TA_99.csv",
+        "ue_file": "ues_FT_TA_703.csv",
+        "shadow_seed": 99
+      },
+      "training": {
+        "mae_db": {
+          "rsrp": 6.888924198060167,
+          "sinr": 3.128958187810075,
+          "rsrq": 4.951197009966889
+        },
+        "valid_sites": 5,
+        "missing_sites": [],
+        "score": 4.98969313194571
+      },
+      "control": {
+        "mae_db": {
+          "rsrp": 7.5093884480942235,
+          "sinr": 2.1667371300007408,
+          "rsrq": 6.146622266206005
+        },
+        "valid_sites": 3,
+        "missing_sites": [],
+        "score": 5.274249281433656
+      },
+      "measurement_connected": 256,
+      "prb_mean_achieved": 0.23569685185185973
+    }
+  ]
+}

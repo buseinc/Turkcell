@@ -1,0 +1,68 @@
+{
+  "steps": [
+    {
+      "voice_per_cell": 100,
+      "eval_prb_mean": 0.5261119453762713,
+      "eval_demand_max_cell": 0.9357679768265047,
+      "overloaded_cell_share": 0.010416666666666666,
+      "overloaded_cells_of_24": 0.25,
+      "voice_sinr_below0": 0.050479166666666665,
+      "voice_cqi0_unservable": 0.0056250000000000015
+    },
+    {
+      "voice_per_cell": 200,
+      "eval_prb_mean": 0.8139569053176579,
+      "eval_demand_max_cell": 1.8132265842525404,
+      "overloaded_cell_share": 0.28958333333333325,
+      "overloaded_cells_of_24": 6.9499999999999975,
+      "voice_sinr_below0": 0.1465625,
+      "voice_cqi0_unservable": 0.0069791666666666665
+    },
+    {
+      "voice_per_cell": 250,
+      "eval_prb_mean": 0.898386967285503,
+      "eval_demand_max_cell": 2.06914655797756,
+      "overloaded_cell_share": 0.5916666666666667,
+      "overloaded_cells_of_24": 14.2,
+      "voice_sinr_below0": 0.18288333333333334,
+      "voice_cqi0_unservable": 0.005841666666666667
+    },
+    {
+      "voice_per_cell": 300,
+      "eval_prb_mean": 0.9296317770162188,
+      "eval_demand_max_cell": 2.472988959446383,
+      "overloaded_cell_share": 0.7083333333333334,
+      "overloaded_cells_of_24": 17.0,
+      "voice_sinr_below0": 0.19705555555555557,
+      "voice_cqi0_unservable": 0.009208333333333336
+    },
+    {
+      "voice_per_cell": 350,
+      "eval_prb_mean": 0.95800920541958,
+      "eval_demand_max_cell": 2.6503089594463836,
+      "overloaded_cell_share": 0.81875,
+      "overloaded_cells_of_24": 19.65,
+      "voice_sinr_below0": 0.20311309523809523,
+      "voice_cqi0_unservable": 0.00875
+    },
+    {
+      "voice_per_cell": 400,
+      "eval_prb_mean": 0.9725149693458561,
+      "eval_demand_max_cell": 2.822374839658228,
+      "overloaded_cell_share": 0.8854166666666666,
+      "overloaded_cells_of_24": 21.25,
+      "voice_sinr_below0": 0.21840104166666663,
+      "voice_cqi0_unservable": 0.007197916666666667
+    },
+    {
+      "voice_per_cell": 500,
+      "eval_prb_mean": 0.9838751946484476,
+      "eval_demand_max_cell": 3.419274051408815,
+      "overloaded_cell_share": 0.9333333333333333,
+      "overloaded_cells_of_24": 22.4,
+      "voice_sinr_below0": 0.22725,
+      "voice_cqi0_unservable": 0.008291666666666666
+    }
+  ],
+  "rule": "Windows: voice capacity limit with the fast model (the step deneyler/29 could not finish in ns-3).\n\nSame design as deneyler/29 stress steps (draw 701, azimuth 42, AMR 44 B every 20 ms, 3N voice users per\nevaluation site placed from Experia TA, background = the 72 calibrated load users), N extended past 200.\nVoice users are generated exactly as deneyler/29 prepare.voice_ues (same seed rule), in memory.\nA cell is counted as overloaded when the PRB its users need exceeds the whole band (demand >= 1).\nLOS states: 20 independent draws per step. Known bias (dogrulama.json): at N = 200 the fast model gives\n0.81 mean PRB where ns-3 gave 0.72, so the limit found here is on the safe (low) side.\n"
+}

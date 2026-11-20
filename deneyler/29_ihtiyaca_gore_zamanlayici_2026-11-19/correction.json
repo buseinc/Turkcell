@@ -1,0 +1,31 @@
+{
+  "experia_fit_a_b": [
+    -68.33640440362697,
+    -10.621472507923482
+  ],
+  "model_fit_a_b": [
+    44.822191077340186,
+    -43.33210283084078
+  ],
+  "model_fit_resid_sd_db": 11.57660003095215,
+  "model_users_used": 768,
+  "extra_loss_db": "113.159 + (-32.711)*log10(d_m), d clipped to [100, 15000] m",
+  "per_draw_extra_loss_stats": {
+    "701": {
+      "min": -22.63362459740614,
+      "median": 7.203332849266609,
+      "max": 41.15844538447756
+    },
+    "702": {
+      "min": -21.136010378400044,
+      "median": 5.906417285260396,
+      "max": 39.036425892630305
+    },
+    "703": {
+      "min": -23.089366078542497,
+      "median": 6.091819174991066,
+      "max": 47.73733483513257
+    }
+  },
+  "rule": "- Context: deneyler/22 derived extra_loss(d) = RSRP_model(d) - RSRP_Experia(d) with the cosine antenna. In\n  deneyler/23-24 the antenna became the 3GPP pattern but the correction was not re-derived, and RSRP got worse\n  (held-out 3.5 -> 5.4 dB). deneyler/25 showed the missing SINR ceiling (transmitter EVM). All of this was\n  seen before designing deneyler/26; reported as such.\n- Same method as deneyler/22, applied to the 3GPP-antenna model:\n  * RSRP_Experia(d): unchanged fit from deneyler/22 (Experia cells of the region, 8 evaluation sites excluded).\n  * RSRP_model(d): fit a + b*log10(d) over the measured users of the three deneyler/24 LC_TA runs, using the\n    UNCORRECTED RSRP = simulated RSRP + that user's deneyler/22 extra_loss_db. This is exact, because the\n    correction is the same on every link of a user (verified in deneyler/22: RSRP change = -extra_loss,\n    correlation 1.0) and RSRP does not depend on load or EVM. d = serving distance, clipped 100 m-15 km.\n    Only simulation output is used; no Experia value of the evaluation sites.\n  * New extra_loss(d) = RSRP_model(d) - RSRP_Experia(d), applied per user as before (measured users: TA\n    placement distance; load users: distance to target site).\n- Load intervals are copied from deneyler/24 (factor 1.243) and re-calibrated by calibrate.py."
+}

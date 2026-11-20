@@ -1,0 +1,9 @@
+START FT_TA_draw702 01:32:12
+START FT_TA_draw703 01:32:12
+START FT_TA_draw701 01:32:12
+DONE FT_TA_draw703 1806 s
+DONE FT_TA_draw702 1839 s
+DONE FT_TA_draw701 1845 s
+FT_TA_draw701 holdout {'rsrp': 2.84, 'sinr': 1.18, 'rsrq': 6.14} train {'rsrp': 4.62, 'sinr': 2.54, 'rsrq': 5.01} connected 256 PRB 0.228
+FT_TA_draw702 holdout {'rsrp': 4.06, 'sinr': 2.26, 'rsrq': 5.95} train {'rsrp': 5.37, 'sinr': 2.91, 'rsrq': 5.1} connected 256 PRB 0.193
+FT_TA_draw703 holdout {'rsrp': 7.51, 'sinr': 2.17, 'rsrq': 6.15} train {'rsrp': 6.89, 'sinr': 3.13, 'rsrq': 4.95} connected 256 PRB 0.236

@@ -1,0 +1,30 @@
+{
+ "482_both_cells_normal": 95.24,
+ "482_lost_cell_normal": 41.26,
+ "482_remaining_cell_normal": 53.99,
+ "482_remaining_cell_outage": 48.53,
+ "443_441_normal": 784.42,
+ "443_441_outage_day": 1029.35,
+ "other_eval_normal": 357.78,
+ "other_eval_outage_day": 355.5,
+ "remaining_cell_absorbed_share_of_lost": -0.13,
+ "443_441_increase": 244.94
+}
+{
+ "same_site": [
+  0.4763191268375408,
+  0.3333333333333333,
+  0.6507918552036198
+ ],
+ "other_site": [
+  0.4943346251843225,
+  0.3206428571428572,
+  0.6347222222222221
+ ],
+ "no_service": [
+  0.029346247978136748,
+  0.0,
+  0.08913043478260863
+ ]
+}
+EXIT 0

@@ -1,0 +1,833 @@
+{
+  "criteria": {
+    "voice_deadline_ms": 100,
+    "user_can_talk_min_on_time_share": 0.99,
+    "cell_carries_min_satisfied_share": 0.98,
+    "window_s": [
+      1.0,
+      3.75
+    ]
+  },
+  "steps": [
+    {
+      "name": "V25_draw701",
+      "voice_per_cell": 25,
+      "voice_users": 600,
+      "not_connected": 0,
+      "can_talk_share": 0.7883333333333333,
+      "eval_cells": 24,
+      "eval_cells_carrying": 2,
+      "median_delay_ms": 13.951203,
+      "eval_prb_mean": 0.261531111111125,
+      "cells": [
+        {
+          "site": "SITE_000130",
+          "synthetic_cell_id": 7,
+          "users": 4,
+          "can_talk": 0.75,
+          "dl_prb_utilization": 0.121,
+          "carries": false
+        },
+        {
+          "site": "SITE_000130",
+          "synthetic_cell_id": 8,
+          "users": 6,
+          "can_talk": 0.667,
+          "dl_prb_utilization": 0.096,
+          "carries": false
+        },
+        {
+          "site": "SITE_000130",
+          "synthetic_cell_id": 9,
+          "users": 19,
+          "can_talk": 0.474,
+          "dl_prb_utilization": 0.199,
+          "carries": false
+        },
+        {
+          "site": "SITE_000296",
+          "synthetic_cell_id": 10,
+          "users": 26,
+          "can_talk": 0.846,
+          "dl_prb_utilization": 0.48,
+          "carries": false
+        },
+        {
+          "site": "SITE_000296",
+          "synthetic_cell_id": 11,
+          "users": 31,
+          "can_talk": 0.871,
+          "dl_prb_utilization": 0.187,
+          "carries": false
+        },
+        {
+          "site": "SITE_000296",
+          "synthetic_cell_id": 12,
+          "users": 31,
+          "can_talk": 0.871,
+          "dl_prb_utilization": 0.111,
+          "carries": false
+        },
+        {
+          "site": "SITE_000440",
+          "synthetic_cell_id": 1,
+          "users": 17,
+          "can_talk": 0.765,
+          "dl_prb_utilization": 0.15,
+          "carries": false
+        },
+        {
+          "site": "SITE_000440",
+          "synthetic_cell_id": 2,
+          "users": 11,
+          "can_talk": 0.636,
+          "dl_prb_utilization": 0.168,
+          "carries": false
+        },
+        {
+          "site": "SITE_000440",
+          "synthetic_cell_id": 3,
+          "users": 5,
+          "can_talk": 0.8,
+          "dl_prb_utilization": 0.095,
+          "carries": false
+        },
+        {
+          "site": "SITE_000441",
+          "synthetic_cell_id": 4,
+          "users": 25,
+          "can_talk": 0.88,
+          "dl_prb_utilization": 0.424,
+          "carries": false
+        },
+        {
+          "site": "SITE_000441",
+          "synthetic_cell_id": 5,
+          "users": 28,
+          "can_talk": 0.786,
+          "dl_prb_utilization": 0.134,
+          "carries": false
+        },
+        {
+          "site": "SITE_000441",
+          "synthetic_cell_id": 6,
+          "users": 20,
+          "can_talk": 0.95,
+          "dl_prb_utilization": 0.267,
+          "carries": false
+        },
+        {
+          "site": "SITE_000443",
+          "synthetic_cell_id": 13,
+          "users": 16,
+          "can_talk": 0.688,
+          "dl_prb_utilization": 0.069,
+          "carries": false
+        },
+        {
+          "site": "SITE_000443",
+          "synthetic_cell_id": 14,
+          "users": 27,
+          "can_talk": 0.889,
+          "dl_prb_utilization": 0.182,
+          "carries": false
+        },
+        {
+          "site": "SITE_000443",
+          "synthetic_cell_id": 15,
+          "users": 20,
+          "can_talk": 0.6,
+          "dl_prb_utilization": 0.176,
+          "carries": false
+        },
+        {
+          "site": "SITE_000444",
+          "synthetic_cell_id": 22,
+          "users": 28,
+          "can_talk": 0.786,
+          "dl_prb_utilization": 0.496,
+          "carries": false
+        },
+        {
+          "site": "SITE_000444",
+          "synthetic_cell_id": 23,
+          "users": 20,
+          "can_talk": 0.75,
+          "dl_prb_utilization": 0.464,
+          "carries": false
+        },
+        {
+          "site": "SITE_000444",
+          "synthetic_cell_id": 24,
+          "users": 25,
+          "can_talk": 0.92,
+          "dl_prb_utilization": 0.138,
+          "carries": false
+        },
+        {
+          "site": "SITE_000482",
+          "synthetic_cell_id": 19,
+          "users": 30,
+          "can_talk": 0.9,
+          "dl_prb_utilization": 0.174,
+          "carries": false
+        },
+        {
+          "site": "SITE_000482",
+          "synthetic_cell_id": 20,
+          "users": 34,
+          "can_talk": 0.824,
+          "dl_prb_utilization": 0.51,
+          "carries": false
+        },
+        {
+          "site": "SITE_000482",
+          "synthetic_cell_id": 21,
+          "users": 25,
+          "can_talk": 0.88,
+          "dl_prb_utilization": 0.457,
+          "carries": false
+        },
+        {
+          "site": "SITE_000554",
+          "synthetic_cell_id": 16,
+          "users": 14,
+          "can_talk": 1.0,
+          "dl_prb_utilization": 0.109,
+          "carries": true
+        },
+        {
+          "site": "SITE_000554",
+          "synthetic_cell_id": 17,
+          "users": 31,
+          "can_talk": 0.839,
+          "dl_prb_utilization": 0.121,
+          "carries": false
+        },
+        {
+          "site": "SITE_000554",
+          "synthetic_cell_id": 18,
+          "users": 14,
+          "can_talk": 1.0,
+          "dl_prb_utilization": 0.948,
+          "carries": true
+        }
+      ]
+    },
+    {
+      "name": "V50_draw701",
+      "voice_per_cell": 50,
+      "voice_users": 1200,
+      "not_connected": 0,
+      "can_talk_share": 0.8083333333333333,
+      "eval_cells": 24,
+      "eval_cells_carrying": 0,
+      "median_delay_ms": 13.82452079,
+      "eval_prb_mean": 0.35662111111108336,
+      "cells": [
+        {
+          "site": "SITE_000130",
+          "synthetic_cell_id": 7,
+          "users": 14,
+          "can_talk": 0.929,
+          "dl_prb_utilization": 0.444,
+          "carries": false
+        },
+        {
+          "site": "SITE_000130",
+          "synthetic_cell_id": 8,
+          "users": 21,
+          "can_talk": 0.857,
+          "dl_prb_utilization": 0.451,
+          "carries": false
+        },
+        {
+          "site": "SITE_000130",
+          "synthetic_cell_id": 9,
+          "users": 52,
+          "can_talk": 0.75,
+          "dl_prb_utilization": 0.57,
+          "carries": false
+        },
+        {
+          "site": "SITE_000296",
+          "synthetic_cell_id": 10,
+          "users": 50,
+          "can_talk": 0.9,
+          "dl_prb_utilization": 0.274,
+          "carries": false
+        },
+        {
+          "site": "SITE_000296",
+          "synthetic_cell_id": 11,
+          "users": 56,
+          "can_talk": 0.839,
+          "dl_prb_utilization": 0.231,
+          "carries": false
+        },
+        {
+          "site": "SITE_000296",
+          "synthetic_cell_id": 12,
+          "users": 57,
+          "can_talk": 0.947,
+          "dl_prb_utilization": 0.196,
+          "carries": false
+        },
+        {
+          "site": "SITE_000440",
+          "synthetic_cell_id": 1,
+          "users": 30,
+          "can_talk": 0.6,
+          "dl_prb_utilization": 0.229,
+          "carries": false
+        },
+        {
+          "site": "SITE_000440",
+          "synthetic_cell_id": 2,
+          "users": 22,
+          "can_talk": 0.727,
+          "dl_prb_utilization": 0.249,
+          "carries": false
+        },
+        {
+          "site": "SITE_000440",
+          "synthetic_cell_id": 3,
+          "users": 13,
+          "can_talk": 0.462,
+          "dl_prb_utilization": 0.14,
+          "carries": false
+        },
+        {
+          "site": "SITE_000441",
+          "synthetic_cell_id": 4,
+          "users": 45,
+          "can_talk": 0.822,
+          "dl_prb_utilization": 0.394,
+          "carries": false
+        },
+        {
+          "site": "SITE_000441",
+          "synthetic_cell_id": 5,
+          "users": 48,
+          "can_talk": 0.833,
+          "dl_prb_utilization": 0.189,
+          "carries": false
+        },
+        {
+          "site": "SITE_000441",
+          "synthetic_cell_id": 6,
+          "users": 41,
+          "can_talk": 0.854,
+          "dl_prb_utilization": 0.468,
+          "carries": false
+        },
+        {
+          "site": "SITE_000443",
+          "synthetic_cell_id": 13,
+          "users": 51,
+          "can_talk": 0.922,
+          "dl_prb_utilization": 0.475,
+          "carries": false
+        },
+        {
+          "site": "SITE_000443",
+          "synthetic_cell_id": 14,
+          "users": 54,
+          "can_talk": 0.833,
+          "dl_prb_utilization": 0.496,
+          "carries": false
+        },
+        {
+          "site": "SITE_000443",
+          "synthetic_cell_id": 15,
+          "users": 59,
+          "can_talk": 0.881,
+          "dl_prb_utilization": 0.206,
+          "carries": false
+        },
+        {
+          "site": "SITE_000444",
+          "synthetic_cell_id": 22,
+          "users": 57,
+          "can_talk": 0.807,
+          "dl_prb_utilization": 0.514,
+          "carries": false
+        },
+        {
+          "site": "SITE_000444",
+          "synthetic_cell_id": 23,
+          "users": 50,
+          "can_talk": 0.88,
+          "dl_prb_utilization": 0.26,
+          "carries": false
+        },
+        {
+          "site": "SITE_000444",
+          "synthetic_cell_id": 24,
+          "users": 34,
+          "can_talk": 0.912,
+          "dl_prb_utilization": 0.114,
+          "carries": false
+        },
+        {
+          "site": "SITE_000482",
+          "synthetic_cell_id": 19,
+          "users": 41,
+          "can_talk": 0.878,
+          "dl_prb_utilization": 0.409,
+          "carries": false
+        },
+        {
+          "site": "SITE_000482",
+          "synthetic_cell_id": 20,
+          "users": 60,
+          "can_talk": 0.75,
+          "dl_prb_utilization": 0.709,
+          "carries": false
+        },
+        {
+          "site": "SITE_000482",
+          "synthetic_cell_id": 21,
+          "users": 48,
+          "can_talk": 0.917,
+          "dl_prb_utilization": 0.162,
+          "carries": false
+        },
+        {
+          "site": "SITE_000554",
+          "synthetic_cell_id": 16,
+          "users": 25,
+          "can_talk": 0.88,
+          "dl_prb_utilization": 0.631,
+          "carries": false
+        },
+        {
+          "site": "SITE_000554",
+          "synthetic_cell_id": 17,
+          "users": 49,
+          "can_talk": 0.755,
+          "dl_prb_utilization": 0.267,
+          "carries": false
+        },
+        {
+          "site": "SITE_000554",
+          "synthetic_cell_id": 18,
+          "users": 35,
+          "can_talk": 0.971,
+          "dl_prb_utilization": 0.483,
+          "carries": false
+        }
+      ]
+    },
+    {
+      "name": "V100_draw701",
+      "voice_per_cell": 100,
+      "voice_users": 2400,
+      "not_connected": 0,
+      "can_talk_share": 0.8233333333333334,
+      "eval_cells": 24,
+      "eval_cells_carrying": 0,
+      "median_delay_ms": 13.7218235,
+      "eval_prb_mean": 0.4785177777777083,
+      "cells": [
+        {
+          "site": "SITE_000130",
+          "synthetic_cell_id": 7,
+          "users": 28,
+          "can_talk": 0.643,
+          "dl_prb_utilization": 0.151,
+          "carries": false
+        },
+        {
+          "site": "SITE_000130",
+          "synthetic_cell_id": 8,
+          "users": 54,
+          "can_talk": 0.759,
+          "dl_prb_utilization": 0.481,
+          "carries": false
+        },
+        {
+          "site": "SITE_000130",
+          "synthetic_cell_id": 9,
+          "users": 76,
+          "can_talk": 0.789,
+          "dl_prb_utilization": 0.687,
+          "carries": false
+        },
+        {
+          "site": "SITE_000296",
+          "synthetic_cell_id": 10,
+          "users": 94,
+          "can_talk": 0.894,
+          "dl_prb_utilization": 0.439,
+          "carries": false
+        },
+        {
+          "site": "SITE_000296",
+          "synthetic_cell_id": 11,
+          "users": 122,
+          "can_talk": 0.795,
+          "dl_prb_utilization": 0.481,
+          "carries": false
+        },
+        {
+          "site": "SITE_000296",
+          "synthetic_cell_id": 12,
+          "users": 100,
+          "can_talk": 0.91,
+          "dl_prb_utilization": 0.654,
+          "carries": false
+        },
+        {
+          "site": "SITE_000440",
+          "synthetic_cell_id": 1,
+          "users": 36,
+          "can_talk": 0.722,
+          "dl_prb_utilization": 0.506,
+          "carries": false
+        },
+        {
+          "site": "SITE_000440",
+          "synthetic_cell_id": 2,
+          "users": 40,
+          "can_talk": 0.7,
+          "dl_prb_utilization": 0.223,
+          "carries": false
+        },
+        {
+          "site": "SITE_000440",
+          "synthetic_cell_id": 3,
+          "users": 25,
+          "can_talk": 0.72,
+          "dl_prb_utilization": 0.249,
+          "carries": false
+        },
+        {
+          "site": "SITE_000441",
+          "synthetic_cell_id": 4,
+          "users": 84,
+          "can_talk": 0.845,
+          "dl_prb_utilization": 0.416,
+          "carries": false
+        },
+        {
+          "site": "SITE_000441",
+          "synthetic_cell_id": 5,
+          "users": 107,
+          "can_talk": 0.785,
+          "dl_prb_utilization": 0.456,
+          "carries": false
+        },
+        {
+          "site": "SITE_000441",
+          "synthetic_cell_id": 6,
+          "users": 107,
+          "can_talk": 0.897,
+          "dl_prb_utilization": 0.788,
+          "carries": false
+        },
+        {
+          "site": "SITE_000443",
+          "synthetic_cell_id": 13,
+          "users": 92,
+          "can_talk": 0.88,
+          "dl_prb_utilization": 0.326,
+          "carries": false
+        },
+        {
+          "site": "SITE_000443",
+          "synthetic_cell_id": 14,
+          "users": 111,
+          "can_talk": 0.838,
+          "dl_prb_utilization": 0.684,
+          "carries": false
+        },
+        {
+          "site": "SITE_000443",
+          "synthetic_cell_id": 15,
+          "users": 113,
+          "can_talk": 0.929,
+          "dl_prb_utilization": 0.48,
+          "carries": false
+        },
+        {
+          "site": "SITE_000444",
+          "synthetic_cell_id": 22,
+          "users": 102,
+          "can_talk": 0.804,
+          "dl_prb_utilization": 0.796,
+          "carries": false
+        },
+        {
+          "site": "SITE_000444",
+          "synthetic_cell_id": 23,
+          "users": 138,
+          "can_talk": 0.826,
+          "dl_prb_utilization": 0.494,
+          "carries": false
+        },
+        {
+          "site": "SITE_000444",
+          "synthetic_cell_id": 24,
+          "users": 64,
+          "can_talk": 0.938,
+          "dl_prb_utilization": 0.299,
+          "carries": false
+        },
+        {
+          "site": "SITE_000482",
+          "synthetic_cell_id": 19,
+          "users": 95,
+          "can_talk": 0.947,
+          "dl_prb_utilization": 0.355,
+          "carries": false
+        },
+        {
+          "site": "SITE_000482",
+          "synthetic_cell_id": 20,
+          "users": 107,
+          "can_talk": 0.888,
+          "dl_prb_utilization": 0.466,
+          "carries": false
+        },
+        {
+          "site": "SITE_000482",
+          "synthetic_cell_id": 21,
+          "users": 98,
+          "can_talk": 0.898,
+          "dl_prb_utilization": 0.49,
+          "carries": false
+        },
+        {
+          "site": "SITE_000554",
+          "synthetic_cell_id": 16,
+          "users": 55,
+          "can_talk": 0.873,
+          "dl_prb_utilization": 0.201,
+          "carries": false
+        },
+        {
+          "site": "SITE_000554",
+          "synthetic_cell_id": 17,
+          "users": 81,
+          "can_talk": 0.84,
+          "dl_prb_utilization": 0.614,
+          "carries": false
+        },
+        {
+          "site": "SITE_000554",
+          "synthetic_cell_id": 18,
+          "users": 62,
+          "can_talk": 0.935,
+          "dl_prb_utilization": 0.748,
+          "carries": false
+        }
+      ]
+    },
+    {
+      "name": "V200_draw701",
+      "voice_per_cell": 200,
+      "voice_users": 4800,
+      "not_connected": 0,
+      "can_talk_share": 0.8354166666666667,
+      "eval_cells": 24,
+      "eval_cells_carrying": 0,
+      "median_delay_ms": 13.658548,
+      "eval_prb_mean": 0.7246611111110833,
+      "cells": [
+        {
+          "site": "SITE_000130",
+          "synthetic_cell_id": 7,
+          "users": 59,
+          "can_talk": 0.695,
+          "dl_prb_utilization": 0.388,
+          "carries": false
+        },
+        {
+          "site": "SITE_000130",
+          "synthetic_cell_id": 8,
+          "users": 108,
+          "can_talk": 0.769,
+          "dl_prb_utilization": 0.564,
+          "carries": false
+        },
+        {
+          "site": "SITE_000130",
+          "synthetic_cell_id": 9,
+          "users": 149,
+          "can_talk": 0.718,
+          "dl_prb_utilization": 0.809,
+          "carries": false
+        },
+        {
+          "site": "SITE_000296",
+          "synthetic_cell_id": 10,
+          "users": 196,
+          "can_talk": 0.923,
+          "dl_prb_utilization": 0.759,
+          "carries": false
+        },
+        {
+          "site": "SITE_000296",
+          "synthetic_cell_id": 11,
+          "users": 235,
+          "can_talk": 0.86,
+          "dl_prb_utilization": 0.99,
+          "carries": false
+        },
+        {
+          "site": "SITE_000296",
+          "synthetic_cell_id": 12,
+          "users": 190,
+          "can_talk": 0.932,
+          "dl_prb_utilization": 0.614,
+          "carries": false
+        },
+        {
+          "site": "SITE_000440",
+          "synthetic_cell_id": 1,
+          "users": 106,
+          "can_talk": 0.755,
+          "dl_prb_utilization": 0.528,
+          "carries": false
+        },
+        {
+          "site": "SITE_000440",
+          "synthetic_cell_id": 2,
+          "users": 90,
+          "can_talk": 0.756,
+          "dl_prb_utilization": 0.787,
+          "carries": false
+        },
+        {
+          "site": "SITE_000440",
+          "synthetic_cell_id": 3,
+          "users": 60,
+          "can_talk": 0.75,
+          "dl_prb_utilization": 0.36,
+          "carries": false
+        },
+        {
+          "site": "SITE_000441",
+          "synthetic_cell_id": 4,
+          "users": 142,
+          "can_talk": 0.901,
+          "dl_prb_utilization": 0.529,
+          "carries": false
+        },
+        {
+          "site": "SITE_000441",
+          "synthetic_cell_id": 5,
+          "users": 202,
+          "can_talk": 0.822,
+          "dl_prb_utilization": 0.781,
+          "carries": false
+        },
+        {
+          "site": "SITE_000441",
+          "synthetic_cell_id": 6,
+          "users": 186,
+          "can_talk": 0.935,
+          "dl_prb_utilization": 0.95,
+          "carries": false
+        },
+        {
+          "site": "SITE_000443",
+          "synthetic_cell_id": 13,
+          "users": 187,
+          "can_talk": 0.914,
+          "dl_prb_utilization": 0.943,
+          "carries": false
+        },
+        {
+          "site": "SITE_000443",
+          "synthetic_cell_id": 14,
+          "users": 208,
+          "can_talk": 0.822,
+          "dl_prb_utilization": 0.988,
+          "carries": false
+        },
+        {
+          "site": "SITE_000443",
+          "synthetic_cell_id": 15,
+          "users": 208,
+          "can_talk": 0.913,
+          "dl_prb_utilization": 0.674,
+          "carries": false
+        },
+        {
+          "site": "SITE_000444",
+          "synthetic_cell_id": 22,
+          "users": 206,
+          "can_talk": 0.903,
+          "dl_prb_utilization": 0.709,
+          "carries": false
+        },
+        {
+          "site": "SITE_000444",
+          "synthetic_cell_id": 23,
+          "users": 245,
+          "can_talk": 0.837,
+          "dl_prb_utilization": 0.948,
+          "carries": false
+        },
+        {
+          "site": "SITE_000444",
+          "synthetic_cell_id": 24,
+          "users": 151,
+          "can_talk": 0.927,
+          "dl_prb_utilization": 0.857,
+          "carries": false
+        },
+        {
+          "site": "SITE_000482",
+          "synthetic_cell_id": 19,
+          "users": 192,
+          "can_talk": 0.906,
+          "dl_prb_utilization": 0.991,
+          "carries": false
+        },
+        {
+          "site": "SITE_000482",
+          "synthetic_cell_id": 20,
+          "users": 208,
+          "can_talk": 0.841,
+          "dl_prb_utilization": 0.765,
+          "carries": false
+        },
+        {
+          "site": "SITE_000482",
+          "synthetic_cell_id": 21,
+          "users": 208,
+          "can_talk": 0.962,
+          "dl_prb_utilization": 0.628,
+          "carries": false
+        },
+        {
+          "site": "SITE_000554",
+          "synthetic_cell_id": 16,
+          "users": 117,
+          "can_talk": 0.957,
+          "dl_prb_utilization": 0.364,
+          "carries": false
+        },
+        {
+          "site": "SITE_000554",
+          "synthetic_cell_id": 17,
+          "users": 177,
+          "can_talk": 0.802,
+          "dl_prb_utilization": 0.725,
+          "carries": false
+        },
+        {
+          "site": "SITE_000554",
+          "synthetic_cell_id": 18,
+          "users": 122,
+          "can_talk": 0.902,
+          "dl_prb_utilization": 0.74,
+          "carries": false
+        }
+      ]
+    }
+  ]
+}

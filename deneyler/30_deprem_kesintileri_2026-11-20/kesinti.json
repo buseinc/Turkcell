@@ -1,0 +1,150 @@
+{
+  "2025-08-10 19:53": [
+    {
+      "site": "SITE_000494",
+      "role": "Interference buffer",
+      "cells_out": 1,
+      "outage_h_total": 10.221,
+      "outage_h_max": 10.221,
+      "min_av": 0.0,
+      "users_before": 19.465,
+      "start": "2025-08-11 09:45:00",
+      "end": "2025-08-11 19:45:00",
+      "cells_total": 1
+    },
+    {
+      "site": "SITE_000130",
+      "role": "Evaluation",
+      "cells_out": 6,
+      "outage_h_total": 2.624,
+      "outage_h_max": 0.448,
+      "min_av": 0.0,
+      "users_before": 93.27,
+      "start": "2025-08-10 21:30:00",
+      "end": "2025-08-10 22:00:00",
+      "cells_total": 7
+    },
+    {
+      "site": "SITE_000484",
+      "role": "Interference buffer",
+      "cells_out": 2,
+      "outage_h_total": 0.669,
+      "outage_h_max": 0.335,
+      "min_av": 0.597,
+      "users_before": 71.459,
+      "start": "2025-08-10 20:00:00",
+      "end": "2025-08-11 19:30:00",
+      "cells_total": 2
+    }
+  ],
+  "2025-10-27 22:48": [
+    {
+      "site": "SITE_000482",
+      "role": "Evaluation",
+      "cells_out": 2,
+      "outage_h_total": 20.176,
+      "outage_h_max": 19.356,
+      "min_av": 0.0,
+      "users_before": 55.185,
+      "start": "2025-10-28 01:15:00",
+      "end": "2025-10-28 22:45:00",
+      "cells_total": 2
+    },
+    {
+      "site": "SITE_000438",
+      "role": "Interference buffer",
+      "cells_out": 8,
+      "outage_h_total": 20.169,
+      "outage_h_max": 2.663,
+      "min_av": 0.0,
+      "users_before": 104.784,
+      "start": "2025-10-28 11:45:00",
+      "end": "2025-10-28 16:30:00",
+      "cells_total": 8
+    },
+    {
+      "site": "SITE_000199",
+      "role": "Interference buffer",
+      "cells_out": 10,
+      "outage_h_total": 9.602,
+      "outage_h_max": 1.355,
+      "min_av": 0.0,
+      "users_before": 152.222,
+      "start": "2025-10-28 16:30:00",
+      "end": "2025-10-28 20:45:00",
+      "cells_total": 10
+    },
+    {
+      "site": "SITE_000389",
+      "role": "Interference buffer",
+      "cells_out": 8,
+      "outage_h_total": 8.701,
+      "outage_h_max": 1.257,
+      "min_av": 0.0,
+      "users_before": 75.5,
+      "start": "2025-10-28 20:45:00",
+      "end": "2025-10-28 22:00:00",
+      "cells_total": 8
+    },
+    {
+      "site": "SITE_000208",
+      "role": "Interference buffer",
+      "cells_out": 9,
+      "outage_h_total": 6.833,
+      "outage_h_max": 0.762,
+      "min_av": 0.251,
+      "users_before": 120.005,
+      "start": "2025-10-28 16:00:00",
+      "end": "2025-10-28 20:45:00",
+      "cells_total": 9
+    },
+    {
+      "site": "SITE_000205",
+      "role": "Interference buffer",
+      "cells_out": 9,
+      "outage_h_total": 4.712,
+      "outage_h_max": 0.527,
+      "min_av": 0.317,
+      "users_before": 154.541,
+      "start": "2025-10-28 17:15:00",
+      "end": "2025-10-28 20:45:00",
+      "cells_total": 9
+    },
+    {
+      "site": "SITE_000283",
+      "role": "Interference buffer",
+      "cells_out": 7,
+      "outage_h_total": 3.961,
+      "outage_h_max": 0.571,
+      "min_av": 0.327,
+      "users_before": 67.916,
+      "start": "2025-10-27 22:45:00",
+      "end": "2025-10-28 20:45:00",
+      "cells_total": 7
+    },
+    {
+      "site": "SITE_000552",
+      "role": "Interference buffer",
+      "cells_out": 3,
+      "outage_h_total": 1.044,
+      "outage_h_max": 0.348,
+      "min_av": 0.18,
+      "users_before": 14.045,
+      "start": "2025-10-28 01:30:00",
+      "end": "2025-10-28 03:45:00",
+      "cells_total": 6
+    },
+    {
+      "site": "SITE_000461",
+      "role": "Interference buffer",
+      "cells_out": 1,
+      "outage_h_total": 0.51,
+      "outage_h_max": 0.51,
+      "min_av": 0.338,
+      "users_before": 37.513,
+      "start": "2025-10-28 17:15:00",
+      "end": "2025-10-28 20:45:00",
+      "cells_total": 1
+    }
+  ]
+}

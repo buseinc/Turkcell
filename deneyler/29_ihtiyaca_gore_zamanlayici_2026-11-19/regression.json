@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "reference": "16_bina_anten_2026-11-16/simulation/results/regression_disabled_draw701",
+  "files": {
+    "sectors.csv": true,
+    "ues.csv": true,
+    "radio_samples.csv": true,
+    "sinr_components.csv": true,
+    "measurements.csv": true,
+    "prb_usage.csv": true
+  }
+}

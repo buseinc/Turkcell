@@ -1,0 +1,30 @@
+{
+  "FT_TA_draw701": {
+    "cell_prb_mae_between_two_draws": 0.158,
+    "same_cell_between_two_draws": 0.583
+  },
+  "FT_TA_draw702": {
+    "cell_prb_mae_between_two_draws": 0.164,
+    "same_cell_between_two_draws": 0.569
+  },
+  "FT_TA_draw703": {
+    "cell_prb_mae_between_two_draws": 0.166,
+    "same_cell_between_two_draws": 0.574
+  },
+  "V25_draw701": {
+    "cell_prb_mae_between_two_draws": 0.189,
+    "same_cell_between_two_draws": 0.602
+  },
+  "V50_draw701": {
+    "cell_prb_mae_between_two_draws": 0.15,
+    "same_cell_between_two_draws": 0.629
+  },
+  "V100_draw701": {
+    "cell_prb_mae_between_two_draws": 0.179,
+    "same_cell_between_two_draws": 0.606
+  },
+  "V200_draw701": {
+    "cell_prb_mae_between_two_draws": 0.129,
+    "same_cell_between_two_draws": 0.632
+  }
+}

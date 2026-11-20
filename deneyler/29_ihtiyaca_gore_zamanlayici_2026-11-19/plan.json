@@ -1,0 +1,285 @@
+{
+  "radio": {
+    "pathloss": "rma",
+    "dl_earfcn": 1651,
+    "ul_earfcn": 19651,
+    "enb_power": 49,
+    "beamwidth": 65,
+    "antenna_max_gain_dbi": 15,
+    "vertical_pattern": 1,
+    "downtilt": 6,
+    "vertical_beamwidth": 10,
+    "link_shadow_std": 8,
+    "receiver_nf": 9,
+    "indoor_loss": 0,
+    "mixed_cqi": 1,
+    "udp_jitter": 1,
+    "antenna_3gpp": 1,
+    "max_attenuation": 25,
+    "evm": 0.08,
+    "pf_buffer_aware": 1
+  },
+  "stress_srs_periodicity": 320,
+  "sources": {
+    "pathloss": "3GPP TR 38.901 Table 7.4.1-1 RMa (h=5 m, W=20 m), LOS probability Table 7.4.2-1; chosen after deneyler/20",
+    "dl_earfcn": "CellMapper, Turkcell B3 primary carrier observed on Balikesir towers (17.11.2026)",
+    "enb_power": "3GPP TR 36.814 Table A.2.1.1-1: 49 dBm for a 20 MHz carrier",
+    "beamwidth": "3GPP TR 36.814/36.942 sector antenna, 65 deg horizontal HPBW",
+    "antenna_max_gain_dbi": "3GPP TR 36.942 macro antenna 15 dBi",
+    "vertical_pattern": "3GPP TR 36.814 vertical pattern form, 10 deg HPBW, 20 dB cap",
+    "downtilt": "advisor draft (6 deg)",
+    "link_shadow_std": "3GPP TR 36.814 macro log-normal shadowing 8 dB",
+    "receiver_nf": "3GPP TR 36.814 UE noise figure 9 dB",
+    "distance_correction": "deneyler/22 method re-derived for the 3GPP antenna (correction.py)",
+    "antenna_pattern": "3GPP TR 36.814 Table A.2.1.1-2: A=min(A_H+A_V,25), A_H cap 25, A_V cap 20; chosen after deneyler/22",
+    "load_factor": "KPI mean DL PRB 0.233 on draw 701, re-calibrated with the new scheduler",
+    "evm": "3GPP TS 36.104 Table 6.5.2-1, 64QAM EVM 8 %",
+    "scheduler": "ns-3 PF made buffer-aware (build_private_lte.py patch 3)"
+  },
+  "correction": {
+    "experia_fit_a_b": [
+      -68.33640440362697,
+      -10.621472507923482
+    ],
+    "model_fit_a_b": [
+      44.822191077340186,
+      -43.33210283084078
+    ],
+    "model_fit_resid_sd_db": 11.57660003095215,
+    "model_users_used": 768,
+    "extra_loss_db": "113.159 + (-32.711)*log10(d_m), d clipped to [100, 15000] m",
+    "per_draw_extra_loss_stats": {
+      "701": {
+        "min": -22.63362459740614,
+        "median": 7.203332849266609,
+        "max": 41.15844538447756
+      },
+      "702": {
+        "min": -21.136010378400044,
+        "median": 5.906417285260396,
+        "max": 39.036425892630305
+      },
+      "703": {
+        "min": -23.089366078542497,
+        "median": 6.091819174991066,
+        "max": 47.73733483513257
+      }
+    },
+    "rule": "- Context: deneyler/22 derived extra_loss(d) = RSRP_model(d) - RSRP_Experia(d) with the cosine antenna. In\n  deneyler/23-24 the antenna became the 3GPP pattern but the correction was not re-derived, and RSRP got worse\n  (held-out 3.5 -> 5.4 dB). deneyler/25 showed the missing SINR ceiling (transmitter EVM). All of this was\n  seen before designing deneyler/26; reported as such.\n- Same method as deneyler/22, applied to the 3GPP-antenna model:\n  * RSRP_Experia(d): unchanged fit from deneyler/22 (Experia cells of the region, 8 evaluation sites excluded).\n  * RSRP_model(d): fit a + b*log10(d) over the measured users of the three deneyler/24 LC_TA runs, using the\n    UNCORRECTED RSRP = simulated RSRP + that user's deneyler/22 extra_loss_db. This is exact, because the\n    correction is the same on every link of a user (verified in deneyler/22: RSRP change = -extra_loss,\n    correlation 1.0) and RSRP does not depend on load or EVM. d = serving distance, clipped 100 m-15 km.\n    Only simulation output is used; no Experia value of the evaluation sites.\n  * New extra_loss(d) = RSRP_model(d) - RSRP_Experia(d), applied per user as before (measured users: TA\n    placement distance; load users: distance to target site).\n- Load intervals are copied from deneyler/24 (factor 1.243) and re-calibrated by calibrate.py."
+  },
+  "load_calibration": {
+    "target_prb": 0.233,
+    "rounds": [
+      {
+        "factor": 1.2432260371959327,
+        "prb": 0.034037222222222364
+      },
+      {
+        "factor": 0.18161356609652723,
+        "prb": 0.30706981481484724
+      },
+      {
+        "factor": 0.23934782879452632,
+        "prb": 0.25362481481481153
+      },
+      {
+        "factor": 0.2605345440100384,
+        "prb": 0.2284707407407657
+      }
+    ],
+    "frozen_factor": 0.2605345440100384,
+    "within_5_percent": true,
+    "rule": "- Regression: with all new options off the simulator (linked to the private lib with three patches) must\n  reproduce deneyler/16 regression_disabled_draw701 byte for byte (after CRLF->LF). Otherwise stop.\n- Calibration: the scheduler change lowers the PRB a given traffic needs, so the load factor of deneyler/26\n  (1.2432, KPI PRB 0.233) no longer gives the KPI load. Target is the measured load only: mean DL PRB 0.233\n  on draw 701 (same inputs and method as deneyler/26: ues_EC_TA_701, load interval = factor / target_prb).\n  SINR, RSRP and CQI are NOT used. Round 1 uses 1.2432; while |PRB/0.233 - 1| > 5 % a proportional step\n  factor * PRB / 0.233 is taken, at most 4 rounds; the first round within 5 % is frozen, else the last."
+  },
+  "validation_cases": [
+    {
+      "name": "FT_TA_draw701",
+      "label": "FT_TA",
+      "az": 42,
+      "ue_seed": 701,
+      "sites_file": "sites_S0TA_42.csv",
+      "ue_file": "ues_FT_TA_701.csv",
+      "shadow_seed": 42
+    },
+    {
+      "name": "FT_TA_draw702",
+      "label": "FT_TA",
+      "az": 7,
+      "ue_seed": 702,
+      "sites_file": "sites_S0TA_7.csv",
+      "ue_file": "ues_FT_TA_702.csv",
+      "shadow_seed": 7
+    },
+    {
+      "name": "FT_TA_draw703",
+      "label": "FT_TA",
+      "az": 99,
+      "ue_seed": 703,
+      "sites_file": "sites_S0TA_99.csv",
+      "ue_file": "ues_FT_TA_703.csv",
+      "shadow_seed": 99
+    }
+  ],
+  "cases": [
+    {
+      "name": "V25_draw701",
+      "label": "V25",
+      "voice_per_cell": 25,
+      "az": 42,
+      "ue_seed": 701,
+      "ues": 672,
+      "sites_file": "sites_S0TA_42.csv",
+      "ue_file": "ues_V25_701.csv",
+      "shadow_seed": 42
+    },
+    {
+      "name": "V50_draw701",
+      "label": "V50",
+      "voice_per_cell": 50,
+      "az": 42,
+      "ue_seed": 701,
+      "ues": 1272,
+      "sites_file": "sites_S0TA_42.csv",
+      "ue_file": "ues_V50_701.csv",
+      "shadow_seed": 42
+    },
+    {
+      "name": "V100_draw701",
+      "label": "V100",
+      "voice_per_cell": 100,
+      "az": 42,
+      "ue_seed": 701,
+      "ues": 2472,
+      "sites_file": "sites_S0TA_42.csv",
+      "ue_file": "ues_V100_701.csv",
+      "shadow_seed": 42
+    },
+    {
+      "name": "V200_draw701",
+      "label": "V200",
+      "voice_per_cell": 200,
+      "az": 42,
+      "ue_seed": 701,
+      "ues": 4872,
+      "sites_file": "sites_S0TA_42.csv",
+      "ue_file": "ues_V200_701.csv",
+      "shadow_seed": 42
+    },
+    {
+      "name": "V300_draw701",
+      "label": "V300",
+      "voice_per_cell": 300,
+      "az": 42,
+      "ue_seed": 701,
+      "ues": 7272,
+      "sites_file": "sites_S0TA_42.csv",
+      "ue_file": "ues_V300_701.csv",
+      "shadow_seed": 42
+    }
+  ],
+  "train_sites": [
+    "SITE_000130",
+    "SITE_000296",
+    "SITE_000444",
+    "SITE_000482",
+    "SITE_000554"
+  ],
+  "holdout_sites": [
+    "SITE_000440",
+    "SITE_000441",
+    "SITE_000443"
+  ],
+  "decision_rule": {
+    "holdout_rsrp_mae_max_db": 3.0,
+    "holdout_sinr_mae_max_db": 3.0,
+    "all_measured_connected": true,
+    "scenario": "FT_TA"
+  },
+  "kpi_connected_users": {
+    "SITE_000440": {
+      "normal_mean_per_cell": 17.782405709076375,
+      "evening_mean_per_cell": 21.158392700501253,
+      "earthquake_x2_per_cell": 35.56481141815275
+    },
+    "SITE_000441": {
+      "normal_mean_per_cell": 21.365714873736838,
+      "evening_mean_per_cell": 26.314364476004826,
+      "earthquake_x2_per_cell": 42.731429747473676
+    },
+    "SITE_000130": {
+      "normal_mean_per_cell": 10.995214865259523,
+      "evening_mean_per_cell": 12.19968910371166,
+      "earthquake_x2_per_cell": 21.990429730519047
+    },
+    "SITE_000296": {
+      "normal_mean_per_cell": 8.622857238605897,
+      "evening_mean_per_cell": 10.561524853801169,
+      "earthquake_x2_per_cell": 17.245714477211795
+    },
+    "SITE_000443": {
+      "normal_mean_per_cell": 32.76495611675386,
+      "evening_mean_per_cell": 42.0041917293233,
+      "earthquake_x2_per_cell": 65.52991223350772
+    },
+    "SITE_000554": {
+      "normal_mean_per_cell": 4.83874,
+      "evening_mean_per_cell": 6.314740506329114,
+      "earthquake_x2_per_cell": 9.67748
+    },
+    "SITE_000482": {
+      "normal_mean_per_cell": 34.60826145552561,
+      "evening_mean_per_cell": 39.79910964912281,
+      "earthquake_x2_per_cell": 69.21652291105121
+    },
+    "SITE_000444": {
+      "normal_mean_per_cell": 3.935533735478105,
+      "evening_mean_per_cell": 4.392533625730994,
+      "earthquake_x2_per_cell": 7.87106747095621
+    }
+  },
+  "criteria": {
+    "voice_deadline_ms": 100,
+    "user_can_talk_min_on_time_share": 0.99,
+    "cell_carries_min_satisfied_share": 0.98,
+    "window_s": [
+      1.0,
+      3.75
+    ]
+  },
+  "eval_sites": [
+    "SITE_000440",
+    "SITE_000441",
+    "SITE_000130",
+    "SITE_000296",
+    "SITE_000443",
+    "SITE_000554",
+    "SITE_000482",
+    "SITE_000444"
+  ],
+  "source_hashes": {
+    "sindirgi_baseline.cc": "ca8bd18aced2e38fadcb4965cf39f0a80ce2da66719c28f5b8d887249fcf7e67",
+    "building-vertical-model.h": "ce9e648299fbbb2035e5c3a385d3d7d51fa93d4c16d2f25ff827f8de76a04cfc",
+    "static-shadow-model.h": "83ed29579c7a678880afa9dd5e84e3520a52c4ce5d3f476531c7a631e8d2c9ed",
+    "run_baseline.py": "acb9fd34375ea692fdf43ff61d72ec1f23cb0d3e5740a802d62e649c12335bae",
+    "build_private_lte.py": "039b4c5f8fecaa7791347a8ccd24035e0684cb032a6c9444a095e881ab014e97"
+  },
+  "input_hashes": {
+    "sites_S0TA_42.csv": "59a5f4f30fb820546f9b3cb210b1ae3cfd038ff10cbc2bb5a18d48912d2a1abe",
+    "sites_S0TA_7.csv": "50b204af23cc8be26da020b52408e26c02a5a54b84d0806a06f5e0ab48431618",
+    "sites_S0TA_99.csv": "e8de49801a5a48935e3df2dfe364e7cac64716872d9c5d9fd79a0ce4e9ead8c4",
+    "targets.csv": "e0992888615a188f36d94ff85406161af9fd6f7346206f9408ef324abde977f6",
+    "ues_EC_TA_701.csv": "057e82c3a0b0b035de62ef945fc6e53a62e3665fa995bc74aaabbfc4d8debe01",
+    "ues_EC_TA_702.csv": "898d45765bab9a63c4284b4213261a4bec3cca0c50b004685e1e6791a9a25cfd",
+    "ues_EC_TA_703.csv": "ca16fd6e25df9e9b85dc2e04ec1a24797af81b8cf379d865f2c448333f70110e",
+    "ues_FT_TA_701.csv": "69fae7e2018f949d84b45cd8524cdf8dec102f31fc0ef4f56b89826a06f44642",
+    "ues_FT_TA_702.csv": "61ed777c92989a24368a549a02f20bafbb61fe4da65e7791c8ff95213699029c",
+    "ues_FT_TA_703.csv": "f23d852e506cb6a7932a4105c5f143096e6a2198a4af86af2648e23c0d4f4104",
+    "ues_S0TA_701.csv": "cd013c78ed046dac4d7a9120055e40eaa2305e4fb9b0c97a43dcf7ea373b7310",
+    "ues_V100_701.csv": "2bf68c0b84794c176a79f608258e72a7dde0c9bfa8562cace072b543464191b1",
+    "ues_V200_701.csv": "460034cc1a289258f73f09d243ce2b52d7fae21b28fa4c3ffac702cdd6438b83",
+    "ues_V25_701.csv": "8e07e84de3a6ab43b115e2e2a765ca47bf3605843f6b274876c1a10b5eb35e76",
+    "ues_V300_701.csv": "4bb47e889c297c3dba3489d2ac3362ed84eb05984c37e4897f686255117f116f",
+    "ues_V50_701.csv": "f3b5435f2a4e84d8db7e9c2c7f8481bf887973f790e56ab451061e4697bb8f7f"
+  },
+  "rule": "- Model: deneyler/26 FT_TA unchanged (RMa, 3GPP antenna, EVM 8 %, distance correction, 8 dB shadow, TA\n  placement) except the buffer-aware PF scheduler (calibrate.py) and the load factor re-frozen by calibrate.py.\n- Validation (A): the 3 azimuth draws of deneyler/26 (42/701, 7/702, 99/703), 256 measured users + 72 load\n  users. Same decision rule as deneyler/26: held-out RSRP MAE <= 3 dB and SINR MAE <= 3 dB averaged over\n  draws, all measured users connected. Reported next to deneyler/26 (old scheduler).\n- Voice capacity (B): exactly the deneyler/28 design (AMR 12.2 kbps, 44 B every 20 ms, 3N voice users per\n  evaluation site placed from Experia TA, background = the 72 load users at the new frozen factor, SRS\n  periodicity 320, steps N = 25, 50, 100, 200, 300 per cell, draw 42/701, 4 s), now with the new scheduler.\n  The same voice-user positions as deneyler/28 are used (same random seed), so V25 here vs V25 there shows\n  the scheduler effect alone (plus the small background-factor change).\n- Criteria as deneyler/28: user can talk if >= 99 % of packets in [1 s, 3.75 s] arrive within 100 ms\n  (3GPP TS 23.203 QCI 1, TS 26.132); cell carries its load if >= 98 % of its users can talk (convention of\n  3GPP TR 25.814 / ITU-R M.2135, to be checked before citing); no service = not RRC-connected."
+}
