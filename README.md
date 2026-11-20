@@ -138,6 +138,11 @@ Her deney bir öncekinin sonucunu kullanır. Sonuç belgesi genellikle `SONUCLAR
 | 25 | [25_sinr_tavani_evm](deneyler/25_sinr_tavani_evm_2026-11-19/SONUCLAR.md) | Yalnız analiz: Experia SINR'ı ~20 dB'de duruyor, simülasyonda tavan yok; 3GPP TS 36.104 EVM %8 eklenince 22–24'ün SINR farkı 2,3–2,8 dB'ye iniyor |
 | 26 | [26_kaynakli_tam_model](deneyler/26_kaynakli_tam_model_2026-11-19/SONUCLAR.md) | Bütün kaynaklı parçalar + EVM simülatörün içinde (özel libns3-lte): SINR geçti (2,6 dB), RSRP 4,8 dB (296/440/444 7–10 dB güçlü); kural geçmedi, S0 temel |
 | 27 | [27_komsu_saha_kontrolu](deneyler/27_komsu_saha_kontrolu_2026-11-19/SONUCLAR.md) | 26. deneyin modeli 3 komşu sahada (200, 224, 206): SINR farkı 3,1 dB, RSRP 5,7 dB; ana sahalara yakın, zayıf/uzak sahalarda (224, 444, 440) model iyimser |
+| 28 | [28_stres_testi_ses_kapasitesi](deneyler/28_stres_testi_ses_kapasitesi_2026-11-19/SONUCLAR.md) | Ses kapasitesi, ns-3'ün varsayılan PF zamanlayıcısıyla: tek ses paketi bütün bandı alıyor, hücreler dolu görünüyor; yalnız en kötü durum olarak geçerli |
+| 29 | [29_ihtiyaca_gore_zamanlayici](deneyler/29_ihtiyaca_gore_zamanlayici_2026-11-19/SONUCLAR.md) | Kuyruğa göre kaynak veren PF: SINR hatası 1,9 dB; hücre başına 200 görüşmede gecikme 14 ms, tıkanma yok; konuşamayanların çoğu muhtemelen ns-3'te kodlama düzeltme döngüsü olmamasından |
+| 30 | [30_deprem_kesintileri](deneyler/30_deprem_kesintileri_2026-11-20/SONUCLAR.md) | KPI'daki gerçek kesintiler: 10 Ağustos'ta 130, 28 Ekim'de 482 (depremden 1,5–2,5 saat sonra); K1/K2/K3 senaryoları |
+| 31 | [31_hizli_model](deneyler/31_hizli_model_2026-11-20/SONUCLAR.md) | ns-3 formülleriyle hızlı model (ön eleme için): RSRP birebir, SINR saha başına ≤1,3 dB; kapasite sınırı hücre başına ~250–300 görüşme (alt sınır) |
+| 32 | [32_kesinti_hazirligi](deneyler/32_kesinti_hazirligi_2026-11-20/TANIMLAR.md) | Kesintiden önce sabitlenenler: servis tanımları (3GPP), ölçülen deprem yükü (en yoğun hücre ~101), yerleştirme duyarlılığı; 482 kapanınca çevresinin %22–32'si servissiz |
 
 ## Notlar
 
