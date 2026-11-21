@@ -95,5 +95,11 @@ Bizim ölçütümüz bundan biraz farklıydı: %99 ve 100 ms. ITU ölçütüyle 
 - Gerçek baz istasyonları bunu bir düzeltme döngüsüyle önler (outer-loop link adaptation): paketler bozuldukça seçilen kodlamayı otomatik olarak düşürür. ns-3.44'ün LTE modülünde böyle bir döngü yok; kaynak kodunda arandı, bulunamadı.
 - **Sonuç:** Normal günde görülen "%15–20 konuşamıyor" sonucunun önemli bir kısmı büyük ihtimalle ns-3'ün bu eksikliğinden geliyor, gerçek bir kapsama sorunundan değil. SINR'ı 0 dB altında olanların başarısız olması ise gerçek bir kapsama sınırı.
 - Bu açıklama henüz doğrudan kanıtlanmadı. ns-3'ün fiziksel katman kayıtlarıyla (her paket için seçilen kodlama ve bozulup bozulmadığı) kısa bir koşuda sınanabilir.
+- **21 Kasım güncellemesi (deney 33, L25 koşusu): bu açıklama ana sebep olarak tutmadı.**
+  - Sinyali iyi konuşma kullanıcılarında ilk gönderimlerin %13,6'sı bozuk. Hedef %10; açıklama doğru olsaydı çok daha yüksek çıkmalıydı.
+  - Başarısız 68 kullanıcının 49'unda veri blokları neredeyse hiç bozulmuyor.
+  - Blokları çoğunlukla bozulan 52 kullanıcının ise 38'i, yeniden gönderimler sayesinde yine de konuşabiliyor.
+  - Başarısızlığın asıl kaynağı gecikme ve kayıp. Bu kullanıcılarda ortalama gecikme ~40 ms, en uzun gecikme ~110 ms, paket kaybı ~%9. Bu kullanıcılar dolu hücrelerde de değil.
+  - Sebebi henüz bilinmiyor. Ayrıntı: deney 33 `SONUCLAR.md`.
 
 *Hiç paket almayanlar:* 25 görüşmede 10 kullanıcı (ortanca SINR 1,8 dB, RSRP −120 dBm), 200 görüşmede 41 kullanıcı (ortanca SINR −6 dB, RSRP −129 dBm). 200'dekiler kapsama dışı. 25'tekiler sınırda; bunlar da aynı kodlama uyuşmazlığından etkileniyor olabilir.

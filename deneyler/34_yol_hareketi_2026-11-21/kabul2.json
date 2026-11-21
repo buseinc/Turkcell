@@ -1,0 +1,8 @@
+{
+ "links": 672,
+ "share_within_0.01db": 1.0,
+ "max_err_db": 0.004179912293878374,
+ "same_best_cell_share": 1.0,
+ "los_share_links": 0.017299107142857144,
+ "pass": true
+}

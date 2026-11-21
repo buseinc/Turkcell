@@ -1,0 +1,38 @@
+{
+ "A": {
+  "ref": "10-31",
+  "site": "SITE_000130",
+  "outage": "K2",
+  "length_km": 16.67,
+  "K0": {
+   "km_no_service": 0.19,
+   "gaps": 5,
+   "longest_gap_km": 0.07,
+   "serving_cell_changes": 73
+  },
+  "K2": {
+   "km_no_service": 6.81,
+   "gaps": 26,
+   "longest_gap_km": 2.81,
+   "serving_cell_changes": 112
+  }
+ },
+ "B": {
+  "ref": "D240",
+  "site": "SITE_000482",
+  "outage": "K1",
+  "length_km": 10.88,
+  "K0": {
+   "km_no_service": 0.19,
+   "gaps": 3,
+   "longest_gap_km": 0.13,
+   "serving_cell_changes": 69
+  },
+  "K1": {
+   "km_no_service": 0.34,
+   "gaps": 7,
+   "longest_gap_km": 0.11,
+   "serving_cell_changes": 63
+  }
+ }
+}

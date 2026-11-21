@@ -1,0 +1,120 @@
+{
+  "radio": {
+    "pathloss": "rma",
+    "dl_earfcn": 1651,
+    "ul_earfcn": 19651,
+    "enb_power": 49,
+    "beamwidth": 65,
+    "antenna_max_gain_dbi": 15,
+    "vertical_pattern": 1,
+    "downtilt": 6,
+    "vertical_beamwidth": 10,
+    "link_shadow_std": 8,
+    "receiver_nf": 9,
+    "indoor_loss": 0,
+    "mixed_cqi": 1,
+    "udp_jitter": 1,
+    "antenna_3gpp": 1,
+    "max_attenuation": 25,
+    "evm": 0.08,
+    "pf_buffer_aware": 1
+  },
+  "srs_periodicity": 320,
+  "quake": "2025-10-27",
+  "udp_interval_ms": 45.17227658820534,
+  "users": 1473,
+  "users_by_site": {
+    "SITE_000443": 214,
+    "SITE_000200": 144,
+    "SITE_000441": 141,
+    "SITE_000204": 123,
+    "SITE_000475": 88,
+    "SITE_000482": 81,
+    "SITE_000440": 78,
+    "SITE_000224": 64,
+    "SITE_000206": 62,
+    "SITE_000480": 61,
+    "SITE_000296": 51,
+    "SITE_000198": 48,
+    "SITE_000555": 41,
+    "SITE_000130": 40,
+    "SITE_000145": 39,
+    "SITE_000506": 36,
+    "SITE_000220": 36,
+    "SITE_000442": 34,
+    "SITE_000554": 28,
+    "SITE_000553": 24,
+    "SITE_000444": 17,
+    "SITE_000083": 13,
+    "SITE_000445": 10
+  },
+  "scenarios": {
+    "K0": {
+      "off": [],
+      "sites_file": "sites_K0.csv",
+      "ue_file": "ues_quake_42.csv"
+    },
+    "K1": {
+      "off": [
+        "SITE_000482"
+      ],
+      "sites_file": "sites_K1.csv",
+      "ue_file": "ues_quake_42.csv"
+    },
+    "K2": {
+      "off": [
+        "SITE_000130"
+      ],
+      "sites_file": "sites_K2.csv",
+      "ue_file": "ues_quake_42.csv"
+    },
+    "K3": {
+      "off": [
+        "SITE_000482",
+        "SITE_000130"
+      ],
+      "sites_file": "sites_K3.csv",
+      "ue_file": "ues_quake_42.csv"
+    }
+  },
+  "link_check": {
+    "name": "L25",
+    "sites_file": "sites_S0TA_42.csv",
+    "ue_file": "ues_V25_701.csv",
+    "reference": "C:\\Users\\20umu\\OneDrive\\Desktop\\Turkcell\\deneyler\\29_ihtiyaca_gore_zamanlayici_2026-11-19\\simulation\\results\\V25_draw701"
+  },
+  "source_hashes": {
+    "sindirgi_baseline.cc": "c04c0da3d9e1938527fcb2e1823dbb0da3467aae00ebe173361fd8405c8cdc19",
+    "building-vertical-model.h": "ce9e648299fbbb2035e5c3a385d3d7d51fa93d4c16d2f25ff827f8de76a04cfc",
+    "static-shadow-model.h": "83ed29579c7a678880afa9dd5e84e3520a52c4ce5d3f476531c7a631e8d2c9ed",
+    "run_baseline.py": "7ac51bfb2e1da5e209ad8b12f32cd66fb02d989b69a1abced705a2f8c13f9ed4",
+    "build_private_lte.py": "039b4c5f8fecaa7791347a8ccd24035e0684cb032a6c9444a095e881ab014e97"
+  },
+  "input_hashes": {
+    "sites_K0.csv": "3004ad7a678e70a855eeb2f3dc7d50e7ad884b9af8734ecf49a643d93b18f612",
+    "sites_K1.csv": "2f1d4f3dba479c33c91ce445c0a5e00a11fdfe085b195496e815e612be7f9350",
+    "sites_K2.csv": "416b00540763590e645fbf001a2fa243df7c4931765c5a1a972437aae4cc6520",
+    "sites_K3.csv": "cee524a7e9f12b811240bb871061eb776f97ac41af337e87527928b269c18e2e",
+    "sites_S0TA_42.csv": "59a5f4f30fb820546f9b3cb210b1ae3cfd038ff10cbc2bb5a18d48912d2a1abe",
+    "ues_quake_42.csv": "6935036ce9bfe2725356f2965d1629a2e6a183f0d857a6c90058900a165142f9",
+    "ues_V25_701.csv": "8e07e84de3a6ab43b115e2e2a765ca47bf3605843f6b274876c1a10b5eb35e76"
+  },
+  "rule": "- Model: deneyler/29 ns-3 model unchanged (RMa, 3GPP antenna, EVM 8 %, distance correction, 8 dB link\n  shadow, buffer-aware PF), antenna draw 42, SRS periodicity 320 (as the deneyler/28-29 stress runs, so many\n  users per cell can attach). The only source change is an optional switch for ns-3's DL PHY traces (off in K).\n- Load: 27 Oct 2025 earthquake (deneyler/32 deprem_yuku.py; all sites have KPI there and it is the quake of\n  the real 482 outage). Users per site = KPI connected users per cell x sectors, placed by rule A of\n  deneyler/32 senaryo.py (seed 33042). Every user one DL flow of 512-byte packets; common interval from the\n  fast model so that the evaluation-cell PRB is the KPI earthquake value 0.23 without outage.\n- Scenarios: K0 nothing off; K1 site 482 removed; K2 site 130 removed; K3 both removed. Same users in all.\n- Service is judged with the deneyler/32 TANIMLAR.md step-1 radio criteria, NOT with packet delivery\n  (ns-3 has no outer-loop link adaptation, so its packet losses at moderate load are not reliable; deneyler/29):\n  no service = not RRC-connected, or mean reported SINR < -6.7 dB (CQI 0); weak = RSRP < -121.8 dBm\n  (TS 36.101 REFSENS); overloaded cell = DL PRB use >= 0.95. Reported for all users and for the users placed\n  around the removed site(s).\n- K0 is accepted if the evaluation-cell mean PRB is within 0.15-0.35 (target 0.23); otherwise the K runs are\n  still reported but the load is flagged.\n- The ns-3 numbers are compared with the fast model on the same users (20 LOS draws, 5-95 % range).\n- L25: deneyler/29 V25_draw701 re-run with identical inputs and DL PHY traces on. Check 1: voice.csv equal to\n  deneyler/29 (the trace switch changes nothing). Check 2: for voice users with good reported SINR (> 3 dB),\n  share of transport blocks received in error at light load; if the \"CQI measured when neighbours are silent\"\n  explanation holds, errors should be far above the 10 % BLER the CQI targets.",
+  "smoke": {
+    "case": "K0, 1.5 s (0.5 s counted after warmup)",
+    "connected": "1473/1473",
+    "eval_prb": 0.159,
+    "sinr_median_db": 17.0,
+    "sinr_below_-6.7": 0.001,
+    "wall_s": 1816,
+    "note": "PRB inside the predeclared 0.15-0.35 band, at its low edge; not recalibrated (rule). Smoke result folder deleted after reading."
+  },
+  "source_hashes_K_runs_20Nov": {
+    "sindirgi_baseline.cc": "c9581cfc253606b9c34e9d4aa94cd3a987c7c92099b75cfbc702902e22a0bdd6",
+    "building-vertical-model.h": "ce9e648299fbbb2035e5c3a385d3d7d51fa93d4c16d2f25ff827f8de76a04cfc",
+    "static-shadow-model.h": "83ed29579c7a678880afa9dd5e84e3520a52c4ce5d3f476531c7a631e8d2c9ed",
+    "run_baseline.py": "7ac51bfb2e1da5e209ad8b12f32cd66fb02d989b69a1abced705a2f8c13f9ed4",
+    "build_private_lte.py": "039b4c5f8fecaa7791347a8ccd24035e0684cb032a6c9444a095e881ab014e97"
+  },
+  "amendment_21Nov": "L25 trace call fixed: EnableDlPhyTraces (RSRP/SINR only) -> EnableDlRxPhyTraces (per-TB MCS, size, correct flag). Only L25 is re-run; K0-K3 ran with the switch off and the old source (source_hashes_K_runs_20Nov). First L25 kept as simulation/results/L25_v1_yanlis_iz. Check 2 rule unchanged."
+}

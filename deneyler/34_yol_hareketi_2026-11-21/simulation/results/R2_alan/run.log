@@ -1,0 +1,14 @@
+{
+  "ns3_version": "3.44",
+  "seed": 42,
+  "run": 1,
+  "physical_sites": 24,
+  "synthetic_sectors": 72,
+  "ues": 672,
+  "connected_ues": 672,
+  "ues_receiving_dl": 667,
+  "total_dl_bytes": 22180328,
+  "radio_samples": 5369,
+  "duration_s": 1,
+  "placement": "near-sites"
+}

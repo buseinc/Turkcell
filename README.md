@@ -143,6 +143,8 @@ Her deney bir öncekinin sonucunu kullanır. Sonuç belgesi genellikle `SONUCLAR
 | 30 | [30_deprem_kesintileri](deneyler/30_deprem_kesintileri_2026-11-20/SONUCLAR.md) | KPI'daki gerçek kesintiler: 10 Ağustos'ta 130, 28 Ekim'de 482 (depremden 1,5–2,5 saat sonra); K1/K2/K3 senaryoları |
 | 31 | [31_hizli_model](deneyler/31_hizli_model_2026-11-20/SONUCLAR.md) | ns-3 formülleriyle hızlı model (ön eleme için): RSRP birebir, SINR saha başına ≤1,3 dB; kapasite sınırı hücre başına ~250–300 görüşme (alt sınır) |
 | 32 | [32_kesinti_hazirligi](deneyler/32_kesinti_hazirligi_2026-11-20/TANIMLAR.md) | Kesintiden önce sabitlenenler: servis tanımları (3GPP), ölçülen deprem yükü (en yoğun hücre ~101), yerleştirme duyarlılığı; 482 kapanınca çevresinin %22–32'si servissiz |
+| 33 | [33_kesinti_ns3](deneyler/33_kesinti_ns3_2026-11-20/SONUCLAR.md) | ns-3'te deprem yüküyle 482/130 kesintisi: hiçbir hücre dolmuyor, kapanan sahanın çevresinin %15–18'i servissiz (saha açıkken %0); L25: "kodlama düzeltme döngüsü yok" açıklaması tutmadı |
+| 34 | [34_yol_hareketi](deneyler/34_yol_hareketi_2026-11-21/SONUCLAR.md) | OpenStreetMap yollarında hareketli araçlar (yumuşak gölgeleme, konuma bağlı görüş hattı, A3 geçiş): 130 kapanınca il yolunun 6,6 km'si servissiz (en uzun 2,8 km), 482 kapanınca D240 etkilenmiyor; hızlı model ns-3'ü tutuyor |
 
 ## Notlar
 

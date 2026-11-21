@@ -1,0 +1,26 @@
+{
+ "R5_ho_acik": {
+  "first_site": "SITE_000441",
+  "last_site": "SITE_000443",
+  "ue_start": 5,
+  "ue_end_ok": 5,
+  "enb_end_ok": 5,
+  "failures": 0,
+  "last_rrc_state": 9,
+  "packets": 9802,
+  "handover_ms": 4.213124000003177,
+  "packets_after": 6484,
+  "max_gap_near_ms": 399.9999999999986
+ },
+ "R5_ho_kapali": {
+  "first_site": "SITE_000441",
+  "last_site": "SITE_000441",
+  "ue_start": 0,
+  "ue_end_ok": 0,
+  "enb_end_ok": 0,
+  "failures": 0,
+  "last_rrc_state": 9,
+  "packets": 4743
+ },
+ "pass": true
+}

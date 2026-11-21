@@ -1,0 +1,81 @@
+{
+ "mean_old": {
+  "sinr_train": 3.838,
+  "sinr_holdout": 2.029,
+  "rsrp_train": 6.852,
+  "rsrp_holdout": 3.956,
+  "cell_rsrp_median": -100.397
+ },
+ "mean_new": {
+  "sinr_train": 3.484,
+  "sinr_holdout": 2.496,
+  "rsrp_train": 5.815,
+  "rsrp_holdout": 4.166,
+  "cell_rsrp_median": -101.9
+ },
+ "checks": {
+  "sinr_train": true,
+  "sinr_holdout": true,
+  "rsrp_train": true,
+  "rsrp_holdout": true,
+  "median_within_1db": false
+ },
+ "pass": false,
+ "cases": [
+  {
+   "case": "FT_TA_draw701",
+   "old": {
+    "sinr_train": 4.131,
+    "sinr_holdout": 1.671,
+    "rsrp_train": 7.623,
+    "rsrp_holdout": 2.821,
+    "cell_rsrp_median": -100.219
+   },
+   "new": {
+    "sinr_train": 3.95,
+    "sinr_holdout": 2.133,
+    "rsrp_train": 6.745,
+    "rsrp_holdout": 2.735,
+    "cell_rsrp_median": -102.845
+   },
+   "los_share_new": 0.018038617886178863
+  },
+  {
+   "case": "FT_TA_draw702",
+   "old": {
+    "sinr_train": 3.729,
+    "sinr_holdout": 2.34,
+    "rsrp_train": 6.301,
+    "rsrp_holdout": 4.913,
+    "cell_rsrp_median": -100.647
+   },
+   "new": {
+    "sinr_train": 2.91,
+    "sinr_holdout": 2.849,
+    "rsrp_train": 5.437,
+    "rsrp_holdout": 4.995,
+    "cell_rsrp_median": -102.29
+   },
+   "los_share_new": 0.015625
+  },
+  {
+   "case": "FT_TA_draw703",
+   "old": {
+    "sinr_train": 3.653,
+    "sinr_holdout": 2.077,
+    "rsrp_train": 6.631,
+    "rsrp_holdout": 4.133,
+    "cell_rsrp_median": -100.326
+   },
+   "new": {
+    "sinr_train": 3.591,
+    "sinr_holdout": 2.507,
+    "rsrp_train": 5.263,
+    "rsrp_holdout": 4.769,
+    "cell_rsrp_median": -100.566
+   },
+   "los_share_new": 0.018292682926829267
+  }
+ ],
+ "rule": "Windows: acceptance rule 3 of DUZELTMELER.md. Does the smooth shadow + position LOS keep the fit to the\nreal measurements? Fast model, the 3 deneyler/29 validation cases (normal load, 3 antenna draws).\nOld = hizli_model.Network, mean over 20 LOS draws (as deneyler/31). New = Network34 (LOS fixed by position).\nMetrics per case, then mean over the 3 cases:\n- site SINR error vs Experia (train and test sites; deneyler/31 metric: mean SINR of the first 256 users,\n  sector means averaged per site);\n- site RSRP error vs Experia (same averaging, serving RSRP);\n- median of sector-mean RSRP over all 24 evaluation cells (deneyler/26 reports Experia -104.2 dBm).\nPass: each new error <= old + 1 dB, and new median within 1 dB of -104.2."
+}
