@@ -1,0 +1,11 @@
+{
+ "files_equal": {
+  "radio_samples.csv": true,
+  "ues.csv": true,
+  "prb_usage.csv": true,
+  "voice.csv": true,
+  "DlRxPhyStats.txt": true,
+  "sectors.csv": true
+ },
+ "pass": true
+}

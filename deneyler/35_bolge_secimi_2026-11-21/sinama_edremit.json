@@ -1,0 +1,59 @@
+{
+ "region": "edremit",
+ "f_on": 0.21428571428571427,
+ "train": [
+  "SITE_000006",
+  "SITE_000016",
+  "SITE_000105",
+  "SITE_000370",
+  "SITE_000529"
+ ],
+ "test": [
+  "SITE_000005",
+  "SITE_000007",
+  "SITE_000507"
+ ],
+ "variants": {
+  "taban": {
+   "sinr_train": 2.796,
+   "rsrp_train": 3.946,
+   "sinr_test": 3.806,
+   "rsrp_test": 3.292,
+   "sinr_signed_mean": 3.106
+  },
+  "A1": {
+   "sinr_train": 2.837,
+   "rsrp_train": 4.179,
+   "sinr_test": 3.767,
+   "rsrp_test": 3.792,
+   "sinr_signed_mean": 3.086
+  },
+  "B": {
+   "sinr_train": 5.271,
+   "rsrp_train": 3.946,
+   "sinr_test": 5.046,
+   "rsrp_test": 3.292,
+   "sinr_signed_mean": -5.187
+  },
+  "A1+B": {
+   "sinr_train": 5.179,
+   "rsrp_train": 4.179,
+   "sinr_test": 5.016,
+   "rsrp_test": 3.792,
+   "sinr_signed_mean": -5.118
+  },
+  "A2": {
+   "sinr_train": 2.694,
+   "rsrp_train": 3.718,
+   "sinr_test": 3.014,
+   "rsrp_test": 2.047,
+   "sinr_signed_mean": 2.491
+  }
+ },
+ "chosen": "A2",
+ "accept": {
+  "sinr_test_le_3": false,
+  "rsrp_test_le_5": true
+ },
+ "accepted": false
+}

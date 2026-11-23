@@ -1,0 +1,209 @@
+{
+ "rule": "Windows: steps 1-2 for the second region, Edremit coast (DISTRICT_0008). Rule written before running:\n\nStep 1, sites (24, as Sindirgi: 8 evaluation + 16 neighbours; Sindirgi showed 24 is enough, to be re-checked\nwith the fast model in step 3):\n- Centre = mean coordinate of the DISTRICT_0008 sites (39.5851 N, 26.8971 E, Akcay coast).\n- Evaluation sites = the 8 DISTRICT_0008 sites nearest the centre that have at least one cell with >= 100\n  hourly Experia records (Sindirgi evaluation cells had >= 137).\n- Neighbour sites = the next 16 sites nearest the centre from the full coordinate inventory, with or without\n  Experia data, any district.\n- Local metres: same east-north plane formula as Sindirgi (deneyler/07), origin = the centre.\n- Sector hypothesis S0 as Sindirgi: 3 sectors per site, one carrier (B3); rotations later (step 3).\nStep 2, data (operator data: local only, *.csv.gz is git-ignored):\n- experia_cells.csv.gz: all Experia hourly rows of the cells of the 24 sites.\n- kpi_cells.csv.gz: all 15-min KPI rows of those cells from the ten KPI workbooks (same columns as\n  deneyler/09 + RACH TA and handover success, as deneyler/13).\nOutputs: inputs/sites_edremit.csv, secim.json (cell lists, counts, hashes), secim.png.",
+ "centre_lat_lon": [
+  39.58513970416463,
+  26.89710160136814
+ ],
+ "district_sites": 82,
+ "district_sites_with_data": 78,
+ "sites": {
+  "SITE_000370": {
+   "role": "Evaluation",
+   "d_center_km": 0.33,
+   "cells_inventory": 14,
+   "cells_experia": 14,
+   "experia_rows": 2078,
+   "cells_kpi": 14
+  },
+  "SITE_000507": {
+   "role": "Evaluation",
+   "d_center_km": 0.83,
+   "cells_inventory": 25,
+   "cells_experia": 20,
+   "experia_rows": 2708,
+   "cells_kpi": 25
+  },
+  "SITE_000529": {
+   "role": "Evaluation",
+   "d_center_km": 1.18,
+   "cells_inventory": 7,
+   "cells_experia": 7,
+   "experia_rows": 1096,
+   "cells_kpi": 7
+  },
+  "SITE_000007": {
+   "role": "Evaluation",
+   "d_center_km": 1.3,
+   "cells_inventory": 14,
+   "cells_experia": 14,
+   "experia_rows": 1999,
+   "cells_kpi": 12
+  },
+  "SITE_000105": {
+   "role": "Evaluation",
+   "d_center_km": 1.33,
+   "cells_inventory": 23,
+   "cells_experia": 22,
+   "experia_rows": 3349,
+   "cells_kpi": 23
+  },
+  "SITE_000016": {
+   "role": "Evaluation",
+   "d_center_km": 1.75,
+   "cells_inventory": 8,
+   "cells_experia": 8,
+   "experia_rows": 992,
+   "cells_kpi": 8
+  },
+  "SITE_000006": {
+   "role": "Evaluation",
+   "d_center_km": 2.08,
+   "cells_inventory": 9,
+   "cells_experia": 9,
+   "experia_rows": 1226,
+   "cells_kpi": 7
+  },
+  "SITE_000005": {
+   "role": "Evaluation",
+   "d_center_km": 2.34,
+   "cells_inventory": 21,
+   "cells_experia": 21,
+   "experia_rows": 3255,
+   "cells_kpi": 21
+  },
+  "SITE_000476": {
+   "role": "Interference buffer",
+   "d_center_km": 1.19,
+   "cells_inventory": 3,
+   "cells_experia": 0,
+   "experia_rows": 0,
+   "cells_kpi": 3
+  },
+  "SITE_000328": {
+   "role": "Interference buffer",
+   "d_center_km": 2.42,
+   "cells_inventory": 13,
+   "cells_experia": 13,
+   "experia_rows": 1690,
+   "cells_kpi": 13
+  },
+  "SITE_000015": {
+   "role": "Interference buffer",
+   "d_center_km": 2.49,
+   "cells_inventory": 17,
+   "cells_experia": 12,
+   "experia_rows": 1874,
+   "cells_kpi": 17
+  },
+  "SITE_000008": {
+   "role": "Interference buffer",
+   "d_center_km": 2.58,
+   "cells_inventory": 12,
+   "cells_experia": 12,
+   "experia_rows": 582,
+   "cells_kpi": 12
+  },
+  "SITE_000010": {
+   "role": "Interference buffer",
+   "d_center_km": 2.58,
+   "cells_inventory": 22,
+   "cells_experia": 22,
+   "experia_rows": 3382,
+   "cells_kpi": 22
+  },
+  "SITE_000004": {
+   "role": "Interference buffer",
+   "d_center_km": 2.64,
+   "cells_inventory": 14,
+   "cells_experia": 14,
+   "experia_rows": 1853,
+   "cells_kpi": 14
+  },
+  "SITE_000369": {
+   "role": "Interference buffer",
+   "d_center_km": 2.7,
+   "cells_inventory": 20,
+   "cells_experia": 12,
+   "experia_rows": 1888,
+   "cells_kpi": 20
+  },
+  "SITE_000118": {
+   "role": "Interference buffer",
+   "d_center_km": 2.98,
+   "cells_inventory": 18,
+   "cells_experia": 9,
+   "experia_rows": 1105,
+   "cells_kpi": 18
+  },
+  "SITE_000315": {
+   "role": "Interference buffer",
+   "d_center_km": 3.02,
+   "cells_inventory": 12,
+   "cells_experia": 10,
+   "experia_rows": 1020,
+   "cells_kpi": 12
+  },
+  "SITE_000013": {
+   "role": "Interference buffer",
+   "d_center_km": 3.03,
+   "cells_inventory": 22,
+   "cells_experia": 15,
+   "experia_rows": 2263,
+   "cells_kpi": 22
+  },
+  "SITE_000044": {
+   "role": "Interference buffer",
+   "d_center_km": 3.08,
+   "cells_inventory": 8,
+   "cells_experia": 8,
+   "experia_rows": 1114,
+   "cells_kpi": 8
+  },
+  "SITE_000137": {
+   "role": "Interference buffer",
+   "d_center_km": 3.39,
+   "cells_inventory": 6,
+   "cells_experia": 6,
+   "experia_rows": 861,
+   "cells_kpi": 6
+  },
+  "SITE_000011": {
+   "role": "Interference buffer",
+   "d_center_km": 3.59,
+   "cells_inventory": 28,
+   "cells_experia": 25,
+   "experia_rows": 3639,
+   "cells_kpi": 28
+  },
+  "SITE_000017": {
+   "role": "Interference buffer",
+   "d_center_km": 3.7,
+   "cells_inventory": 13,
+   "cells_experia": 10,
+   "experia_rows": 1595,
+   "cells_kpi": 12
+  },
+  "SITE_000003": {
+   "role": "Interference buffer",
+   "d_center_km": 3.75,
+   "cells_inventory": 8,
+   "cells_experia": 8,
+   "experia_rows": 1078,
+   "cells_kpi": 6
+  },
+  "SITE_000025": {
+   "role": "Interference buffer",
+   "d_center_km": 3.77,
+   "cells_inventory": 21,
+   "cells_experia": 14,
+   "experia_rows": 2156,
+   "cells_kpi": 21
+  }
+ },
+ "experia_rows": 42803,
+ "kpi_rows": 331634,
+ "hashes": {
+  "experia_cells.csv.gz": "119ba03252b54416b9f320d43e029f47c787ee1b8edacb41b106ab20ebc99e0d",
+  "kpi_cells.csv.gz": "86800a3bcfbbbb8fd3a791e936cdad1c3c54040f5c237f3453b12d2c28e6f179"
+ }
+}

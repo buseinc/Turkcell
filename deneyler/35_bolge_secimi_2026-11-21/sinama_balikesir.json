@@ -1,0 +1,52 @@
+{
+ "region": "balikesir",
+ "f_on": 0.21428571428571427,
+ "train": [
+  "SITE_000090",
+  "SITE_000146",
+  "SITE_000188",
+  "SITE_000243",
+  "SITE_000248"
+ ],
+ "test": [
+  "SITE_000089",
+  "SITE_000121",
+  "SITE_000244"
+ ],
+ "variants": {
+  "taban": {
+   "sinr_train": 4.343,
+   "rsrp_train": 4.521,
+   "sinr_test": 5.426,
+   "rsrp_test": 5.94,
+   "sinr_signed_mean": 4.738
+  },
+  "A1": {
+   "sinr_train": 4.313,
+   "rsrp_train": 4.909,
+   "sinr_test": 5.342,
+   "rsrp_test": 6.543,
+   "sinr_signed_mean": 4.691
+  },
+  "B": {
+   "sinr_train": 5.86,
+   "rsrp_train": 4.521,
+   "sinr_test": 5.659,
+   "rsrp_test": 5.94,
+   "sinr_signed_mean": -5.784
+  },
+  "A1+B": {
+   "sinr_train": 5.822,
+   "rsrp_train": 4.909,
+   "sinr_test": 5.56,
+   "rsrp_test": 6.543,
+   "sinr_signed_mean": -5.724
+  }
+ },
+ "chosen": "taban",
+ "accept": {
+  "sinr_test_le_3": false,
+  "rsrp_test_le_5": false
+ },
+ "accepted": false
+}

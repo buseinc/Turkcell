@@ -1,0 +1,56 @@
+{
+ "K0": {
+  "f0.0": {
+   "no_service_all": 0.008146639511201629,
+   "no_service_around": null,
+   "eval_load_recomputed": 0.2349486780003868
+  },
+  "f0.03": {
+   "no_service_all": 0.008146639511201629,
+   "no_service_around": null,
+   "eval_load_recomputed": 0.23831726329560743
+  },
+  "load_used": 0.23444692821633573
+ },
+ "K1": {
+  "f0.0": {
+   "no_service_all": 0.02376103190767142,
+   "no_service_around": 0.2839506172839506,
+   "eval_load_recomputed": 0.2616016669885609
+  },
+  "f0.03": {
+   "no_service_all": 0.02376103190767142,
+   "no_service_around": 0.2839506172839506,
+   "eval_load_recomputed": 0.26405998052586466
+  },
+  "load_used": 0.26178805159616886
+ },
+ "K2": {
+  "f0.0": {
+   "no_service_all": 0.010862186014935505,
+   "no_service_around": 0.225,
+   "eval_load_recomputed": 0.2539948100052055
+  },
+  "f0.03": {
+   "no_service_all": 0.010862186014935505,
+   "no_service_around": 0.225,
+   "eval_load_recomputed": 0.257659088674017
+  },
+  "load_used": 0.25424837190465077
+ },
+ "K3": {
+  "f0.0": {
+   "no_service_all": 0.025797691785471828,
+   "no_service_around": 0.256198347107438,
+   "eval_load_recomputed": 0.28707381511880053
+  },
+  "f0.03": {
+   "no_service_all": 0.025797691785471828,
+   "no_service_around": 0.256198347107438,
+   "eval_load_recomputed": 0.28956305083896355
+  },
+  "load_used": 0.28700268520794125
+ },
+ "max_change_around_pp": 0.0,
+ "rerun_ns3": false
+}

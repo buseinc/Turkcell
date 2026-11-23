@@ -1,0 +1,37 @@
+read 47 s
+LTE Main KPI_20250803000000-202508040000 32974 102 s
+LTE Main KPI_20250809000000-202508100000 33013 156 s
+LTE Main KPI_20250810000000-202508110000 32991 210 s
+LTE Main KPI_20250811000000-202508120000 32862 265 s
+LTE Main KPI_20250817000000-202508180000 32958 325 s
+LTE Main KPI_20251020000000-202510210000 33342 382 s
+LTE Main KPI_20251026000000-202510270000 33386 440 s
+LTE Main KPI_20251027000000-202510280000 33362 498 s
+LTE Main KPI_20251028000000-202510290000 33338 555 s
+LTE Main KPI_20251103000000-202511040000 33408 620 s
+{"centre_lat_lon": [39.58513970416463, 26.89710160136814], "district_sites": 82, "district_sites_with_data": 78, "experia_rows": 42803, "kpi_rows": 331634}
+                            role d_center_km cells_inventory cells_experia experia_rows cells_kpi
+SITE_000370           Evaluation        0.33              14            14         2078        14
+SITE_000507           Evaluation        0.83              25            20         2708        25
+SITE_000529           Evaluation        1.18               7             7         1096         7
+SITE_000007           Evaluation         1.3              14            14         1999        12
+SITE_000105           Evaluation        1.33              23            22         3349        23
+SITE_000016           Evaluation        1.75               8             8          992         8
+SITE_000006           Evaluation        2.08               9             9         1226         7
+SITE_000005           Evaluation        2.34              21            21         3255        21
+SITE_000476  Interference buffer        1.19               3             0            0         3
+SITE_000328  Interference buffer        2.42              13            13         1690        13
+SITE_000015  Interference buffer        2.49              17            12         1874        17
+SITE_000008  Interference buffer        2.58              12            12          582        12
+SITE_000010  Interference buffer        2.58              22            22         3382        22
+SITE_000004  Interference buffer        2.64              14            14         1853        14
+SITE_000369  Interference buffer         2.7              20            12         1888        20
+SITE_000118  Interference buffer        2.98              18             9         1105        18
+SITE_000315  Interference buffer        3.02              12            10         1020        12
+SITE_000013  Interference buffer        3.03              22            15         2263        22
+SITE_000044  Interference buffer        3.08               8             8         1114         8
+SITE_000137  Interference buffer        3.39               6             6          861         6
+SITE_000011  Interference buffer        3.59              28            25         3639        28
+SITE_000017  Interference buffer         3.7              13            10         1595        12
+SITE_000003  Interference buffer        3.75               8             8         1078         6
+SITE_000025  Interference buffer        3.77              21            14         2156        21

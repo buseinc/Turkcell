@@ -1,0 +1,112 @@
+{
+ "E0": {
+  "all": {
+   "users": 655,
+   "no_service": 0.015267175572519083,
+   "weak": 0.06259541984732825
+  },
+  "eval_prb": 0.15123611111113333,
+  "eval_cells_full": 0,
+  "max_prb_eval": 0.775653333333,
+  "cells_full_any": [
+   {
+    "site": "SITE_000004",
+    "role": "Interference buffer"
+   },
+   {
+    "site": "SITE_000267",
+    "role": "Extra buffer"
+   }
+  ]
+ },
+ "E1": {
+  "all": {
+   "users": 655,
+   "no_service": 0.0183206106870229,
+   "weak": 0.06870229007633588
+  },
+  "around_off": {
+   "users": 64,
+   "no_service": 0.0,
+   "weak": 0.03125,
+   "not_connected": 0,
+   "sinr_median": 14.504027576602352
+  },
+  "eval_prb": 0.15998412698408093,
+  "eval_cells_full": 0,
+  "max_prb_eval": 0.76736,
+  "cells_full_any": [
+   {
+    "site": "SITE_000004",
+    "role": "Interference buffer"
+   },
+   {
+    "site": "SITE_000267",
+    "role": "Extra buffer"
+   }
+  ],
+  "around_off_when_on": {
+   "users": 64,
+   "no_service": 0.0,
+   "weak": 0.0,
+   "not_connected": 0,
+   "sinr_median": 15.641152116873052
+  }
+ },
+ "E2": {
+  "all": {
+   "users": 655,
+   "no_service": 0.01984732824427481,
+   "weak": 0.0732824427480916
+  },
+  "around_off": {
+   "users": 39,
+   "no_service": 0.05128205128205128,
+   "weak": 0.20512820512820512,
+   "not_connected": 0,
+   "sinr_median": 15.197789279894396
+  },
+  "eval_prb": 0.16321206349204287,
+  "eval_cells_full": 0,
+  "max_prb_eval": 0.773226666667,
+  "cells_full_any": [
+   {
+    "site": "SITE_000004",
+    "role": "Interference buffer"
+   },
+   {
+    "site": "SITE_000267",
+    "role": "Extra buffer"
+   }
+  ],
+  "around_off_when_on": {
+   "users": 39,
+   "no_service": 0.02564102564102564,
+   "weak": 0.15384615384615385,
+   "not_connected": 0,
+   "sinr_median": 15.411977947271915
+  }
+ },
+ "sindirgi_deney33": {
+  "K0": {
+   "around_off_no_service": null,
+   "all_no_service": 0.0006788866259334691,
+   "eval_prb": 0.16970222222220832
+  },
+  "K1": {
+   "around_off_no_service": 0.18518518518518517,
+   "all_no_service": 0.010862186014935505,
+   "eval_prb": 0.1970266666666381
+  },
+  "K2": {
+   "around_off_no_service": 0.15,
+   "all_no_service": 0.0047522063815342835,
+   "eval_prb": 0.1926304761904619
+  },
+  "K3": {
+   "around_off_no_service": 0.17355371900826447,
+   "all_no_service": 0.015614392396469789,
+   "eval_prb": 0.22004888888877225
+  }
+ }
+}

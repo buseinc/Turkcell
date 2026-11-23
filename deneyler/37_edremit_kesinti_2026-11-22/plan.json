@@ -1,0 +1,60 @@
+{
+ "quake_interval_ms": 21.44356036923122,
+ "load_interval_ms": 1.0649368235298056,
+ "users": 655,
+ "load_users": 72,
+ "users_by_site": {
+  "SITE_000529": 64,
+  "SITE_000315": 50,
+  "SITE_000011": 45,
+  "SITE_000017": 43,
+  "SITE_000006": 41,
+  "SITE_000105": 39,
+  "SITE_000010": 35,
+  "SITE_000007": 33,
+  "SITE_000015": 32,
+  "SITE_000003": 30,
+  "SITE_000370": 27,
+  "SITE_000118": 27,
+  "SITE_000137": 24,
+  "SITE_000005": 23,
+  "SITE_000013": 23,
+  "SITE_000369": 22,
+  "SITE_000507": 18,
+  "SITE_000004": 16,
+  "SITE_000044": 15,
+  "SITE_000025": 15,
+  "SITE_000016": 14,
+  "SITE_000008": 10,
+  "SITE_000328": 9
+ },
+ "k0_k1": [
+  91.90499768807592,
+  -20.707900119852667
+ ],
+ "f_on": 0.03,
+ "scenarios": {
+  "E0": {
+   "off": [],
+   "sites_file": "sites_E0.csv"
+  },
+  "E1": {
+   "off": [
+    "SITE_000529"
+   ],
+   "sites_file": "sites_E1.csv"
+  },
+  "E2": {
+   "off": [
+    "SITE_000105"
+   ],
+   "sites_file": "sites_E2.csv"
+  }
+ },
+ "input_hashes": {
+  "sites_E0.csv": "a20bc7601fd08d9ab4e26ada54a60947050463f6fed1ad81dc8d6d6d7db2177e",
+  "sites_E1.csv": "e15915d8b91fb8deac63cbbe0934cc8b6f2cdb7c070ee56dfb2424f57a44c7c6",
+  "sites_E2.csv": "0432d22e63202631f5a9173737bab125e0e54fd0d80583fa4e1ce8c92eb0f002",
+  "ues_quake.csv": "64dea8aa5fe02fbad4a7571a73ecbf85ebabcb1e7c3d761004aeb7afdd93a53a"
+ }
+}

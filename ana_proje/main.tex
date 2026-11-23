@@ -11,6 +11,8 @@
 \newenvironment{progress}{\par\smallskip\color{blue}}{\par\smallskip}
 % Turkuaz paragraflar: gerçek değerlerle kurulan yeni model, yeni eklenenler (19 Kasım 2026).
 \newenvironment{yeni}{\par\smallskip\color{teal}}{\par\smallskip}
+% Turuncu paragraflar: stres testi, saha kesintisi, yollarda hareket ve başka bölgeler (22 Kasım 2026).
+\newenvironment{ek}{\par\smallskip\color{orange}}{\par\smallskip}
 
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
 \lstdefinestyle{cpp}{language=C++,basicstyle=\ttfamily\footnotesize,breaklines=true,frame=single,columns=fullflexible,showstringspaces=false}
@@ -25,6 +27,15 @@ This document specifies a reproducible procedure to construct a \emph{representa
 \begin{yeni}
 \textbf{Yeni eklentilerimiz (turkuaz yazılar):}  modeli, bütün değerleri gerçek kaynaklardan (3GPP standartları, CellMapper ve Turkcell'in bölgedeki kendi ölçümleri) alarak yeniden kurduk (Bölüm~\ref{sec:sourced}). Test sahalarında SINR 2,6~dB, RSRP 4,8~dB farkla tutuyor.
 \end{yeni}
+
+\begin{ek}
+\textbf{Son eklentilerimiz (turuncu yazılar):} modeli kurduktan sonra asıl soruya geçtik: deprem anında bu ağa ne oluyor? Kısaca üç şey bulduk (Bölüm~\ref{sec:stres} ve \ref{sec:bolgeler}).
+\begin{itemize}[nosep]
+\item Deprem yükü ağı tıkamıyor. Ağ, deprem anındaki yükün yaklaşık 3 katını kaldırabiliyor.
+\item Asıl sorun bir saha çöktüğünde ortaya çıkıyor: komşu sahaların sinyali çöken sahanın çevresine yetmiyor. Sındırgı'da çöken sahanın çevresindeki kullanıcıların \%15--19'u servis alamıyor. Sahilde, sahaların sık olduğu Edremit'te bu oran \%0--5.
+\item Araçları gerçek yollarda hareket ettirdik. 130 çökünce il yolunun 6,6~km'sinde araçlar servis alamıyor.
+\end{itemize}
+\end{ek}
 
 \section{Scope and key methodological constraints}
 The available data include (i) cell identifiers and coordinates (several cells share each physical site coordinate), (ii) aggregate radio-quality indicators such as RSRP, RSRQ, SINR, and mean timing advance (TAAVG), and (iii) a separate LTE KPI dataset with traffic, users, PRB utilization, CQI, throughput, and potentially availability, drops, and handover counters. The radio and traffic observation periods \textbf{do not coincide}, although cell IDs and site coordinates match. Thus, these datasets may be joined by cell identity for metadata and long-run characterization, \emph{not} treated as simultaneous observations. Actual carrier frequencies, bandwidths, antenna azimuths, transmit powers, schedulers, and user coordinates are unavailable.
@@ -122,6 +133,10 @@ We propose three explicit alternatives: \textbf{S0}, three synthetic single-carr
 Yük deneylerinde S0 ve S2'yi birlikte runlarız. S0'da girişim olduğundan fazla, S2'de az; iki senaryoda da aynı çıkan sonuç daha güvenilir olur. Bant bilgisi gelirse S2 netleşir.
 \end{progress}
 
+\begin{ek}
+yük ve kesinti deneylerini sonunda yalnız tek frekansla runladık. hangi hücrenin hangi bantta olduğu elimizdeki veride yok ve gelmeyecek; S2'yi tahmine dayandırmak yerine bunu kalıcı bir sınır olarak yazıyoruz. Bunun sonuca etkisi şu: gerçek ağdaki 800~MHz katmanı daha uzağa ulaşır, bu yüzden saha çökünce açılan boşluk modelde gerçekte olduğundan biraz büyük görünebilir.
+\end{ek}
+
 \paragraph{Experia timing-advance caveat.} \red{bunu Turkcell le netlestirmeye calisiyoruz. bazi degerler anlamsiz}The supplied vendor description defines 12 cell-range usage categories: 0--9\%, 10--19\%, \ldots, 100--109\%, and 110--200\%. However, the exported \texttt{AVG(TAAVG)} column contains values far outside the 0--11 category-index range. Therefore, neither $\mathrm{TAAVG}\times 1.5$ km nor a standard LTE timing-advance-command conversion is justified for the raw export. Preserve raw values and exclude TAAVG from distance-based calibration until its aggregation, scaling, and units are verified. Even with a valid conversion, the metric describes weighted usage distance, not maximum cell radius or UE coordinates.
 
 \begin{progress}
@@ -152,6 +167,10 @@ The same code should accept \texttt{region.yaml} (geographic polygon or epicente
 \begin{progress}
 henüz yapmadık. şu an bölge ayarları her deneyin kendi dosyalarında duruyor. şehir merkezi veya sahil bölgesine geçmeden önce bunları tek bir bölge dosyasında toplamak gerekecek.
 \end{progress}
+
+\begin{ek}
+Edremit kıyısını ve Balıkesir merkezini aynı kodla kurduk; değişen yalnızca ilçe listesi (Bölüm~\ref{sec:bolgeler}). Sahaları, ölçümleri ve kullanıcı mesafelerini o ilçenin verisinden kendisi çekiyor. Kıyıda kullanıcıların denize düşmemesi için OpenStreetMap'ten kıyı çizgisini de ekledik.
+\end{ek}
 
 \section{Baseline radio configuration}
 \red{Turkcell radio ve frekans verisi paylasmadi. o yuzden nes3 default degerleri ile basliyoruz. handover vs de tanimli ama en bast astatic UE yapabiliriz}
@@ -228,6 +247,15 @@ In the classic LTE helper, \texttt{Attach(ueDevices)} can perform automatic init
 kullanıcıları hem bölgeye düzgün dağıtarak hem de sahaların çevresinde kümeler halinde denedik. en tutarlı sonuç sahaların 2--6~km çevresindeki kümelerle çıktı. kullanıcılar şimdilik sabit ve handover henüz kurulmadı.
 \end{progress}
 
+\begin{ek}
+artık hareketli kullanıcılar ve handover da var. A3 handover (3~dB, 256~ms) ve X2 arayüzünü kurduk, araçları OpenStreetMap'teki gerçek yollarda 90~km/sa hızla ilerlettik. Hareket edince modelde iki sorun çıktı ve ikisini de 3GPP'nin önerdiği şekilde düzelttik:
+\begin{itemize}[nosep]
+\item gölgeleme her kullanıcıya bir kere rastgele veriliyordu. araç ilerledikçe değişmesi gerekiyor. bunu konuma bağladık: yaklaşık 120~m'de bir yavaşça değişiyor (TR~38.901, kırsal alan).
+\item kuleyi görüp görmeme (LOS) durumu da aynı şekilde konuma bağlı oldu, yaklaşık 60~m'de bir değişiyor. Bu yüzden sinyal bazı yerlerde birden sıçrıyor; gerçekte de araç bir tepenin arkasından çıkınca bu oluyor.
+\end{itemize}
+Düzeltmeler kapalıyken model eskisiyle birebir aynı sonucu veriyor, yani önceki sonuçlar geçerli. Hareket sonuçları Bölüm~\ref{sec:stres}'de.
+\end{ek}
+
 \section{Traffic model and calibration}
 \label{sec:traffic}
 For KPI interval duration $\Delta t$, convert carried traffic volume $V_{i,t}$ into measured mean throughput $\bar S_{i,t}=8V_{i,t}/\Delta t$ (with unit conversion). This is \emph{served traffic}, not necessarily offered demand. Begin with synthetic downlink/uplink UDP sources, calibrated so uncongested simulations produce similar per-cell carried traffic and broad PRB utilization patterns. The exact application types, packet sizes, arrival bursts, and per-UE allocations remain experimental choices. Use active-user counts as constraints on synthetic UE populations if their KPI definitions are suitable.
@@ -243,6 +271,10 @@ bu bölümden üç önemli şey bulduk.
 
 \textbf{bağımsız kontrol olarak CQI kullanabiliriz} Yükü ayarlarken CQI'yı hiç kullanmadık, sonra bağımsız bir kontrol olarak karşılaştırdık. KPI'da CQI ve yük aynı kayıttan geldiği için bu aynı dönemin verisiyle yapılan bir karşılaştırma. Simülasyonun CQI'sı gerçek ağa yakın ama ortalamada yaklaşık 1 puan düşük bu da simülasyonda girişimin biraz fazla olduğunu yani tek frekans varsayımının girişimi abarttığını gösteriyor.
 \end{progress}
+
+\begin{ek}
+deprem yükünü sonra daha dikkatli ölçtük. Deprem penceresinde bağlı kullanıcı sayısı normal güne göre 1,6--1,85 kat artıyor (yukarıda ``yaklaşık iki katı'' demiştik, biraz fazlaymış). Sahadan sahaya 1,1 ile 2,3 kat arasında değişiyor. Kullanılan kapasite (PRB) ise artmıyor, hatta biraz düşüyor: insanlar arıyor ve mesajlaşıyor, büyük veri indirmiyor. En yoğun anda hücre başına yaklaşık 100 kişi bağlı.
+\end{ek}
 
 \section{Implementation sequence in ns-3}
 \begin{enumerate}[leftmargin=*,itemsep=3pt]
@@ -476,6 +508,98 @@ antenlerin hangi yöne baktığını bilmiyoruz; CellMapper'da da bu sahalar iç
 
 \end{yeni}
 
+\section{Stress test, site outages and mobility}
+\label{sec:stres}
+\begin{ek}
+Bu bölümdeki bütün sonuçlar ns-3'ten. Binlerce durumu tek tek ns-3'te runlamak saatler sürdüğü için ns-3'ün kendi formülleriyle çalışan, saniyeler süren hızlı bir model de yazdık. Onu yalnız hangi durumların ns-3'te runlanmaya değer olduğunu seçmek için kullandık. İkisi aynı sonucu veriyor; örneğin aşağıdaki yolda servissiz kalan kısım ns-3'te 6,6~km, hızlı modelde 6,8~km.
+
+Her deneyin değerlendirme ölçütünü runlamadan önce yazdık. ``Servis yok'' dediğimiz durum: telefon ağa bağlanamıyor ya da sinyal kalitesi en düşük CQI'nin bile altında ($-6{,}7$~dB), yani hiç veri alamıyor.
+
+\subsection*{Deprem yükü ağı tıkıyor mu?}
+Bir hücrenin kaç görüşme kaldırdığına baktık. Hücreye ses benzeri küçük paketler (512 bayt) gönderen kullanıcılar ekledik. ns-3'ün varsayılan zamanlayıcısı küçük bir ses paketine bile bütün kanalı ayırıyor; bu gerçekçi olmadığı için onu kaynağı ihtiyaca göre veren hale getirdik. Bu ayarla hücre başına 200 eşzamanlı görüşmede bile tıkanma olmadı, gecikme 14~ms civarında kaldı. Hızlı modelle sınıra kadar gidince hücre başına en az 250--300 görüşme çıkıyor.
+
+Deprem anında hücre başına yaklaşık 100 kişi bağlı. Yani ağ deprem yükünün yaklaşık 3 katını kaldırıyor. \textbf{Deprem yükü tek başına ağı tıkamıyor.}
+
+\subsection*{Bir saha çökünce ne oluyor?}
+Kapatacağımız sahaları uydurmak yerine KPI'da depremden sonra gerçekten susan sahaları bulduk:
+\begin{itemize}[nosep]
+\item \textbf{130:} 10 Ağustos depreminden yaklaşık 1,5 saat sonra 7 hücresinin 6'sı yarım saat boyunca tamamen sustu.
+\item \textbf{482:} 27 Ekim depreminden yaklaşık 2,5 saat sonra bir hücresi sustu ve yaklaşık 19 saat kapalı kaldı.
+\end{itemize}
+İkisinde de kesinti depremle aynı anda değil, birkaç saat sonra başlıyor. Muhtemelen elektrik kesiliyor, saha bir süre aküyle çalışıyor, akü bitince susuyor (bu bir tahmin, veri tek başına göstermiyor).
+
+ns-3'te 27 Ekim deprem penceresindeki KPI kullanıcı sayısıyla, önce hiçbir saha kapalı değilken, sonra 130, 482 ve ikisi birden kapalıyken runladık. 482'de gerçekte tek hücre sustu ama biz sahanın tamamını kapattık, yani bu daha kötü bir durum.
+\begin{center}\small
+\begin{tabular}{@{}lccc@{}}\toprule
+ & Çöken sahanın çevresinde servis yok & Bölgenin tamamında servis yok & Dolan hücre \\\midrule
+Hiçbir saha kapalı değil & \%0 & \%0,1 & 0 \\
+130 kapalı & \%15 (40 kişiden 6) & \%0,5 & 0 \\
+482 kapalı & \%19 (81 kişiden 15) & \%1,1 & 0 \\
+İkisi birden kapalı & \%17 (121 kişiden 21) & \%1,6 & 0 \\\bottomrule
+\end{tabular}
+\end{center}
+Hiçbir hücre dolmuyor; ana hücrelerin ortalama kullanılan kapasitesi \%17'den en fazla \%22'ye çıkıyor. Servis alamayanlar kalabalıktan değil, komşu sahaların sinyalinin o uzaklığa yetmemesinden servis alamıyor. \textbf{Yani deprem anında sorun kapasite değil, kapsama.}
+
+\subsection*{Yoldaki araçlar ne yaşıyor?}
+Hocam araziye uygun hareket önermiştiniz. Bölgedeki ana yolları OpenStreetMap'ten aldık. Modele göre bölgedeki 301~km'lik ana yolun 130 çökünce yaklaşık 15~km'si, 482 çökünce yaklaşık 1,5~km'si servissiz kalıyor. Bu yüzden ns-3'te iki yolu seçtik: 130'un yanından geçen il yolu (16,7~km) ve 482'nin yanından geçen D240 (10,9~km). Bu runlarda 1.473 deprem kullanıcısını tek tek koymadık. Aynı yükü her hücreye birer yük kullanıcısıyla verdik, yollarda da 34 ve 22 araç gidiyor.
+\begin{center}
+\includegraphics[width=\linewidth]{figures/yol_kesinti.png}
+\end{center}
+\begin{itemize}[nosep]
+\item 130 açıkken il yolunda servissiz yer neredeyse yok (0,1~km). 130 çökünce 6,6~km'de araçlar servis alamıyor; en uzun kopuk parça 2,8~km. 34 aracın 15'inin bağlantısı en az bir kez tamamen kopuyor.
+\item 482 çökünce D240 neredeyse etkilenmiyor (servissiz kısım 0,1~km'den 0,2~km'ye çıkıyor). Yolun o kısmını başka sahalar da görüyor.
+\item Araçlar km başına 2,5--4,5 kez hücre değiştiriyor ve bunun bir kısmı aynı iki hücre arasında gidip gelme. Bu gerçekte olduğundan sık; ns-3'ün varsayılan handover ayarlarını kullandık. Servissiz yol hesabını etkilemiyor, çünkü onu sinyal kalitesine göre hesapladık.
+\end{itemize}
+
+\textbf{Dikkat edilmesi gerekenler}
+\begin{itemize}[nosep]
+\item Anten yönlerini bilmiyoruz. Kesinti ve yol runlarında tek bir rastgele yön seçimi kullandık; başka yönlerle rakamlar biraz değişebilir.
+\item Model araziyi düz kabul ediyor. Sındırgı dağlık; tepeler bazı yerlerde kapsamayı değiştirebilir.
+\item Yolda gerçek ölçümümüz (drive test) yok. Yol sonuçlarını gerçekle karşılaştıramıyoruz.
+\item Kesinti yokken simülasyondaki yük KPI'daki deprem yükünün biraz altında kaldı (Sındırgı'da PRB 0,17'ye karşı 0,23, Edremit'te 0,15'e karşı 0,18). Yeniden ayarlamadık.
+\item Normal günde bile simülasyondaki ses kullanıcılarının \%15--20'sinde paket kaybı ya da gecikme çıkıyor ve sebebini bulamadık. Bu yüzden kesinti ve yol sonuçlarını paket teslimine göre değil, yukarıdaki sinyal ölçütüne göre değerlendirdik.
+\end{itemize}
+\end{ek}
+
+\section{Other regions: Edremit coast}
+\label{sec:bolgeler}
+\begin{ek}
+Hocam sahil bölgelerinin daha yoğun olabileceğini söylemiştiniz. Elimizdeki Experia verisi ilin 20 ilçesini kapsıyor. Bunlardan en çok saha ve ölçüm olan sahil ilçesini, Edremit kıyısını (Akçay çevresi) seçtik. Şehir merkezine örnek olarak Balıkesir merkezini de denedik.
+
+\subsection*{Model sık bölgede de tutuyor mu?}
+Sındırgı'daki modeli hiç değiştirmeden Edremit'e taşıdık: 24 sahalık bölge ve çevresinde 24 saha daha. Sinyal gücü tuttu, ama sinyal kalitesi ölçümden yaklaşık 4~dB fazla iyi çıktı. Balıkesir merkezde bu fark 5~dB'yi geçiyordu. Sındırgı'da sahalar seyrek olduğu için bu fark pek görünmüyordu; sahalar sıklaşınca komşulardan gelen girişim önem kazanıyor.
+
+Sebebini aradık:
+\begin{itemize}[nosep]
+\item \textbf{Çok frekans:} CellMapper'a baktık; Edremit'te Turkcell 1, 3, 7 ve 20 numaralı bantları kullanıyor. Kullanıcıları bantlara dağıtmak sonucu tek başına pek değiştirmedi.
+\item \textbf{Komşuların hep yayında olan sinyalleri:} Bir baz istasyonu hiç kullanıcısı yokken bile bazı sinyalleri (referans ve kontrol sinyalleri) sürekli gönderiyor. Model komşu hücreyi yalnız veri gönderdiği anda girişim sayıyordu. Bu sinyalleri tam olarak hesaba katınca da model bu sefer ters yöne, fazla kötüye kaydı (yaklaşık 5~dB).
+\item \textbf{İkisinin arası:} Komşunun gücünün \%3'ünü hep yayında saydık. Bu katsayıyı yalnız Edremit ve Balıkesir'in eğitim sahalarına bakarak ayarladık, sonra bakmadığımız sahalarda denedik:
+\end{itemize}
+\begin{center}\small
+\begin{tabular}{@{}lcc@{}}\toprule
+Sinyal kalitesi farkı, test sahaları & Katsayısız & \%3 ile \\\midrule
+Edremit & 3,8~dB & 0,7~dB \\
+Balıkesir merkez & 5,4~dB & 1,4~dB \\
+Sındırgı (test sahaları) & 2,5~dB & 2,0~dB \\\bottomrule
+\end{tabular}
+\end{center}
+Katsayı üç bölgede de tutuyor ve Sındırgı'yı da bozmuyor. Ama neden tam \%3 olduğunu fiziksel olarak açıklayamadık. Bir de hücrelerin kimlik numarasından (PCI) gelen sinyal çakışmasıyla açıklamayı denedik, tutmadı. Bu yüzden onu ölçümle ayarlanmış bir katsayı olarak kullanıyoruz. Katsayıyı ns-3'e de ekledik; kapalıyken ns-3 eskisiyle birebir aynı, açıkken hızlı modelle aynı sonucu veriyor. Sındırgı'nın kesinti sonucunu da değiştirmiyor.
+
+Balıkesir merkezde sinyal gücü de ölçümden yaklaşık 5~dB fazla güçlü çıkıyor. Şehirde kullanıcıların çoğu bina içinde ve modelde bina içi kayıp yok. Bu yüzden Balıkesir merkezi şimdilik bir kenara bıraktık.
+
+\subsection*{Edremit'te saha çökünce ne oluyor?}
+Edremit'te KPI'ya göre deprem anlarında kesinti olmamış. Kapatmak için iki saha seçtik: 529 (28 Ekim öğleden sonra 45 dakika gerçekten kesinti yaşamış tek ana saha) ve 105 (deprem anında en kalabalık sahalardan biri). Yük, Sındırgı'daki gibi 27 Ekim deprem penceresindeki KPI kullanıcı sayısı. ns-3'te model ölçüme oturuyor: deprem kullanıcılarının ortanca sinyal kalitesi 14,3~dB, Experia'daki saha değerleri 13,8--15,6~dB arasında.
+\begin{center}
+\includegraphics[width=0.85\linewidth]{figures/kesinti_karsilastirma.png}
+\end{center}
+\begin{itemize}[nosep]
+\item 529 çökünce çevresindeki 64 kişinin hepsi servis almaya devam ediyor. 105 çökünce 39 kişiden 2'si servis alamıyor; bunlardan biri saha açıkken de alamıyordu.
+\item Kullanıcılar komşu sahalara geçiyor ve sinyal kalitesi biraz düşüyor (ortanca 15,6'dan 14,5~dB'ye). Hiçbir hücre dolmuyor.
+\item Çevredeki kişi sayısı az olduğu için 1--2 kişi rakamı birkaç puan oynatıyor. Ama Sındırgı ile aradaki fark (\%15--19'a karşı \%0--5) bundan çok daha büyük.
+\end{itemize}
+\textbf{Sonuç:} Sahaların sık olduğu kıyıda bir saha çökünce komşular boşluğu dolduruyor. Seyrek kırsal bölgede dolduramıyor. Yani deprem sonrası İHA gibi bir desteğe asıl seyrek bölgelerde ihtiyaç var.
+\end{ek}
+
 \section{Deliverables and staged milestones}
 \begin{enumerate}[nosep]
 \item \textbf{M1: Input audit.} Cell/site/carrier inventory, coordinate map, KPI dictionary, and mismatch report.
@@ -492,7 +616,15 @@ antenlerin hangi yöne baktığını bilmiyoruz; CellMapper'da da bu sahalar iç
 \begin{progress}
 stres testine henüz başlamadık. yoğun saat yükünden başlayıp iki şeyi ayrı ayrı adım adım artırabiliriz bi ağdaki trafik miktarı bi de deprem anını temsil etmek için aynı anda bağlı kullanıcı sayısı. her iki deneyi tek ve çok frekanslı senaryoda rnlayıp hizmetin nerede yetersiz kaldığını karşılaştırabiliriz.
 \end{progress}
+
+\begin{ek}
+stres testini ve saha kesintilerini yaptık, sonuçlar Bölüm~\ref{sec:stres} ve \ref{sec:bolgeler}'de. Kısaca: deprem yükü ağı tıkamıyor, asıl sorun çöken sahanın çevresine komşuların sinyalinin yetmemesi ve bu en çok seyrek bölgelerde oluyor.
+\end{ek}
 \paragraph{UAV-assisted restoration.} Translate simulated unmet demand into geographical service targets with dynamic priorities and deadlines. Add UAV eNBs with explicit access capacity, backhaul and interference; evaluate actual UE reassociation and service restoration. Train priority-window RL in a faster surrogate environment and validate resulting deployments in ns-3. This is a separate later-stage research question.
+
+\begin{ek}
+İHA için ilk somut hedef belli oldu. Sonuçlara göre İHA'nın işi kapasite eklemek değil, sinyalin ulaşmadığı yere sinyal götürmek. İlk deneme için 130 çöktüğünde il yolunda açılan yaklaşık 3~km'lik kopukluğu ve 130'un çevresini kullanmayı düşünüyoruz. Bunun için 3GPP'nin hava-yer kanal modelini ekleyip İHA'nın yerini ve yüksekliğini önce hızlı modelle tarayacağız, iyi çıkanları ns-3'te deneyeceğiz.
+\end{ek}
 
 \section{Open decisions before coding}
 \begin{enumerate}[nosep]
@@ -511,6 +643,17 @@ turkcelle sorabilme ihtimalimiz var mı hocam bir seyleri mesela:
 \item KPI'daki throughput ve TAAVG birimleri ne? bunlar netleşirse yükü ve mesafeyi daha doğru modelleriz
 \end{itemize}
 \end{progress}
+
+\begin{ek}
+bu bilgiler gelmeyecek. Eksikleri kalıcı sınır olarak kabul edip şöyle ele aldık:
+\begin{itemize}[nosep]
+\item Hücrelerin bandı yok: bütün runlar tek frekansla.
+\item Anten yönleri yok: yönleri rastgele seçiyoruz; modeli doğrularken üç farklı seçimle tekrarladık.
+\item Experia'daki SINR'nin tanımı yok: sık bölgelerde yukarıdaki \%3'lük katsayıyı ölçümle ayarladık.
+\item TAAVG'nin birimi yok: 1 birim $\approx$ 4,88~m varsayımını kullanıyoruz.
+\item Yolda ölçüm yok: yol sonuçları yalnız modelden.
+\end{itemize}
+\end{ek}
 
 \paragraph{Implementation reference.} Consult the ns-3 LTE user documentation and the examples distributed with the \emph{installed version}: \url{https://www.nsnam.org/docs/models/html/lte-user.html}. API and model support may differ between releases.
 \end{document}
