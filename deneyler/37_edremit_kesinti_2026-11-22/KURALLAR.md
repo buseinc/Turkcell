@@ -56,3 +56,10 @@ Bütün durumlarda kullanıcılar aynı.
 ## Yaz yükü (yalnız hızlı model, bilgi için)
 
 10 Ağustos deprem yüküyle aynı hesap yapılacak: kullanıcı ve PRB 0,39. Hücrelerin dolup dolmadığına bakılacak.
+
+**Ayrıntılar (23 Kasım, yaz sonucu görülmeden yazıldı):**
+- **Pencere:** 10 Ağustos 19:45–21:30. Kullanıcı sayısı ekimdeki kuralla: saha başına hücre ortalaması × 3.
+- **Yük:** Kesinti yokken ana hücrelerin ortalama PRB'si 0,39 olacak şekilde ortak paket aralığı. Dış sahaların yük kullanıcılarının hedefi de 0,39.
+- **Durumlar:** E0, E1, E2; 3 anten çekilişi (42, 7, 99).
+- **Dolu hücre** iç 24 sahada ve dış sahalarda ayrı sayılır, çünkü dış sahalardaki dolu hücreler yük kullanıcısı yönteminin yan etkisi olabilir.
+- **ns-3 kararı:** Kesinti durumlarında (E1, E2) iç 24 sahada, E0'da dolu olmayan bir hücre dolarsa ya da kapanan sahanın çevresinde servis yok payı ekim ön bakışından 5 puandan fazla artarsa ns-3 koşusu önerilir. Aksi hâlde hızlı model sonucu bilgi olarak yazılır.

@@ -57,3 +57,16 @@ Süre: koşu başına ~1,7 saat (paralel). Ölçütler KURALLAR.md'deki gibi; pu
 - Dolu görünen iki hücre (004 ve 267) üç koşuda da aynı ve kesinti olmadan da var. Deneme koşusunda görülen yük kullanıcısı yan etkisi; ana sahalarda değil.
 - Ana hücre PRB'si hedefin (0,18) altında kaldı (0,15). Sındırgı'daki gibi yeniden ayar yapılmadı.
 - Bölge geneli servis yok oranı kesinti yokken de %1,5 (Sındırgı %0,07). Sık ağda hücre kenarlarında girişim fazla; kesintiden kaynaklanmıyor.
+
+## Yaz yükü kontrolü (10 Ağustos, yalnız hızlı model, 23 Kasım)
+
+Kurallar sonuç görülmeden `KURALLAR.md`'ye yazıldı. Kod `yaz_yuku.py` ve `yaz_tani.py`, sayılar `yaz_yuku.json` ve `yaz_tani.json`. Üç anten çekilişinin ortalaması.
+
+- **Yük:** 2.121 deprem kullanıcısı (ekimde 655). Kesinti yokken ana hücre PRB'si 0,36 (hedef 0,39; ayar 42 numaralı çekilişte yapıldı, orada 0,39).
+- **105 kapalı:** Çevresindeki 143 kullanıcının %4,9'u servis alamıyor (üç çekilişte %3,5–6,3). Ekim ön bakışında %6,8'di. Yaz yükü sonucu kötüleştirmiyor.
+- **529 kapalı: değerlendirilemedi.** 529'un KPI kaydı yalnız ekim–kasım günlerinde var, ağustosta hiç yok. Bu yüzden yaz koşusunda çevresine kullanıcı konamadı.
+- **Kesintiyle yeni dolan ana hücre:** Hiç yok.
+- **Kesinti olmadan da dolu görünen ana hücreler (çekiliş başına 1–6):** Kullanıcı kalabalığından değil, yük kullanıcısı yönteminden. Hepsinde en az bir yük kullanıcısı var. Yük kullanıcıları çıkarılınca bu hücrelerin doluluğu en fazla 0,38.
+- **ns-3 kararı:** Önceden yazılan koşul oluşmadı (yeni dolan hücre yok, servis kaybı 5 puandan fazla artmıyor). ns-3 koşusu önerilmiyor.
+
+**Sınır:** Bu sonuç hızlı modelden ve yalnız 105 için geçerli. 529'un yaz davranışı veride olmadığı için bilinmiyor.

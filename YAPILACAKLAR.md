@@ -48,6 +48,7 @@ Liste, hocanın istediği işlere göre gruplandı.
   - ✅ Açıkken ns-3 ile hızlı model aynı sonucu veriyor (saha başına fark 0,14 dB).
 - ✅ Katsayı Sındırgı'nın kesinti sonucunu değiştirmiyor; deney 33 geçerli (deney 36).
 - ✅ Edremit'te kesinti (ns-3, deney 37). **Sonuç:** sık kıyı bölgesinde saha çökünce kapanan sahanın çevresinde servissiz kalan %0–5. Sındırgı'da bu oran %15–18'di. Komşular boşluğu dolduruyor. Hiçbir hücre dolmuyor.
+- ✅ Edremit yaz yükü (10 Ağustos, hızlı model). 105 çökünce çevrede %4,9 servis yok, yeni dolan ana hücre yok. 529'un ağustos KPI'sı olmadığı için o saha yazın denenemedi.
 - ⬜ Edremit'te yol koşusu (kıyı yolu). İsteğe bağlı; kesinti zaten az etki gösterdiği için önceliği düşük.
 - ⏸️ Balıkesir merkez. Sinyal gücü kabulü geçmiyor; bina içi kayıp gerekir. Şimdilik bekletiliyor.
 

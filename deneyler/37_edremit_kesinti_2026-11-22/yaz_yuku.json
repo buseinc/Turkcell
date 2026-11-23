@@ -1,0 +1,175 @@
+{
+ "window": [
+  "2025-08-10 19:45",
+  "2025-08-10 21:30"
+ ],
+ "target_prb": 0.39,
+ "quake_users": 2121,
+ "load_users": 72,
+ "evaluation_users_per_cell_kpi": 32.56484397219758,
+ "quake_interval_ms": 34.50349733648402,
+ "load_interval_ms": 0.49150930316760255,
+ "runs": [
+  {
+   "scenario": "E0",
+   "seed": 42,
+   "no_service_all": 0.02215935879302216,
+   "no_service_around": null,
+   "users_around": 0,
+   "eval_prb": 0.3903413379266973,
+   "max_core_demand": 2.171698228159742,
+   "full_core": 6,
+   "full_extra": 7,
+   "new_full_core": 0,
+   "users_in_full_core": 0.061291843470061294
+  },
+  {
+   "scenario": "E1",
+   "seed": 42,
+   "no_service_all": 0.024516737388024516,
+   "no_service_around": null,
+   "users_around": 0,
+   "eval_prb": 0.39539817383179593,
+   "max_core_demand": 2.171698228159742,
+   "full_core": 6,
+   "full_extra": 7,
+   "new_full_core": 0,
+   "users_in_full_core": 0.061291843470061294
+  },
+  {
+   "scenario": "E2",
+   "seed": 42,
+   "no_service_all": 0.02545968882602546,
+   "no_service_around": 0.06293706293706294,
+   "users_around": 143,
+   "eval_prb": 0.413725583788001,
+   "max_core_demand": 2.171698228159742,
+   "full_core": 6,
+   "full_extra": 7,
+   "new_full_core": 0,
+   "users_in_full_core": 0.061291843470061294
+  },
+  {
+   "scenario": "E0",
+   "seed": 7,
+   "no_service_all": 0.0231023102310231,
+   "no_service_around": null,
+   "users_around": 0,
+   "eval_prb": 0.3441744285546666,
+   "max_core_demand": 1.4999101893952824,
+   "full_core": 3,
+   "full_extra": 17,
+   "new_full_core": 0,
+   "users_in_full_core": 0.015558698727015558
+  },
+  {
+   "scenario": "E1",
+   "seed": 7,
+   "no_service_all": 0.02498821310702499,
+   "no_service_around": null,
+   "users_around": 0,
+   "eval_prb": 0.350971531441417,
+   "max_core_demand": 1.4999101893952824,
+   "full_core": 3,
+   "full_extra": 17,
+   "new_full_core": 0,
+   "users_in_full_core": 0.015558698727015558
+  },
+  {
+   "scenario": "E2",
+   "seed": 7,
+   "no_service_all": 0.02498821310702499,
+   "no_service_around": 0.04895104895104895,
+   "users_around": 143,
+   "eval_prb": 0.3572389574458592,
+   "max_core_demand": 1.4999101893952824,
+   "full_core": 3,
+   "full_extra": 17,
+   "new_full_core": 0,
+   "users_in_full_core": 0.015558698727015558
+  },
+  {
+   "scenario": "E0",
+   "seed": 99,
+   "no_service_all": 0.02545968882602546,
+   "no_service_around": null,
+   "users_around": 0,
+   "eval_prb": 0.3308329287051787,
+   "max_core_demand": 1.0612359338514952,
+   "full_core": 1,
+   "full_extra": 12,
+   "new_full_core": 0,
+   "users_in_full_core": 0.0033003300330033004
+  },
+  {
+   "scenario": "E1",
+   "seed": 99,
+   "no_service_all": 0.026402640264026403,
+   "no_service_around": null,
+   "users_around": 0,
+   "eval_prb": 0.3456637123467476,
+   "max_core_demand": 1.0612359338514952,
+   "full_core": 1,
+   "full_extra": 12,
+   "new_full_core": 0,
+   "users_in_full_core": 0.0033003300330033004
+  },
+  {
+   "scenario": "E2",
+   "seed": 99,
+   "no_service_all": 0.02545968882602546,
+   "no_service_around": 0.03496503496503497,
+   "users_around": 143,
+   "eval_prb": 0.36002290102325785,
+   "max_core_demand": 1.0612359338514952,
+   "full_core": 1,
+   "full_extra": 11,
+   "new_full_core": 0,
+   "users_in_full_core": 0.0033003300330033004
+  }
+ ],
+ "mean": {
+  "E0": {
+   "no_service_all": 0.0236,
+   "no_service_around": null,
+   "users_around": 0.0,
+   "eval_prb": 0.3551,
+   "max_core_demand": 1.5776,
+   "full_core": 3.3333,
+   "full_extra": 12.0,
+   "new_full_core": 0.0,
+   "users_in_full_core": 0.0267
+  },
+  "E1": {
+   "no_service_all": 0.0253,
+   "no_service_around": null,
+   "users_around": 0.0,
+   "eval_prb": 0.364,
+   "max_core_demand": 1.5776,
+   "full_core": 3.3333,
+   "full_extra": 12.0,
+   "new_full_core": 0.0,
+   "users_in_full_core": 0.0267
+  },
+  "E2": {
+   "no_service_all": 0.0253,
+   "no_service_around": 0.049,
+   "users_around": 143.0,
+   "eval_prb": 0.377,
+   "max_core_demand": 1.5776,
+   "full_core": 3.3333,
+   "full_extra": 11.6667,
+   "new_full_core": 0.0,
+   "users_in_full_core": 0.0267
+  }
+ },
+ "october_around": {
+  "E1": 0.026041666666666668,
+  "E2": 0.06837606837606837
+ },
+ "rise_around_pp": {
+  "E2": -1.9376068376068367
+ },
+ "max_new_full_core_cells": 0,
+ "recommend_ns3": false
+}

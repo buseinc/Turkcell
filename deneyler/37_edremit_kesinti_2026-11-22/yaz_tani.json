@@ -1,0 +1,117 @@
+{
+ "core_sites_without_kpi": [
+  "SITE_000529"
+ ],
+ "full_core_cells": [
+  {
+   "seed": 42,
+   "site": "SITE_000016",
+   "role": "Evaluation",
+   "demand": 1.11,
+   "demand_without_load_users": 0.124,
+   "users": 21,
+   "load_users": 1,
+   "top3_user_share": 0.91,
+   "median_sinr": 12.3
+  },
+  {
+   "seed": 42,
+   "site": "SITE_000005",
+   "role": "Evaluation",
+   "demand": 1.15,
+   "demand_without_load_users": 0.168,
+   "users": 21,
+   "load_users": 1,
+   "top3_user_share": 0.89,
+   "median_sinr": 6.7
+  },
+  {
+   "seed": 42,
+   "site": "SITE_000015",
+   "role": "Interference buffer",
+   "demand": 1.13,
+   "demand_without_load_users": 0.145,
+   "users": 19,
+   "load_users": 1,
+   "top3_user_share": 0.91,
+   "median_sinr": 11.2
+  },
+  {
+   "seed": 42,
+   "site": "SITE_000004",
+   "role": "Interference buffer",
+   "demand": 2.17,
+   "demand_without_load_users": 0.381,
+   "users": 48,
+   "load_users": 2,
+   "top3_user_share": 0.84,
+   "median_sinr": 10.3
+  },
+  {
+   "seed": 42,
+   "site": "SITE_000137",
+   "role": "Interference buffer",
+   "demand": 1.25,
+   "demand_without_load_users": 0.085,
+   "users": 16,
+   "load_users": 2,
+   "top3_user_share": 0.94,
+   "median_sinr": 10.6
+  },
+  {
+   "seed": 42,
+   "site": "SITE_000011",
+   "role": "Interference buffer",
+   "demand": 1.07,
+   "demand_without_load_users": 0.08,
+   "users": 13,
+   "load_users": 1,
+   "top3_user_share": 0.94,
+   "median_sinr": 10.2
+  },
+  {
+   "seed": 7,
+   "site": "SITE_000017",
+   "role": "Interference buffer",
+   "demand": 1.5,
+   "demand_without_load_users": 0.068,
+   "users": 9,
+   "load_users": 1,
+   "top3_user_share": 0.97,
+   "median_sinr": 6.5
+  },
+  {
+   "seed": 7,
+   "site": "SITE_000003",
+   "role": "Interference buffer",
+   "demand": 1.22,
+   "demand_without_load_users": 0.231,
+   "users": 23,
+   "load_users": 1,
+   "top3_user_share": 0.87,
+   "median_sinr": 7.2
+  },
+  {
+   "seed": 7,
+   "site": "SITE_000003",
+   "role": "Interference buffer",
+   "demand": 1.45,
+   "demand_without_load_users": 0.018,
+   "users": 5,
+   "load_users": 2,
+   "top3_user_share": 0.99,
+   "median_sinr": 7.1
+  },
+  {
+   "seed": 99,
+   "site": "SITE_000003",
+   "role": "Interference buffer",
+   "demand": 1.06,
+   "demand_without_load_users": 0.077,
+   "users": 8,
+   "load_users": 1,
+   "top3_user_share": 0.97,
+   "median_sinr": 3.4
+  }
+ ]
+}
