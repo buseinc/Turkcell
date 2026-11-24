@@ -1,0 +1,438 @@
+{
+ "Balıkesir merkez": {
+  "aug17_max_shape_diff": 0.092,
+  "aug17_in_G3": true,
+  "monday_pair_max_shape_diff": {
+   "2025-10-20 / 2025-11-03": 0.083,
+   "2025-10-20 / 2025-10-27": 0.114,
+   "2025-11-03 / 2025-10-27": 0.133
+  },
+  "mondays_consistent": true,
+  "groups": {
+   "G1 hafta içi, okul açık": {
+    "users_per_cell_day_mean": 15.65,
+    "peak_hour_users": "15:30",
+    "peak_users_per_cell": 22.87,
+    "peak_hour_prb": "21:15",
+    "prb_day_mean": 0.212,
+    "window_over_night": {
+     "Gece": 1.0,
+     "Sabah gidiş": 1.73,
+     "Mesai / okul": 2.79,
+     "Akşam dönüş": 3.02,
+     "Akşam": 2.57
+    },
+    "window_users_per_cell": {
+     "Gece": 7.12,
+     "Sabah gidiş": 12.35,
+     "Mesai / okul": 19.88,
+     "Akşam dönüş": 21.49,
+     "Akşam": 18.27
+    },
+    "morning_rise_pct_of_day_mean": 45.1,
+    "hourly_shape": [
+     0.803,
+     0.639,
+     0.544,
+     0.473,
+     0.437,
+     0.426,
+     0.484,
+     0.665,
+     0.913,
+     1.063,
+     1.184,
+     1.252,
+     1.298,
+     1.337,
+     1.335,
+     1.425,
+     1.444,
+     1.396,
+     1.28,
+     1.205,
+     1.184,
+     1.18,
+     1.102,
+     0.932
+    ]
+   },
+   "G2 hafta sonu, okul açık": {
+    "users_per_cell_day_mean": 13.64,
+    "peak_hour_users": "18:00",
+    "peak_users_per_cell": 18.49,
+    "peak_hour_prb": "18:15",
+    "prb_day_mean": 0.226,
+    "window_over_night": {
+     "Gece": 1.0,
+     "Sabah gidiş": 1.19,
+     "Mesai / okul": 2.12,
+     "Akşam dönüş": 2.52,
+     "Akşam": 2.4
+    },
+    "window_users_per_cell": {
+     "Gece": 7.3,
+     "Sabah gidiş": 8.7,
+     "Mesai / okul": 15.5,
+     "Akşam dönüş": 18.4,
+     "Akşam": 17.53
+    },
+    "morning_rise_pct_of_day_mean": 26.6,
+    "hourly_shape": [
+     0.996,
+     0.795,
+     0.657,
+     0.562,
+     0.507,
+     0.477,
+     0.508,
+     0.584,
+     0.691,
+     0.848,
+     0.968,
+     1.071,
+     1.165,
+     1.249,
+     1.309,
+     1.343,
+     1.342,
+     1.349,
+     1.355,
+     1.334,
+     1.322,
+     1.27,
+     1.213,
+     1.085
+    ]
+   },
+   "G3 hafta sonu, yaz": {
+    "users_per_cell_day_mean": 13.6,
+    "peak_hour_users": "21:00",
+    "peak_users_per_cell": 17.89,
+    "peak_hour_prb": "22:15",
+    "prb_day_mean": 0.189,
+    "window_over_night": {
+     "Gece": 1.0,
+     "Sabah gidiş": 1.18,
+     "Mesai / okul": 2.01,
+     "Akşam dönüş": 2.25,
+     "Akşam": 2.29
+    },
+    "window_users_per_cell": {
+     "Gece": 7.62,
+     "Sabah gidiş": 8.97,
+     "Mesai / okul": 15.3,
+     "Akşam dönüş": 17.14,
+     "Akşam": 17.48
+    },
+    "morning_rise_pct_of_day_mean": 23.3,
+    "hourly_shape": [
+     1.027,
+     0.834,
+     0.695,
+     0.592,
+     0.528,
+     0.503,
+     0.526,
+     0.605,
+     0.715,
+     0.852,
+     0.987,
+     1.085,
+     1.18,
+     1.23,
+     1.265,
+     1.277,
+     1.274,
+     1.252,
+     1.254,
+     1.256,
+     1.288,
+     1.316,
+     1.28,
+     1.179
+    ]
+   },
+   "G4 deprem sonrası": {
+    "users_per_cell_day_mean": 16.75,
+    "peak_hour_users": "20:00",
+    "peak_users_per_cell": 22.88,
+    "peak_hour_prb": "21:45",
+    "prb_day_mean": 0.234,
+    "window_over_night": {
+     "Gece": 1.0,
+     "Sabah gidiş": 1.49,
+     "Mesai / okul": 2.5,
+     "Akşam dönüş": 2.54,
+     "Akşam": 2.6
+    },
+    "window_users_per_cell": {
+     "Gece": 8.08,
+     "Sabah gidiş": 12.0,
+     "Mesai / okul": 20.24,
+     "Akşam dönüş": 20.55,
+     "Akşam": 21.05
+    },
+    "morning_rise_pct_of_day_mean": 37.4,
+    "hourly_shape": [
+     1.006,
+     0.745,
+     0.602,
+     0.51,
+     0.455,
+     0.441,
+     0.486,
+     0.627,
+     0.806,
+     0.985,
+     1.143,
+     1.226,
+     1.27,
+     1.28,
+     1.273,
+     1.281,
+     1.261,
+     1.232,
+     1.186,
+     1.177,
+     1.366,
+     1.262,
+     1.22,
+     1.16
+    ]
+   }
+  },
+  "G3_vs_G2_weekend_max_shape_diff": 0.1,
+  "cells_classified": 1149,
+  "cell_share": {
+   "akşam": 0.348,
+   "karışık": 0.326,
+   "gündüz": 0.326
+  },
+  "cell_ratio_median": 0.94,
+  "simulation_hours": {
+   "sabah_gidis": "08:45",
+   "en_kalabalik": "15:30",
+   "kapasite_zirvesi": "21:15"
+  },
+  "cells": 1153
+ },
+ "Bandırma": {
+  "aug17_max_shape_diff": 0.057,
+  "aug17_in_G3": true,
+  "monday_pair_max_shape_diff": {
+   "2025-10-20 / 2025-11-03": 0.076,
+   "2025-10-20 / 2025-10-27": 0.066,
+   "2025-11-03 / 2025-10-27": 0.059
+  },
+  "mondays_consistent": true,
+  "groups": {
+   "G1 hafta içi, okul açık": {
+    "users_per_cell_day_mean": 17.4,
+    "peak_hour_users": "15:30",
+    "peak_users_per_cell": 24.39,
+    "peak_hour_prb": "20:45",
+    "prb_day_mean": 0.239,
+    "window_over_night": {
+     "Gece": 1.0,
+     "Sabah gidiş": 1.52,
+     "Mesai / okul": 2.32,
+     "Akşam dönüş": 2.47,
+     "Akşam": 2.09
+    },
+    "window_users_per_cell": {
+     "Gece": 9.29,
+     "Sabah gidiş": 14.08,
+     "Mesai / okul": 21.5,
+     "Akşam dönüş": 22.98,
+     "Akşam": 19.42
+    },
+    "morning_rise_pct_of_day_mean": 41.2,
+    "hourly_shape": [
+     0.873,
+     0.726,
+     0.64,
+     0.545,
+     0.523,
+     0.505,
+     0.527,
+     0.69,
+     0.928,
+     1.038,
+     1.143,
+     1.218,
+     1.288,
+     1.287,
+     1.311,
+     1.363,
+     1.399,
+     1.329,
+     1.233,
+     1.17,
+     1.145,
+     1.103,
+     1.045,
+     0.972
+    ]
+   },
+   "G2 hafta sonu, okul açık": {
+    "users_per_cell_day_mean": 15.51,
+    "peak_hour_users": "15:00",
+    "peak_users_per_cell": 20.48,
+    "peak_hour_prb": "20:00",
+    "prb_day_mean": 0.248,
+    "window_over_night": {
+     "Gece": 1.0,
+     "Sabah gidiş": 1.11,
+     "Mesai / okul": 1.88,
+     "Akşam dönüş": 2.19,
+     "Akşam": 2.1
+    },
+    "window_users_per_cell": {
+     "Gece": 9.22,
+     "Sabah gidiş": 10.2,
+     "Mesai / okul": 17.31,
+     "Akşam dönüş": 20.21,
+     "Akşam": 19.37
+    },
+    "morning_rise_pct_of_day_mean": 21.7,
+    "hourly_shape": [
+     1.021,
+     0.851,
+     0.734,
+     0.629,
+     0.56,
+     0.527,
+     0.55,
+     0.611,
+     0.704,
+     0.819,
+     0.934,
+     1.048,
+     1.167,
+     1.237,
+     1.289,
+     1.321,
+     1.314,
+     1.297,
+     1.298,
+     1.291,
+     1.287,
+     1.244,
+     1.175,
+     1.09
+    ]
+   },
+   "G3 hafta sonu, yaz": {
+    "users_per_cell_day_mean": 16.28,
+    "peak_hour_users": "16:30",
+    "peak_users_per_cell": 21.05,
+    "peak_hour_prb": "21:15",
+    "prb_day_mean": 0.224,
+    "window_over_night": {
+     "Gece": 1.0,
+     "Sabah gidiş": 1.18,
+     "Mesai / okul": 1.97,
+     "Akşam dönüş": 2.23,
+     "Akşam": 2.19
+    },
+    "window_users_per_cell": {
+     "Gece": 9.35,
+     "Sabah gidiş": 11.02,
+     "Mesai / okul": 18.42,
+     "Akşam dönüş": 20.85,
+     "Akşam": 20.47
+    },
+    "morning_rise_pct_of_day_mean": 23.6,
+    "hourly_shape": [
+     1.008,
+     0.83,
+     0.703,
+     0.607,
+     0.543,
+     0.518,
+     0.537,
+     0.621,
+     0.733,
+     0.86,
+     0.989,
+     1.112,
+     1.201,
+     1.238,
+     1.253,
+     1.267,
+     1.284,
+     1.284,
+     1.273,
+     1.267,
+     1.272,
+     1.273,
+     1.216,
+     1.112
+    ]
+   },
+   "G4 deprem sonrası": {
+    "users_per_cell_day_mean": 18.17,
+    "peak_hour_users": "14:45",
+    "peak_users_per_cell": 23.84,
+    "peak_hour_prb": "21:30",
+    "prb_day_mean": 0.256,
+    "window_over_night": {
+     "Gece": 1.0,
+     "Sabah gidiş": 1.44,
+     "Mesai / okul": 2.36,
+     "Akşam dönüş": 2.41,
+     "Akşam": 2.35
+    },
+    "window_users_per_cell": {
+     "Gece": 9.37,
+     "Sabah gidiş": 13.45,
+     "Mesai / okul": 22.11,
+     "Akşam dönüş": 22.58,
+     "Akşam": 22.03
+    },
+    "morning_rise_pct_of_day_mean": 35.2,
+    "hourly_shape": [
+     0.955,
+     0.744,
+     0.625,
+     0.54,
+     0.492,
+     0.469,
+     0.507,
+     0.652,
+     0.829,
+     0.986,
+     1.124,
+     1.222,
+     1.277,
+     1.297,
+     1.307,
+     1.307,
+     1.285,
+     1.253,
+     1.191,
+     1.171,
+     1.309,
+     1.207,
+     1.163,
+     1.087
+    ]
+   }
+  },
+  "G3_vs_G2_weekend_max_shape_diff": 0.064,
+  "cells_classified": 400,
+  "cell_share": {
+   "karışık": 0.367,
+   "gündüz": 0.343,
+   "akşam": 0.29
+  },
+  "cell_ratio_median": 1.02,
+  "simulation_hours": {
+   "sabah_gidis": "08:45",
+   "en_kalabalik": "15:30",
+   "kapasite_zirvesi": "20:45"
+  },
+  "cells": 429
+ }
+}

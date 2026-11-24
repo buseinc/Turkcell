@@ -1,0 +1,31 @@
+{
+ "centre_lat_lon": [
+  39.6395,
+  27.8916
+ ],
+ "sites": 94,
+ "core": 83,
+ "buffer": 11,
+ "experia_rows": 150071,
+ "experia_cells": 998,
+ "experia_sites": 93,
+ "experia_dates": [
+  "2026-06-22",
+  "2026-06-23",
+  "2026-06-24",
+  "2026-06-25",
+  "2026-06-26",
+  "2026-06-27",
+  "2026-06-28"
+ ],
+ "sites_with_kpi": {
+  "sabah_gidis": 90,
+  "en_kalabalik": 90,
+  "kapasite_zirvesi": 90
+ },
+ "mean_prb": {
+  "sabah_gidis": 0.184,
+  "en_kalabalik": 0.284,
+  "kapasite_zirvesi": 0.344
+ }
+}

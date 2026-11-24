@@ -25,3 +25,8 @@ deneyler/27_komsu_saha_kontrolu_2026-11-19/neighbour_experia.csv.gz
 
 # İkinci bölge (Edremit) için ham Experia/KPI süzmesi (operatör verisi; secim.py ile yeniden üretilir)
 deneyler/35_bolge_secimi_2026-11-21/*.csv.gz
+deneyler/39_trafik_trendleri_2026-11-24/*.csv.gz
+deneyler/39_trafik_trendleri_2026-11-24/_parca_*/
+deneyler/40_sehir_modeli_2026-11-24/*.csv.gz
+deneyler/41_kesinti_turu_2026-11-24/*.csv.gz
+deneyler/41_kesinti_turu_2026-11-24/_parca/
