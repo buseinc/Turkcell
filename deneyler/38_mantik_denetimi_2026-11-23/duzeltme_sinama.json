@@ -1,0 +1,278 @@
+{
+ "valid": {
+  "A": {
+   "edremit": {
+    "sinr_train": 1.2591189377683842,
+    "rsrp_train": 3.946175556521124,
+    "sinr_test": 0.7069296151723875,
+    "rsrp_test": 3.2918666787531095
+   },
+   "sindirgi": {
+    "sinr_train": 2.6298813088149404,
+    "rsrp_train": 5.814941888951477,
+    "sinr_test": 1.949401420035173,
+    "rsrp_test": 4.1662316379784095
+   }
+  },
+  "S": {
+   "edremit": {
+    "sinr_train": 1.2863899163410977,
+    "rsrp_train": 2.8375678005260596,
+    "sinr_test": 0.5542158451568882,
+    "rsrp_test": 2.63327339697358
+   },
+   "sindirgi": {
+    "sinr_train": 2.273703151975816,
+    "rsrp_train": 3.9704568038948995,
+    "sinr_test": 1.1848135151824843,
+    "rsrp_test": 2.2718787422057622
+   }
+  },
+  "C": {
+   "edremit": {
+    "sinr_train": 1.261315237522891,
+    "rsrp_train": 3.8321905244827206,
+    "sinr_test": 0.9013507718220118,
+    "rsrp_test": 3.6394165265641116
+   },
+   "sindirgi": {
+    "sinr_train": 2.394517362874909,
+    "rsrp_train": 8.386593640935487,
+    "sinr_test": 1.9197701955761053,
+    "rsrp_test": 6.5546824952824485
+   }
+  }
+ },
+ "pass": {
+  "A": true,
+  "S": true,
+  "C": false
+ },
+ "train_total": {
+  "A": 13.650117692055925,
+  "S": 10.368117672737872,
+  "C": 15.874616765816008
+ },
+ "chosen": "S",
+ "results": {
+  "A": {
+   "sindirgi": {
+    "K0": {
+     "all": 0.008146639511201629
+    },
+    "K1": {
+     "off": [
+      "SITE_000482"
+     ],
+     "around": 0.2839506172839506,
+     "around_when_on": 0.0,
+     "all": 0.02376103190767142,
+     "users": 81
+    },
+    "K2": {
+     "off": [
+      "SITE_000130"
+     ],
+     "around": 0.225,
+     "around_when_on": 0.1,
+     "all": 0.010862186014935505,
+     "users": 40
+    },
+    "K3": {
+     "off": [
+      "SITE_000482",
+      "SITE_000130"
+     ],
+     "around": 0.256198347107438,
+     "around_when_on": 0.03305785123966942,
+     "all": 0.025797691785471828,
+     "users": 121
+    }
+   },
+   "edremit": {
+    "E0": {
+     "all": 0.025445292620865142,
+     "around": NaN,
+     "around_when_on": NaN,
+     "users": NaN
+    },
+    "E1": {
+     "all": 0.02748091603053435,
+     "around": 0.026041666666666668,
+     "around_when_on": 0.015625,
+     "users": 64.0
+    },
+    "E2": {
+     "all": 0.02697201017811705,
+     "around": 0.06837606837606837,
+     "around_when_on": 0.05982905982905983,
+     "users": 39.0
+    }
+   },
+   "road": {
+    "A_K0": {
+     "km_no_service": 0.19,
+     "longest_gap_km": 0.07
+    },
+    "A_K2": {
+     "km_no_service": 6.81,
+     "longest_gap_km": 2.81
+    },
+    "B_K0": {
+     "km_no_service": 0.19,
+     "longest_gap_km": 0.13
+    },
+    "B_K1": {
+     "km_no_service": 0.34,
+     "longest_gap_km": 0.11
+    }
+   }
+  },
+  "S": {
+   "sindirgi": {
+    "K0": {
+     "all": 0.00746775288526816
+    },
+    "K1": {
+     "off": [
+      "SITE_000482"
+     ],
+     "around": 0.0,
+     "around_when_on": 0.0,
+     "all": 0.00746775288526816,
+     "users": 81
+    },
+    "K2": {
+     "off": [
+      "SITE_000130"
+     ],
+     "around": 0.025,
+     "around_when_on": 0.05,
+     "all": 0.006109979633401222,
+     "users": 40
+    },
+    "K3": {
+     "off": [
+      "SITE_000482",
+      "SITE_000130"
+     ],
+     "around": 0.008264462809917356,
+     "around_when_on": 0.01652892561983471,
+     "all": 0.005431093007467753,
+     "users": 121
+    }
+   },
+   "edremit": {
+    "E0": {
+     "all": 0.0371501272264631,
+     "around": NaN,
+     "around_when_on": NaN,
+     "users": NaN
+    },
+    "E1": {
+     "all": 0.03918575063613231,
+     "around": 0.03125,
+     "around_when_on": 0.03125,
+     "users": 64.0
+    },
+    "E2": {
+     "all": 0.03816793893129771,
+     "around": 0.06837606837606837,
+     "around_when_on": 0.05128205128205129,
+     "users": 39.0
+    }
+   },
+   "road": {
+    "A_K0": {
+     "km_no_service": 0.16,
+     "longest_gap_km": 0.07
+    },
+    "A_K2": {
+     "km_no_service": 0.1,
+     "longest_gap_km": 0.05
+    },
+    "B_K0": {
+     "km_no_service": 0.13,
+     "longest_gap_km": 0.13
+    },
+    "B_K1": {
+     "km_no_service": 0.13,
+     "longest_gap_km": 0.11
+    }
+   }
+  },
+  "C": {
+   "sindirgi": {
+    "K0": {
+     "all": 0.008146639511201629
+    },
+    "K1": {
+     "off": [
+      "SITE_000482"
+     ],
+     "around": 0.024691358024691357,
+     "around_when_on": 0.012345679012345678,
+     "all": 0.009504412763068567,
+     "users": 81
+    },
+    "K2": {
+     "off": [
+      "SITE_000130"
+     ],
+     "around": 0.0,
+     "around_when_on": 0.0,
+     "all": 0.006788866259334691,
+     "users": 40
+    },
+    "K3": {
+     "off": [
+      "SITE_000482",
+      "SITE_000130"
+     ],
+     "around": 0.01652892561983471,
+     "around_when_on": 0.008264462809917356,
+     "all": 0.008146639511201629,
+     "users": 121
+    }
+   },
+   "edremit": {
+    "E0": {
+     "all": 0.03307888040712468,
+     "around": NaN,
+     "around_when_on": NaN,
+     "users": NaN
+    },
+    "E1": {
+     "all": 0.03358778625954199,
+     "around": 0.03125,
+     "around_when_on": 0.03125,
+     "users": 64.0
+    },
+    "E2": {
+     "all": 0.03409669211195929,
+     "around": 0.05982905982905982,
+     "around_when_on": 0.05128205128205129,
+     "users": 39.0
+    }
+   },
+   "road": {
+    "A_K0": {
+     "km_no_service": 0.29,
+     "longest_gap_km": 0.04
+    },
+    "A_K2": {
+     "km_no_service": 0.19,
+     "longest_gap_km": 0.04
+    },
+    "B_K0": {
+     "km_no_service": 0.07,
+     "longest_gap_km": 0.03
+    },
+    "B_K1": {
+     "km_no_service": 0.1,
+     "longest_gap_km": 0.03
+    }
+   }
+  }
+ }
+}

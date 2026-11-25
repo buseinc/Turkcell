@@ -45,18 +45,18 @@ def main():
     eh = e[e.HOUR_ID == EHOUR['en_kalabalik']]
     curves['Experia'] = binned((eh['AVG(TAAVG)']*TS_M).clip(100, 15000), eh['AVG(MED_SERVINGRSRPMEDIAN)'])
     curves['Experia_sinr'] = binned((eh['AVG(TAAVG)']*TS_M).clip(100, 15000), eh['AVG(MED_SINRMEDIAN)'])
-    for v in ['ana_model', 'tek_ortam_sehir', 'bina_ici_yok']:
+    keys = [v for v in ['ana_model', 'tek_ortam_sehir', 'bina_ici_yok'] if v in res]  # side variants may still be running
+    for v in keys:
         u = pd.read_csv(HERE/f'users_{v}.csv.gz')
         u = u[u.hour == 'en_kalabalik']
         curves[v] = binned(u.distance_m, u.rsrp)
         curves[v + '_sinr'] = binned(u.distance_m, u.sinr)
-    keys = ['ana_model', 'tek_ortam_sehir', 'bina_ici_yok']
     near = {k: float(curves[k][1][0] - curves['Experia'][1][0]) for k in keys}
     far = {k: float(curves[k][1][-1] - curves['Experia'][1][-1]) for k in keys}
     # site errors by distance from the centre (15:30, mean over draws)
     sd = sites.set_index('site').d_m/1000
     by_ring = {}
-    for v in ['ana_model', 'tek_ortam_sehir']:
+    for v in [k for k in ['ana_model', 'tek_ortam_sehir'] if k in res]:
         rr = [x for x in res[v]['runs'] if x['hour'] == 'en_kalabalik']
         q = pd.DataFrame({'rsrp': pd.DataFrame([x['rsrp_by_site'] for x in rr]).mean(),
                           'sinr': pd.DataFrame([x['sinr_by_site'] for x in rr]).mean()})
@@ -95,6 +95,8 @@ def main():
                        ('ana_model', 'ana model (saha başına şehir/kırsal)', dict(color='#1f5fa8', lw=1.8)),
                        ('tek_ortam_sehir', 'bütün bölge şehir', dict(color='#7a4fa0', lw=1.2, ls='-.')),
                        ('bina_ici_yok', 'herkes dışarıda', dict(color='#e08a1e', lw=1.4, ls='--'))]:
+        if k not in curves:
+            continue
         x, y, n = curves[k]
         a.plot(x, y, marker='o', ms=4, label=lab, **st)
     a.set_xscale('log')

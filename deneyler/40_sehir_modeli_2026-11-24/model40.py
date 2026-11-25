@@ -24,11 +24,12 @@ sys.path.insert(0, str(DEN/'35_bolge_secimi_2026-11-21'))
 import model35 as m35  # noqa: E402
 import sinamalar as sn  # noqa: E402
 
-DRAWS = [42, 7, 99]
+DRAWS = [42, 7, 99, 1, 2, 3, 4, 5, 6, 8]          # main model; side variants use the first 3
+SIDE_DRAWS = 3
 HOURS = {'sabah_gidis': ('08:45', 9), 'en_kalabalik': ('15:30', 16), 'kapasite_zirvesi': ('21:15', 21)}
 TS_M, DMIN, DMAX = 4.88, 100.0, 15000.0
 H_BS, H_UT = 25.0, 1.5
-PER_SITE, MIN_ROWS = 32, 3
+PER_SITE, MIN_ROWS = 100, 3
 N_DIR, CHUNK = 12, 6000
 SHADOW_SPACING, LOS_SPACING = 50.0, 50.0
 NO_SERVICE_DB = -6.7
@@ -124,6 +125,12 @@ def place(core_xy, x, rng):
     return pd.concat(rows, ignore_index=True)
 
 
+def site_median(sec, serving, value):
+    """Per site: mean over its cells of the median of the users each cell serves (as Experia: cell medians)."""
+    d = pd.DataFrame({'site': sec.site.to_numpy()[serving], 'sector': sec.sector.to_numpy()[serving], 'v': value})
+    return d.groupby(['site', 'sector']).v.median().groupby('site').mean()
+
+
 def best_server_dirs(ues, sites, sec, seed, ue_env, rng, urban_sigma):
     """Keep each user's TA distance; pick the first of N_DIR random directions where the user's placement site
     is the best server in this model (KURALLAR.md). Returns the moved users and a matched flag."""
@@ -167,12 +174,12 @@ def run_one(cfg, sites, prb, e, hour_key, seed):
     load = sec.site.map(prb[hour_key]).to_numpy(float)
     sinr = sn.sinr_on(r, srv, load, cfg['f_on'])
     rs = r[np.arange(len(r)), srv]
-    ms, mr = m35.site_mean(sec, srv, sinr), m35.site_mean(sec, srv, rs)
+    ms, mr = site_median(sec, srv, sinr), site_median(sec, srv, rs)
     ev = [s for s in core.site if s in targets.index and s in ms.index]
     d_s = pd.Series({s: ms[s] - targets.sinr[s] for s in ev})
     d_r = pd.Series({s: mr[s] - targets.rsrp[s] for s in ev})
     mm = matched
-    ms2, mr2 = m35.site_mean(sec, srv[mm], sinr[mm]), m35.site_mean(sec, srv[mm], rs[mm])
+    ms2, mr2 = site_median(sec, srv[mm], sinr[mm]), site_median(sec, srv[mm], rs[mm])
     ev2 = [s for s in core.site if s in targets.index and s in ms2.index]
     m_s = pd.Series({s: ms2[s] - targets.sinr[s] for s in ev2})
     m_r = pd.Series({s: mr2[s] - targets.rsrp[s] for s in ev2})
@@ -221,7 +228,7 @@ def main():
         cfg = {**MAIN, **change}
         runs, users = [], []
         for hour_key in (['en_kalabalik'] if check else HOURS):
-            for seed in (DRAWS[:1] if check else DRAWS):
+            for seed in (DRAWS[:1] if check else (DRAWS if name == 'ana_model' else DRAWS[:SIDE_DRAWS])):
                 t0 = time.time()
                 res, u = run_one(cfg, sites, prb, e, hour_key, seed)
                 res['seconds'] = round(time.time() - t0, 1)

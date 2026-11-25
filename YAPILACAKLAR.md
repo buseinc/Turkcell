@@ -4,6 +4,8 @@
 
 Liste, hocanın istediği işlere göre gruplandı.
 
+> **⚠️ 24 Kasım:** Hocanın kararıyla veriden mesafe düzeltmesi kaldırıldı. Bölüm 3, 4 ve 5'teki kesinti sonuçları (%15–19, il yolunda 6,6 km) bu düzeltmeyle hesaplanmıştı; düzeltmesiz yeniden yapılacak. Taslak henüz düzeltilmedi.
+
 ## 1. Gerçek ölçümlere dayanan bir LTE ağı kurmak (taslağın ana amacı)
 
 - ✅ Sındırgı'da 24 sahalık ağ, ns-3'te kuruldu.

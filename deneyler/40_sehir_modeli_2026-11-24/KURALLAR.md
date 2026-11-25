@@ -38,7 +38,7 @@ Hiçbir değer ölçüme bakılarak ayarlanmıyor. Her değer veriden, bir stand
 | Güç | 49 dBm | 3GPP TR 36.814 |
 | Anten | 3GPP deseni, 65°, 15 dBi, dikey genişlik 10° | 3GPP TR 36.814 / 36.942 |
 | Anten eğimi | 6° | hocanın taslağı; gerçek değer bilinmiyor |
-| Anten yönleri | rastgele, 3 çekiliş | bilinmiyor |
+| Anten yönleri | rastgele; ana modelde 10, yan denemelerde 3 çekiliş | bilinmiyor |
 | Kule / telefon yüksekliği | 25 m / 1,5 m | 3GPP TR 38.901 şehir formülünün varsayımı |
 | Yayılım | şehir sahasında UMa, kırsal sahada RMa (aşağıda "Saha başına ortam"); görüş hattı olasılığı formülün kendisinden | standart (3GPP TR 38.901) |
 | Gölgeleme | şehirde 7 dB (TR 38.901 Tablo 7.4.3-3, tek frekanslı 6 GHz altı şehir simülasyonu), kırsalda 4 / 8 dB (görüş hattı / engelli, Tablo 7.4.1-1) | standart |
@@ -89,7 +89,7 @@ Ana model önceden belli; yan denemeler sonucu nasıl değiştirdiğini gösterm
 
 - Şehirde bir sahada ortalama 10 gerçek hücre var, modelde 3. Sahanın 3 model hücresinin her birinin doluluğu, o sahanın gerçek hücrelerinin o saatteki ortalama doluluğu (DL PRB; üç pazartesinin ortalaması, deney 39). KPI'sı olmayan sahalara bölgenin o saatteki ortalaması.
 - Bu adımda yük, kullanıcılardan hesaplanmıyor; hücre doluluğu doğrudan KPI'dan giriliyor (girişim bundan geliyor). Binlerce kullanıcı ancak kesinti adımında gerekiyor.
-- Ölçüm kullanıcıları: Experia verisi olan her ana sahaya 32 kullanıcı, o sahanın hücrelerinin aynı saatteki TA uzaklıklarından çekilerek. TA birimi 4,88 m, uzaklık 100 m–15 km arasına sınırlanıyor (önceki deneylerle aynı).
+- Ölçüm kullanıcıları (yalnız sinyali ölçen noktalar; yükü değiştirmez): Experia verisi olan her ana sahaya 100 kullanıcı, o sahanın hücrelerinin aynı saatteki TA uzaklıklarından çekilerek. TA birimi 4,88 m, uzaklık 100 m–15 km arasına sınırlanıyor (önceki deneylerle aynı).
 - **Yön:** TA, telefonun bağlı olduğu kuleye uzaklık. Bu yüzden kullanıcı yalnız yerleştirildiği sahanın en iyi sinyali verdiği yönlere konuyor ("en iyi sunucu alanı"): her kullanıcı için 12 rastgele yön deneniyor, yerleştirildiği sahanın bir hücresine bağlandığı ilk yön seçiliyor. Hiçbir yönde bağlanmıyorsa ilk yön kalıyor ve bu kullanıcıların payı raporlanıyor. Yön seçimi her hâlin kendi modeliyle yapılıyor.
 - Experia'daki TA, hücreye o saatte bağlı telefonların ortalaması; tek tek kullanıcıların uzaklığı değil. Bu yüzden modelde uzaklıklar gerçekte olduğundan daha toplu olabilir (sınır).
 - Saat eşleşmesi: modelin 1 saatlik penceresinin ortası hangi Experia saatine düşüyorsa (08:45 → saat 9, 15:30 → saat 16, 21:15 → saat 21).
@@ -100,6 +100,6 @@ Ana model önceden belli; yan denemeler sonucu nasıl değiştirdiğini gösterm
 - Hiçbir şey ayarlanmadığı için sahalar eğitim/test diye ayrılmıyor; ana bölgedeki Experia verisi yeterli bütün sahalar kullanılıyor.
 - Her saatin modeli Experia'nın aynı saatteki ölçümleriyle karşılaştırılıyor (`HOUR_ID`).
 - Experia yalnız 22–28 Haziran 2026 haftasını kapsıyor; KPI ise 2025 Ağustos ve Ekim–Kasım günleri. Okullar haziranın sonunda kapalı. Bu yüzden yalnız Experia'nın hafta içi günleri (22–26 Haziran) kullanılıyor ve dönem farkı sınır olarak yazılıyor.
-- Ölçü: saha başına ortalama sinyal gücü (RSRP) ve sinyal kalitesi (SINR) farkı, 3 anten çekilişinin ortalaması.
+- Ölçü: Experia her hücre ve saat için ortanca veriyor; modelde de her hücrenin kullanıcılarının ortancası alınıyor, saha değeri hücrelerin ortalaması. Saha başına sinyal gücü (RSRP) ve sinyal kalitesi (SINR) farkı, anten çekilişlerinin ortalaması.
 - Sınırlar: SINR farkı ≤ 3 dB, RSRP farkı ≤ 5 dB.
 - **Geçmezse de ana model kullanılır**, farklar açıkça yazılır. Kuleye yakın kullanıcılardaki fark ayrıca gösterilir.

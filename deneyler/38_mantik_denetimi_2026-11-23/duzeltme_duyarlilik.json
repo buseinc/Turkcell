@@ -1,0 +1,43 @@
+{
+ "sindirgi_outage": {
+  "K1": {
+   "users_around": 81,
+   "no_service_around_A": 0.2839506172839506,
+   "no_service_around_B": 0.012345679012345678
+  },
+  "K2": {
+   "users_around": 40,
+   "no_service_around_A": 0.225,
+   "no_service_around_B": 0.05
+  },
+  "K3": {
+   "users_around": 121,
+   "no_service_around_A": 0.256198347107438,
+   "no_service_around_B": 0.024793388429752067
+  }
+ },
+ "road": {
+  "A": {
+   "km_no_service_A": 6.81,
+   "longest_gap_km_A": 2.81,
+   "km_no_service_B": 0.16,
+   "longest_gap_km_B": 0.05
+  },
+  "B": {
+   "km_no_service_A": 0.34,
+   "longest_gap_km_A": 0.11,
+   "km_no_service_B": 0.2,
+   "longest_gap_km_B": 0.11
+  }
+ },
+ "edremit_outage_mean_3_draws": {
+  "E1": {
+   "A": 0.026041666666666668,
+   "B": 0.041666666666666664
+  },
+  "E2": {
+   "A": 0.06837606837606837,
+   "B": 0.1111111111111111
+  }
+ }
+}

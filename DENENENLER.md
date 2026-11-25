@@ -28,7 +28,12 @@ Hepsi hızlı modelle, 94 saha, ölçümle aynı saatte. Fark = saha başına or
 | 2 | Saha başına şehir/kırsal, formül **kulenin** yerine göre | 2,1 | 9,2 | Şehirdeki kullanıcıların %35'i uzak kırsal kulelere bağlanıyordu |
 | 3 | Formül **kullanıcının** yerine göre | 2,6 | 7,7 | Kullanıcıların çoğu yerleştirildiği sahaya bağlanmıyordu |
 | 4 | Kullanıcı kendi sahasının en iyi olduğu yöne | 3,0 | 7,5 | Standardın metni okundu: bizim durum için başka bina modeli öngörülüyor |
-| 5 | Standarda uygun: şehirde 20 dB + iç mesafe, gölge 7 dB; kırsalda %50 bina, %50 araba | 3,5 | 6,0 | Güncel ana model; ortalama güç farkı 1–1,6 dB |
+| 5 | Standarda uygun: şehirde 20 dB + iç mesafe, gölge 7 dB; kırsalda %50 bina, %50 araba | 3,5 | 6,0 | Karşılaştırma sahada 32 nokta, 3 çekiliş, ortalamayla yapılıyordu |
+| 6 | Aynı model; karşılaştırma sahada 100 nokta, 10 çekiliş, hücre ortancası (Experia gibi) | 3,0 | 7,1 | Güncel; ortalama güç farkı 1 dB'den az, saha saha fark büyüdü |
+
+Değerlendirilip yapılmayanlar (25 Kasım):
+- **Banliyö ortamı (TR 38.901 SMa)** şehrin kenarı için: yol kaybı formülü 0,5–37 GHz'de geçerli, ama bina kaybı tahta ev varsayıyor (cam + kontrplak). Türkiye'deki beton yapılara uymuyor; beton bina kaybıyla birleştirmek standart dışı bir karışım olurdu. Yapılmadı.
+- **Arazi yüksekliği:** TR 38.901 düz arazi varsayıyor; araziyi eklemek standardın dışına çıkmak demek. Şimdilik yapılmadı.
 
 Yan denemeler (hepsi bırakıldı, ana modelin yerine geçmedi): bina kaybı yok (kalite 1,9 / güç 19,5), bütün bölge kırsal (2,5 / 21,9), anten eğimi 10° (5,0 / 6,4), sürekli yayın %9,5 (4,6 / 6,0).
 

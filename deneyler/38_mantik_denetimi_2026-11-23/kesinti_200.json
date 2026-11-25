@@ -1,0 +1,216 @@
+{
+ "site": "SITE_000200",
+ "users_in_model": 144,
+ "kpi_on_6_nearest": 0.67,
+ "kpi_sd": 0.12,
+ "nearest_6_m": {
+  "SITE_000206": 995.0,
+  "SITE_000204": 1811.0,
+  "SITE_000198": 4757.0,
+  "SITE_000224": 4969.0,
+  "SITE_000554": 6359.0,
+  "SITE_000461": 10905.0
+ },
+ "nearest_6_in_model": [
+  "SITE_000206",
+  "SITE_000204",
+  "SITE_000198",
+  "SITE_000224",
+  "SITE_000554"
+ ],
+ "n_nearest_in_model": 5,
+ "mean": {
+  "A (100% kullanıcıda)": {
+   "on_6_nearest": 0.875,
+   "service_elsewhere": 0.0995,
+   "no_service": 0.0255
+  },
+  "%75": {
+   "on_6_nearest": 0.8819,
+   "service_elsewhere": 0.0995,
+   "no_service": 0.0185
+  },
+  "%50": {
+   "on_6_nearest": 0.8843,
+   "service_elsewhere": 0.0995,
+   "no_service": 0.0162
+  },
+  "%25": {
+   "on_6_nearest": 0.8912,
+   "service_elsewhere": 0.0995,
+   "no_service": 0.0093
+  },
+  "S (0% kullanıcıda)": {
+   "on_6_nearest": 0.8889,
+   "service_elsewhere": 0.0972,
+   "no_service": 0.0139
+  },
+  "C (bağlantı başına)": {
+   "on_6_nearest": 0.6528,
+   "service_elsewhere": 0.338,
+   "no_service": 0.0093
+  }
+ },
+ "range_on_6": {
+  "A (100% kullanıcıda)": {
+   "min": 0.875,
+   "max": 0.875
+  },
+  "%75": {
+   "min": 0.875,
+   "max": 0.8889
+  },
+  "%50": {
+   "min": 0.8819,
+   "max": 0.8889
+  },
+  "%25": {
+   "min": 0.8889,
+   "max": 0.8958
+  },
+  "S (0% kullanıcıda)": {
+   "min": 0.8889,
+   "max": 0.8889
+  },
+  "C (bağlantı başına)": {
+   "min": 0.6389,
+   "max": 0.6667
+  }
+ },
+ "agrees_55_79": {
+  "A (100% kullanıcıda)": false,
+  "%75": false,
+  "%50": false,
+  "%25": false,
+  "S (0% kullanıcıda)": false,
+  "C (bağlantı başına)": true
+ },
+ "runs": [
+  {
+   "variant": "A (100% kullanıcıda)",
+   "az": 42,
+   "on_6_nearest": 0.875,
+   "service_elsewhere": 0.09722222222222222,
+   "no_service": 0.027777777777777776
+  },
+  {
+   "variant": "%75",
+   "az": 42,
+   "on_6_nearest": 0.875,
+   "service_elsewhere": 0.09722222222222222,
+   "no_service": 0.027777777777777776
+  },
+  {
+   "variant": "%50",
+   "az": 42,
+   "on_6_nearest": 0.8819444444444444,
+   "service_elsewhere": 0.09722222222222222,
+   "no_service": 0.020833333333333332
+  },
+  {
+   "variant": "%25",
+   "az": 42,
+   "on_6_nearest": 0.8888888888888888,
+   "service_elsewhere": 0.09722222222222222,
+   "no_service": 0.013888888888888888
+  },
+  {
+   "variant": "S (0% kullanıcıda)",
+   "az": 42,
+   "on_6_nearest": 0.8888888888888888,
+   "service_elsewhere": 0.09722222222222222,
+   "no_service": 0.013888888888888888
+  },
+  {
+   "variant": "C (bağlantı başına)",
+   "az": 42,
+   "on_6_nearest": 0.6527777777777778,
+   "service_elsewhere": 0.3472222222222222,
+   "no_service": 0.0
+  },
+  {
+   "variant": "A (100% kullanıcıda)",
+   "az": 7,
+   "on_6_nearest": 0.875,
+   "service_elsewhere": 0.09722222222222222,
+   "no_service": 0.027777777777777776
+  },
+  {
+   "variant": "%75",
+   "az": 7,
+   "on_6_nearest": 0.8888888888888888,
+   "service_elsewhere": 0.09722222222222222,
+   "no_service": 0.013888888888888888
+  },
+  {
+   "variant": "%50",
+   "az": 7,
+   "on_6_nearest": 0.8888888888888888,
+   "service_elsewhere": 0.09722222222222222,
+   "no_service": 0.013888888888888888
+  },
+  {
+   "variant": "%25",
+   "az": 7,
+   "on_6_nearest": 0.8958333333333334,
+   "service_elsewhere": 0.09722222222222222,
+   "no_service": 0.006944444444444444
+  },
+  {
+   "variant": "S (0% kullanıcıda)",
+   "az": 7,
+   "on_6_nearest": 0.8888888888888888,
+   "service_elsewhere": 0.09722222222222222,
+   "no_service": 0.013888888888888888
+  },
+  {
+   "variant": "C (bağlantı başına)",
+   "az": 7,
+   "on_6_nearest": 0.6666666666666666,
+   "service_elsewhere": 0.3194444444444444,
+   "no_service": 0.013888888888888888
+  },
+  {
+   "variant": "A (100% kullanıcıda)",
+   "az": 99,
+   "on_6_nearest": 0.875,
+   "service_elsewhere": 0.10416666666666667,
+   "no_service": 0.020833333333333332
+  },
+  {
+   "variant": "%75",
+   "az": 99,
+   "on_6_nearest": 0.8819444444444444,
+   "service_elsewhere": 0.10416666666666667,
+   "no_service": 0.013888888888888888
+  },
+  {
+   "variant": "%50",
+   "az": 99,
+   "on_6_nearest": 0.8819444444444444,
+   "service_elsewhere": 0.10416666666666667,
+   "no_service": 0.013888888888888888
+  },
+  {
+   "variant": "%25",
+   "az": 99,
+   "on_6_nearest": 0.8888888888888888,
+   "service_elsewhere": 0.10416666666666667,
+   "no_service": 0.006944444444444444
+  },
+  {
+   "variant": "S (0% kullanıcıda)",
+   "az": 99,
+   "on_6_nearest": 0.8888888888888888,
+   "service_elsewhere": 0.09722222222222222,
+   "no_service": 0.013888888888888888
+  },
+  {
+   "variant": "C (bağlantı başına)",
+   "az": 99,
+   "on_6_nearest": 0.6388888888888888,
+   "service_elsewhere": 0.3472222222222222,
+   "no_service": 0.013888888888888888
+  }
+ ]
+}
