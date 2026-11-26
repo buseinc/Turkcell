@@ -1,0 +1,21 @@
+{
+ "users_with_samples": 2549,
+ "users": 2624,
+ "same_serving_cell_share": 0.9714,
+ "diff_db_same_cell": {
+  "median": -0.0,
+  "mean_abs": 0.001,
+  "max_abs": 0.006
+ },
+ "diff_db_all": {
+  "median": -0.0,
+  "mean_abs": 0.001
+ },
+ "site_mean_abs_db": 0.001,
+ "site_max_abs_db": 0.002,
+ "pass_site_le_0_5": true,
+ "by_env_median_diff": {
+  "RMa": -0.0,
+  "UMa": -0.0
+ }
+}

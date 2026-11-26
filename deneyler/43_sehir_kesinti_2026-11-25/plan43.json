@@ -1,0 +1,24 @@
+{
+ "seed": 42,
+ "hour": "en_kalabalik",
+ "users": 6244,
+ "load_users": 8,
+ "idle_users": 344,
+ "tuning_steps": 120,
+ "max_prb_error": 0.2248197659367006,
+ "max_prb_error_at_120": 0.2248197659367006,
+ "cells_err_gt_0_01": 11,
+ "mean_target_prb": 0.28384688091570454,
+ "mean_fast_prb": 0.28466163679980167,
+ "c2_affected_users": 213,
+ "c2_taking_cells": 42,
+ "packets_per_second_total": 188461.25316142844,
+ "max_packet_bytes": 1252,
+ "input_hashes": {
+  "cells_43.csv": "95969789a4f6f7d3180b06f08f91df4ce64bcbd8967d07b188a785fb18617339",
+  "fast_43.csv": "916cc44e8cbcd81f32bac98674d6e83655762b43f5ed486a10d1e1224cabdffc",
+  "sites_C0.csv": "da0450316ac995f6fcae3f3cfaf2d8984aab37ed37cf90a8823c18dda483d23c",
+  "sites_C2.csv": "6eacbcc4663e6f08df589fd96ff388f590d6fc82059ae4186da3c82353c8a965",
+  "ues_43.csv": "07295ce5339c0f3ae63af83ef4fa722569eb5037f9f6445eb303ef234230824d"
+ }
+}

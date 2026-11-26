@@ -1,0 +1,16 @@
+step 120 max err 0.2248 cells > 0.01: 11
+cells missing target by > 0.01:
+             site  sector    role  target_prb  fast_prb    err  users  idle_users  rate_per_ms
+258  SITE_000229       0  buffer       0.167     0.132 -0.035      1         0.0        1.196
+276  SITE_000180       0  buffer       0.154     0.132 -0.022      2         1.0        1.078
+277  SITE_000180       1  buffer       0.154     0.132 -0.022      1         0.0        1.078
+269  SITE_000558       2  buffer       0.284     0.264 -0.020      1         0.0        2.291
+255  SITE_000231       0  buffer       0.232     0.220 -0.012      1         0.0        1.824
+279  SITE_000181       0  buffer       0.253     0.264  0.011      1         0.0        1.857
+36   SITE_000120       0    core       0.716     0.727  0.011    101         0.0        0.021
+50   SITE_000247       2    core       0.641     0.654  0.013     58         0.0        0.039
+37   SITE_000120       1    core       0.716     0.736  0.019     22         0.0        0.072
+140  SITE_000254       2    core       0.295     0.326  0.031     21         4.0        0.041
+45   SITE_000134       0    core       0.520     0.745  0.225      4         0.0        0.193
+C2 taking cells that miss target: 4 of 42
+{"seed": 42, "hour": "en_kalabalik", "users": 6244, "load_users": 8, "idle_users": 344, "tuning_steps": 120, "max_prb_error": 0.2248197659367006, "max_prb_error_at_120": 0.2248197659367006, "cells_err_gt_0_01": 11, "mean_target_prb": 0.28384688091570454, "mean_fast_prb": 0.28466163679980167, "c2_affected_users": 213, "c2_taking_cells": 42, "packets_per_second_total": 188461.25316142844, "max_packet_bytes": 1252}
